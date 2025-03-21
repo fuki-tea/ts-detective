@@ -1,4 +1,5 @@
 ;一番最初に呼び出されるファイル
+[plugin name="advancedaudio"]
 
 [title name="ティラノスクリプト解説"]
 
