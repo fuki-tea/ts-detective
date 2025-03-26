@@ -30,7 +30,7 @@
 
 ;このゲームで登場するキャラクターを宣言
 ;nojarori
-[chara_new  name="nojarori" storage="chara/nojarori/STA17AD.png" jname="のじゃロリ"  ]
+[chara_new  name="nojarori" storage="chara/nojarori/STA17AD.png" jname="ロリ娘？"  ]
 ;キャラクターの表情登録
 [chara_face name="nojarori" face="ah" storage="chara/nojarori/STA17AA.png"]
 [chara_face name="nojarori" face="uh" storage="chara/nojarori/STA17AB.png"]
@@ -41,9 +41,9 @@
 [chara_face name="nojarori" face="hiyari" storage="chara/nojarori/STA17AG.png"]
 
 
-;rinochan
-[chara_new  name="rinochan" storage="chara/rinochan/STA15AA.png" jname="リノちゃん" ]
-[chara_face name="rinochan" face="uh" storage="chara/rinochan/STA15AB.png"]
+;rino
+[chara_new  name="rino" storage="chara/rino/STA15AA.png" jname="河越　凜乃" ]
+[chara_face name="rino" face="uh" storage="chara/rino/STA15AB.png"]
 
 
 ;キャラクター登場
@@ -52,8 +52,10 @@
 登場[p]
 
 
-[chara_show name="rinochan" top="0" left="-100"]
 #河越　凜乃
 「こんにちは。」[p]
+[chara_show name="rino" top="0" left="0"]
 
-[s]
+#
+終了[p][cm]
+[HIDE_MESSAGE_WINDOW]

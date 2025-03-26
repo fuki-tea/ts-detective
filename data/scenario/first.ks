@@ -19,7 +19,9 @@
 [hidemenubutton]
 
 ;タイトル画面へ移動
-@jump storage="title.ks"
+;@jump storage="title.ks"
+
+@jump storage="ts-scene1.ks"
 
 [s]
 
