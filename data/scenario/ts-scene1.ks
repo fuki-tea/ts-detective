@@ -45,7 +45,6 @@
 [chara_new  name="rino" storage="chara/rino/STA15AA.png" jname="河越　凜乃" ]
 [chara_face name="rino" face="uh" storage="chara/rino/STA15AB.png"]
 
-
 ;キャラクター登場
 [chara_show name="nojarori" top="100" left="700"]
 #ロリ娘？
@@ -53,9 +52,12 @@
 
 
 #河越　凜乃
-「こんにちは。」[p]
 [chara_show name="rino" top="0" left="0"]
+「こんにちは。」[p]
+[cm]
 
+[message name=""]
 #
 終了[p][cm]
-[HIDE_MESSAGE_WINDOW]
+[endmessage]
+[layopt layer="message0" visible="false"]

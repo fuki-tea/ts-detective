@@ -2,7 +2,7 @@
 ;debugMenu.visible=false
 ;configSave=webstorage
 ;global.config_version=6.00
-;System.title=ティラノスクリプト
+;System.title=ＴＳ探偵
 ;projectID=tyranoproject
 ;game_version=0.0
 ;ScreenRatio=fix
@@ -99,3 +99,4 @@
 ;useGamepad=true
 ;useCloseConfirm=true
 ;offscreenClickable=true
+;message_config.nextMark="▶"

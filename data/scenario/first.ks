@@ -21,7 +21,7 @@
 ;タイトル画面へ移動
 ;@jump storage="title.ks"
 
-@jump storage="ts-scene1.ks"
+@jump storage="ts-0-prologue.ks"
 
 [s]
 
