@@ -81,7 +81,7 @@ f.bgm="music.m4a"	; サウンドテスト用の初期値
 
 *bgm_fadein
 [emb exp="f.bgm"][l]
-[fadeinbgm storage="&f.bgm" time=2000 volume=40]
+[fadeinbgm storage="&f.bgm" time=2000 volume=100]
 @jump target="*start"
 
 *bgm_loop
