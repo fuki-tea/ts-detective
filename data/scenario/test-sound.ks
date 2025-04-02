@@ -33,7 +33,7 @@ f.bgm="music.m4a"	; サウンドテスト用の初期値
 [chara_config ptext="chara_name_area"]
 
 [macro name="play_bgm"]
-[playbgm storage="&f.bgm" loop="true" volume=20 ]
+[playbgm storage="&f.bgm" loop="true" volume=100 ]
 [endmacro]
 
 [macro name="set_bgm" storage=""]
@@ -81,12 +81,12 @@ f.bgm="music.m4a"	; サウンドテスト用の初期値
 
 *bgm_fadein
 [emb exp="f.bgm"][l]
-[fadeinbgm storage="&f.bgm" time=2000 volume=100]
+[fadeinbgm storage="&f.bgm" time=2000 volume=50]
 @jump target="*start"
 
 *bgm_loop
 [emb exp="f.bgm"][l]
-[ir_playbgm volume=50 storage="&f.bgm" loop_start=5000 loop_end=7000]
+[ir_playbgm volume=100 storage="&f.bgm" loop_start=5000 loop_end=7000]
 @jump target="*start"
 
 *bgm01
