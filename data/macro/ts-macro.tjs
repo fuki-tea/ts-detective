@@ -1,0 +1,16 @@
+
+[macro name="sort_indices" param="ep" return="sortedIndices"]
+[iscript]
+let sortedIndices = ep
+    .map((value, index) => ({ value, index }))
+    .sort((a, b) => b.value - a.value)
+    .map(item => item.index);
+
+// グローバル変数に保存
+f.sorted_indices = sortedIndices;
+
+alert("ソートされた添え字の順序: " + f.sorted_indices);
+return sortedIndices;
+[endiscript]
+[endmacro]
+

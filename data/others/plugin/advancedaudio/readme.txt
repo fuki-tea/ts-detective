@@ -1,61 +1,61 @@
-��������������������������������������������������
-�������@�@�@�@�@�@�@�@�@�@�@�@�@�@�@�@�@�@�@������
-�������@�����a�f�l�͈͎w�胋�[�v�v���O�C���@������
-�������@�@�@�@�@�@�@�@�@�@�@�@�@�@�@�@�@�@�@������
-��������������������������������������������������
+■■■■■■■■■■■■■■■■■■■■■■■■■
+■■■　　　　　　　　　　　　　　　　　　　■■■
+■■■　試製ＢＧＭ範囲指定ループプラグイン　■■■
+■■■　　　　　　　　　　　　　　　　　　　■■■
+■■■■■■■■■■■■■■■■■■■■■■■■■
 
 
-�y�T�v�z
-�E�e�B���m�X�N���v�g��BGM��͈͎w�胋�[�v���čĐ����邽�߂̃v���O�C���ł��B
-�E�͈͎w�胋�[�v�Ƃ́A����̋�ԁi1�b?5�b�܂ł̊ԁA���j���w�肵�ă��[�v�Đ������邱�Ƃł��B
+【概要】
+・ティラノスクリプトでBGMを範囲指定ループして再生するためのプラグインです。
+・範囲指定ループとは、特定の区間（1秒?5秒までの間、等）を指定してループ再生させることです。
 
-�y���ӎ����z
-�E����ł̂��ߕs������X����܂��B
-�E�e�B���m�X�N���v�g�̒ʏ��BGM�Đ��iplaybgm���j�Ƃ͕ʂ̕��@�ŉ������Đ����Ă��邽�߁A�o�b�t�@�w��͂ł��܂���B
-�E�܂��A�����ɕ����̋Ȃ�͈͎w�胋�[�v�Đ����邱�Ƃ��ł��܂���B
-�EA�Ƃ����Ȃ��t�F�[�h�A�E�g�����Ȃ���B�Ƃ����Ȃ��t�F�[�h�C���A�Ƃ������Ƃ��ł��܂���B
-�EA���t�F�[�h�A�E�g���t�F�[�h�A�E�g�����i�Đ��I���j��B�̃t�F�[�h�C���J�n�A�Ƃ����菇�Ȃ�ł��܂��B
+【注意事項】
+・試作版のため不具合等多々あります。
+・ティラノスクリプトの通常のBGM再生（playbgm等）とは別の方法で音声を再生しているため、バッファ指定はできません。
+・また、同時に複数の曲を範囲指定ループ再生することもできません。
+・Aという曲をフェードアウトさせながらBという曲をフェードイン、ということもできません。
+・Aをフェードアウト→フェードアウト完了（再生終了）→Bのフェードイン開始、という手順ならできます。
 
-�y�g�����z
-first.ks�Ɏ��̂悤�ɋL�q���Ă��������B��q����^�O���g�p�ł���悤�ɂȂ�܂��B
+【使い方】
+first.ksに次のように記述してください。後述するタグを使用できるようになります。
 
 [plugin name="advancedaudio"]
 
 
-�y�^�O�z
-�Ead_playaudio�c���[�v�Đ����J�n
-�w��\�����F
-�@storage�c�Đ�������BGM���w��A�t�@�C����BGM�t�H���_�ɓ���Ă�������
-�@loop�c���[�v�����邩��true/false�Ŏw��
-�@start�c���[�v�J�n�ʒu���~���b�Ŏw��
-�@end�c���[�v�I���ʒu���~���b�Ŏw��
-�@intro�c�ŏ��̃��[�v�ɓ���O�ɃC���g���i�Ȃ̊J�n�`���[�v�J�n�ʒu�j���Đ����邩��true/false�Ŏw��
-�@time�c�t�F�[�h�C���Đ�������ꍇ�A�t�F�[�h���Ԃ��~���b�Ŏw��
-�@volume�c�Đ����̃{�����[����0�`100�̒l�Ŏw��
+【タグ】
+・ad_playaudio…ループ再生を開始
+指定可能属性：
+　storage…再生させるBGMを指定、ファイルはBGMフォルダに入れてください
+　loop…ループさせるかをtrue/falseで指定
+　start…ループ開始位置をミリ秒で指定
+　end…ループ終了位置をミリ秒で指定
+　intro…最初のループに入る前にイントロ（曲の開始～ループ開始位置）を再生するかをtrue/falseで指定
+　time…フェードイン再生させる場合、フェード時間をミリ秒で指定
+　volume…再生時のボリュームを0～100の値で指定
 
-�Ead_stopaudio�c�Đ��I��
-�w��\�����F
-�@time�c�t�F�[�h�A�E�g�I��������ꍇ�A�t�F�[�h���Ԃ��~���b�Ŏw��
+・ad_stopaudio…再生終了
+指定可能属性：
+　time…フェードアウト終了させる場合、フェード時間をミリ秒で指定
 
-�Ead_optionaudio�c�Đ����̋Ȃ̐ݒ�ύX
-�w��\�����F
-�@loop�c��{�I�ɂ�false���w�肵�A���[�v���I�������܂�
-�@volume�c�ύX����{�����[����0�`100�̒l�Ŏw��
-�@time�c�{�����[���ύX���Ɏw��̒l�܂ŕύX���鎞�Ԃ��~���b�Ŏw��
+・ad_optionaudio…再生中の曲の設定変更
+指定可能属性：
+　loop…基本的にはfalseを指定し、ループを終了させます
+　volume…変更するボリュームを0～100の値で指定
+　time…ボリューム変更時に指定の値まで変更する時間をミリ秒で指定
 
-�Ead_pauseaudio�c�Đ����ꎞ��~
-�w��\�����F
-�@time�c�t�F�[�h�A�E�g���Ȃ����~������ꍇ�A�t�F�[�h���Ԃ��~���b�Ŏw��
+・ad_pauseaudio…再生を一時停止
+指定可能属性：
+　time…フェードアウトしながら停止させる場合、フェード時間をミリ秒で指定
 
-�Ead_resumeaudio�c�ꎞ��~������
-�w��\�����F
-�@time�c�t�F�[�h�C�����Ȃ���Đ�������ꍇ�A�t�F�[�h���Ԃ��~���b�Ŏw��
-�@volume�c�Đ��{�����[����0�`100�̒l�Ŏw��
+・ad_resumeaudio…一時停止を解除
+指定可能属性：
+　time…フェードインしながら再生させる場合、フェード時間をミリ秒で指定
+　volume…再生ボリュームを0～100の値で指定
 
-�Ead_restoreaudio�c���[�h���p�}�N���imake.ks�ɂ��̃^�O���L�q���Ă��������j
-�w��\�����F
-�Ȃ�
+・ad_restoreaudio…ロード時用マクロ（make.ksにこのタグを記述してください）
+指定可能属性：
+なし
 
-�y�A����z
-twitter�F@violet_ncnc
-�s��񍐓�����܂�����A���v��DM�ł��肢���܂��B�iDM�S�J�����Ă܂��j
+【連絡先】
+twitter：@violet_ncnc
+不具合報告等ありましたら、リプかDMでお願いします。（DM全開放してます）

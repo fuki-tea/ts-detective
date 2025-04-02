@@ -1,7 +1,8 @@
 ;一番最初に呼び出されるファイル
-[plugin name="advancedaudio"]
+;[plugin name="advancedaudio"]
+[plugin name=intro_loop]
 
-[title name="ティラノスクリプト解説"]
+[title name="ＴＳ探偵"]
 
 [stop_keyconfig]
 
@@ -19,9 +20,7 @@
 [hidemenubutton]
 
 ;タイトル画面へ移動
-;@jump storage="title.ks"
-
-@jump storage="ts-0-prologue.ks"
+@jump storage="test-title.ks"
 
 [s]
 

@@ -99,4 +99,5 @@
 ;useGamepad=true
 ;useCloseConfirm=true
 ;offscreenClickable=true
-;message_config.nextMark="▶"
+;scWidth = 1280;
+;scHeight = 720;
