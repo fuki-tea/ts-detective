@@ -7,6 +7,7 @@
 
 ;メッセージウィンドウの非表示
 [layopt layer=message0 visible=false]
+[config_record_label color="0x00FF00"]
 
 *start 
 [button x=135 y=230 graphic="title/button_start.png" enterimg="title/button_start2.png"  target="gamestart" keyfocus="1"]
@@ -16,10 +17,10 @@
 [button x=135 y=590 graphic="title/button_config.png" enterimg="title/button_config2.png" role="sleepgame" storage="config.ks" keyfocus="5"]
 
 [glink text="シナリオテスト" size=20 width=500 x=630 y=300 color=blue target=test_scenario ]
-[glink text="キャラ表示テスト" size=20 width=500 x=630 y=360 color=blue target=test_chara ]
-[glink text="サウンドテスト" size=20 width=500 x=630 y=420 color=blue target=test_sound ]
-[glink text="マップテスト" size=20 width=500 x=630 y=480 color=blue target=test_map ]
-;[glink text="MAP05" size=20 width=500 x=630 y=540 color=blue target=map05 ]
+[glink text="キャラ表示移動テスト" size=20 width=500 x=630 y=360 color=blue target=test_chara ]
+[glink text="キャラ表示効果テスト" size=20 width=500 x=630 y=420 color=blue target=test_chara2 ]
+[glink text="サウンドテスト" size=20 width=500 x=630 y=480 color=blue target=test_sound ]
+[glink text="マップテスト" size=20 width=500 x=630 y=540 color=blue target=test_map ]
 
 [s]
 
@@ -31,6 +32,11 @@
 
 *test_chara
 @jump storage="test-chara.ks"
+
+[s]
+
+*test_chara2
+@jump storage="test-chara2.ks"
 
 [s]
 
@@ -47,7 +53,3 @@ f.story_step=[-1,-1,-1]	; エピソードごとのストーリーの進捗
 
 [s]
 
-*map05
-@jump storage="ts-scene1.ks"
-
-[s]

@@ -40,6 +40,10 @@ f.bgm="music.m4a"	; サウンドテスト用の初期値
 [eval exp="f.bgm=mp.storage"]
 ;[eval exp="tf.bgm_preload='./data/bgm/'+mp.storage"]
 ;[preload storage="&tf.bgm_preload"]
+#
+[if exp="f.bgm != ''"]
+[emb exp="f.bgm"]を選択しています
+[endif]
 [endmacro]
 
 ;[playbgm storage="music.m4a" loop="true" volume=50]
@@ -50,12 +54,13 @@ f.bgm="music.m4a"	; サウンドテスト用の初期値
 
 *main
 [freeimage layer="1"]
-[ptext layer="1" x="630" y="20" text="&f.bgm" color="white" edge="0xFF0000"]
+[ptext layer="1" x="30" y="20" text="&f.bgm" color="white" edge="0xFF0000"]
 
-[glink text="停止" size=20 width=500 x=30 y=20 color=blue target=bgm_stop ]
-[glink text="フェードアウト" size=20 width=500 x=30 y=60 color=blue target=bgm_fadeout ]
-[glink text="フェードイン" size=20 width=500 x=30 y=100 color=blue target=bgm_fadein ]
-[glink text="部分ループ" size=20 width=500 x=30 y=140 color=blue target=bgm_loop ]
+[glink text="再生" size=20 width=500 x=30 y=50 color=blue target=bgm_play ]
+[glink text="停止" size=20 width=500 x=30 y=100 color=blue target=bgm_stop ]
+[glink text="フェードアウト" size=20 width=500 x=30 y=150 color=blue target=bgm_fadeout ]
+[glink text="フェードイン" size=20 width=500 x=30 y=200 color=blue target=bgm_fadein ]
+[glink text="部分ループ" size=20 width=500 x=30 y=250 color=blue target=bgm_loop ]
 
 [glink text="arashi.mp3" size=20 width=500 x=630 y=100 color=blue target=bgm01 ]
 [glink text="elevator girl - Stereo Out.mp3" size=20 width=500 x=630 y=140 color=blue target=bgm02 ]
@@ -69,84 +74,73 @@ f.bgm="music.m4a"	; サウンドテスト用の初期値
 [glink text="meitantei - Stereo Out.mp3" size=20 width=500 x=630 y=460 color=blue target=bgm10 ]
 [s]
 
+*bgm_play
+[emb exp="f.bgm"]を再生します
+[play_bgm]
+@jump target="*main"
+
 *bgm_stop
+停止します
 [stopbgm]
-[set_bgm storage=""]
-@jump target="*start"
+@jump target="*main"
 
 *bgm_fadeout
+フェードアウトします
 [fadeoutbgm time=2000]
-[set_bgm storage=""]
-@jump target="*start"
+@jump target="*main"
 
 *bgm_fadein
-[emb exp="f.bgm"][l]
+[if exp="f.bgm != ''"]
+[emb exp="f.bgm"]をフェードインします
 [fadeinbgm storage="&f.bgm" time=2000 volume=50]
-@jump target="*start"
+[endif]
+@jump target="*main"
 
 *bgm_loop
-[emb exp="f.bgm"][l]
+[if exp="f.bgm != ''"]
+[emb exp="f.bgm"]をループします
 [ir_playbgm volume=100 storage="&f.bgm" loop_start=5000 loop_end=7000]
-@jump target="*start"
+[endif]
+@jump target="*main"
 
 *bgm01
 [set_bgm storage="arashi.mp3"]
-[emb exp="f.bgm"][l]
-[play_bgm]
-@jump target="*start"
+@jump target="*main"
 
 *bgm02
 [set_bgm storage="elevator girl - Stereo Out.mp3"]
-[emb exp="f.bgm"][l]
-[play_bgm]
-@jump target="*start"
+@jump target="*main"
 
 *bgm03
 [set_bgm storage="elevator girl piano - Stereo Out.mp3"]
-[emb exp="f.bgm"][l]
-[play_bgm]
-@jump target="*start"
+@jump target="*main"
 
 *bgm04
 [set_bgm storage="jiken - Stereo Out.mp3"]
-[emb exp="f.bgm"][l]
-[play_bgm]
-@jump target="*start"
+@jump target="*main"
 
 *bgm05
 [set_bgm storage="jouhouya - Stereo Out.mp3"]
-[emb exp="f.bgm"][l]
-[play_bgm]
-@jump target="*start"
+@jump target="*main"
 
 *bgm06
 [set_bgm storage="nazonazo - Stereo Out.mp3"]
-[emb exp="f.bgm"][l]
-[play_bgm]
-@jump target="*start"
+@jump target="*main"
 
 *bgm07
 [set_bgm storage="pokan - Stereo Out.mp3"]
-[emb exp="f.bgm"][l]
-[play_bgm]
-@jump target="*start"
+@jump target="*main"
 
 *bgm08
 [set_bgm storage="question - Stereo Out.mp3"]
-[emb exp="f.bgm"][l]
-[play_bgm]
-@jump target="*start"
+@jump target="*main"
 
 *bgm09
 [set_bgm storage="tantei8 - Stereo Out.mp3"]
-[emb exp="f.bgm"][l]
-[play_bgm]
-@jump target="*start"
+@jump target="*main"
 
 *bgm10
 [set_bgm storage="meitantei - Stereo Out.mp3"]
-[emb exp="f.bgm"][l]
-[play_bgm]
-@jump target="*start"
+@jump target="*main"
 
 [s]
