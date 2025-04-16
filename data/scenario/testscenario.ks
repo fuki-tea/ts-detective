@@ -9,26 +9,10 @@
 
 [bg storage="BG01.png" time="100"]
 
-;メニューボタンの表示
-@showmenubutton
+;メッセージエリアの設定
+[message_area_scenario]
 
-;メッセージウィンドウの設定
-;[position layer="message0" left=160 top=500 width=1000 height=200 page=fore visible=true]
-[position layer="message0" left=10 top=500 width=1000 height=200 page=fore visible=true]
-
-;文字が表示される領域を調整
-[position layer=message0 page=fore margint="45" marginl="55" marginr="35" marginb="60"]
-
-
-;メッセージウィンドウの表示
-@layopt layer=message0 visible=true
-
-;キャラクターの名前が表示される文字領域
-[ptext name="chara_name_area" layer="message0" color="white" size=28 bold=true x=30 y=510]
-
-;上記で定義した領域がキャラクターの名前表示であることを宣言（これがないと#の部分でエラーになります）
-[chara_config ptext="chara_name_area"]
-
+*moji_suu_test
 #
 １２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０[p]
 
@@ -53,6 +37,7 @@ Shibasaki-TomoyaでTS。[r]
 とても華やかさとは縁のない、男だけの寂しい事務所───だったのだが。[p]
 
 
+*joshi_tojo
 #常葉　悠卯
 「トモちゃーん！下着買ってきてあげたよ！」[p]
 
@@ -132,8 +117,10 @@ Shibasaki-TomoyaでTS。[r]
 
 そう、俺は女の子になってしまったのである。[p]
 
-
+*kako_banashi
 きっかけは二週間前。[p]
+
+@jump storage="testtitle.ks" target="*init"
 
 #柴崎　智也
 「そろそろ髪をどげんかせんといかんな……」[p]

@@ -1,12 +1,14 @@
-*start
+*init
 
 [cm  ]
 [clearfix]
 [start_keyconfig]
+[free name="chara_name_area" layer="message0"]
 
 @wait time = 200
 
 [bg storage="MAP01.png" time="100"]
+[config_record_label color="0xFFFFFF"]
 
 ;メニューボタンの表示
 @showmenubutton
@@ -26,8 +28,6 @@
 
 ;上記で定義した領域がキャラクターの名前表示であることを宣言（これがないと#の部分でエラーになります）
 [chara_config ptext="chara_name_area"]
-
-;[import storage="macro/ts-macro.tjs"]
 
 [iscript]
 tf.story_map=[["ekimae","jimusho","gakuen","hankagai","ekimae","hankagai","jimusho","gakuen","keisatsu","gakuen"],["kissa","kissa","kissa","kissa","kissa","keisatsu","hankagai","kissa","hankagai","kissa"],["hankagai","keisatsu","hankagai","jimusho","jimusho","kissa","keisatsu","jimusho","jimusho","ekimae"]]
@@ -53,22 +53,45 @@ tf.current_step=-1
 [endmacro]
 
 
-; 次の状態を表示
-[macro name="disp_step"]
+; 修了確認
+[macro name="check_end"]
 #
 EP[emb exp="tf.current_ep+1"]-[emb exp="tf.current_step+1"]/[emb exp="tf.current_map"][r]
 [if exp="tf.current_ep != -1 && tf.current_step == 9"]
 GOOD END[p]
 [emb exp="tf.current_ep"]
 [freeimage layer="1"]
-[jump storage="test-title.ks"]
+[jump storage="testtitle.ks"]
 [elsif exp="tf.current_ep != -1 && tf.current_step == 99"]
 BAD END[p]
 [emb exp="tf.current_ep"]
 [freeimage layer="1"]
-[jump storage="test-title.ks"]
+[jump storage="testtitle.ks"]
 [endif]
 [endmacro]
+
+; 次の状態によって動作を変える
+[macro name="check_next"]
+[if exp="tf.current_ep == -1 && tf.current_map == 'jimusho'"]
+[freeimage layer="1"]
+[free name="chara_name_area" layer="message0"]
+[jump storage="testscenario2.ks"]
+[endif]
+[endmacro]
+
+; 次の状態に合わせたメッセージを表示
+[macro name="disp_next"]
+#
+[if exp="tf.current_ep != -1 && tf.current_step == 8"]
+慎重に行き先を選ぼう
+[else]
+何処へ行く？
+[endif]
+[endmacro]
+
+[check_end]
+[check_next]
+[disp_next]
 
 *main
 [ep_stat]
@@ -88,14 +111,14 @@ BAD END[p]
 [clickable opacity="0" mouseopacity="50" x=138 y=217 width=266 height=219 color="yellow" target=keisatsu ]
 [clickable opacity="0" mouseopacity="50" x=430 y=81  width=300 height=200 color="yellow" target=ekimae ]
 
-#
-何処へ行く？
 [s]
 
 *jimusho
 [eval exp="tf.current_map='jimusho'"]
 [call target="check_ep"]
-[disp_step]
+[check_end]
+[check_next]
+[disp_next]
 [call target="next_ep"]
 [jump target="*main"]
 [s]
@@ -103,7 +126,9 @@ BAD END[p]
 *kissa
 [eval exp="tf.current_map='kissa'"]
 [call target="check_ep"]
-[disp_step]
+[check_end]
+[check_next]
+[disp_next]
 [call target="next_ep"]
 [jump target="*main"]
 [s]
@@ -111,7 +136,9 @@ BAD END[p]
 *gakuen
 [eval exp="tf.current_map='gakuen'"]
 [call target="check_ep"]
-[disp_step]
+[check_end]
+[check_next]
+[disp_next]
 [call target="next_ep"]
 [jump target="*main"]
 [s]
@@ -119,7 +146,9 @@ BAD END[p]
 *hankagai
 [eval exp="tf.current_map='hankagai'"]
 [call target="check_ep"]
-[disp_step]
+[check_end]
+[check_next]
+[disp_next]
 [call target="next_ep"]
 [jump target="*main"]
 [s]
@@ -127,7 +156,9 @@ BAD END[p]
 *keisatsu
 [eval exp="tf.current_map='keisatsu'"]
 [call target="check_ep"]
-[disp_step]
+[check_end]
+[check_next]
+[disp_next]
 [call target="next_ep"]
 [jump target="*main"]
 [s]
@@ -135,7 +166,9 @@ BAD END[p]
 *ekimae
 [eval exp="tf.current_map='ekimae'"]
 [call target="check_ep"]
-[disp_step]
+[check_end]
+[check_next]
+[disp_next]
 [call target="next_ep"]
 [jump target="*main"]
 [s]

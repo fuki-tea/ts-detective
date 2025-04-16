@@ -1,4 +1,4 @@
-
+*init
 [cm]
 
 @clearstack
@@ -7,7 +7,6 @@
 
 ;メッセージウィンドウの非表示
 [layopt layer=message0 visible=false]
-[config_record_label color="0x00FF00"]
 
 *start 
 [button x=135 y=230 graphic="title/button_start.png" enterimg="title/button_start2.png"  target="gamestart" keyfocus="1"]
@@ -25,23 +24,24 @@
 [s]
 
 *gamestart
+
 *test_scenario
-@jump storage="test-scenario.ks"
+@jump storage="test_scenario.ks"
 
 [s]
 
 *test_chara
-@jump storage="test-chara.ks"
+@jump storage="test_chara.ks"
 
 [s]
 
 *test_chara2
-@jump storage="test-chara2.ks"
+@jump storage="test_chara2.ks"
 
 [s]
 
 *test_sound
-@jump storage="test-sound.ks"
+@jump storage="test_sound.ks"
 
 [s]
 
@@ -49,7 +49,7 @@
 [iscript]
 f.story_step=[-1,-1,-1]	; エピソードごとのストーリーの進捗
 [endscript]
-@jump storage="test-map.ks"
+@jump storage="testmap.ks"
 
 [s]
 

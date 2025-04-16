@@ -43,7 +43,7 @@
 ;configSaveDateFormat=yyyy/M/d h:mm:ss
 ;configSaveOverwrite=false
 ;maxBackLogNum=50
-;autoRecordLabel=false
+;autoRecordLabel=true
 ;unReadTextSkip=false
 ;alreadyReadTextColor=0x87cefa
 ;numCharacterLayers=3
