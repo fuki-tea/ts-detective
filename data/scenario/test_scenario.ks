@@ -12,7 +12,7 @@
 ;メッセージエリアの設定
 [message_area_scenario]
 
-*moji_suu_test
+*moji_suu_test_
 #
 １２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０[p]
 
@@ -120,7 +120,7 @@ Shibasaki-TomoyaでTS。[r]
 *kako_banashi
 きっかけは二週間前。[p]
 
-@jump storage="testtitle.ks" target="*init"
+@jump storage="test_title.ks" target="*init"
 
 #柴崎　智也
 「そろそろ髪をどげんかせんといかんな……」[p]
@@ -238,3 +238,6 @@ Shibasaki-TomoyaでTS。[r]
 
 まったく、これからどうなっちまうんだろうな……。[p]
 [layopt layer="message0" visible="false"]
+
+@jump storage="test_title.ks"
+[s]

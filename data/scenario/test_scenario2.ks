@@ -26,8 +26,7 @@
 最近、前髪の生え際が気になる32歳。職業は私立探偵だ。[p]
 
 
-
-*miyukitojo
+*miyuki_tojo
 
 ;喋っていないキャラに対するエフェクト
 [chara_config brightness=40 talk_focus=brightness]
@@ -99,5 +98,5 @@
 [layopt layer="message0" visible="false"]
 [hidemenubutton]
 
-@jump storage="testmap.ks" target="init"
+@jump storage="test_map.ks" target="init"
 [s]

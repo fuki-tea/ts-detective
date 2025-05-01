@@ -20,6 +20,7 @@
 [glink text="キャラ表示効果テスト" size=20 width=500 x=630 y=420 color=blue target=test_chara2 ]
 [glink text="サウンドテスト" size=20 width=500 x=630 y=480 color=blue target=test_sound ]
 [glink text="マップテスト" size=20 width=500 x=630 y=540 color=blue target=test_map ]
+[glink text="スチルテスト" size=20 width=500 x=630 y=600 color=blue target=test_still ]
 
 [s]
 
@@ -49,7 +50,12 @@
 [iscript]
 f.story_step=[-1,-1,-1]	; エピソードごとのストーリーの進捗
 [endscript]
-@jump storage="testmap.ks"
+@jump storage="test_map.ks"
+
+[s]
+
+*test_still
+@jump storage="test_still.ks"
 
 [s]
 

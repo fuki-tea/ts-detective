@@ -16,6 +16,8 @@
 ;既読管理
 ;未読スキップオフ
 [config_record_label skip=false]
+;既読カウント全削除
+;[eval exp="delete sf.record"]
 
 ;メッセージボックスは非表示
 @layopt layer="message" visible=false
@@ -53,7 +55,7 @@
 [hidemenubutton]
 
 ;タイトル画面へ移動
-@jump storage="testtitle.ks"
+@jump storage="test_title.ks"
 
 [s]
 
