@@ -17,6 +17,8 @@
 [chara_new name="nekoshima" storage="chara/nekoshima/nekoshima_stand.png" jname="猫島警部"]
 [chara_new name="takao" storage="chara/takao/takao_stand.png" jname="浅川　鷹貨夫"]
 [chara_new name="fumie" storage="chara/fumie/fumie_stand.png" jname="荻窪　文絵"]
+[chara_new name="noja" storage="chara/nojarori/noja_stand.png" jname="ロリ娘？"]
+[chara_new name="rino" storage="chara/rino/rino_stand.png" jname="河越　凜乃"]
 
 ;キャラクター登場
 [chara_config talk_focus="brightness" ]
@@ -28,6 +30,18 @@
 [chara_show name="tomo" top="0" left="0" layer="0" wait="0"]
 #柴崎　智也
 柴崎　智也[p]
+
+[chara_show name="rino" top="200" left="700" layer="0" wait="0"]
+#河越　凜乃
+河越　凜乃[p]
+
+[chara_hide name="rino" pos_mode="false"]
+
+[chara_show name="noja" top="250" left="800" layer="0" wait="0"]
+#ロリ娘？
+ロリ娘？[p]
+
+[chara_hide name="noja" pos_mode="false"]
 
 [chara_show name="yu" top="0" left="600" layer="0" wait="0"]
 #常葉　悠卯

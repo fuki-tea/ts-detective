@@ -5,6 +5,11 @@
 
 [title name="ＴＳ探偵"]
 
+[iscript]
+f.story_step=[-1,-1,-1]	; エピソードごとのストーリーの進捗
+sf.type_r18=false	; R18の場合は真
+[endscript]
+
 [stop_keyconfig]
 
 ;ティラノスクリプトが標準で用意している便利なライブラリ群
@@ -16,8 +21,10 @@
 ;既読管理
 ;未読スキップオフ
 [config_record_label skip=false]
-;既読カウント全削除
+;既読カウントリセット
 ;[eval exp="delete sf.record"]
+;CGモードリセット
+;[eval exp="delete sf.cg_view"]
 
 ;メッセージボックスは非表示
 @layopt layer="message" visible=false

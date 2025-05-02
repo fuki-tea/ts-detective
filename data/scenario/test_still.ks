@@ -35,10 +35,12 @@ stl1-01/stl1-01d.png
 stl1-01/stl1-01e.png
 [p]
 
+[if exp="sf.type_r18 != true"]
 [bg storage="stl1-01/stl1-01f.png" time="100"]
 #
 stl1-01/stl1-01f.png
 [p]
+[endif]
 
 [bg storage="stl1-01/stl1-01g.png" time="100"]
 #

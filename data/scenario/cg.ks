@@ -44,7 +44,11 @@
 @jump target=&tf.target_page
 
 *page_0
+[if exp="sf.type_r18 == true"]
+[cg_image_button graphic="stl1-01/stl1-01a.png,stl1-01/stl1-01b.png,stl1-01/stl1-01c.png,stl1-01/stl1-01d.png,stl1-01/stl1-01e.png,stl1-01/stl1-01g.png" no_graphic="../../tyrano/images/system/noimage.png" x=60 y=130 width=256 height=144 folder="bgimage" ]
+[else]
 [cg_image_button graphic="stl1-01/stl1-01a.png,stl1-01/stl1-01b.png,stl1-01/stl1-01c.png,stl1-01/stl1-01d.png,stl1-01/stl1-01e.png,stl1-01/stl1-01f.png,stl1-01/stl1-01g.png" no_graphic="../../tyrano/images/system/noimage.png" x=60 y=130 width=256 height=144 folder="bgimage" ]
+[endif]
 [cg_image_button graphic="room.jpg" no_graphic="../../tyrano/images/system/noimage.png" x=380 y=130 width=256 height=144 folder="bgimage" ]
 
 @jump target="*common"
@@ -61,7 +65,7 @@
 *backtitle
 [cm]
 [freeimage layer=1]
-@jump storage=title.ks
+@jump storage=test_title.ks
 
 *nextpage
 [emb exp="tf.page++;"]
