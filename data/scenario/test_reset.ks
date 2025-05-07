@@ -20,6 +20,6 @@ CGモードリセット[p]
 [eval exp="delete sf.record"]
 [eval exp="delete sf.cg_view"]
 
-@jump storage="test_title.ks"
+@jump storage="ts_title.ks"
 [s]
 

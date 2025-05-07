@@ -5,6 +5,7 @@
 [start_keyconfig]
 [free name="chara_name_area" layer="message0"]
 
+;-------------------------------------------------------------------------------
 @wait time = 200
 
 [bg storage="MAP01.png" time="100"]
@@ -29,74 +30,79 @@
 ;上記で定義した領域がキャラクターの名前表示であることを宣言（これがないと#の部分でエラーになります）
 [chara_config ptext="chara_name_area"]
 
-[iscript]
-tf.story_map=[["ekimae","jimusho","gakuen","hankagai","ekimae","hankagai","jimusho","gakuen","keisatsu","gakuen"],["kissa","kissa","kissa","kissa","kissa","keisatsu","hankagai","kissa","hankagai","kissa"],["hankagai","keisatsu","hankagai","jimusho","jimusho","kissa","keisatsu","jimusho","jimusho","ekimae"]]
-tf.current_map="-"
-tf.current_ep=-1
-tf.current_step=-1
-[endscript]
-
 [layopt layer="1" visible="true"]
 
+;-------------------------------------------------------------------------------
+[iscript]
+f.story_map=[["ekimae","jimusho","gakuen","hankagai","ekimae","hankagai","jimusho","gakuen","keisatsu","gakuen"],["kissa","kissa","kissa","kissa","kissa","keisatsu","hankagai","kissa","hankagai","kissa"],["hankagai","keisatsu","hankagai","jimusho","jimusho","kissa","keisatsu","jimusho","jimusho","ekimae"]]
+f.current_map="-"
+f.current_ep=-1
+f.current_step=-1
+[endscript]
+
+;-------------------------------------------------------------------------------
 [macro name="ep_stat"]
 [freeimage layer="1"]
-[ptext layer="1" x="1200" y="0" text="&tf.current_ep+1" color="white" edge="0xFF0000"]
-[ptext layer="1" x="1220" y="0" text="&tf.current_step+1" color="white" edge="0xFF0000"]
-[ptext layer="1" x="1200" y="20" text="&tf.current_map" color="white" edge="0xFF0000"]
+[ptext layer="1" x="1200" y="0" text="&f.current_ep+1" color="white" edge="0xFF0000"]
+[ptext layer="1" x="1220" y="0" text="&f.current_step+1" color="white" edge="0xFF0000"]
+[ptext layer="1" x="1200" y="20" text="&f.current_map" color="white" edge="0xFF0000"]
 
 [ptext layer="1" x="1180" y="40" text="&f.story_step[0]+1" color="white" edge="0xFF0000"]
 [ptext layer="1" x="1180" y="60" text="&f.story_step[1]+1" color="white" edge="0xFF0000"]
 [ptext layer="1" x="1180" y="80" text="&f.story_step[2]+1" color="white" edge="0xFF0000"]
-[ptext layer="1" x="1200" y="40" text="&tf.story_map[0][f.story_step[0]+1]" color="white" edge="0xFF0000"]
-[ptext layer="1" x="1200" y="60" text="&tf.story_map[1][f.story_step[1]+1]" color="white" edge="0xFF0000"]
-[ptext layer="1" x="1200" y="80" text="&tf.story_map[2][f.story_step[2]+1]" color="white" edge="0xFF0000"]
+[ptext layer="1" x="1200" y="40" text="&f.story_map[0][f.story_step[0]+1]" color="white" edge="0xFF0000"]
+[ptext layer="1" x="1200" y="60" text="&f.story_map[1][f.story_step[1]+1]" color="white" edge="0xFF0000"]
+[ptext layer="1" x="1200" y="80" text="&f.story_map[2][f.story_step[2]+1]" color="white" edge="0xFF0000"]
 [endmacro]
 
 
+;-------------------------------------------------------------------------------
 ; 修了確認
 [macro name="check_end"]
 #
-EP[emb exp="tf.current_ep+1"]-[emb exp="tf.current_step+1"]/[emb exp="tf.current_map"][r]
-[if exp="tf.current_ep != -1 && tf.current_step == 9"]
+EP[emb exp="f.current_ep+1"]-[emb exp="f.current_step+1"]/[emb exp="f.current_map"][r]
+[if exp="f.current_ep != -1 && f.current_step == 9"]
 GOOD END[p]
-[emb exp="tf.current_ep"]
+[emb exp="f.current_ep"]
 [freeimage layer="1"]
-[jump storage="test_title.ks"]
-[elsif exp="tf.current_ep != -1 && tf.current_step == 99"]
+[jump storage="ts_title.ks"]
+[elsif exp="f.current_ep != -1 && f.current_step == 99"]
 BAD END[p]
-[emb exp="tf.current_ep"]
+[emb exp="f.current_ep"]
 [freeimage layer="1"]
-[jump storage="test_title.ks"]
+[jump storage="ts_title.ks"]
 [endif]
 [endmacro]
 
+;-------------------------------------------------------------------------------
 ; 次の状態によって動作を変える
 [macro name="check_next"]
-[if exp="tf.current_ep == -1 && tf.current_map == 'jimusho'"]
+[if exp="f.current_ep == -1 && f.current_map != '-'"]
 [freeimage layer="1"]
 [free name="chara_name_area" layer="message0"]
-[jump storage="test_scenario2.ks"]
-[elsif exp="tf.current_ep == -1 && tf.current_map == 'keisatsu'"]
-[freeimage layer="1"]
-[free name="chara_name_area" layer="message0"]
-[jump storage="test_chara3.ks"]
+[jump storage="ts_scenario_ep00.ks"]
 [endif]
 [endmacro]
 
+;-------------------------------------------------------------------------------
 ; 次の状態に合わせたメッセージを表示
 [macro name="disp_next"]
 #
-[if exp="tf.current_ep != -1 && tf.current_step == 8"]
+[if exp="f.current_ep != -1 && f.current_step == 9 - 1"]
 慎重に行き先を選ぼう
 [else]
 何処へ行く？
 [endif]
 [endmacro]
 
+;-------------------------------------------------------------------------------
+;-------------------------------------------------------------------------------
+;最初のメッセージ
 [check_end]
 [check_next]
 [disp_next]
 
+;-------------------------------------------------------------------------------
 *main
 [ep_stat]
 
@@ -117,58 +123,44 @@ BAD END[p]
 
 [s]
 
+;-------------------------------------------------------------------------------
 *jimusho
-[eval exp="tf.current_map='jimusho'"]
-[call target="check_ep"]
-[check_end]
-[check_next]
-[disp_next]
-[call target="next_ep"]
-[jump target="*main"]
+[eval exp="f.current_map='jimusho'"]
+[jump target="*next_action"]
 [s]
 
+;-------------------------------------------------------------------------------
 *kissa
-[eval exp="tf.current_map='kissa'"]
-[call target="check_ep"]
-[check_end]
-[check_next]
-[disp_next]
-[call target="next_ep"]
-[jump target="*main"]
+[eval exp="f.current_map='kissa'"]
+[jump target="*next_action"]
 [s]
 
+;-------------------------------------------------------------------------------
 *gakuen
-[eval exp="tf.current_map='gakuen'"]
-[call target="check_ep"]
-[check_end]
-[check_next]
-[disp_next]
-[call target="next_ep"]
-[jump target="*main"]
+[eval exp="f.current_map='gakuen'"]
+[jump target="*next_action"]
 [s]
 
+;-------------------------------------------------------------------------------
 *hankagai
-[eval exp="tf.current_map='hankagai'"]
-[call target="check_ep"]
-[check_end]
-[check_next]
-[disp_next]
-[call target="next_ep"]
-[jump target="*main"]
+[eval exp="f.current_map='hankagai'"]
+[jump target="*next_action"]
 [s]
 
+;-------------------------------------------------------------------------------
 *keisatsu
-[eval exp="tf.current_map='keisatsu'"]
-[call target="check_ep"]
-[check_end]
-[check_next]
-[disp_next]
-[call target="next_ep"]
-[jump target="*main"]
+[eval exp="f.current_map='keisatsu'"]
+[jump target="*next_action"]
 [s]
 
+;-------------------------------------------------------------------------------
 *ekimae
-[eval exp="tf.current_map='ekimae'"]
+[eval exp="f.current_map='ekimae'"]
+[jump target="*next_action"]
+[s]
+
+;-------------------------------------------------------------------------------
+*next_action
 [call target="check_ep"]
 [check_end]
 [check_next]
@@ -177,7 +169,8 @@ BAD END[p]
 [jump target="*main"]
 [s]
 
-
+;-------------------------------------------------------------------------------
+;-------------------------------------------------------------------------------
 ; 現在のステージにマッチするエピソードのうち、最もストーリーが進んでいるものを返す
 *check_ep
 [iscript]
@@ -192,8 +185,8 @@ let badep = -1;
 // 現在のEPごとのストーリー進捗から次のステージを取得し、現在地とマッチしたらストーリー番号をセット
 for (let i = 0; i < n; i++) {
 	let st = f.story_step[i] + 1;
-	let name = tf.story_map[i][st];
-	if(tf.current_map == name){
+	let name = f.story_map[i][st];
+	if(f.current_map == name){
 		nextep[i] = st;
 		exist_flag = true;
 	}else if(f.story_step[i] == 8 && badep == -1){
@@ -208,7 +201,7 @@ if(badep >= 0){
 
 if(exist_flag){
 	// 各エピソードのストーリーが進んでいるものから順に並べ替える
-	tf.hit_ep = ep;
+	f.hit_ep = ep;
 	for (let i = 0; i < n - 1; i++) { // 外側ループ
 	    for (let j = 0; j < n - 1 - i; j++) { // 内側ループ
 	        if (nextep[j] < nextep[j + 1]) {
@@ -223,17 +216,17 @@ if(exist_flag){
 	    }
 	}
 	// 最もストーリーが進んでいるエピソード番号を返す
-	tf.current_ep = indic[0];
-	tf.current_step = nextep[0];
+	f.current_ep = indic[0];
+	f.current_step = nextep[0];
 }else{
 	// バッドエンド
 	if(badep >= 0){
-		tf.current_ep = badep;
-		tf.current_step = 99;
+		f.current_ep = badep;
+		f.current_step = 99;
 	}else{
 		// 進捗無し
-		tf.current_ep = -1;
-		tf.current_step = -1;
+		f.current_ep = -1;
+		f.current_step = -1;
 	}
 }
 
@@ -241,11 +234,13 @@ if(exist_flag){
 [return]
 
 
+;-------------------------------------------------------------------------------
+;-------------------------------------------------------------------------------
 ; ストーリーを進める
 *next_ep
 [iscript]
-if(tf.current_ep != -1){
-	f.story_step[tf.current_ep] = tf.current_step;
+if(f.current_ep != -1){
+	f.story_step[f.current_ep] = f.current_step;
 }
 [endscript]
 [return]

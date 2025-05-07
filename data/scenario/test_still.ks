@@ -35,7 +35,7 @@ stl1-01/stl1-01d.png
 stl1-01/stl1-01e.png
 [p]
 
-[if exp="sf.type_r18 != true"]
+[if exp="sf.type_r18 == true"]
 [bg storage="stl1-01/stl1-01f.png" time="100"]
 #
 stl1-01/stl1-01f.png
@@ -51,5 +51,5 @@ stl1-01/stl1-01g.png
 
 [layopt layer="message0" visible="false"]
 
-@jump storage="test_title.ks"
+@jump storage="ts_title.ks"
 [s]

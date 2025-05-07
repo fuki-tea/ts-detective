@@ -5,10 +5,17 @@
 @clearstack
 @bg storage ="title.jpg" time=100
 @wait time = 200
-
+[hidemenubutton]
+;-------------------------------------------------------------------------------
 ;メッセージウィンドウの非表示
 [layopt layer=message0 visible=false]
 
+;-------------------------------------------------------------------------------
+[iscript]
+f.story_step=[-1,-1,-1]	; エピソードごとのストーリーの進捗
+[endscript]
+
+;-------------------------------------------------------------------------------
 *start 
 [button x=135 y=230 graphic="title/button_start.png" enterimg="title/button_start2.png"  target="gamestart" keyfocus="1"]
 [button x=135 y=320 graphic="title/button_load.png" enterimg="title/button_load2.png" role="load" keyfocus="2"]
@@ -23,18 +30,28 @@
 [glink text="R18 OFF→ON" size=20 width=500 x=630 y=120 color=blue target=test_r18_on ]
 [endif]
 [glink text="シナリオテスト" size=20 width=500 x=630 y=300 color=blue target=test_scenario ]
+;[glink text="シナリオテスト２" size=20 width=500 x=630 y=300 color=blue target=test_scenario2 ]
 [glink text="キャラ表示移動テスト" size=20 width=500 x=630 y=360 color=blue target=test_chara ]
 [glink text="キャラ表示効果テスト" size=20 width=500 x=630 y=420 color=blue target=test_chara2 ]
-[glink text="サウンドテスト" size=20 width=500 x=630 y=480 color=blue target=test_sound ]
-[glink text="マップテスト" size=20 width=500 x=630 y=540 color=blue target=test_map ]
-[glink text="スチルテスト" size=20 width=500 x=630 y=600 color=blue target=test_still ]
+[glink text="キャラテスト３" size=20 width=500 x=630 y=480 color=blue target=test_chara3 ]
+[glink text="サウンドテスト" size=20 width=500 x=630 y=540 color=blue target=test_sound ]
+[glink text="マップテスト" size=20 width=500 x=630 y=600 color=blue target=ts_map ]
+[glink text="スチルテスト" size=20 width=500 x=630 y=660 color=blue target=test_still ]
 
 [s]
 
+;-------------------------------------------------------------------------------
 *gamestart
+@jump storage="ts_prologue.ks"
+[s]
 
 *test_scenario
 @jump storage="test_scenario.ks"
+
+[s]
+
+*test_scenario2
+@jump storage="test_scenario2.ks"
 
 [s]
 
@@ -48,13 +65,18 @@
 
 [s]
 
+*test_chara3
+@jump storage="test_chara3.ks"
+
+[s]
+
 *test_sound
 @jump storage="test_sound.ks"
 
 [s]
 
-*test_map
-@jump storage="test_map.ks"
+*ts_map
+@jump storage="ts_map.ks"
 
 [s]
 

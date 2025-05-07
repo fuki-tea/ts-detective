@@ -5,26 +5,30 @@
 [cm  ]
 [clearfix]
 [start_keyconfig]
+[free name="chara_name_area" layer="message0"]
 
-
-[bg storage="BG01.png" time="100"]
+[bg storage="BG02.png" time="100"]
 
 ;メッセージエリアの設定
 [message_area_scenario]
 
-*moji_suu_test_
-#
-１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０[p]
 
+;このゲームで登場するキャラクターを宣言
+[chara_new name="tomo" storage="chara/tomo/tomo_stand.png" jname="柴崎　智也"  ]
+[chara_new name="yu" storage="chara/yu/yu_stand.png" jname="常葉　悠卯"]
+[chara_new name="miyuki" storage="chara/miyuki/miyuki_stand.png" jname="鳩村　美柚季"]
+[chara_new name="ui" storage="chara/ui/ui_stand.png" jname="西春　愛"]
+
+;喋っていないキャラに対するエフェクト
+[chara_config brightness=40 talk_focus=brightness]
+
+*porologue_start
 #
 俺の名前は柴崎智也。[r]
 最近、前髪の生え際が気になる32歳。職業は私立探偵だ。[p]
 
-;[filter name="nojarori_hiyari" grayscale=100 ]
-
 植物学、化学、物理学についてはエキスパート……などという必要はない。[r]
 日本ではライセンスが必要な仕事ではないので、誰でもできる。[p]
-;[filter name="nojarori_hiyari" grayscale=0 ]
 
 この事務所───TS探偵事務所は俺一人だけの探偵だ。[p]
 
@@ -36,21 +40,23 @@ Shibasaki-TomoyaでTS。[r]
 
 とても華やかさとは縁のない、男だけの寂しい事務所───だったのだが。[p]
 
-
-*joshi_tojo
+*yu_tojo
+[chara_show name="yu" top="0" left="600" layer="0" wait="0"]
 #常葉　悠卯
-「トモちゃーん！下着買ってきてあげたよ！」[p]
+トモちゃーん！下着買ってきてあげたよ！[p]
 
 #柴崎　智也
-「トモちゃんはやめろと言っただろう……」[p]
+トモちゃんはやめろと言っただろう……[p]
 
 #常葉　悠卯
-「えぇーいいじゃん！ほら、これなんかどぉ？[r]
-きわどいのもあるよぉ～」[p]
+えぇーいいじゃん！ほら、これなんかどぉ？
+きわどいのもあるよぉ～[p]
 
 #柴崎　智也
-「普通のでいいのに……」[p]
+普通のでいいのに……[p]
 
+[chara_config talk_focus=none]
+#
 彼女は常葉悠卯（ときは　ゆう）。[r]
 俺が事務所を構える第一鳩村ビルの大家さんの妹だ。[p]
 
@@ -59,46 +65,65 @@ Shibasaki-TomoyaでTS。[r]
 
 今まで俺のことは「柴崎智也！家賃！」と、フルネーム呼びだったのだが、この間からこれである。[p]
 
+[chara_hide name="yu" pos_mode="false" wait="false"]
+[chara_config brightness=40 talk_focus=brightness]
+
+*miyuki_tojo
+[chara_show name="miyuki" top="0" left="600" layer="0" wait="0"]
 #鳩村　美柚季
-「智也さん。悠卯と一緒だったんですね」[p]
+智也さん。悠卯と一緒だったんですね[p]
 
 #柴崎　智也
-「大家さん、どうもどうも」[p]
+大家さん、どうもどうも[p]
 
 #鳩村　美柚季
-「体、どうですか？」[p]
+体、どうですか？[p]
 
 #柴崎　智也
-「いやまぁ……なんとかやっていますよ」[p]
+いやまぁ……なんとかやっていますよ[p]
 
 #鳩村　美柚季
-「私に出来ることならなんでも相談してくださいね」[p]
+私に出来ることならなんでも相談してくださいね[p]
 
-この美しく優しい方は鳩村美柚季（はとむら　みゆき）さん。[r]
+[chara_config talk_focus=none]
+#
+この美しく優しい方は鳩村美柚季（はとむら　みゆき）さん。[p]
 1Fの喫茶店ルブランのマスターであり、このビルの大家さんでもある。[p]
 
 まだ25歳の若い未亡人で、旦那さんの形見分けで貰ったこのビルの維持管理をしている。[p]
 
+[chara_hide name="miyuki" pos_mode="false" wait="false"]
+[chara_config brightness=40 talk_focus=brightness]
+
+*ui_tojo
+[chara_show name="ui" top="0" left="600" layer="0" wait="0"]
 #西春　愛
-「先輩、今いいすか？その……生理用品……」[p]
+先輩、今いいすか？その……生理用品……[p]
 
 #柴崎　智也
-「ありがとう。助かるよ」[p]
+ありがとう。助かるよ[p]
 
 #西春　愛
-「分からないけど多分必要すよね？困ったことがあれば自分に聞いてください」[p]
+分からないけど多分必要すよね？困ったことがあれば自分に聞いてください[p]
 
 #柴崎　智也
-「すまんな」[p]
+すまんな[p]
 
 #西春　愛
-「猫島さんもまた来るって言うし、気を落とさないでほしいっす」[p]
+猫島さんもまた来るって言うし、気を落とさないでほしいっす[p]
 
+[chara_config talk_focus=none]
+#
 このスーツで長身の女は西春愛（にしはる　うい）。[r]
 21歳の2年目刑事で、俺が警官時代の同僚猫島警部の部下だ。[p]
 
 喫茶店ルブランの常連で、顔を合わせるうちに口を聞く関係になった。[r]
 歳が10も離れているのに時々タメ口で話してくるのは警官だからか。[p]
+
+[chara_hide name="ui" pos_mode="false" wait="false"]
+[chara_config brightness=40 talk_focus=brightness]
+
+*toiuwakede
 
 というわけで、男だけの事務所だったはずだが何かと女性の出入りが多い。[p]
 
@@ -106,24 +131,29 @@ Shibasaki-TomoyaでTS。[r]
 
 ……いや、それは正確ではないか。[p]
 
+[chara_show name="yu" top="0" left="600" layer="0" wait="0"]
 #常葉　悠卯
-「ねぇねぇ、トモちゃん。これ着てみてよ」[p]
+ねぇねぇ、トモちゃん。これ着てみてよ[p]
 
 #柴崎　智也
-「ええい、ここでそんな恥ずかしい格好などできるか」[p]
+ええい、ここでそんな恥ずかしい格好などできるか[p]
 
 #常葉　悠卯
-「え～いいじゃん！どうせ女同士なんだしぃ」[p]
+え～いいじゃん！どうせ女同士なんだしぃ[p]
+[chara_hide name="yu" pos_mode="true"]
 
+[chara_show name="tomo" top="0" left="0" layer="0" wait="0"]
+#柴崎　智也
 そう、俺は女の子になってしまったのである。[p]
 
-*kako_banashi
+[chara_hide name="tomo" pos_mode="false"]
+
+*kikkake
+
 きっかけは二週間前。[p]
 
-@jump storage="ts_title.ks"
-
 #柴崎　智也
-「そろそろ髪をどげんかせんといかんな……」[p]
+そろそろ髪をどげんかせんといかんな……[p]
 
 前髪が後退していたのは気づいていたが、そろそろごまかしきれなくなってきた。[r]
 証明写真を並べると前回比ボリュームダウンが一目瞭然。[p]
@@ -160,19 +190,21 @@ Shibasaki-TomoyaでTS。[r]
 
 そんなことを考えながら街を歩いているときだった。[p]
 
-#キャッチの女性
-「そこのお兄さん！」[p]
-
-#柴崎　智也
-「？」[p]
-
-三十路を捕まえてお兄さんというのは風俗か保険屋だけだ。[p]
+*chatch
 
 #キャッチの女性
-「いま、育毛プランのサンプルをお試しいただいているんですけど如何ですか？」[p]
+そこのお兄さん！[p]
 
 #柴崎　智也
-「育毛？」[p]
+？[p]
+
+三十路を捕まえてお兄さんというのは風俗か保険屋だけだ。[r]
+
+#キャッチの女性
+いま、育毛プランのサンプルをお試しいただいているんですけど如何ですか？[p]
+
+#柴崎　智也
+育毛？[p]
 
 暗にこのハゲーって言ってるのかよ。[r]
 失礼だな。[p]
@@ -180,25 +212,25 @@ Shibasaki-TomoyaでTS。[r]
 だが渡りに船のキャッチだ。[p]
 
 #柴崎　智也
-「でもお高いんでしょう？」[p]
+でもお高いんでしょう？[p]
 
 #キャッチの女性
-「それがなんと今回は無料でお受けいただけます！」[p]
+それがなんと今回は無料でお受けいただけます！[p]
 
 #柴崎　智也
-「無料！？」[p]
+無料！？[p]
 
 #キャッチの女性
-「当社特製の女性ホルモンマシマシ剤を投与することで、ロングヘアも夢じゃありませんよ！」[p]
+当社特製の女性ホルモンマシマシ剤を投与することで、ロングヘアも夢じゃありませんよ！[p]
 
 #柴崎　智也
-「じゃ、じゃあ……ちょっと話を聞くだけでも」[p]
+じゃ、じゃあ……ちょっと話を聞くだけでも[p]
 
-………………。[r]
-…………。[r]
+………………。[p]
+…………。[p]
 ……。[p]
 
-
+*kiokun_no_togire
 
 そこで俺の記憶は途切れている。[p]
 
@@ -227,17 +259,27 @@ Shibasaki-TomoyaでTS。[r]
 
 そろそろ飯を食うために仕事をしなきゃならない。[p]
 
-#柴崎　智也
-「何か事件でもないかな……」[p]
+*nanika_jiken
 
+[chara_show name="tomo" top="0" left="0" layer="0" wait="0"]
+#柴崎　智也
+何か事件でもないかな……[p]
+
+[chara_show name="ui" top="0" left="600" layer="0" wait="0"]
 #西春　愛
-「女になったのは事件じゃないすか？」[p]
+女になったのは事件じゃないすか？[p]
 
 #柴崎　智也
-「いや、もっとマシな事件がいいんだけどさ……」[p]
+いや、もっとマシな事件がいいんだけどさ……[p]
 
-まったく、これからどうなっちまうんだろうな……。[p]
+[chara_hide name="tomo" pos_mode="false" wait="false"]
+[chara_hide name="ui" pos_mode="false" wait="true"]
+
+
+まったく、これからどうなっちまうんだろうな……。[r]
+
 [layopt layer="message0" visible="false"]
+[hidemenubutton]
 
-@jump storage="ts_title.ks"
+@jump storage="ts_map.ks"
 [s]

@@ -21,63 +21,65 @@
 [chara_new name="rino" storage="chara/rino/rino_stand.png" jname="河越　凜乃"]
 
 ;キャラクター登場
-[chara_config talk_focus="brightness" ]
+;[chara_config talk_focus="brightness" ]
 
 ;メッセージウィンドウの表示
 [layopt layer=message0 visible=true]
 
 *start
-[chara_show name="tomo" top="0" left="0" layer="0" wait="0"]
+[chara_show name="tomo" top="50" left="0" layer="0" wait="0"]
 #柴崎　智也
 柴崎　智也[p]
 
-[chara_show name="rino" top="200" left="700" layer="0" wait="0"]
+[chara_show name="yu" top="0" left="350" layer="0" wait="0"]
+[chara_show name="rino" top="180" left="700" layer="0" wait="0"]
 #河越　凜乃
-河越　凜乃[p]
+河越　凜乃55%[p]
 
-[chara_hide name="rino" pos_mode="false"]
+[chara_hide name="rino" pos_mode="false" wait="false"]
 
 [chara_show name="noja" top="250" left="800" layer="0" wait="0"]
 #ロリ娘？
-ロリ娘？[p]
+ロリ娘？55%[p]
 
-[chara_hide name="noja" pos_mode="false"]
-
-[chara_show name="yu" top="0" left="600" layer="0" wait="0"]
-#常葉　悠卯
-常葉　悠卯[p]
-
-[chara_hide name="yu" pos_mode="false"]
+[chara_hide name="noja" pos_mode="false" wait="false"]
 
 [chara_show name="miyuki" top="0" left="600" layer="0" wait="0"]
 #鳩村　美柚季
 鳩村　美柚季[p]
 
-[chara_hide name="miyuki" pos_mode="false"]
+[chara_hide name="miyuki" pos_mode="false" wait="false"]
 
 [chara_show name="ui" top="0" left="600" layer="0" wait="0"]
 #西春　愛
 西春　愛[p]
 
-[chara_hide name="ui" pos_mode="false"]
+[chara_hide name="ui" pos_mode="false" wait="false"]
 
 [chara_show name="nekoshima" top="0" left="600" layer="0" wait="0"]
 #猫島警部
 猫島警部[p]
 
-[chara_hide name="nekoshima" pos_mode="false"]
+[chara_hide name="nekoshima" pos_mode="false" wait="false"]
 
 [chara_show name="takao" top="0" left="600" layer="0" wait="0"]
 #浅川　鷹貨夫
 浅川　鷹貨夫[p]
 
-[chara_hide name="takao" pos_mode="false"]
+[chara_hide name="takao" pos_mode="false" wait="false"]
 
 [chara_show name="fumie" top="0" left="600" layer="0" wait="0"]
 #荻窪　文絵
 荻窪　文絵[p]
 
-[chara_hide name="fumie" pos_mode="true"]
+[chara_hide name="fumie" pos_mode="false" wait="false"]
+
+[chara_hide name="yu" pos_mode="false" wait="false"]
+[chara_show name="yu" top="0" left="600" layer="0" wait="0"]
+#常葉　悠卯
+常葉　悠卯[p]
+
+[chara_hide name="yu" pos_mode="true"]
 
 #柴崎　智也
 柴崎　智也 center[p]
@@ -87,5 +89,5 @@
 
 [chara_hide_all]
 [hidemenubutton]
-@jump storage="test_map.ks" target="init"
+@jump storage="ts_title.ks"
 [s]

@@ -1,14 +1,7 @@
 ;一番最初に呼び出されるファイル
-;[plugin name="advancedaudio"]
 [plugin name=intro_loop]
-;[plugin name=alreadyreadskip_ex]
 
 [title name="ＴＳ探偵"]
-
-[iscript]
-f.story_step=[-1,-1,-1]	; エピソードごとのストーリーの進捗
-sf.type_r18=false	; R18の場合は真
-[endscript]
 
 [stop_keyconfig]
 
@@ -20,7 +13,7 @@ sf.type_r18=false	; R18の場合は真
 
 ;既読管理
 ;未読スキップオフ
-[config_record_label skip=false]
+;[config_record_label skip=false]
 ;既読カウントリセット
 ;[eval exp="delete sf.record"]
 ;CGモードリセット
@@ -28,6 +21,11 @@ sf.type_r18=false	; R18の場合は真
 
 ;メッセージボックスは非表示
 @layopt layer="message" visible=false
+
+;-------------------------------------------------------------------------------
+[iscript]
+sf.type_r18=true	; R18の場合は真
+[endscript]
 
 ;-------------------------------------------------------------------------------
 ;メッセージエリアの設定
@@ -52,7 +50,6 @@ sf.type_r18=false	; R18の場合は真
 
 ;既読テキストのカラー設定
 [config_record_label color="0x87cefa"]
-[config_record_label skip=true]
 
 [endmacro]
 ;-------------------------------------------------------------------------------
@@ -62,7 +59,7 @@ sf.type_r18=false	; R18の場合は真
 [hidemenubutton]
 
 ;タイトル画面へ移動
-@jump storage="test_title.ks"
+@jump storage="ts_title.ks"
 
 [s]
 
