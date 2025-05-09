@@ -6,6 +6,7 @@
 @bg storage ="title.jpg" time=100
 @wait time = 200
 [hidemenubutton]
+
 ;-------------------------------------------------------------------------------
 ;メッセージウィンドウの非表示
 [layopt layer=message0 visible=false]
@@ -31,7 +32,7 @@ f.story_step=[-1,-1,-1]	; エピソードごとのストーリーの進捗
 [endif]
 [glink text="シナリオテスト" size=20 width=500 x=630 y=300 color=blue target=test_scenario ]
 ;[glink text="シナリオテスト２" size=20 width=500 x=630 y=300 color=blue target=test_scenario2 ]
-[glink text="キャラ表示移動テスト" size=20 width=500 x=630 y=360 color=blue target=test_chara ]
+;[glink text="キャラ表示移動テスト" size=20 width=500 x=630 y=360 color=blue target=test_chara ]
 [glink text="キャラ表示効果テスト" size=20 width=500 x=630 y=420 color=blue target=test_chara2 ]
 [glink text="キャラテスト３" size=20 width=500 x=630 y=480 color=blue target=test_chara3 ]
 [glink text="サウンドテスト" size=20 width=500 x=630 y=540 color=blue target=test_sound ]

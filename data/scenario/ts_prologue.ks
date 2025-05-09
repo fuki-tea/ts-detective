@@ -9,24 +9,19 @@
 
 [bg storage="BG02.png" time="100"]
 
-;メッセージエリアの設定
-[message_area_scenario]
-
-
-;このゲームで登場するキャラクターを宣言
-[chara_new name="tomo" storage="chara/tomo/tomo_stand.png" jname="柴崎　智也"  ]
-[chara_new name="yu" storage="chara/yu/yu_stand.png" jname="常葉　悠卯"]
-[chara_new name="miyuki" storage="chara/miyuki/miyuki_stand.png" jname="鳩村　美柚季"]
-[chara_new name="ui" storage="chara/ui/ui_stand.png" jname="西春　愛"]
-
 ;喋っていないキャラに対するエフェクト
 [chara_config brightness=40 talk_focus=brightness]
 
 [if exp="sf.record.trail_ts_prologue_scenario_end !== undefined"]
-[button_read_skip]
+[glink text="既読スキップする" size=20 width=200 x=230 y=300 color=blue target=scenario_end ]
+[glink text="しない" size=20 width=200 x=730 y=300 color=blue target=scenario_start ]
+[s]
 [endif]
 
 *scenario_start
+;メッセージエリアの設定
+[message_area_scenario]
+
 #
 俺の名前は柴崎智也。[r]
 最近、前髪の生え際が気になる32歳。職業は私立探偵だ。[p]
