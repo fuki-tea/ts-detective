@@ -4,7 +4,7 @@
 [clearfix]
 [start_keyconfig]
 
-[bg storage="BG03.png" time="100"]
+[bg storage="BG01_jimusho_night.png" time="100"]
 
 ;メッセージエリアの設定
 [message_area_scenario]
@@ -31,7 +31,11 @@
 #柴崎　智也
 柴崎　智也[p]
 
-[chara_show name="yu" top="0" left="350" layer="0" wait="0"]
+;悠卯登場
+[chara_show name="yu" top="0" left="600" layer="0" wait="0"]
+;悠卯移動
+[chara_move name="yu" top="0" left="350" anim="true" effect="easeInSine" time="500" wait="true"]
+
 [chara_show name="rino" top="180" left="700" layer="0" wait="0"]
 #河越　凜乃
 河越　凜乃55%[p]
@@ -74,11 +78,11 @@
 
 [chara_hide name="fumie" pos_mode="false" wait="false"]
 
-[chara_hide name="yu" pos_mode="false" wait="false"]
-[chara_show name="yu" top="0" left="600" layer="0" wait="0"]
+[chara_move name="yu" top="0" left="600" anim="true" effect="easeInSine" time="500" wait="true"]
 #常葉　悠卯
 常葉　悠卯[p]
 
+;悠卯が消えるときに残ったキャラ位置が自動調整される
 [chara_hide name="yu" pos_mode="true"]
 
 #柴崎　智也

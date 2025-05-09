@@ -22,7 +22,11 @@
 ;喋っていないキャラに対するエフェクト
 [chara_config brightness=40 talk_focus=brightness]
 
-*porologue_start
+[if exp="sf.record.trail_ts_prologue_scenario_end !== undefined"]
+[button_read_skip]
+[endif]
+
+*scenario_start
 #
 俺の名前は柴崎智也。[r]
 最近、前髪の生え際が気になる32歳。職業は私立探偵だ。[p]
@@ -149,7 +153,7 @@ Shibasaki-TomoyaでTS。[r]
 [chara_hide name="tomo" pos_mode="false"]
 
 *kikkake
-
+[bg storage="BG03.png" time="100"]
 きっかけは二週間前。[p]
 
 #柴崎　智也
@@ -231,6 +235,7 @@ Shibasaki-TomoyaでTS。[r]
 ……。[p]
 
 *kiokun_no_togire
+[freeimage layer="base" time="100" wait="false"]
 
 そこで俺の記憶は途切れている。[p]
 
@@ -260,6 +265,7 @@ Shibasaki-TomoyaでTS。[r]
 そろそろ飯を食うために仕事をしなきゃならない。[p]
 
 *nanika_jiken
+[bg storage="BG02.png" time="100"]
 
 [chara_show name="tomo" top="0" left="0" layer="0" wait="0"]
 #柴崎　智也
@@ -272,14 +278,16 @@ Shibasaki-TomoyaでTS。[r]
 #柴崎　智也
 いや、もっとマシな事件がいいんだけどさ……[p]
 
-[chara_hide name="tomo" pos_mode="false" wait="false"]
-[chara_hide name="ui" pos_mode="false" wait="true"]
+[chara_hide name="ui" pos_mode="false" wait="false"]
 
 
-まったく、これからどうなっちまうんだろうな……。[r]
+まったく、これからどうなっちまうんだろうな……。[p]
 
+[chara_hide name="tomo" pos_mode="false" wait="false" time="0"]
 [layopt layer="message0" visible="false"]
 [hidemenubutton]
+[freeimage layer="base" time="100" wait="true"]
 
+*scenario_end
 @jump storage="ts_map.ks"
 [s]

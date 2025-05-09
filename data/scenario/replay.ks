@@ -54,7 +54,7 @@
 tf.system.flag_replay = false;
 [endscript]
 
-@jump storage=title.ks
+@jump storage=ts_title.ks
 
 *nextpage
 [emb exp="tf.page++;"]
