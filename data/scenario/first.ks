@@ -68,6 +68,8 @@ sf.type_r18=true	; R18の場合は真
 [chara_new name="fumie" storage="chara/fumie/fumie_stand.png" jname="荻窪　文絵"]
 [chara_new name="noja" storage="chara/nojarori/noja_stand.png" jname="ロリ娘？"]
 [chara_new name="rino" storage="chara/rino/rino_stand.png" jname="河越　凜乃"]
+[chara_new name="johoya" storage="chara/johoya/johoya_stand.png" jname="情報屋"]
+[chara_new name="sojuro" storage="chara/sojuro/sojuro_stand.png" jname="十二橋　総渋朗"]
 
 ;-------------------------------------------------------------------------------
 ;タイトル画面へ移動
