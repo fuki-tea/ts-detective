@@ -7,7 +7,7 @@
 ;メッセージエリアの設定
 [message_area_scenario]
 
-[chara_new name="tomo_zoom" storage="../bgimage/stl1-02/stl1-02d.png" jname=""]
+[chara_new name="tomo_zoom" storage="../bgimage/stl1-02/stl1-02d-full.png" jname=""]
 
 ;メッセージウィンドウの表示
 [layopt layer=message0 visible=true]
@@ -34,7 +34,7 @@ stl1-02/stl1-02c.png
 
 [layopt layer="message0" visible="false"]
 [chara_show name="tomo_zoom" width="5120" height="2880" left="-3600" top="-2160" time="1000"]
-[chara_move name="tomo_zoom" width="1280" height="720" left="0" top="0" anim="true" effect="easeInQuint" time="1000" wait="true"]
+[chara_move name="tomo_zoom" width="1280" height="720" left="0" top="0" anim="true" effect="easeInQuint" time="1500" wait="true"]
 
 [bg storage="stl1-02/stl1-02d.png" time="0"]
 [chara_hide name="tomo_zoom" wait="true" time="1000"]
@@ -43,6 +43,8 @@ stl1-02/stl1-02c.png
 #
 stl1-02/stl1-02d.png
 [p]
+
+[cg storage="stl1-02/stl1-02a.png"]
 
 [layopt layer="message0" visible="false"]
 
