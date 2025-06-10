@@ -59,8 +59,8 @@ f.current_step=-1
 ;-------------------------------------------------------------------------------
 ; 修了確認
 [macro name="check_end"]
-#
-EP[emb exp="f.current_ep+1"]-[emb exp="f.current_step+1"]/[emb exp="f.current_map"][r]
+;#
+;EP[emb exp="f.current_ep+1"]-[emb exp="f.current_step+1"]/[emb exp="f.current_map"][r]
 [if exp="f.current_ep != -1 && f.current_step == 9"]
 GOOD END[p]
 [emb exp="f.current_ep"]
@@ -77,12 +77,28 @@ BAD END[p]
 [endmacro]
 
 ;-------------------------------------------------------------------------------
-; 次の状態によって動作を変える
+; 次の状態によってシナリオ表示
 [macro name="check_next"]
-[if exp="f.current_ep == -1 && f.current_map != '-'"]
-[freeimage layer="1"]
-[free name="chara_name_area" layer="message0"]
-[jump storage="ts_scenario_ep00.ks"]
+;EP[emb exp="f.current_ep+1"]-[emb exp="f.current_step+1"]/[emb exp="f.current_map"][p]
+
+[if exp="f.current_ep == 1 - 1"]
+
+	[if exp="f.current_step == 1 - 1"]
+
+		[freeimage layer="1"]
+		[layopt layer="message0" visible="false"]
+		[free name="chara_name_area" layer="message0"]
+		[jump storage="EP1_01.ks"]
+
+	[endif]
+
+[elsif exp="f.current_ep == -1 && f.current_map != '-'"]
+
+	[freeimage layer="1"]
+	[layopt layer="message0" visible="false"]
+	[free name="chara_name_area" layer="message0"]
+	[jump storage="ts_scenario_ep00.ks"]
+
 [endif]
 [endmacro]
 

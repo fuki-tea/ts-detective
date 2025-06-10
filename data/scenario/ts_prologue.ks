@@ -40,7 +40,7 @@ Shibasaki-TomoyaでTS。[r]
 とても華やかさとは縁のない、男だけの寂しい事務所───だったのだが。[p]
 
 *yu_tojo
-[chara_show name="yu" top="0" left="600" layer="0" wait="0"]
+[chara_show name="01_yu" top="0" left="600" layer="0" wait="0"]
 #常葉　悠卯
 トモちゃーん！下着買ってきてあげたよ！[p]
 
@@ -64,11 +64,11 @@ Shibasaki-TomoyaでTS。[r]
 
 今まで俺のことは「柴崎智也！家賃！」と、フルネーム呼びだったのだが、この間からこれである。[p]
 
-[chara_hide name="yu" pos_mode="false" wait="false"]
+[chara_hide name="01_yu" pos_mode="false" wait="false"]
 [chara_config brightness=40 talk_focus=brightness]
 
 *miyuki_tojo
-[chara_show name="miyuki" top="0" left="600" layer="0" wait="0"]
+[chara_show name="02_miyuki" top="0" left="600" layer="0" wait="0"]
 #鳩村　美柚季
 智也さん。悠卯と一緒だったんですね[p]
 
@@ -91,11 +91,11 @@ Shibasaki-TomoyaでTS。[r]
 
 まだ25歳の若い未亡人で、旦那さんの形見分けで貰ったこのビルの維持管理をしている。[p]
 
-[chara_hide name="miyuki" pos_mode="false" wait="false"]
+[chara_hide name="02_miyuki" pos_mode="false" wait="false"]
 [chara_config brightness=40 talk_focus=brightness]
 
 *ui_tojo
-[chara_show name="ui" top="0" left="600" layer="0" wait="0"]
+[chara_show name="03_ui" top="0" left="600" layer="0" wait="0"]
 #西春　愛
 先輩、今いいすか？その……生理用品……[p]
 
@@ -119,7 +119,7 @@ Shibasaki-TomoyaでTS。[r]
 喫茶店ルブランの常連で、顔を合わせるうちに口を聞く関係になった。[r]
 歳が10も離れているのに時々タメ口で話してくるのは警官だからか。[p]
 
-[chara_hide name="ui" pos_mode="false" wait="false"]
+[chara_hide name="03_ui" pos_mode="false" wait="false"]
 [chara_config brightness=40 talk_focus=brightness]
 
 *toiuwakede
@@ -130,7 +130,7 @@ Shibasaki-TomoyaでTS。[r]
 
 ……いや、それは正確ではないか。[p]
 
-[chara_show name="yu" top="0" left="600" layer="0" wait="0"]
+[chara_show name="01_yu" top="0" left="600" layer="0" wait="0"]
 #常葉　悠卯
 ねぇねぇ、トモちゃん。これ着てみてよ[p]
 
@@ -139,13 +139,13 @@ Shibasaki-TomoyaでTS。[r]
 
 #常葉　悠卯
 え～いいじゃん！どうせ女同士なんだしぃ[p]
-[chara_hide name="yu" pos_mode="true"]
+[chara_hide name="01_yu" pos_mode="true"]
 
-[chara_show name="tomo" top="0" left="0" layer="0" wait="0"]
+[chara_show name="00_tomoya" top="0" left="0" layer="0" wait="0"]
 #柴崎　智也
 そう、俺は女の子になってしまったのである。[p]
 
-[chara_hide name="tomo" pos_mode="false"]
+[chara_hide name="00_tomoya" pos_mode="false"]
 
 *kikkake
 [bg storage="BG03.png" time="100"]
@@ -262,23 +262,23 @@ Shibasaki-TomoyaでTS。[r]
 *nanika_jiken
 [bg storage="BG02.png" time="100"]
 
-[chara_show name="tomo" top="0" left="0" layer="0" wait="0"]
+[chara_show name="00_tomoya" top="0" left="0" layer="0" wait="0"]
 #柴崎　智也
 何か事件でもないかな……[p]
 
-[chara_show name="ui" top="0" left="600" layer="0" wait="0"]
+[chara_show name="03_ui" top="0" left="600" layer="0" wait="0"]
 #西春　愛
 女になったのは事件じゃないすか？[p]
 
 #柴崎　智也
 いや、もっとマシな事件がいいんだけどさ……[p]
 
-[chara_hide name="ui" pos_mode="false" wait="false"]
+[chara_hide name="03_ui" pos_mode="false" wait="false"]
 
 
 まったく、これからどうなっちまうんだろうな……。[p]
 
-[chara_hide name="tomo" pos_mode="false" wait="false" time="0"]
+[chara_hide name="00_tomoya" pos_mode="false" wait="false" time="0"]
 [layopt layer="message0" visible="false"]
 [hidemenubutton]
 [freeimage layer="base" time="100" wait="true"]

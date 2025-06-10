@@ -1,0 +1,333 @@
+*start
+
+;全キャラの立ち絵定義
+[chara_new  name="00_tomoya" storage="chara/00_tomoya/STA00CA.png" jname="柴崎　智也"  ]
+[chara_new  name="01_yu" storage="chara/01_yu/STA01AA.png" jname="常葉　悠卯"  ]
+[chara_new  name="02_miyuki" storage="chara/02_miyuki/STA02AA.png" jname="鳩村　美柚季"  ]
+[chara_new  name="03_ui" storage="chara/03_ui/STA03AA.png" jname="西春　愛"  ]
+[chara_new  name="11_necojima" storage="chara/11_necojima/STA11AA.png" jname="猫島警部"  ]
+[chara_new  name="12_johoya" storage="chara/12_johoya/STA12AA.png" jname="情報屋"  ]
+[chara_new  name="14_fumie" storage="chara/14_fumie/STA14AA.png" jname="高尾　文絵"  ]
+[chara_new  name="15_rino" storage="chara/15_rino/STA15AA.png" jname="河越　凜乃"  ]
+[chara_new  name="19_onise" storage="chara/19_onise/STA19AA.png" jname="鬼瀬　龍一"  ]
+[chara_new  name="21_sojuro" storage="chara/21_sojuro/STA21AA.png" jname="十二橋　総渋朗"  ]
+
+;状況で名前が変わるキャラ
+[chara_new  name="13_takao" storage="chara/13_takao/STA13AA.png" jname="高尾　良治"  ]
+[chara_new  name="13_takao" storage="chara/13_takao/STA13AA.png" jname="高尾　良治？"  ]
+[chara_new  name="13_takao" storage="chara/13_takao/STA13AA.png" jname="浅川　鷹貨夫"  ]
+
+[chara_new  name="17_nojarori" storage="chara/17_nojarori/STA17AA.png" jname="幼女"  ]
+[chara_new  name="17_nojarori" storage="chara/17_nojarori/STA17AA.png" jname="幼女？"  ]
+
+[chara_new  name="22_miyuki(fake)" storage="chara/22_miyuki(fake)/STA22AA.png" jname="マスター"  ]
+[chara_new  name="22_miyuki(fake)" storage="chara/22_miyuki(fake)/STA22AA.png" jname="マスター？"  ]
+[chara_new  name="22_miyuki(fake)" storage="chara/22_miyuki(fake)/STA22AA.png" jname="謎の女"  ]
+
+
+;----------以下表情差分定義----------
+
+;00_智也　制服差分
+[chara_face name="00_tomoya" face="STA00AA" storage="chara/00_tomoya/STA00AA.png"]
+[chara_face name="00_tomoya" face="STA00AB" storage="chara/00_tomoya/STA00AB.png"]
+[chara_face name="00_tomoya" face="STA00AC" storage="chara/00_tomoya/STA00AC.png"]
+[chara_face name="00_tomoya" face="STA00AD" storage="chara/00_tomoya/STA00AD.png"]
+[chara_face name="00_tomoya" face="STA00AE" storage="chara/00_tomoya/STA00AE.png"]
+[chara_face name="00_tomoya" face="STA00AF" storage="chara/00_tomoya/STA00AF.png"]
+[chara_face name="00_tomoya" face="STA00AG" storage="chara/00_tomoya/STA00AG.png"]
+[chara_face name="00_tomoya" face="STA00AH" storage="chara/00_tomoya/STA00AH.png"]
+[chara_face name="00_tomoya" face="STA00AI" storage="chara/00_tomoya/STA00AI.png"]
+
+;00_智也　バイト服差分
+[chara_face name="00_tomoya" face="STA00BA" storage="chara/00_tomoya/STA00BA.png"]
+[chara_face name="00_tomoya" face="STA00BB" storage="chara/00_tomoya/STA00BB.png"]
+[chara_face name="00_tomoya" face="STA00BC" storage="chara/00_tomoya/STA00BC.png"]
+[chara_face name="00_tomoya" face="STA00BD" storage="chara/00_tomoya/STA00BD.png"]
+[chara_face name="00_tomoya" face="STA00BE" storage="chara/00_tomoya/STA00BE.png"]
+[chara_face name="00_tomoya" face="STA00BF" storage="chara/00_tomoya/STA00BF.png"]
+[chara_face name="00_tomoya" face="STA00BG" storage="chara/00_tomoya/STA00BG.png"]
+[chara_face name="00_tomoya" face="STA00BH" storage="chara/00_tomoya/STA00BH.png"]
+[chara_face name="00_tomoya" face="STA00BI" storage="chara/00_tomoya/STA00BI.png"]
+
+;00_智也　私服差分(CAはdefault)
+[chara_face name="00_tomoya" face="STA00CA" storage="chara/00_tomoya/STA00CA.png"]
+[chara_face name="00_tomoya" face="STA00CB" storage="chara/00_tomoya/STA00CB.png"]
+[chara_face name="00_tomoya" face="STA00CC" storage="chara/00_tomoya/STA00CC.png"]
+[chara_face name="00_tomoya" face="STA00CD" storage="chara/00_tomoya/STA00CD.png"]
+[chara_face name="00_tomoya" face="STA00CE" storage="chara/00_tomoya/STA00CE.png"]
+[chara_face name="00_tomoya" face="STA00CF" storage="chara/00_tomoya/STA00CF.png"]
+[chara_face name="00_tomoya" face="STA00CG" storage="chara/00_tomoya/STA00CG.png"]
+[chara_face name="00_tomoya" face="STA00CH" storage="chara/00_tomoya/STA00CH.png"]
+[chara_face name="00_tomoya" face="STA00CI" storage="chara/00_tomoya/STA00CI.png"]
+
+;01_悠卯ポーズ差分A(AAはdefault)
+[chara_face name="01_yu" face="STA01AB" storage="chara/01_yu/STA01AB.png"]
+[chara_face name="01_yu" face="STA01AC" storage="chara/01_yu/STA01AC.png"]
+[chara_face name="01_yu" face="STA01AD" storage="chara/01_yu/STA01AD.png"]
+[chara_face name="01_yu" face="STA01AE" storage="chara/01_yu/STA01AE.png"]
+[chara_face name="01_yu" face="STA01AF" storage="chara/01_yu/STA01AF.png"]
+[chara_face name="01_yu" face="STA01AG" storage="chara/01_yu/STA01AG.png"]
+[chara_face name="01_yu" face="STA01AH" storage="chara/01_yu/STA01AH.png"]
+[chara_face name="01_yu" face="STA01AI" storage="chara/01_yu/STA01AI.png"]
+[chara_face name="01_yu" face="STA01AJ" storage="chara/01_yu/STA01AJ.png"]
+[chara_face name="01_yu" face="STA01AK" storage="chara/01_yu/STA01AK.png"]
+[chara_face name="01_yu" face="STA01AL" storage="chara/01_yu/STA01AL.png"]
+[chara_face name="01_yu" face="STA01AM" storage="chara/01_yu/STA01AM.png"]
+[chara_face name="01_yu" face="STA01AN" storage="chara/01_yu/STA01AN.png"]
+[chara_face name="01_yu" face="STA01AO" storage="chara/01_yu/STA01AO.png"]
+
+;01_悠卯ポーズ差分B
+[chara_face name="01_yu" face="STA01BA" storage="chara/01_yu/STA01BA.png"]
+[chara_face name="01_yu" face="STA01BB" storage="chara/01_yu/STA01BB.png"]
+[chara_face name="01_yu" face="STA01BC" storage="chara/01_yu/STA01BC.png"]
+[chara_face name="01_yu" face="STA01BD" storage="chara/01_yu/STA01BD.png"]
+[chara_face name="01_yu" face="STA01BE" storage="chara/01_yu/STA01BE.png"]
+[chara_face name="01_yu" face="STA01BF" storage="chara/01_yu/STA01BF.png"]
+[chara_face name="01_yu" face="STA01BG" storage="chara/01_yu/STA01BG.png"]
+[chara_face name="01_yu" face="STA01BH" storage="chara/01_yu/STA01BH.png"]
+[chara_face name="01_yu" face="STA01BI" storage="chara/01_yu/STA01BI.png"]
+[chara_face name="01_yu" face="STA01BJ" storage="chara/01_yu/STA01BJ.png"]
+[chara_face name="01_yu" face="STA01BK" storage="chara/01_yu/STA01BK.png"]
+[chara_face name="01_yu" face="STA01BL" storage="chara/01_yu/STA01BL.png"]
+[chara_face name="01_yu" face="STA01BM" storage="chara/01_yu/STA01BM.png"]
+[chara_face name="01_yu" face="STA01BN" storage="chara/01_yu/STA01BN.png"]
+[chara_face name="01_yu" face="STA01BO" storage="chara/01_yu/STA01BO.png"]
+
+;02_美柚季喫茶差分A(AAはdefault)
+[chara_face name="02_miyuki" face="STA02AB" storage="chara/02_miyuki/STA02AB.png"]
+[chara_face name="02_miyuki" face="STA02AC" storage="chara/02_miyuki/STA02AC.png"]
+[chara_face name="02_miyuki" face="STA02AD" storage="chara/02_miyuki/STA02AD.png"]
+[chara_face name="02_miyuki" face="STA02AE" storage="chara/02_miyuki/STA02AE.png"]
+[chara_face name="02_miyuki" face="STA02AF" storage="chara/02_miyuki/STA02AF.png"]
+[chara_face name="02_miyuki" face="STA02AG" storage="chara/02_miyuki/STA02AG.png"]
+[chara_face name="02_miyuki" face="STA02AH" storage="chara/02_miyuki/STA02AH.png"]
+[chara_face name="02_miyuki" face="STA02AI" storage="chara/02_miyuki/STA02AI.png"]
+[chara_face name="02_miyuki" face="STA02AJ" storage="chara/02_miyuki/STA02AJ.png"]
+[chara_face name="02_miyuki" face="STA02AK" storage="chara/02_miyuki/STA02AK.png"]
+[chara_face name="02_miyuki" face="STA02AL" storage="chara/02_miyuki/STA02AL.png"]
+[chara_face name="02_miyuki" face="STA02AM" storage="chara/02_miyuki/STA02AM.png"]
+
+;02_美柚季喫茶差分B
+[chara_face name="02_miyuki" face="STA02BA" storage="chara/02_miyuki/STA02BA.png"]
+[chara_face name="02_miyuki" face="STA02BB" storage="chara/02_miyuki/STA02BB.png"]
+[chara_face name="02_miyuki" face="STA02BC" storage="chara/02_miyuki/STA02BC.png"]
+[chara_face name="02_miyuki" face="STA02BD" storage="chara/02_miyuki/STA02BD.png"]
+[chara_face name="02_miyuki" face="STA02BE" storage="chara/02_miyuki/STA02BE.png"]
+[chara_face name="02_miyuki" face="STA02BF" storage="chara/02_miyuki/STA02BF.png"]
+[chara_face name="02_miyuki" face="STA02BG" storage="chara/02_miyuki/STA02BG.png"]
+[chara_face name="02_miyuki" face="STA02BH" storage="chara/02_miyuki/STA02BH.png"]
+[chara_face name="02_miyuki" face="STA02BI" storage="chara/02_miyuki/STA02BI.png"]
+[chara_face name="02_miyuki" face="STA02BJ" storage="chara/02_miyuki/STA02BJ.png"]
+[chara_face name="02_miyuki" face="STA02BK" storage="chara/02_miyuki/STA02BK.png"]
+[chara_face name="02_miyuki" face="STA02BL" storage="chara/02_miyuki/STA02BL.png"]
+[chara_face name="02_miyuki" face="STA02BM" storage="chara/02_miyuki/STA02BM.png"]
+
+;02_美柚季セーター差分C
+[chara_face name="02_miyuki" face="STA02CA" storage="chara/02_miyuki/STA02CA.png"]
+[chara_face name="02_miyuki" face="STA02CB" storage="chara/02_miyuki/STA02CB.png"]
+[chara_face name="02_miyuki" face="STA02CC" storage="chara/02_miyuki/STA02CC.png"]
+[chara_face name="02_miyuki" face="STA02CD" storage="chara/02_miyuki/STA02CD.png"]
+[chara_face name="02_miyuki" face="STA02CE" storage="chara/02_miyuki/STA02CE.png"]
+[chara_face name="02_miyuki" face="STA02CF" storage="chara/02_miyuki/STA02CF.png"]
+[chara_face name="02_miyuki" face="STA02CG" storage="chara/02_miyuki/STA02CG.png"]
+[chara_face name="02_miyuki" face="STA02CH" storage="chara/02_miyuki/STA02CH.png"]
+[chara_face name="02_miyuki" face="STA02CI" storage="chara/02_miyuki/STA02CI.png"]
+[chara_face name="02_miyuki" face="STA02CJ" storage="chara/02_miyuki/STA02CJ.png"]
+[chara_face name="02_miyuki" face="STA02CK" storage="chara/02_miyuki/STA02CK.png"]
+[chara_face name="02_miyuki" face="STA02CL" storage="chara/02_miyuki/STA02CL.png"]
+[chara_face name="02_miyuki" face="STA02CM" storage="chara/02_miyuki/STA02CM.png"]
+
+;02_美柚季セーター差分D
+[chara_face name="02_miyuki" face="STA02DA" storage="chara/02_miyuki/STA02DA.png"]
+[chara_face name="02_miyuki" face="STA02DB" storage="chara/02_miyuki/STA02DB.png"]
+[chara_face name="02_miyuki" face="STA02DC" storage="chara/02_miyuki/STA02DC.png"]
+[chara_face name="02_miyuki" face="STA02DD" storage="chara/02_miyuki/STA02DD.png"]
+[chara_face name="02_miyuki" face="STA02DE" storage="chara/02_miyuki/STA02DE.png"]
+[chara_face name="02_miyuki" face="STA02DF" storage="chara/02_miyuki/STA02DF.png"]
+[chara_face name="02_miyuki" face="STA02DG" storage="chara/02_miyuki/STA02DG.png"]
+[chara_face name="02_miyuki" face="STA02DH" storage="chara/02_miyuki/STA02DH.png"]
+[chara_face name="02_miyuki" face="STA02DI" storage="chara/02_miyuki/STA02DI.png"]
+[chara_face name="02_miyuki" face="STA02DJ" storage="chara/02_miyuki/STA02DJ.png"]
+[chara_face name="02_miyuki" face="STA02DK" storage="chara/02_miyuki/STA02DK.png"]
+[chara_face name="02_miyuki" face="STA02DL" storage="chara/02_miyuki/STA02DL.png"]
+[chara_face name="02_miyuki" face="STA02DM" storage="chara/02_miyuki/STA02DM.png"]
+
+;02_美柚季セーター差分E
+[chara_face name="02_miyuki" face="STA02EA" storage="chara/02_miyuki/STA02EA.png"]
+[chara_face name="02_miyuki" face="STA02EB" storage="chara/02_miyuki/STA02EB.png"]
+[chara_face name="02_miyuki" face="STA02EC" storage="chara/02_miyuki/STA02EC.png"]
+[chara_face name="02_miyuki" face="STA02ED" storage="chara/02_miyuki/STA02ED.png"]
+[chara_face name="02_miyuki" face="STA02EE" storage="chara/02_miyuki/STA02EE.png"]
+[chara_face name="02_miyuki" face="STA02EF" storage="chara/02_miyuki/STA02EF.png"]
+[chara_face name="02_miyuki" face="STA02EG" storage="chara/02_miyuki/STA02EG.png"]
+[chara_face name="02_miyuki" face="STA02EH" storage="chara/02_miyuki/STA02EH.png"]
+[chara_face name="02_miyuki" face="STA02EI" storage="chara/02_miyuki/STA02EI.png"]
+[chara_face name="02_miyuki" face="STA02EJ" storage="chara/02_miyuki/STA02EJ.png"]
+[chara_face name="02_miyuki" face="STA02EK" storage="chara/02_miyuki/STA02EK.png"]
+[chara_face name="02_miyuki" face="STA02EL" storage="chara/02_miyuki/STA02EL.png"]
+[chara_face name="02_miyuki" face="STA02EM" storage="chara/02_miyuki/STA02EM.png"]
+
+;02_美柚季喫茶差分F
+[chara_face name="02_miyuki" face="STA02FA" storage="chara/02_miyuki/STA02FA.png"]
+[chara_face name="02_miyuki" face="STA02FB" storage="chara/02_miyuki/STA02FB.png"]
+[chara_face name="02_miyuki" face="STA02FC" storage="chara/02_miyuki/STA02FC.png"]
+[chara_face name="02_miyuki" face="STA02FD" storage="chara/02_miyuki/STA02FD.png"]
+[chara_face name="02_miyuki" face="STA02FE" storage="chara/02_miyuki/STA02FE.png"]
+[chara_face name="02_miyuki" face="STA02FF" storage="chara/02_miyuki/STA02FF.png"]
+[chara_face name="02_miyuki" face="STA02FG" storage="chara/02_miyuki/STA02FG.png"]
+[chara_face name="02_miyuki" face="STA02FH" storage="chara/02_miyuki/STA02FH.png"]
+[chara_face name="02_miyuki" face="STA02FI" storage="chara/02_miyuki/STA02FI.png"]
+[chara_face name="02_miyuki" face="STA02FJ" storage="chara/02_miyuki/STA02FJ.png"]
+[chara_face name="02_miyuki" face="STA02FK" storage="chara/02_miyuki/STA02FK.png"]
+[chara_face name="02_miyuki" face="STA02FL" storage="chara/02_miyuki/STA02FL.png"]
+[chara_face name="02_miyuki" face="STA02FM" storage="chara/02_miyuki/STA02FM.png"]
+
+;02_美柚季喫茶差分G
+[chara_face name="02_miyuki" face="STA02GA" storage="chara/02_miyuki/STA02GA.png"]
+[chara_face name="02_miyuki" face="STA02GB" storage="chara/02_miyuki/STA02GB.png"]
+[chara_face name="02_miyuki" face="STA02GC" storage="chara/02_miyuki/STA02GC.png"]
+[chara_face name="02_miyuki" face="STA02GD" storage="chara/02_miyuki/STA02GD.png"]
+[chara_face name="02_miyuki" face="STA02GE" storage="chara/02_miyuki/STA02GE.png"]
+[chara_face name="02_miyuki" face="STA02GF" storage="chara/02_miyuki/STA02GF.png"]
+[chara_face name="02_miyuki" face="STA02GG" storage="chara/02_miyuki/STA02GG.png"]
+[chara_face name="02_miyuki" face="STA02GH" storage="chara/02_miyuki/STA02GH.png"]
+[chara_face name="02_miyuki" face="STA02GI" storage="chara/02_miyuki/STA02GI.png"]
+[chara_face name="02_miyuki" face="STA02GJ" storage="chara/02_miyuki/STA02GJ.png"]
+[chara_face name="02_miyuki" face="STA02GK" storage="chara/02_miyuki/STA02GK.png"]
+[chara_face name="02_miyuki" face="STA02GL" storage="chara/02_miyuki/STA02GL.png"]
+[chara_face name="02_miyuki" face="STA02GM" storage="chara/02_miyuki/STA02GM.png"]
+
+;03_愛差分A(AAはdefault)
+[chara_face name="03_ui" face="STA03AB" storage="chara/03_ui/STA03AB.png"]
+[chara_face name="03_ui" face="STA03AC" storage="chara/03_ui/STA03AC.png"]
+[chara_face name="03_ui" face="STA03AD" storage="chara/03_ui/STA03AD.png"]
+[chara_face name="03_ui" face="STA03AE" storage="chara/03_ui/STA03AE.png"]
+[chara_face name="03_ui" face="STA03AF" storage="chara/03_ui/STA03AF.png"]
+[chara_face name="03_ui" face="STA03AG" storage="chara/03_ui/STA03AG.png"]
+[chara_face name="03_ui" face="STA03AH" storage="chara/03_ui/STA03AH.png"]
+[chara_face name="03_ui" face="STA03AI" storage="chara/03_ui/STA03AI.png"]
+[chara_face name="03_ui" face="STA03AJ" storage="chara/03_ui/STA03AJ.png"]
+[chara_face name="03_ui" face="STA03AK" storage="chara/03_ui/STA03AK.png"]
+[chara_face name="03_ui" face="STA03AL" storage="chara/03_ui/STA03AL.png"]
+[chara_face name="03_ui" face="STA03AM" storage="chara/03_ui/STA03AM.png"]
+[chara_face name="03_ui" face="STA03AN" storage="chara/03_ui/STA03AN.png"]
+[chara_face name="03_ui" face="STA03AO" storage="chara/03_ui/STA03AO.png"]
+[chara_face name="03_ui" face="STA03AP" storage="chara/03_ui/STA03AP.png"]
+[chara_face name="03_ui" face="STA03AQ" storage="chara/03_ui/STA03AQ.png"]
+[chara_face name="03_ui" face="STA03AR" storage="chara/03_ui/STA03AR.png"]
+[chara_face name="03_ui" face="STA03AS" storage="chara/03_ui/STA03AS.png"]
+
+;11_猫島警部差分A(AAはdefault)
+[chara_face name="11_necojima" face="STA11AB" storage="chara/11_necojima/STA11AB.png"]
+[chara_face name="11_necojima" face="STA11AC" storage="chara/11_necojima/STA11AC.png"]
+[chara_face name="11_necojima" face="STA11AD" storage="chara/11_necojima/STA11AD.png"]
+[chara_face name="11_necojima" face="STA11AE" storage="chara/11_necojima/STA11AE.png"]
+[chara_face name="11_necojima" face="STA11AF" storage="chara/11_necojima/STA11AF.png"]
+[chara_face name="11_necojima" face="STA11AG" storage="chara/11_necojima/STA11AG.png"]
+[chara_face name="11_necojima" face="STA11AH" storage="chara/11_necojima/STA11AH.png"]
+[chara_face name="11_necojima" face="STA11AI" storage="chara/11_necojima/STA11AI.png"]
+
+;11_猫島警部差分B
+[chara_face name="11_necojima" face="STA11BA" storage="chara/11_necojima/STA11BA.png"]
+[chara_face name="11_necojima" face="STA11BB" storage="chara/11_necojima/STA11BB.png"]
+[chara_face name="11_necojima" face="STA11BC" storage="chara/11_necojima/STA11BC.png"]
+[chara_face name="11_necojima" face="STA11BD" storage="chara/11_necojima/STA11BD.png"]
+[chara_face name="11_necojima" face="STA11BE" storage="chara/11_necojima/STA11BE.png"]
+[chara_face name="11_necojima" face="STA11BF" storage="chara/11_necojima/STA11BF.png"]
+[chara_face name="11_necojima" face="STA11BG" storage="chara/11_necojima/STA11BG.png"]
+[chara_face name="11_necojima" face="STA11BH" storage="chara/11_necojima/STA11BH.png"]
+[chara_face name="11_necojima" face="STA11BI" storage="chara/11_necojima/STA11BI.png"]
+
+;12_情報屋は差分なしのため定義せず
+
+;13_タカオ差分A(AAはdefault)
+[chara_face name="13_takao" face="STA13AB" storage="chara/13_takao/STA13AB.png"]
+[chara_face name="13_takao" face="STA13AC" storage="chara/13_takao/STA13AC.png"]
+[chara_face name="13_takao" face="STA13AD" storage="chara/13_takao/STA13AD.png"]
+[chara_face name="13_takao" face="STA13AE" storage="chara/13_takao/STA13AE.png"]
+[chara_face name="13_takao" face="STA13AF" storage="chara/13_takao/STA13AF.png"]
+
+;13_タカオ差分B
+[chara_face name="13_takao" face="STA13BA" storage="chara/13_takao/STA13BA.png"]
+[chara_face name="13_takao" face="STA13BB" storage="chara/13_takao/STA13BB.png"]
+[chara_face name="13_takao" face="STA13BC" storage="chara/13_takao/STA13BC.png"]
+[chara_face name="13_takao" face="STA13BD" storage="chara/13_takao/STA13BD.png"]
+[chara_face name="13_takao" face="STA13BE" storage="chara/13_takao/STA13BE.png"]
+[chara_face name="13_takao" face="STA13BF" storage="chara/13_takao/STA13BF.png"]
+
+;14_文絵(AAはdefault)
+[chara_face name="14_fumie" face="STA14AB" storage="chara/14_fumie/STA14AB.png"]
+[chara_face name="14_fumie" face="STA14AC" storage="chara/14_fumie/STA14AC.png"]
+[chara_face name="14_fumie" face="STA14AD" storage="chara/14_fumie/STA14AD.png"]
+
+;15_凜乃(AAはdefault)
+[chara_face name="15_rino" face="STA15AB" storage="chara/15_rino/STA15AB.png"]
+
+;17_ロリ娘？(AAはdefault)
+[chara_face name="17_nojarori" face="STA17AB" storage="chara/17_nojarori/STA17AB.png"]
+[chara_face name="17_nojarori" face="STA17AC" storage="chara/17_nojarori/STA17AC.png"]
+[chara_face name="17_nojarori" face="STA17AD" storage="chara/17_nojarori/STA17AD.png"]
+[chara_face name="17_nojarori" face="STA17AE" storage="chara/17_nojarori/STA17AE.png"]
+[chara_face name="17_nojarori" face="STA17AF" storage="chara/17_nojarori/STA17AF.png"]
+[chara_face name="17_nojarori" face="STA17AG" storage="chara/17_nojarori/STA17AG.png"]
+
+;19_鬼瀬差分A(AAはdefault)
+[chara_face name="19_onise" face="STA19AB" storage="chara/19_onise/STA19AB.png"]
+[chara_face name="19_onise" face="STA19AC" storage="chara/19_onise/STA19AC.png"]
+[chara_face name="19_onise" face="STA19AD" storage="chara/19_onise/STA19AD.png"]
+[chara_face name="19_onise" face="STA19AE" storage="chara/19_onise/STA19AE.png"]
+[chara_face name="19_onise" face="STA19AF" storage="chara/19_onise/STA19AF.png"]
+[chara_face name="19_onise" face="STA19AG" storage="chara/19_onise/STA19AG.png"]
+[chara_face name="19_onise" face="STA19AH" storage="chara/19_onise/STA19AH.png"]
+[chara_face name="19_onise" face="STA19AI" storage="chara/19_onise/STA19AI.png"]
+[chara_face name="19_onise" face="STA19AJ" storage="chara/19_onise/STA19AJ.png"]
+[chara_face name="19_onise" face="STA19AK" storage="chara/19_onise/STA19AK.png"]
+[chara_face name="19_onise" face="STA19AL" storage="chara/19_onise/STA19AL.png"]
+[chara_face name="19_onise" face="STA19AM" storage="chara/19_onise/STA19AM.png"]
+
+;19_鬼瀬差分B
+[chara_face name="19_onise" face="STA19BA" storage="chara/19_onise/STA19BA.png"]
+[chara_face name="19_onise" face="STA19BB" storage="chara/19_onise/STA19BB.png"]
+[chara_face name="19_onise" face="STA19BC" storage="chara/19_onise/STA19BC.png"]
+[chara_face name="19_onise" face="STA19BD" storage="chara/19_onise/STA19BD.png"]
+[chara_face name="19_onise" face="STA19BE" storage="chara/19_onise/STA19BE.png"]
+[chara_face name="19_onise" face="STA19BF" storage="chara/19_onise/STA19BF.png"]
+[chara_face name="19_onise" face="STA19BG" storage="chara/19_onise/STA19BG.png"]
+[chara_face name="19_onise" face="STA19BH" storage="chara/19_onise/STA19BH.png"]
+[chara_face name="19_onise" face="STA19BI" storage="chara/19_onise/STA19BI.png"]
+[chara_face name="19_onise" face="STA19BJ" storage="chara/19_onise/STA19BJ.png"]
+[chara_face name="19_onise" face="STA19BK" storage="chara/19_onise/STA19BK.png"]
+[chara_face name="19_onise" face="STA19BL" storage="chara/19_onise/STA19BL.png"]
+[chara_face name="19_onise" face="STA19BM" storage="chara/19_onise/STA19BM.png"]
+
+;19_鬼瀬差分C
+[chara_face name="19_onise" face="STA19CA" storage="chara/19_onise/STA19CA.png"]
+[chara_face name="19_onise" face="STA19CB" storage="chara/19_onise/STA19CB.png"]
+[chara_face name="19_onise" face="STA19CC" storage="chara/19_onise/STA19CC.png"]
+[chara_face name="19_onise" face="STA19CD" storage="chara/19_onise/STA19CD.png"]
+[chara_face name="19_onise" face="STA19CE" storage="chara/19_onise/STA19CE.png"]
+[chara_face name="19_onise" face="STA19CF" storage="chara/19_onise/STA19CF.png"]
+[chara_face name="19_onise" face="STA19CG" storage="chara/19_onise/STA19CG.png"]
+[chara_face name="19_onise" face="STA19CH" storage="chara/19_onise/STA19CH.png"]
+[chara_face name="19_onise" face="STA19CI" storage="chara/19_onise/STA19CI.png"]
+[chara_face name="19_onise" face="STA19CJ" storage="chara/19_onise/STA19CJ.png"]
+[chara_face name="19_onise" face="STA19CK" storage="chara/19_onise/STA19CK.png"]
+[chara_face name="19_onise" face="STA19CL" storage="chara/19_onise/STA19CL.png"]
+[chara_face name="19_onise" face="STA19CM" storage="chara/19_onise/STA19CM.png"]
+
+;21_十二橋は差分なしのため定義せず
+
+;22_偽みゆき(AAはdefault)
+[chara_face name="22_miyuki(fake)" face="STA22AB" storage="chara/22_miyuki(fake)/STA22AB.png"]
+[chara_face name="22_miyuki(fake)" face="STA22AC" storage="chara/22_miyuki(fake)/STA22AC.png"]
+[chara_face name="22_miyuki(fake)" face="STA22AD" storage="chara/22_miyuki(fake)/STA22AD.png"]
+[chara_face name="22_miyuki(fake)" face="STA22AE" storage="chara/22_miyuki(fake)/STA22AE.png"]
+[chara_face name="22_miyuki(fake)" face="STA22AF" storage="chara/22_miyuki(fake)/STA22AF.png"]
+[chara_face name="22_miyuki(fake)" face="STA22AG" storage="chara/22_miyuki(fake)/STA22AG.png"]
+[chara_face name="22_miyuki(fake)" face="STA22AH" storage="chara/22_miyuki(fake)/STA22AH.png"]
+[chara_face name="22_miyuki(fake)" face="STA22AI" storage="chara/22_miyuki(fake)/STA22AI.png"]
+[chara_face name="22_miyuki(fake)" face="STA22AJ" storage="chara/22_miyuki(fake)/STA22AJ.png"]
+
+
+
+[return]

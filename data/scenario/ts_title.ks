@@ -48,7 +48,7 @@ f.story_step=[-1,-1,-1]	; エピソードごとのストーリーの進捗
 [s]
 
 *test_scenario
-@jump storage="test_scenario.ks"
+@jump storage="EP1_01.ks"
 
 [s]
 
