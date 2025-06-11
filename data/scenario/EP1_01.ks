@@ -1,24 +1,31 @@
+;EP1-01_白昼のストリップ
 
 [cm  ]
 [clearfix]
 [start_keyconfig]
 
-*EP1-01_白昼のストリップ
-
 ;背景表示BG03市街地
 [bg storage="BG03.png" time="3000"]
+
+[if exp="sf.record.trail_EP1_01_scenario_end !== undefined"]
+[glink text="既読スキップする" size=20 width=200 x=230 y=300 color=blue target=scenario_end ]
+[glink text="しない" size=20 width=200 x=730 y=300 color=blue target=scenario_start ]
+[s]
+[endif]
 
 ;主人公のpos基本左
 ;★左から立ち絵スライドイン
 [chara_show name="00_tomoya" top="0" left="-600" layer="0" wait="0"]
-[chara_mod name="00_tomoya" face="STA00CB"]
-[chara_move name="00_tomoya" top="0" left="0" anim="true" effect="easeInSine" time="500" wait="true"]
+[chara_mod name="00_tomoya" face="STA00CB" time="0"]
+[chara_move name="00_tomoya" top="0" left="0" anim="true" effect="easeOutExpo" time="1500" wait="true"]
 
 [message_area_scenario]
 
+*talk
 #柴崎　智也
 「おっ」[p]
 
+;@jump target="*bokin"
 
 ;喋っていないキャラを暗く表示OFF
 [chara_config talk_focus=none]
@@ -27,8 +34,8 @@
 ;★右から立ち絵スライドイン
 
 [chara_show name="01_yu" top="0" left="1200" layer="0" wait="0"]
-;[chara_mod name="01_yu" face="STA01BA"]
-[chara_move name="01_yu" top="0" left="600" anim="true" effect="easeInSine" time="500" wait="true"]
+[chara_mod name="01_yu" face="STA01BA" time="0"]
+[chara_move name="01_yu" top="0" left="600" anim="true" effect="easeOutExpo" time="1500" wait="true"]
 
 ;喋っていないキャラを暗く表示ON
 [chara_config brightness=40 talk_focus=brightness]
@@ -36,52 +43,51 @@
 #常葉　悠卯
 「あっ」[p]
 
-
 #
 人の行きかう駅前で、俺は悠卯と出会った。[p]
 
-;[chara_mod name="01_yu" face="STA01BA"]
+[chara_mod name="01_yu" face="STA01BA" time="0"]
 
 #常葉　悠卯
 「なにしてんの？」[p]
 
-[chara_mod name="00_tomoya" face="STA01BF"]
+[chara_mod name="00_tomoya" face="STA00CF" time="0"]
 
 #柴崎　智也
 「買い出しだ」[p]
-
+#
 俺はポリエチレンの袋を掲げる。[p]
 
-[chara_mod name="01_yu" face="STA01BC"]
+[chara_mod name="01_yu" face="STA01BC" time="0"]
 
 #常葉　悠卯
 「リンゴ？似合わなーい」[p]
 
-[chara_mod name="00_tomoya" face="STA00CC"]
+[chara_mod name="00_tomoya" face="STA00CC" time="0"]
 
-[chara_mod name="01_yu" face="STA01BO"]
+[chara_mod name="01_yu" face="STA01BO" time="0"]
 
 #柴崎　智也
 「いや……。大家さんにリンゴは皮剥いたほうが好きって話をしたら、買ってきてもらえれば剥きますよって言われてさ……」[p]
 
-[chara_mod name="01_yu" face="STA01AF"]
-
+[chara_mod name="01_yu" face="STA01AF" time="0"]
+#
 悠卯はにやついたあと、大きなため息をついた。[p]
 
 #常葉　悠卯
 「っはぁ～！どいつもこいつも柚姉、柚姉ぇだねえ」[p]
 
-[chara_mod name="00_tomoya" face="STA00CE"]
+[chara_mod name="00_tomoya" face="STA00CE" time="0"]
 
 #柴崎　智也
 「おいちょっと待てどいつもこいつもって、俺の他にもいるのか？」[p]
 
-[chara_mod name="01_yu" face="STA01AB"]
+[chara_mod name="01_yu" face="STA01AB" time="0"]
 
 #常葉　悠卯
 「ちょ、マジになるじゃん」[p]
 
-[chara_mod name="00_tomoya" face="STA00CF"]
+[chara_mod name="00_tomoya" face="STA00CF" time="0"]
 
 #柴崎　智也
 「別にそういうのじゃねーぞ」[p]
@@ -89,8 +95,8 @@
 #常葉　悠卯
 「ウケる～」[p]
 
-[chara_mod name="00_tomoya" face="STA00CC"]
-
+[chara_mod name="00_tomoya" face="STA00CC" time="0"]
+#
 俺の返しの何が面白いのか、悠卯はけらけら笑っている。[p]
 
 時々、悠卯は見透かしたようなことを言う。[p]
@@ -99,76 +105,82 @@
 
 その後の教育がよかったのか、無事生意気な子になっちまったな。[p]
 
-[chara_mod name="00_tomoya" face="STA00CD"]
+[chara_mod name="00_tomoya" face="STA00CD" time="0"]
 
 #柴崎　智也
 「悠卯はリンゴの皮剥くの下手だもんな」[p]
 
-[chara_mod name="01_yu" face="STA01AD"]
+[chara_mod name="01_yu" face="STA01AD" time="0"]
 
 #常葉　悠卯
 「それ、昔の話じゃん」[p]
 
-[chara_mod name="00_tomoya" face="default"]
-
+[chara_mod name="00_tomoya" face="default" time="0"]
+#
 初めて出会ったころ、悠卯が皮むきに失敗して、指を詰めそうになったことがあった。[p]
 
-[chara_mod name="01_yu" face="STA01AI"]
+[chara_mod name="01_yu" face="STA01AI" time="0"]
 
 #常葉　悠卯
 「あーしだって……分厚いミカンの皮むきとか得意だし」[p]
 
-[chara_mod name="01_yu" face="STA01AF"]
+[chara_mod name="01_yu" face="STA01AF" time="0"]
 #常葉　悠卯
 「ポンカンとか日向夏とか、甘栗の皮むきとか」[p]
 
-[chara_mod name="01_yu" face="STA01AI"]
+[chara_mod name="01_yu" face="STA01AI" time="0"]
 
-[chara_mod name="00_tomoya" face="STA00CB"]
+[chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
 #柴崎　智也
 「甘栗はともかく、分厚いミカンの皮むきは繊細な作業だぞ」[p]
-
+#
 薄皮を剥がすとき一緒に実も分離してしまうからな。[p]
 
 みかんの缶詰がきれいなのは薬品で溶かしているんだよな。[p]
 
-[chara_mod name="00_tomoya" face="default"]
+[chara_mod name="00_tomoya" face="default" time="0"]
 
-[chara_mod name="01_yu" face="STA01AC"]
+[chara_mod name="01_yu" face="STA01AC" time="0"]
 #常葉　悠卯
 「信じてないなぁーもーぉ」[p]
 
-[chara_mod name="01_yu" face="STA01BH"]
+[chara_mod name="01_yu" face="STA01BH" time="0"]
 
 #常葉　悠卯
 「よしっ！今度食べさせてあげっから！あーしの超絶テクを見逃すな！」[p]
 
-[chara_mod name="00_tomoya" face="STA00CB"]
+[chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
-[chara_mod name="01_yu" face="STA01BB"]
+[chara_mod name="01_yu" face="STA01BB" time="0"]
 #柴崎　智也
 「お、おう……」[p]
 
 ;★01_yu上下動
+[chara_move name="01_yu" top="-20" left="600" anim="true" effect="easeOutQuint" time="200" wait="true"]
+[chara_move name="01_yu" top="0" left="600" anim="true" effect="easeInQuart" time="200" wait="true"]
 
 #常葉　悠卯
 「ではっ！」[p]
+#
+
+;★左にスライドアウト
+[chara_move name="01_yu" top="0" left="1200" anim="true" effect="easeInSine" time="500" wait="false"]
 
 言いたいことだけ言って、悠卯は去っていった。[p]
 
-;★左にスライドアウト
-[chara_hide name="01_yuu" ]
-
-[chara_mod name="00_tomoya" face="STA00CC"]
+[chara_mod name="00_tomoya" face="STA00CC" time="0"]
 
 #柴崎　智也
 「相変わらず奔放なやっちゃな……」[p]
 
-[chara_mod name="00_tomoya" face="default"]
+[chara_mod name="00_tomoya" face="default" time="0"]
+
+[chara_hide name="01_yu" time="0" pos_mode="false"]
 
 さて、お使いを済ませたら帰るか。[p]
 
+*bokin
 駅前には、人が集まって、がやがややっている。[p]
 
 制服の若い子たちが並んで、なにやらのぼりを立てたり箱を分け合ったりと忙しい様子だ。[p]
@@ -198,9 +210,12 @@
 「「「募金活動にご協力お願いしまーす」」」[p]
 
 ;★ドクン……！みたいなエフェクトをかけられないか？
+[quake count="2" hmax="10" vmax="1" time="100"]
+[quake count="2" hmax="1" vmax="10" time="100"]
 
+*still
 ;スチル表示
-[bg storage="stl1-01a.png" time="100"]
+[bg storage="stl1-01/stl1-01a.png" time="100"]
 
 
 #少女？
@@ -225,14 +240,14 @@
 
 そう言うと、少女は上着を脱ぎ棄てた。[p]
 
-[bg storage="stl1-01b.png" time="100"]
+[bg storage="stl1-01/stl1-01b.png" time="100"]
 
 突然の出来事に、みなポカーンとしている。[p]
 
 #小金井　みたか
 「あれ、反応薄い……？じゃあ今度はこれ！」[p]
 
-[bg storage="stl1-01c.png" time="100"]
+[bg storage="stl1-01/stl1-01c.png" time="100"]
 
 そういって今度はリボンを放り投げる。[p]
 
@@ -262,7 +277,7 @@
 #小金井　みたか
 「うれしいっ！もっとみんな入れてってね！」[p]
 
-[bg storage="stl1-01d.png" time="100"]
+[bg storage="stl1-01/stl1-01d.png" time="100"]
 
 少女がそれに応えてまた脱いでいく。[p]
 
@@ -276,7 +291,7 @@
 
 この異常な状況を通行人たちは正常バイアスで飲み下し、日常に取り込んでいく。[p]
 
-[bg storage="stl1-01e.png" time="100"]
+[bg storage="stl1-01/stl1-01e.png" time="100"]
 
 #小金井　みたか
 「は～いっ！また投げ銭いただきましたっ！」[p]
@@ -294,7 +309,7 @@
 
 こんなこと、止めさせなきゃ！[p]
 
-[bg storage="stl1-01g.png" time="100"]
+[bg storage="stl1-01/stl1-01g.png" time="100"]
 
 #小金井　みたか
 「はいっ！最後の一枚ですっ！！」[p]
@@ -316,11 +331,13 @@
 少女は大きく息を吸って叫んだ。[p]
 
 #小金井　みたか
-「私には罰ゲームです！！[s]──────え、何、これ……うそ、私どうして……」[p]
+「私には罰ゲームです！！[l]
+──────え、何、これ……うそ、私どうして……」[p]
 
-[bg storage="stl1-01f.png" time="100"]
+[bg storage="stl1-01/stl1-01f.png" time="100"]
+[cg storage="stl1-01/stl1-01a.png"]
 
-/罫線の後ろでクリック待ち入れる
+;/罫線の後ろでクリック待ち入れる
 
 #小金井　みたか
 「い、いやああああっっっっ！！！！」[p]
@@ -328,12 +345,14 @@
 少女は叫んだ。[r]
 金を放り込んでいた男たちは驚いた後、きょとんと前を見る。[p]
 
+*still_end
 ;背景表示BG03市街地
 [bg storage="BG03.png" time="100"]
 
 ;★立ち絵フェードイン
 
-[chara_mod name="00_tomoya" face="STA00CF"]
+[chara_mod name="00_tomoya" face="STA00CF" time="0"]
+[chara_show name="00_tomoya" top="0" left="0" layer="0" wait="500"]
 
 
 #柴崎　智也
@@ -350,12 +369,12 @@
 その混乱を聞きつけて近寄るもの、動画に撮るもの……。[r]
 駅前は小規模の混乱に包まれた。[p]
 
-[chara_mod name="00_tomoya" face="STA00CB"]
+[chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
 
 俺はコートを脱いで少女にかぶせてしゃがませる。[p]
 
-[chara_mod name="00_tomoya" face="STA00CA"]
+[chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
 #小金井　みたか
 「嘘、嘘嘘、うそ……どうして……うそだよ……なんでえ……」[p]
@@ -367,7 +386,7 @@
 
 混乱の雑踏の中に、1000円札が風に舞って飛んでいた。[p]
 
-[chara_mod name="00_tomoya" face="STA00CB"]
+[chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
 
 #柴崎　智也
@@ -377,8 +396,7 @@
 [chara_hide name="00_tomoya" ]
 
 [layopt layer="message0" visible="false"]
-[s]
 
 *scenario_end
-@jump storage="ts_map.ks"
-
+[return]
+[s]

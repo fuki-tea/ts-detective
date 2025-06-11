@@ -62,17 +62,19 @@ f.current_step=-1
 ;#
 ;EP[emb exp="f.current_ep+1"]-[emb exp="f.current_step+1"]/[emb exp="f.current_map"][r]
 [if exp="f.current_ep != -1 && f.current_step == 9"]
+#
 GOOD END[p]
-[emb exp="f.current_ep"]
-[freeimage layer="1"]
-[jump storage="ts_title.ks"]
+	[emb exp="f.current_ep"]
+	[freeimage layer="1"]
+	[jump storage="ts_title.ks"]
 [elsif exp="f.current_ep != -1 && f.current_step == 99"]
+#
 BAD END[p]
-[emb exp="f.current_ep"]
-[freeimage layer="message0" time="100" wait="false"]
-[freeimage layer="1" time="100" wait="false"]
-[freeimage layer="base" time="100" wait="true"]
-[jump storage="ts_title.ks"]
+	[emb exp="f.current_ep"]
+	[freeimage layer="message0" time="100" wait="false"]
+	[freeimage layer="1" time="100" wait="false"]
+	[freeimage layer="base" time="100" wait="true"]
+	[jump storage="ts_title.ks"]
 [endif]
 [endmacro]
 
@@ -88,8 +90,9 @@ BAD END[p]
 		[freeimage layer="1"]
 		[layopt layer="message0" visible="false"]
 		[free name="chara_name_area" layer="message0"]
-		[jump storage="EP1_01.ks"]
-
+		[call storage="EP1_01.ks"]
+		[call target="next_ep"]
+		@jump target="init"
 	[endif]
 
 [elsif exp="f.current_ep == -1 && f.current_map != '-'"]
