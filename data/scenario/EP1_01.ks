@@ -13,13 +13,14 @@
 [s]
 [endif]
 
+*start
+[message_area_scenario]
+
 ;主人公のpos基本左
 ;★左から立ち絵スライドイン
 [chara_show name="00_tomoya" top="0" left="-600" layer="0" wait="0"]
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 [chara_move name="00_tomoya" top="0" left="0" anim="true" effect="easeOutExpo" time="1500" wait="true"]
-
-[message_area_scenario]
 
 *talk
 #柴崎　智也
@@ -197,7 +198,6 @@
 ;00_智也立ち絵消す
 [chara_hide name="00_tomoya" ]
 
-
 #少女A
 「これから募金活動をしまーす」[p]
 
@@ -210,12 +210,20 @@
 「「「募金活動にご協力お願いしまーす」」」[p]
 
 ;★ドクン……！みたいなエフェクトをかけられないか？
-[quake count="2" hmax="10" vmax="1" time="100"]
-[quake count="2" hmax="1" vmax="10" time="100"]
+;[quake count="2" hmax="10" vmax="1" time="100"]
+;[quake count="2" hmax="1" vmax="10" time="100"]
 
 *still
 ;スチル表示
-[bg storage="stl1-01/stl1-01a.png" time="100"]
+
+[bg storage="stl1-01/stl1-01a.png" time="0" method="puffIn"]
+[chara_new  name="stl1_01" storage="../bgimage/stl1-01/stl1-01a.png" ]
+[chara_show name="stl1_01" width="1280" height="720" left="0" top="0" time="0"]
+[filter layer="0" name="stl1_01" invert=100]
+;[chara_move name="stl1_01" left="20" top="0" time="500" anim="true" effect="easeInElastic"]
+;[chara_move name="stl1_01" left="-20" top="0" time="500" anim="true" effect="easeInElastic"]
+;[chara_move name="stl1_01" left="0" top="0" time="500" anim="false"]
+[chara_hide name="stl1_01" time="1000" wait="true" pos_mode="false" ]
 
 
 #少女？
