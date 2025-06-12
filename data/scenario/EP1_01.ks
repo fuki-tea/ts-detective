@@ -7,6 +7,8 @@
 ;背景表示BG03市街地
 [bg storage="BG03.png" time="3000"]
 
+[message_area_scenario]
+
 [if exp="sf.record.trail_EP1_01_scenario_end !== undefined"]
 [glink text="既読スキップする" size=20 width=200 x=230 y=300 color=blue target=scenario_end ]
 [glink text="しない" size=20 width=200 x=730 y=300 color=blue target=scenario_start ]
@@ -14,8 +16,6 @@
 [endif]
 
 *start
-[message_area_scenario]
-
 ;主人公のpos基本左
 ;★左から立ち絵スライドイン
 [chara_show name="00_tomoya" top="0" left="-600" layer="0" wait="0"]
@@ -25,8 +25,6 @@
 *talk
 #柴崎　智也
 「おっ」[p]
-
-;@jump target="*bokin"
 
 ;喋っていないキャラを暗く表示OFF
 [chara_config talk_focus=none]
