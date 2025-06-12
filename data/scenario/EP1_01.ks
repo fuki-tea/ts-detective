@@ -7,8 +7,6 @@
 ;背景表示BG03市街地
 [bg storage="BG03.png" time="3000"]
 
-[message_area_scenario]
-
 [if exp="sf.record.trail_EP1_01_scenario_end !== undefined"]
 [glink text="既読スキップする" size=20 width=200 x=230 y=300 color=blue target=scenario_end ]
 [glink text="しない" size=20 width=200 x=730 y=300 color=blue target=scenario_start ]
@@ -23,6 +21,8 @@
 [chara_move name="00_tomoya" top="0" left="0" anim="true" effect="easeOutExpo" time="1500" wait="true"]
 
 *talk
+[message_area_scenario]
+
 #柴崎　智也
 「おっ」[p]
 
