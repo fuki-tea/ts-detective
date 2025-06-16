@@ -93,6 +93,15 @@ BAD END[p]
 		[call storage="EP1_01.ks"]
 		[call target="next_ep"]
 		@jump target="init"
+	
+	[elsif exp="f.current_step == 2 - 1"]
+
+		[freeimage layer="1"]
+		[layopt layer="message0" visible="false"]
+		[free name="chara_name_area" layer="message0"]
+		[call storage="EP1_02.ks"]
+		[call target="next_ep"]
+		@jump target="init"
 	[endif]
 
 [elsif exp="f.current_ep == -1 && f.current_map != '-'"]

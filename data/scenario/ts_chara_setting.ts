@@ -61,6 +61,7 @@
 [chara_face name="00_tomoya" face="STA00CI" storage="chara/00_tomoya/STA00CI.png"]
 
 ;01_悠卯ポーズ差分A(AAはdefault)
+[chara_face name="01_yu" face="STA01AA" storage="chara/01_yu/STA01AA.png"]
 [chara_face name="01_yu" face="STA01AB" storage="chara/01_yu/STA01AB.png"]
 [chara_face name="01_yu" face="STA01AC" storage="chara/01_yu/STA01AC.png"]
 [chara_face name="01_yu" face="STA01AD" storage="chara/01_yu/STA01AD.png"]
@@ -256,6 +257,7 @@
 [chara_face name="13_takao" face="STA13BF" storage="chara/13_takao/STA13BF.png"]
 
 ;14_文絵(AAはdefault)
+[chara_face name="14_fumie" face="STA14AA" storage="chara/14_fumie/STA14AA.png"]
 [chara_face name="14_fumie" face="STA14AB" storage="chara/14_fumie/STA14AB.png"]
 [chara_face name="14_fumie" face="STA14AC" storage="chara/14_fumie/STA14AC.png"]
 [chara_face name="14_fumie" face="STA14AD" storage="chara/14_fumie/STA14AD.png"]
