@@ -13,17 +13,20 @@
 [chara_new  name="21_sojuro" storage="chara/21_sojuro/STA21AA.png" jname="十二橋　総渋朗"  ]
 
 ;状況で名前が変わるキャラ
-[chara_new  name="13_takao" storage="chara/13_takao/STA13AA.png" jname="高尾　良治"  ]
-[chara_new  name="13_takao" storage="chara/13_takao/STA13AA.png" jname="高尾　良治？"  ]
+;[chara_new  name="13_takao" storage="chara/13_takao/STA13AA.png" jname="高尾　良治"  ]
+;[chara_new  name="13_takao" storage="chara/13_takao/STA13AA.png" jname="高尾　良治？"  ]
 [chara_new  name="13_takao" storage="chara/13_takao/STA13AA.png" jname="浅川　鷹貨夫"  ]
 
 [chara_new  name="17_nojarori" storage="chara/17_nojarori/STA17AA.png" jname="幼女"  ]
-[chara_new  name="17_nojarori" storage="chara/17_nojarori/STA17AA.png" jname="幼女？"  ]
+;[chara_new  name="17_nojarori" storage="chara/17_nojarori/STA17AA.png" jname="幼女？"  ]
 
 [chara_new  name="22_miyuki(fake)" storage="chara/22_miyuki(fake)/STA22AA.png" jname="マスター"  ]
-[chara_new  name="22_miyuki(fake)" storage="chara/22_miyuki(fake)/STA22AA.png" jname="マスター？"  ]
-[chara_new  name="22_miyuki(fake)" storage="chara/22_miyuki(fake)/STA22AA.png" jname="謎の女"  ]
+;[chara_new  name="22_miyuki(fake)" storage="chara/22_miyuki(fake)/STA22AA.png" jname="マスター？"  ]
+;[chara_new  name="22_miyuki(fake)" storage="chara/22_miyuki(fake)/STA22AA.png" jname="謎の女"  ]
 
+;cut
+[chara_new  name="cut_bansoko" storage="cut/cut_bansoko.png" ]
+[chara_new  name="cut_voicerecorder" storage="cut/cut_voicerecorder.png" ]
 
 ;----------以下表情差分定義----------
 
@@ -329,7 +332,5 @@
 [chara_face name="22_miyuki(fake)" face="STA22AH" storage="chara/22_miyuki(fake)/STA22AH.png"]
 [chara_face name="22_miyuki(fake)" face="STA22AI" storage="chara/22_miyuki(fake)/STA22AI.png"]
 [chara_face name="22_miyuki(fake)" face="STA22AJ" storage="chara/22_miyuki(fake)/STA22AJ.png"]
-
-
 
 [return]

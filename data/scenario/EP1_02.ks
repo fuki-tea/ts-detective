@@ -528,7 +528,8 @@ TYRANO.kag.stat.charas['14_fumie'].jname = "高尾　文絵"
 ;★BGM14フェードアウト
 
 ;★文江画面右にスライドアウト
-[chara_move name="14_fumie" top="0" left="1200" anim="true" effect="easeOutExpo" time="500" wait="true"]
+[chara_move name="14_fumie" top="0" left="1200" anim="true" effect="easeOutExpo" time="1500" wait="true"]
+[chara_hide name="14_fumie" wait="false" pos_mode="false"]
 
 *fumie_taijo
 
@@ -762,13 +763,11 @@ TYRANO.kag.stat.charas['14_fumie'].jname = "高尾　文絵"
 悠卯の笑顔を見て思った。[r]
 絶対いい方法じゃないのってのだけはわかるぞ、と。[p]
 
+[layopt layer="message0" visible="false"]
+
 ;★立ち絵消す
-[chara_hide name="14_fumie" wait="false" ]
 [chara_hide name="00_tomoya" wait="false" ]
 [chara_hide name="01_yu" ]
-
-*scenario_end
-[layopt layer="message0" visible="false"]
 
 *scenario_end
 [return]

@@ -4,8 +4,8 @@
 [clearfix]
 [start_keyconfig]
 
-;背景表示BG03市街地
-[bg storage="BG03.png" time="3000"]
+;背景表示BG04駅前
+[bg storage="BG04.png" time="3000"]
 
 [if exp="sf.record.trail_EP1_01_scenario_end !== undefined"]
 [glink text="既読スキップする" size=20 width=200 x=230 y=300 color=blue target=scenario_end ]
@@ -485,10 +485,10 @@
 #柴崎　智也
 「いったい、この街で何が起きたっていうんだ……？」[p]
 
+[layopt layer="message0" visible="false"]
+
 ;00_智也立ち絵消す
 [chara_hide name="00_tomoya" ]
-
-[layopt layer="message0" visible="false"]
 
 *scenario_end
 [return]
