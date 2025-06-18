@@ -929,6 +929,7 @@ TYRANO.kag.stat.charas['13_takao'].jname = "高尾　良治"
 
 #柴崎　智也
 「！？」[p]
+#
 
 ;★BGM12　file_702.mp3
 
