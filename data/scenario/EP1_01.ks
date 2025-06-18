@@ -423,7 +423,7 @@
 
 *still_end
 ;背景表示BG03市街地
-[bg storage="BG03.png" time="100"]
+[bg storage="BG04.png" time="100"]
 
 ;★立ち絵フェードイン
 
