@@ -27,6 +27,7 @@
 ;cut
 [chara_new  name="cut_bansoko" storage="cut/cut_bansoko.png" ]
 [chara_new  name="cut_voicerecorder" storage="cut/cut_voicerecorder.png" ]
+[chara_new  name="cut_paimomi" storage="cut/cut_paimomi.png" ]
 
 ;----------以下表情差分定義----------
 

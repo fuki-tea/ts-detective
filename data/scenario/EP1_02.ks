@@ -118,6 +118,7 @@ TYRANO.kag.stat.charas['14_fumie'].jname = 'OL風の女性'
 *yu_taijo
 
 ;★SE16
+[playse storage="SE16.mp3"]
 
 #
 悠卯を大家さんのところにやって、俺は依頼人に向き直る。[p]
@@ -295,6 +296,7 @@ TYRANO.kag.stat.charas['14_fumie'].jname = "高尾　文絵"
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
 ;★SE34
+[playse storage="SE34.mp3"]
 #
 俺は手早く料金表を取り出す。[r]
 意外と探偵って、お金かかるのよ。[p]
@@ -316,6 +318,7 @@ TYRANO.kag.stat.charas['14_fumie'].jname = "高尾　文絵"
 [chara_mod name="01_yu" face="STA01BA" time="0"]
 [chara_move name="01_yu" top="0" left="900" anim="true" effect="easeOutExpo" time="500" wait="true"]
 ;★SE15
+[playse storage="SE15.mp3"]
 
 #常葉　悠卯
 「コーヒーです」[p]
@@ -327,6 +330,7 @@ TYRANO.kag.stat.charas['14_fumie'].jname = "高尾　文絵"
 遅いよ。もう打ち合わせは最終段階だぞ。[p]
 
 ;★SE12
+[playse storage="SE12.mp3"]
 
 #
 しおらしく一礼して、カップを並べる。[p]
@@ -336,6 +340,7 @@ TYRANO.kag.stat.charas['14_fumie'].jname = "高尾　文絵"
 [chara_move name="01_yu" top="0" left="400" anim="true" effect="easeOutExpo" time="500" wait="true"]
 
 ;★SE13
+[playse storage="SE13.mp3"]
 
 #
 俺はその横で、先ほどの話をざっくり整理しつつパソコンに入力する。[r]
@@ -503,6 +508,7 @@ TYRANO.kag.stat.charas['14_fumie'].jname = "高尾　文絵"
 旦那が浮気しているかもしれない相手なのだから。[p]
 
 ;★SE14
+[playse storage="SE14.mp3"]
 
 #
 プリンタが死にそうな声を上げて吐き出した紙に、印鑑を押す。[r]
@@ -521,11 +527,13 @@ TYRANO.kag.stat.charas['14_fumie'].jname = "高尾　文絵"
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
 ;★SE28
+[playse storage="SE28.mp3"]
 
 #
 封筒に書類を入れて、文江さんに手渡す。[p]
 
 ;★BGM14フェードアウト
+[fadeoutbgm time=2000]
 
 ;★文江画面右にスライドアウト
 [chara_move name="14_fumie" top="0" left="1200" anim="true" effect="easeOutExpo" time="1500" wait="true"]
@@ -535,6 +543,7 @@ TYRANO.kag.stat.charas['14_fumie'].jname = "高尾　文絵"
 
 
 ;★SE16
+[playse storage="SE17.mp3"]
 
 #
 頭を深く下げると、文江さんは足早に事務所を出ていった。[p]

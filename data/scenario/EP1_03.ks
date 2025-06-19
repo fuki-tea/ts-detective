@@ -184,6 +184,8 @@
 「じゃあ……」[p]
 
 ;★BGM12フェードアウト
+[fadeoutbgm time=2000]
+
 *yu_ido
 ;[chara_move name="01_yu" top="0" left="150" anim="true" effect="easeOutExpo" time="1500" wait="true"]
 #
@@ -221,6 +223,7 @@
 
 ;★智也立ち絵ジャンプ
 
+#柴崎　智也
 [chara_mod name="00_tomoya" face="STA00AF" time="0"]
 [chara_move name="00_tomoya" top="-100" left="0" anim="true" effect="easeOutSine" time="200" wait="true"]
 [chara_move name="00_tomoya" top="0" left="0" anim="true" effect="easeInSine" time="200" wait="true"]
@@ -249,6 +252,7 @@
 
 [chara_mod name="01_yu" face="STA01AJ" time="0"]
 
+[chara_show name="cut_paimomi" top="110" left="400" layer="0" wait="false"]
 #
 悠卯が手を俺の下乳に回す。[p]
 
@@ -256,6 +260,8 @@
 「こんな……おっさんだったくせにあーしより大きくなって」[p]
 
 ;★SE17
+[playse storage="SE17.mp3"]
+
 [chara_mod name="00_tomoya" face="STA00AE" time="0"]
 
 #柴崎　智也
@@ -266,6 +272,7 @@
 [chara_mod name="01_yu" face="STA01AK" time="0"]
 
 ;★SE17
+[playse storage="SE17.mp3"]
 
 #常葉　悠卯
 「もったいなぁ。ほれほれ」[p]
@@ -293,6 +300,8 @@
 おっさんみたいな悠卯が、おっさんの俺を責める。[p]
 
 ;★SE17
+[playse storage="SE17.mp3"]
+
 
 #常葉　悠卯
 「ほれほれ揉めるほど大きいぞぉ～」[p]
@@ -331,6 +340,7 @@
 
 ;★BGM22
 [chara_mod name="01_yu" face="STA01AM" time="0"]
+[chara_hide name="cut_paimomi" time="0" wait="false" pos_mode="false"]
 
 #常葉　悠卯
 「そうじゃなくて、ブラは！？」[p]
@@ -657,6 +667,7 @@
 *takao_taijo
 
 ;★SE20
+[playse storage="SE20.mp3"]
 
 #
 カメラで人影を追跡し、シャッターを切る。[r]
@@ -669,6 +680,7 @@
 [chara_move name="15_rino" top="180" left="400" anim="true" effect="easeOutExpo" time="1500" wait="true"]
 
 ;★SE20
+[playse storage="SE20.mp3"]
 
 #
 しばらくすると、校舎から学生が出てきた。[r]
@@ -683,6 +695,7 @@
 *rino_taijo
 
 ;★SE20
+[playse storage="SE20.mp3"]
 
 #
 それからさらに、2人。[p]
@@ -753,6 +766,7 @@
 [chara_mod name="00_tomoya" face="STA00AA" time="0"]
 
 ;★SE21
+[playse storage="SE21.mp3"]
 
 #
 録音ボタンを押して証拠を記録する。[p]
@@ -833,6 +847,7 @@
 *rino_taijo2
 
 ;★SE20
+[playse storage="SE20.mp3"]
 
 #
 俺はシャッターを切り続ける。[p]
@@ -943,6 +958,7 @@ TYRANO.kag.stat.charas['13_takao'].jname = "高尾　良治"
 [chara_mod name="00_tomoya" face="STA00AB" time="0"]
 
 ;★SE22
+[playse storage="SE22.mp3"]
 
 #
 振り返ると、悠卯が校舎から歩いてきた。[p]

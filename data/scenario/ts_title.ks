@@ -3,8 +3,13 @@
 [cm]
 
 @clearstack
+[playbgm storage="elevator girl - Stereo Out.mp3" loop="true" volume=50]
+@bg storage ="BG_black.png" time=100
+[chara_new name="logo" storage="../bgimage/logo.png" jname=""]
+[chara_show name="logo" left="140" top="189" time="1000" wait="false"]
+@wait time = 4000
+[chara_hide name="logo"]
 @bg storage ="title.jpg" time=100
-@wait time = 200
 [hidemenubutton]
 
 ;-------------------------------------------------------------------------------
@@ -48,7 +53,7 @@ f.story_step=[-1,-1,-1]	; エピソードごとのストーリーの進捗
 [s]
 
 *test_scenario
-[call storage="EP1_03.ks"]
+[call storage="EP1_04.ks"]
 @jump target="*init"
 [s]
 

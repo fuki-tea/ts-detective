@@ -5,6 +5,8 @@
 [start_keyconfig]
 [free name="chara_name_area" layer="message0"]
 
+[playbgm storage="pokan - Stereo Out.mp3" loop="true" volume=50]
+
 ;-------------------------------------------------------------------------------
 @wait time = 200
 
@@ -35,6 +37,7 @@
 ;-------------------------------------------------------------------------------
 [iscript]
 f.story_map=[["ekimae","jimusho","gakuen","hankagai","ekimae","hankagai","jimusho","gakuen","keisatsu","gakuen"],["kissa","kissa","kissa","kissa","kissa","keisatsu","hankagai","kissa","hankagai","kissa"],["hankagai","keisatsu","hankagai","jimusho","jimusho","kissa","keisatsu","jimusho","jimusho","ekimae"]]
+f.story_scenario=[["EP1_01.ks","EP1_02.ks","EP1_03.ks","EP1_04.ks","","","","","",""],["","","","","","","","","",""],["","","","","","","","","",""]]
 f.current_map="-"
 f.current_ep=-1
 f.current_step=-1
@@ -83,33 +86,18 @@ BAD END[p]
 [macro name="check_next"]
 ;EP[emb exp="f.current_ep+1"]-[emb exp="f.current_step+1"]/[emb exp="f.current_map"][p]
 
+[eval exp="tf.ep_scenario = ''"]
 [if exp="f.current_ep == 1 - 1"]
+	[iscript]
+	tf.ep_scenario = f.story_scenario[f.current_ep][f.current_step]
+	[endscript]
 
-	[if exp="f.current_step == 1 - 1"]
-		[freeimage layer="1"]
-		[layopt layer="message0" visible="false"]
-		[free name="chara_name_area" layer="message0"]
-		[call storage="EP1_01.ks"]
-		[call target="next_ep"]
-		@jump target="init"
-
-	[elsif exp="f.current_step == 2 - 1"]
-		[freeimage layer="1"]
-		[layopt layer="message0" visible="false"]
-		[free name="chara_name_area" layer="message0"]
-		[call storage="EP1_02.ks"]
-		[call target="next_ep"]
-		@jump target="init"
-
-	[elsif exp="f.current_step == 3 - 1"]
-		[freeimage layer="1"]
-		[layopt layer="message0" visible="false"]
-		[free name="chara_name_area" layer="message0"]
-		[call storage="EP1_03.ks"]
-		[call target="next_ep"]
-		@jump target="init"
-
-	[endif]
+	[freeimage layer="1"]
+	[layopt layer="message0" visible="false"]
+	[free name="chara_name_area" layer="message0"]
+	[call storage="&tf.ep_scenario"]
+	[call target="next_ep"]
+	@jump target="init"
 
 [elsif exp="f.current_ep == -1 && f.current_map != '-'"]
 
