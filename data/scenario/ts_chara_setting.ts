@@ -29,6 +29,9 @@
 [chara_new  name="cut_voicerecorder" storage="cut/cut_voicerecorder.png" ]
 [chara_new  name="cut_paimomi" storage="cut/cut_paimomi.png" ]
 
+;logo
+[chara_new name="logo" storage="../bgimage/logo.png" jname="logo"]
+
 ;----------以下表情差分定義----------
 
 ;00_智也　制服差分

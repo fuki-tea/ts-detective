@@ -13,14 +13,17 @@
 [s]
 [endif]
 
+*scenario_start
+*start
+
 ;★立ち絵は智也左　悠卯右配置
 
 ;★BGM12:file_702.mp3
 
-[chara_show name="00_tomoya" top="0" left="0" layer="0" wait="false"]
+[chara_show name="00_tomoya" top="0" left="0" layer="0" time="100" wait="false"]
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
-[chara_show name="01_yu" top="0" left="600" layer="0" wait="false"]
+[chara_show name="01_yu" top="0" left="600" layer="0" time="100" wait="false"]
 [chara_mod name="01_yu" face="STA01AO" time="0"]
 
 *talk
@@ -785,7 +788,7 @@
 *stl_b
 ;STL1-06b 社員証
 [bg storage="stl1-08/stl1-08b.png" time="3000"]
-
+[cg storage="stl1-08/stl1-08a.png"]
 #
 警らの警官が駆けてきて、交通整理を始める。[r]
 遠くから、救急車のサイレンが聞こえてきた。[p]

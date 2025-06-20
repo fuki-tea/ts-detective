@@ -3,19 +3,6 @@
 [cm]
 
 @clearstack
-[playbgm storage="elevator girl - Stereo Out.mp3" loop="true" volume=50]
-@bg storage ="BG_black.png" time=100
-[chara_new name="logo" storage="../bgimage/logo.png" jname=""]
-[chara_show name="logo" left="140" top="189" time="1000" wait="false"]
-@wait time = 4000
-[chara_hide name="logo"]
-@bg storage ="title.jpg" time=100
-[hidemenubutton]
-
-;-------------------------------------------------------------------------------
-;メッセージウィンドウの非表示
-[layopt layer=message0 visible=false]
-
 ;-------------------------------------------------------------------------------
 [iscript]
 f.story_step=[-1,-1,-1]	; エピソードごとのストーリーの進捗
@@ -23,6 +10,17 @@ f.story_step=[-1,-1,-1]	; エピソードごとのストーリーの進捗
 
 ;-------------------------------------------------------------------------------
 *start 
+[if exp="f.title_bgm != true"]
+[playbgm storage="elevator girl - Stereo Out.mp3" loop="true" volume=50]
+[eval exp="f.title_bgm = true"]
+[endif]
+
+;メッセージウィンドウの非表示
+[layopt layer=message0 visible=false]
+
+@bg storage ="title.jpg" time=100
+[hidemenubutton]
+
 [button x=135 y=230 graphic="title/button_start.png" enterimg="title/button_start2.png"  target="gamestart" keyfocus="1"]
 [button x=135 y=320 graphic="title/button_load.png" enterimg="title/button_load2.png" role="load" keyfocus="2"]
 [button x=135 y=410 graphic="title/button_cg.png" enterimg="title/button_cg2.png" storage="cg.ks" keyfocus="3"]
@@ -53,7 +51,7 @@ f.story_step=[-1,-1,-1]	; エピソードごとのストーリーの進捗
 [s]
 
 *test_scenario
-[call storage="EP1_04.ks"]
+[call storage="EP1_07.ks"]
 @jump target="*init"
 [s]
 

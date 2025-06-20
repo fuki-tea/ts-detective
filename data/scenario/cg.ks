@@ -52,6 +52,10 @@
 
 [cg_image_button no_graphic="../../tyrano/images/system/noimage.png" x=380 y=130 width=256 height=144 folder="bgimage" graphic="stl1-03/stl1-03a.png,stl1-03/stl1-03b.png,stl1-03/stl1-03c.png,stl1-03/stl1-03d.png" ]
 
+[cg_image_button no_graphic="../../tyrano/images/system/noimage.png" x=700 y=130 width=256 height=144 folder="bgimage" graphic="stl1-07/stl1-07.png" ]
+
+[cg_image_button no_graphic="../../tyrano/images/system/noimage.png" x=1020 y=130 width=256 height=144 folder="bgimage" graphic="stl1-08/stl1-08a.png,stl1-08/stl1-08b.png" ]
+
 @jump target="*common"
 
 *common

@@ -17,6 +17,8 @@
 [s]
 [endif]
 
+*scenario_start
+*start
 ;喋っていないキャラを暗く表示ON
 [chara_config brightness=40 talk_focus=brightness]
 
@@ -776,7 +778,8 @@ TYRANO.kag.stat.charas['14_fumie'].jname = "高尾　文絵"
 
 ;★立ち絵消す
 [chara_hide name="00_tomoya" wait="false" ]
-[chara_hide name="01_yu" ]
+[chara_hide name="01_yu" wait="false"]
+[bg storage="BG_black.png" time="1500" wait="true"]
 
 *scenario_end
 [return]

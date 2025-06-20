@@ -37,7 +37,7 @@
 ;-------------------------------------------------------------------------------
 [iscript]
 f.story_map=[["ekimae","jimusho","gakuen","hankagai","ekimae","hankagai","jimusho","gakuen","keisatsu","gakuen"],["kissa","kissa","kissa","kissa","kissa","keisatsu","hankagai","kissa","hankagai","kissa"],["hankagai","keisatsu","hankagai","jimusho","jimusho","kissa","keisatsu","jimusho","jimusho","ekimae"]]
-f.story_scenario=[["EP1_01.ks","EP1_02.ks","EP1_03.ks","EP1_04.ks","","","","","",""],["","","","","","","","","",""],["","","","","","","","","",""]]
+f.story_scenario=[["EP1_01.ks","EP1_02.ks","EP1_03.ks","EP1_04.ks","","EP1_06.ks","EP1_07.ks","","",""],["","","","","","","","","",""],["","","","","","","","","",""]]
 f.current_map="-"
 f.current_ep=-1
 f.current_step=-1
@@ -95,7 +95,9 @@ BAD END[p]
 	[freeimage layer="1"]
 	[layopt layer="message0" visible="false"]
 	[free name="chara_name_area" layer="message0"]
-	[call storage="&tf.ep_scenario"]
+	[if exp="tf.ep_scenario != ''"]
+		[call storage="&tf.ep_scenario"]
+	[endif]
 	[call target="next_ep"]
 	@jump target="init"
 

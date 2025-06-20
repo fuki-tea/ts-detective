@@ -13,7 +13,9 @@
 [s]
 [endif]
 
+*scenario_start
 *start
+
 ;主人公のpos基本左
 ;★左から立ち絵スライドイン
 [chara_show name="00_tomoya" top="0" left="-600" layer="0" wait="false"]
@@ -508,7 +510,8 @@
 [layopt layer="message0" visible="false"]
 
 ;00_智也立ち絵消す
-[chara_hide name="00_tomoya" ]
+[chara_hide name="00_tomoya" wait="false"]
+[bg storage="BG_black.png" time="1500" wait="true"]
 
 *scenario_end
 [return]

@@ -57,23 +57,19 @@ sf.type_r18=true	; R18の場合は真
 ;最初は右下のメニューボタンを非表示にする
 [hidemenubutton]
 
-;-------------------------------------------------------------------------------
-;このゲームで登場するキャラクターを宣言
-[call storage="ts_chara_setting.ts" target="start"]
-
-;[chara_new name="tomo" storage="chara/tomo/tomo_stand.png" jname="柴崎　智也"  ]
-;[chara_new name="yu" storage="chara/yu/yu_stand.png" jname="常葉　悠卯"]
-;[chara_new name="miyuki" storage="chara/miyuki/miyuki_stand.png" jname="鳩村　美柚季"]
-;[chara_new name="ui" storage="chara/ui/ui_stand.png" jname="西春　愛"]
-;[chara_new name="nekoshima" storage="chara/nekoshima/nekoshima_stand.png" jname="猫島警部"]
-;[chara_new name="takao" storage="chara/takao/takao_stand.png" jname="浅川　鷹貨夫"]
-;[chara_new name="fumie" storage="chara/fumie/fumie_stand.png" jname="荻窪　文絵"]
-;[chara_new name="noja" storage="chara/nojarori/noja_stand.png" jname="ロリ娘？"]
-;[chara_new name="rino" storage="chara/rino/rino_stand.png" jname="河越　凜乃"]
-;[chara_new name="johoya" storage="chara/johoya/johoya_stand.png" jname="情報屋"]
-;[chara_new name="sojuro" storage="chara/sojuro/sojuro_stand.png" jname="十二橋　総渋朗"]
+;キャラ設定
+[call storage="ts_chara_setting.ts"]
 
 ;-------------------------------------------------------------------------------
+;タイトルロゴ表示
+;@jump target="*for_debug"
+@bg storage ="BG_black.png" time=100 wait="false"
+[playbgm storage="elevator girl - Stereo Out.mp3" loop="true" volume=50]
+[eval exp="f.title_bgm = true"]
+[chara_show name="logo" left="140" top="189" time="1000" wait="false"]
+@wait time = 4000
+[chara_hide name="logo"]
+*for_debug
 ;タイトル画面へ移動
 @jump storage="ts_title.ks"
 

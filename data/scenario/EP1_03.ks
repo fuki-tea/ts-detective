@@ -13,6 +13,7 @@
 [s]
 [endif]
 
+*scenario_start
 *start
 
 ;★悠卯中央に配置、この時点で智也は非表示
@@ -1045,7 +1046,8 @@ TYRANO.kag.stat.charas['13_takao'].jname = "高尾　良治"
 [chara_hide name="13_takao" time="0" wait="false" pos_mode="false"]
 [chara_hide name="15_rino" time="0" wait="false" pos_mode="false"]
 [chara_hide name="00_tomoya" wait="false" pos_mode="false"]
-[chara_hide name="01_yu" pos_mode="false"]
+[chara_hide name="01_yu" wait="false" pos_mode="false"]
+[bg storage="BG_black.png" time="1500" wait="true"]
 
 *scenario_end
 [return]
