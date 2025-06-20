@@ -6,7 +6,7 @@
 [start_keyconfig]
 
 ;背景表示BG01b事務所夜
-[bg storage="BG01a.png" time="3000"]
+[bg storage="BG01b.png" time="3000"]
 
 [if exp="sf.record.trail_EP1_07_scenario_end !== undefined"]
 [glink text="既読スキップする" size=20 width=200 x=230 y=300 color=blue target=scenario_end ]
