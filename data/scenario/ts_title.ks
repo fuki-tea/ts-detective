@@ -51,7 +51,7 @@ f.story_step=[-1,-1,-1]	; エピソードごとのストーリーの進捗
 [s]
 
 *test_scenario
-[call storage="EP1_07.ks"]
+[call storage="EP1_10.ks"]
 @jump target="*init"
 [s]
 

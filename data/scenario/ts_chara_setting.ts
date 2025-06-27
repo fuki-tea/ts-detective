@@ -2,6 +2,7 @@
 
 ;全キャラの立ち絵定義
 [chara_new  name="00_tomoya" storage="chara/00_tomoya/STA00CA.png" jname="柴崎　智也"  ]
+[chara_new name="00_tomoya_resize" storage="chara/00_tomoya/resize/STA00AB.png"]
 [chara_new  name="01_yu" storage="chara/01_yu/STA01AA.png" jname="常葉　悠卯"  ]
 [chara_new  name="02_miyuki" storage="chara/02_miyuki/STA02AA.png" jname="鳩村　美柚季"  ]
 [chara_new  name="03_ui" storage="chara/03_ui/STA03AA.png" jname="西春　愛"  ]
@@ -28,6 +29,14 @@
 [chara_new  name="cut_bansoko" storage="cut/cut_bansoko.png" ]
 [chara_new  name="cut_voicerecorder" storage="cut/cut_voicerecorder.png" ]
 [chara_new  name="cut_paimomi" storage="cut/cut_paimomi.png" ]
+[chara_new  name="cut_04" storage="cut/04.png" ]
+[chara_new  name="cut_05" storage="cut/05.png" ]
+[chara_new  name="cut_06" storage="cut/06.png" ]
+[chara_new  name="cut_07" storage="cut/07.png" ]
+[chara_new  name="cut_08" storage="cut/08.png" ]
+[chara_new  name="cut_iSZHHcW" storage="cut/cut_iSZHHcW.png" ]
+
+[chara_new name="tomo_zoom" storage="../bgimage/stl1-03/stl1-03d-full.png" jname=""]
 
 ;logo
 [chara_new name="logo" storage="../bgimage/logo.png" jname="logo"]

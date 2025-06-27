@@ -32,6 +32,7 @@ sf.type_r18=true	; R18の場合は真
 [macro name="message_area_scenario"]
 ;メニューボタンの表示
 @showmenubutton
+[free name="chara_name_area" layer="message0"]
 
 ;メッセージウィンドウの設定
 [position layer="message0" left=160 top=500 width=1000 height=200 page=fore visible=true]
@@ -62,9 +63,12 @@ sf.type_r18=true	; R18の場合は真
 
 ;-------------------------------------------------------------------------------
 ;タイトルロゴ表示
-;@jump target="*for_debug"
+@jump target="*for_debug"
 @bg storage ="BG_black.png" time=100 wait="false"
+[layopt layer="1" visible="true"]
+[ptext layer="1" x="460" y="600" text="CLICK TO START" size="40" color="white" edge="0xFF0000"]
 [playbgm storage="elevator girl - Stereo Out.mp3" loop="true" volume=50]
+[freeimage layer="1"]
 [eval exp="f.title_bgm = true"]
 [chara_show name="logo" left="140" top="189" time="1000" wait="false"]
 @wait time = 4000
