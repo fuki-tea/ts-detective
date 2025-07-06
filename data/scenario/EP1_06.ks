@@ -33,6 +33,9 @@
 
 *johoya_tojo
 ;★BGM19 jouhouya - Stereo Out
+[playbgm storage="jouhouya - Stereo Out.mp3" loop="true" volume=50]
+
+
 ;★情報屋立ち絵右からスライドイン　ゆっくり　右配置　
 [chara_show name="12_johoya" top="0" left="1200" layer="0" time="0" wait="false"]
 ;[chara_mod name="12_johoya" face="STA12AA" time="0"]
@@ -198,6 +201,8 @@
 [bg storage="BG_black.png" time="1500" wait="true"]
 
 ;★BGM消す
+[stopbgm]
+
 ;★立ち絵消す
 ;★マップに戻る
 

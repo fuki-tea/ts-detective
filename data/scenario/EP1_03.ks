@@ -91,6 +91,7 @@
 「風紀委員にビビりすぎ。ウケる」[p]
 
 ;★BGM12
+[playbgm storage="file_702.mp3" loop="true" volume=50]
 
 [chara_mod name="01_yu" face="STA01BA" time="0"]
 
@@ -200,6 +201,7 @@
 [chara_mod name="00_tomoya" face="STA00AE" time="0"]
 
 ;★BGM32
+[playbgm storage="file_702.mp3" loop="true" volume=50]
 
 #柴崎　智也
 「なっ！」[p]
@@ -328,6 +330,7 @@
 「ぐへへ、もうすっかりコリコリじゃねぇでげすか」[p]
 
 ;★BGM32消す
+[stopbgm]
 
 [chara_mod name="01_yu" face="STA01AK" time="0"]
 
@@ -340,6 +343,8 @@
 「悠卯が立たせたんだろ！」[p]
 
 ;★BGM22
+[playbgm storage="file_702.mp3" loop="true" volume=50]
+
 [chara_mod name="01_yu" face="STA01AM" time="0"]
 [chara_hide name="cut_paimomi" time="0" wait="false" pos_mode="false"]
 
@@ -480,6 +485,8 @@
 
 [chara_mod name="00_tomoya" face="STA00AA" time="0"]
 ;★BGM22消す
+[stopbgm]
+
 ;★絆創膏挿入絵消す
 [chara_hide name="cut_bansoko" time="0" wait="true" pos_mode="false" ]
 *bansoko_taijo
@@ -490,6 +497,7 @@
 [chara_mod name="01_yu" face="STA01BA" time="0"]
 
 ;★BGM14 question - Stereo Out.mp3
+[playbgm storage="question - Stereo Out.mp3" loop="true" volume=50]
 
 #常葉　悠卯
 「これからどーする？」[p]
@@ -620,6 +628,8 @@
 とりあえず、4時限目が勝負所だ。[p]
 
 ;★BGM14消す
+[stopbgm]
+
 ;★立ち絵をいったん消す
 [chara_hide name="00_tomoya" wait="false" pos_mode="false"]
 [chara_hide name="01_yu" wait="false" pos_mode="false"]
@@ -635,6 +645,7 @@
 「寒いな」[p]
 
 ;★BGM21 jiken - Stereo Out.mp3
+[playbgm storage="jiken - Stereo Out.mp3" loop="true" volume=50]
 
 #
 休み時間は校舎の中をうろつき、それ以外の時間は人気のない場所に隠れていた。[p]
@@ -739,6 +750,8 @@
 [chara_mod name="00_tomoya" face="STA00AA" time="0"]
 
 ;★BGM21 消す
+[stopbgm]
+
 *recorder_tojo
 ;★レコーダの絵を中央に挿入
 [chara_show name="cut_voicerecorder" top="200" left="500" layer="0" wait="false"]
@@ -758,6 +771,7 @@
 嬌声が飛び込んでくる。[p]
 
 ;★BGM32
+[playbgm storage="file_702.mp3" loop="true" volume=50]
 
 [chara_mod name="00_tomoya" face="STA00AH" time="0"]
 
@@ -814,7 +828,7 @@
 *tomoya_taijo2
 
 ;★BGM32消す
-
+[stopbgm]
 #
 ある程度記録したところで、いったん倉庫から離れる。[r]
 深追いは危険だ。[p]
@@ -834,6 +848,7 @@
 一時間以上たって、3人の女子学生が出てきた。[p]
 
 ;★BGM21 jiken - Stereo Out.mp3
+[playbgm storage="jiken - Stereo Out.mp3" loop="true" volume=50]
 
 #柴崎　智也
 「あーあ、あんな格好しちゃって」[p]
@@ -874,6 +889,8 @@
 先に逃げ出したのか？[p]
 
 ;★BGM21消す
+[stopbgm]
+
 ;★タカオ立ち絵　右に突如表示
 [chara_hide name="13_takao" time="0" wait="false" pos_mode="false"]
 [chara_show name="13_takao" top="0" left="600" layer="0" wait="false"]
@@ -948,6 +965,7 @@ TYRANO.kag.stat.charas['13_takao'].jname = "高尾　良治"
 #
 
 ;★BGM12　file_702.mp3
+[playbgm storage="file_703.mp3" loop="true" volume=50]
 
 *yu_tojo2
 ;★悠卯立ち絵を右からスライドインして中央に表示

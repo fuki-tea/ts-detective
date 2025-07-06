@@ -19,6 +19,7 @@
 ;★立ち絵は智也左　悠卯右配置
 
 ;★BGM12:file_702.mp3
+[playbgm storage="file_702.mp3" loop="true" volume=50]
 
 [chara_show name="00_tomoya" top="0" left="0" layer="0" time="100" wait="false"]
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
@@ -551,6 +552,7 @@
 [chara_mod name="01_yu" face="STA01AB" time="0"]
 
 ;★BGM12 フェードアウト wait3000
+[fadeoutbgm time=3000]
 
 #常葉　悠卯
 「なーに？あーしに命乞いは効かないし」[p]
@@ -564,6 +566,8 @@
 
 *fumie_tojo
 ;★BGM21 jiken
+[playbgm storage="jiken.mp3" loop="true" volume=50]
+
 ;★文江立ち絵右からスライドイン　右に配置
 [chara_show name="14_fumie" top="0" left="1200" layer="0" wait="false"]
 [chara_mod name="14_fumie" face="STA14AD" time="0"]
@@ -627,6 +631,7 @@
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
 ;★BGMフェードアウト　wait3000
+[fadeoutbgm time=3000]
 
 #
 たしかに、少しふらついた足取りだ。[p]
@@ -711,6 +716,7 @@
 [chara_show name="01_yu" top="0" left="1200" layer="0" time="0" wait="false"]
 
 ;★BGM15
+[playbgm storage="file_702.mp3" loop="true" volume=50]
 
 
 [chara_mod name="00_tomoya" face="STA00CG" time="0"]
@@ -805,6 +811,9 @@
 まだ浮気調査は始まったばかりだというのに───。[p]
 
 ;★BGM15フェードアウト
+[fadeoutbgm time=2000]
+
+
 ;★マップに戻る
 
 [layopt layer="message0" visible="false"]

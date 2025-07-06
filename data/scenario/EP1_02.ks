@@ -49,6 +49,8 @@ TYRANO.kag.stat.charas['14_fumie'].jname = 'OL風の女性'
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
 ;★BGM14
+[playbgm storage="file_702.mp3" loop="true" volume=50]
+
 
 #
 俺は来客に向き合う。[p]
@@ -561,6 +563,7 @@ TYRANO.kag.stat.charas['14_fumie'].jname = "高尾　文絵"
 「トモちゃーん」[p]
 
 ;★BGM12
+[playbgm storage="file_702.mp3" loop="true" volume=50]
 
 #
 入れ替わるようにして、さっきまで壁のシミのふりをしていた悠卯がやってくる。[p]

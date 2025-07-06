@@ -45,6 +45,8 @@
 「あっ」[p]
 
 ;★★BGM12:file_702.mp3
+[playbgm storage="file_702.mp3" loop="true" volume=50]
+
 #
 人の行きかう駅前で、俺は悠卯と出会った。[p]
 

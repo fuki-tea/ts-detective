@@ -72,6 +72,15 @@ GOOD END[p]
 	[jump storage="ts_title.ks"]
 [elsif exp="f.current_ep != -1 && f.current_step == 99"]
 #
+	[if exp="f.current_ep == 1 - 1"]
+		[freeimage layer="1"]
+		[layopt layer="message0" visible="false"]
+		[free name="chara_name_area" layer="message0"]
+		[call storage="EP1_XX.ks"]
+		[call target="next_ep"]
+		@jump storage="ts_title.ks"
+	[endif]
+	
 BAD END[p]
 	[emb exp="f.current_ep"]
 	[freeimage layer="message0" time="100" wait="false"]

@@ -86,6 +86,7 @@
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
 ;★BGM18
+[playbgm storage="file_702.mp3" loop="true" volume=50]
 
 ;★猫島警部立ち絵　右からスライドイン　右に配置
 [chara_show name="11_necojima" top="0" left="1200" layer="0" wait="false"]
@@ -290,6 +291,8 @@
 俺は早速情報屋に連絡を取ることにした……。[p]
 
 ;★BGM消す
+[stopbgm]
+
 ;★マップ戻る
 
 [layopt layer="message0" visible="false"]

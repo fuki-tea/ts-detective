@@ -33,6 +33,7 @@
 [chara_config brightness=40 talk_focus=brightness]
 
 ;★BGM14 question - Stereo Out
+[playbgm storage="question - Stereo Out.mp3" loop="true" volume=50]
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
@@ -181,6 +182,8 @@
 わかったところで、文絵が妻で無いとわかった以上、賠償も何も無いのだが。[p]
 
 ;★BGM14 フェードアウトwait3000
+[fadeoutbgm time=3000]
+
 
 ;★智也立ち絵　左に移動
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
@@ -198,6 +201,7 @@
 [chara_mod name="00_tomoya" face="STA00CC" time="0"]
 
 ;★BGM12 file702
+[playbgm storage="file_702.mp3" loop="true" volume=50]
 
 #柴崎　智也
 「居るけどノックくらいはして欲しいな」[p]
@@ -526,6 +530,7 @@ V
 [chara_mod name="01_yu" face="STA01BD" time="0"]
 
 ;★BGM12 フェードアウト
+[fadeoutbgm time=2000]
 
 #常葉　悠卯
 「あっ」[p]
@@ -544,6 +549,7 @@ V
 
 
 ;★BGM17 nazonazo
+[playbgm storage="nazonazo.mp3" loop="true" volume=50]
 
 
 #
@@ -828,6 +834,8 @@ V
 #
 
 ;★BGM消す
+[stopbgm]
+
 ;★立ち絵消す
 
 [chara_hide name="01_yu" time="1500" wait="false" pos_mode="false"]

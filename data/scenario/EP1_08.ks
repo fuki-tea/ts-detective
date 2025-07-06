@@ -17,6 +17,8 @@
 *start
 
 ;★BGM21 jiken - Stereo Out.mp3
+[playbgm storage="jiken - Stereo Out.mp3" loop="true" volume=50]
+
 
 ;★悠卯立ち絵右に表示
 [chara_show name="00_tomoya" top="0" left="-600" layer="0" time="0" wait="false"]
@@ -211,6 +213,7 @@
 この名前で追って、正体が知れればいいが……。[p]
 
 ;★BGM消す
+[stopbgm]
 
 *takao_tojo
 [iscript]
@@ -237,6 +240,8 @@ TYRANO.kag.stat.charas['13_takao'].jname = '高尾　良治？'
 スマホを覗き込むのに夢中になっていた俺は、背後から近づいてきた男に気づかなかった。[p]
 
 ;★BGM15
+[playbgm storage="file_702.mp3" loop="true" volume=50]
+
 
 [chara_mod name="00_tomoya" face="STA00AA" time="0"]
 
@@ -378,6 +383,7 @@ TYRANO.kag.stat.charas['13_takao'].jname = '高尾　良治？'
 [chara_mod name="01_yu" face="STA01BL" time="0"]
 
 ;★BGM停止
+[stopbgm]
 
 #常葉　悠卯
 「……なんであーしの名前を知っているんだろう……全然絡みないのに」[p]
@@ -392,6 +398,8 @@ TYRANO.kag.stat.charas['13_takao'].jname = '高尾　良治？'
 [chara_mod name="01_yu" face="STA01AH" time="0"]
 
 ;★BGM12　FILE702
+[playbgm storage="file_702.mp3" loop="true" volume=50]
+
 
 #常葉　悠卯
 「もしかして……あーしが可愛いからかな？」[p]
@@ -486,6 +494,7 @@ TYRANO.kag.stat.charas['13_takao'].jname = '高尾　良治？'
 [chara_mod name="01_yu" face="STA01BA" time="0"]
 
 ;★BGMフェードアウト　5000
+[fadeoutbgm time=5000]
 
 #
 俺は悠卯に言い含めると、踵を返す。[p]
@@ -502,6 +511,8 @@ TYRANO.kag.stat.charas['13_takao'].jname = '高尾　良治？'
 とすれば、頼れるのは一人だけだ。[p]
 
 ;★BGM消す
+[stopbgm]
+
 ;★立ち絵消す
 [chara_hide name="00_tomoya" wait="false" pos_mode="false"]
 [chara_hide name="01_yu" wait="true" pos_mode="false"]
