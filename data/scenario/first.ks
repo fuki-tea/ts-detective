@@ -63,7 +63,7 @@ sf.type_r18=true	; R18の場合は真
 
 ;-------------------------------------------------------------------------------
 ;タイトルロゴ表示
-@jump target="*for_debug"
+#@jump target="*for_debug"
 @bg storage ="BG_black.png" time=100 wait="false"
 [layopt layer="1" visible="true"]
 [ptext layer="1" x="460" y="600" text="CLICK TO START" size="40" color="white" edge="0xFF0000"]
