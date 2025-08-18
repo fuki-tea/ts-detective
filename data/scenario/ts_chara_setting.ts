@@ -21,20 +21,20 @@
 [chara_new  name="17_nojarori" storage="chara/17_nojarori/STA17AA.png" jname="幼女"  ]
 ;[chara_new  name="17_nojarori" storage="chara/17_nojarori/STA17AA.png" jname="幼女？"  ]
 
-[chara_new  name="22_miyuki(fake)" storage="chara/22_miyuki(fake)/STA22AA.png" jname="マスター"  ]
-;[chara_new  name="22_miyuki(fake)" storage="chara/22_miyuki(fake)/STA22AA.png" jname="マスター？"  ]
-;[chara_new  name="22_miyuki(fake)" storage="chara/22_miyuki(fake)/STA22AA.png" jname="謎の女"  ]
+[chara_new  name="22_miyuki_fake" storage="chara/22_miyuki_fake/STA22AA.png" jname="マスター"  ]
+;[chara_new  name="22_miyuki_fake" storage="chara/22_miyuki_fake/STA22AA.png" jname="マスター？"  ]
+;[chara_new  name="22_miyuki_fake" storage="chara/22_miyuki_fake/STA22AA.png" jname="謎の女"  ]
 
 ;cut
-[chara_new  name="cut_bansoko" storage="cut/cut_bansoko.png" ]
-[chara_new  name="cut_voicerecorder" storage="cut/cut_voicerecorder.png" ]
-[chara_new  name="cut_paimomi" storage="cut/cut_paimomi.png" ]
-[chara_new  name="cut_04" storage="cut/04.png" ]
-[chara_new  name="cut_05" storage="cut/05.png" ]
-[chara_new  name="cut_06" storage="cut/06.png" ]
-[chara_new  name="cut_07" storage="cut/07.png" ]
-[chara_new  name="cut_08" storage="cut/08.png" ]
-[chara_new  name="cut_iSZHHcW" storage="cut/cut_iSZHHcW.png" ]
+[chara_new  name="cut_bansoko" storage="cut/ep1/cut_bansoko.png" ]
+[chara_new  name="cut_voicerecorder" storage="cut/ep1/cut_voicerecorder.png" ]
+[chara_new  name="cut_paimomi" storage="cut/ep1/cut_paimomi.png" ]
+[chara_new  name="cut_04" storage="cut/ep1/04.png" ]
+[chara_new  name="cut_05" storage="cut/ep1/05.png" ]
+[chara_new  name="cut_06" storage="cut/ep1/06.png" ]
+[chara_new  name="cut_07" storage="cut/ep1/07.png" ]
+[chara_new  name="cut_08" storage="cut/ep1/08.png" ]
+[chara_new  name="cut_iSZHHcW" storage="cut/ep1/cut_iSZHHcW.png" ]
 
 [chara_new name="tomo_zoom" storage="../bgimage/stl1-03/stl1-03d-full.png" jname=""]
 
@@ -336,14 +336,14 @@
 ;21_十二橋は差分なしのため定義せず
 
 ;22_偽みゆき(AAはdefault)
-[chara_face name="22_miyuki(fake)" face="STA22AB" storage="chara/22_miyuki(fake)/STA22AB.png"]
-[chara_face name="22_miyuki(fake)" face="STA22AC" storage="chara/22_miyuki(fake)/STA22AC.png"]
-[chara_face name="22_miyuki(fake)" face="STA22AD" storage="chara/22_miyuki(fake)/STA22AD.png"]
-[chara_face name="22_miyuki(fake)" face="STA22AE" storage="chara/22_miyuki(fake)/STA22AE.png"]
-[chara_face name="22_miyuki(fake)" face="STA22AF" storage="chara/22_miyuki(fake)/STA22AF.png"]
-[chara_face name="22_miyuki(fake)" face="STA22AG" storage="chara/22_miyuki(fake)/STA22AG.png"]
-[chara_face name="22_miyuki(fake)" face="STA22AH" storage="chara/22_miyuki(fake)/STA22AH.png"]
-[chara_face name="22_miyuki(fake)" face="STA22AI" storage="chara/22_miyuki(fake)/STA22AI.png"]
-[chara_face name="22_miyuki(fake)" face="STA22AJ" storage="chara/22_miyuki(fake)/STA22AJ.png"]
+[chara_face name="22_miyuki_fake" face="STA22AB" storage="chara/22_miyuki_fake/STA22AB.png"]
+[chara_face name="22_miyuki_fake" face="STA22AC" storage="chara/22_miyuki_fake/STA22AC.png"]
+[chara_face name="22_miyuki_fake" face="STA22AD" storage="chara/22_miyuki_fake/STA22AD.png"]
+[chara_face name="22_miyuki_fake" face="STA22AE" storage="chara/22_miyuki_fake/STA22AE.png"]
+[chara_face name="22_miyuki_fake" face="STA22AF" storage="chara/22_miyuki_fake/STA22AF.png"]
+[chara_face name="22_miyuki_fake" face="STA22AG" storage="chara/22_miyuki_fake/STA22AG.png"]
+[chara_face name="22_miyuki_fake" face="STA22AH" storage="chara/22_miyuki_fake/STA22AH.png"]
+[chara_face name="22_miyuki_fake" face="STA22AI" storage="chara/22_miyuki_fake/STA22AI.png"]
+[chara_face name="22_miyuki_fake" face="STA22AJ" storage="chara/22_miyuki_fake/STA22AJ.png"]
 
 [return]

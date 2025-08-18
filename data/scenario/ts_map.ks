@@ -37,7 +37,8 @@
 ;-------------------------------------------------------------------------------
 [iscript]
 f.story_map=[["ekimae","jimusho","gakuen","hankagai","ekimae","hankagai","jimusho","gakuen","keisatsu","gakuen"],["kissa","kissa","kissa","kissa","kissa","keisatsu","hankagai","kissa","hankagai","kissa"],["hankagai","keisatsu","hankagai","jimusho","jimusho","kissa","keisatsu","jimusho","jimusho","ekimae"]]
-f.story_scenario=[["EP1_01.ks","EP1_02.ks","EP1_03.ks","EP1_04.ks","EP1_05.ks","EP1_06.ks","EP1_07.ks","EP1_08.ks","EP1_09.ks","EP1_10.ks"],["","","","","","","","","",""],["","","","","","","","","",""]]
+f.story_scenario=[["EP1_01.ks","EP1_02.ks","EP1_03.ks","EP1_04.ks","EP1_05.ks","EP1_06.ks","EP1_07.ks","EP1_08.ks","EP1_09.ks","EP1_10.ks"],["EP2_01.ks","EP2_02.ks","EP2_03.ks","EP2_04.ks","EP2_05.ks","EP2_06.ks","EP2_07.ks","EP2_08.ks","EP2_09.ks","EP2_10.ks"],["","","","","","","","","",""]]
+f.story_badend=["EP1_XX.ks","EP2_XX.ks",""]
 f.current_map="-"
 f.current_ep=-1
 f.current_step=-1
@@ -65,18 +66,23 @@ f.current_step=-1
 ;#
 ;EP[emb exp="f.current_ep+1"]-[emb exp="f.current_step+1"]/[emb exp="f.current_map"][r]
 [if exp="f.current_ep != -1 && f.current_step == 9"]
-#
+#GOOD END
 GOOD END[p]
 	[emb exp="f.current_ep"]
 	[freeimage layer="1"]
 	[jump storage="ts_title.ks"]
 [elsif exp="f.current_ep != -1 && f.current_step == 99"]
-#
-	[if exp="f.current_ep == 1 - 1"]
+#BAD END
+	[iscript]
+	tf.ep_scenario = f.story_badend[f.current_ep]
+	[endscript]
+	[if exp="f.current_ep == 1 - 1 || f.current_ep == 2 - 1"]
 		[freeimage layer="1"]
 		[layopt layer="message0" visible="false"]
 		[free name="chara_name_area" layer="message0"]
-		[call storage="EP1_XX.ks"]
+		[if exp="tf.ep_scenario != ''"]
+			[call storage="&tf.ep_scenario"]
+		[endif]
 		[call target="next_ep"]
 		@jump storage="ts_title.ks"
 	[endif]
@@ -96,7 +102,7 @@ BAD END[p]
 ;EP[emb exp="f.current_ep+1"]-[emb exp="f.current_step+1"]/[emb exp="f.current_map"][p]
 
 [eval exp="tf.ep_scenario = ''"]
-[if exp="f.current_ep == 1 - 1"]
+[if exp="f.current_ep == 1 - 1 || f.current_ep == 2 - 1"]
 	[iscript]
 	tf.ep_scenario = f.story_scenario[f.current_ep][f.current_step]
 	[endscript]
