@@ -242,7 +242,7 @@
 [chara_hide name="00_tomoya" wait="false" pos_mode="false"]
 [chara_hide name="03_ui" wait="false" pos_mode="false"]
 
-:still
+;still
 
 ;STL
 ;★暗転
@@ -345,6 +345,8 @@
 
 ;★智也左
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
+[chara_show name="00_tomoya" top="0" left="0" layer="0" time="100" wait="false"]
+
 
 ;★BGM20　tantei8 - Stereo Out
 [playbgm storage="tantei8 - Stereo Out.mp3" loop="true" volume=50]
@@ -390,6 +392,7 @@
 「お前も、見たからには無事に帰せないぞ」[p]
 
 ;★カットイン gun02a.png
+[chara_show name="gun02" top="60" left="600" layer="0" wait="false"]
 
 #
 男は黒光りする拳銃を取り出す。[r]
@@ -423,7 +426,10 @@
 「変な女だな。おい、そっちにいけ」[p]
 
 ;★カットイン消す
+[chara_hide name="gun02" time="0" wait="false" pos_mode="false"]
 ;★立ち絵消す
+[chara_hide name="00_tomoya" time="0" wait="false" pos_mode="false"]
+
 
 ;背景表示STL　目見開き怯え
 [bg storage="STL2-03b.png" time="1000"]
@@ -451,6 +457,7 @@
 「そう、俺と───」[p]
 
 ;★暗転
+[bg storage="BG_black.png" time="1500" wait="true"]
 
 ;背景表示BG02喫茶店昼
 [bg storage="BG02a.png" time="3000"]
@@ -458,12 +465,15 @@
 
 ;★愛右からスライドイン　右配置
 [chara_mod name="03_ui" face="STA03AR" time="0"]
+[chara_show name="03_ui" top="0" left="1200" layer="0" wait="false"]
+[chara_move name="03_ui" top="0" left="600" anim="true" effect="easeOutExpo" time="1500" wait="true"]
 
 
 ;★SE48
 [playse storage="SE48.mp3"]
 
 ;★カットイン　gun01a.png 警察拳銃(M3913)　画面中央
+[chara_show name="gun01" top="60" left="600" layer="0" wait="false"]
 
 #西春　愛
 「警察だ！全員動くな！」[p]
@@ -477,12 +487,16 @@
 緊張した面持ちの西春が、拳銃を構えて飛び込んでくる。[p]
 
 ;★カットイン消す
+[chara_hide name="gun01" time="0" wait="false" pos_mode="false"]
+
 
 #謎の男A
 「くそっ！」[p]
 
 ;★智也立ち絵左からスライドイン　敵の真横に配置
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
+[chara_show name="00_tomoya" top="0" left="-600" layer="0" wait="false"]
+[chara_move name="00_tomoya" top="0" left="200" anim="true" effect="easeOutExpo" time="500" wait="true"]
 
 
 [chara_mod name="03_ui" face="STA03AO" time="0"]
@@ -502,6 +516,7 @@
 ;★敵立ち絵　下にスライドアウト
 
 ;★智也立ち絵　左定位置に移動
+[chara_move name="00_tomoya" top="0" left="0" anim="true" effect="easeOutExpo" time="500" wait="true"]
 
 #
 盛大に転んだ片割れを尻目に、俺はカウンターからポットを掴む。[p]

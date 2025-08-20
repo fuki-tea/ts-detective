@@ -2,8 +2,8 @@
 [clearfix]
 [start_keyconfig]
 
-;背景表示BG04駅前
-[bg storage="BG04.png" time="3000"]
+;背景表示BG02喫茶店昼
+[bg storage="BG02a.png" time="3000"]
 
 [if exp="sf.record.trail_EP2_05_scenario_end !== undefined"]
 [glink text="既読スキップする" size=20 width=200 x=230 y=300 color=blue target=scenario_end ]
@@ -15,15 +15,14 @@
 *start
 
 
-;背景表示BG02喫茶店昼
-[bg storage="BG02a.png" time="3000"]
-
 ;★智也立ち絵中央
 
 ;★SE48
 [playse storage="SE48.mp3"]
 
 [chara_mod name="00_tomoya" face="STA00BH" time="0"]
+[chara_show name="00_tomoya" top="0" left="300" layer="0" wait="false"]
+
 
 *talk
 [message_area_scenario]
@@ -43,9 +42,14 @@
 [playbgm storage="question - Stereo Out.mp3" loop="true" volume=50]
 
 ;★智也立ち絵左へ移動
+[chara_move name="00_tomoya" top="0" left="0" anim="true" effect="easeOutExpo" time="500" wait="true"]
 
+*miyuki_tojo
 ;★みゆき立ち絵右からスライドイン　右側
-[chara_mod name="02_miyuki" face="STA02AA" time="0"]
+
+[chara_mod name="02_miyuki" face="default" time="0"]
+[chara_show name="02_miyuki" top="0" left="1200" layer="0" wait="false"]
+[chara_move name="02_miyuki" top="0" left="600" anim="true" effect="easeOutExpo" time="1500" wait="true"]
 
 #鳩村　美柚季
 「お疲れ様です」[p]
@@ -65,11 +69,13 @@
 #柴崎　智也
 「そうですね。なかなか忙しくて……」[p]
 
+*miyuki_taijo
 ;★智也立ち絵中央移動
-
 [chara_mod name="00_tomoya" face="STA00BA" time="0"]
+[chara_move name="00_tomoya" top="0" left="300" anim="true" effect="easeOutExpo" time="500" wait="false"]
 
 ;★みゆき立ち絵右へスライドアウト
+[chara_move name="02_miyuki" top="0" left="1200" anim="true" effect="easeOutExpo" time="1500" wait="true"]
 
 #
 とりとめのない会話をして、なんとなく定位置になっているフロアに戻る。[p]
@@ -206,9 +212,12 @@
 人の旦那というのは、なんとなく関わりづらいものだ。[p]
 
 ;★智也立ち絵左へ移動
+[chara_move name="00_tomoya" top="0" left="0" anim="true" effect="easeOutExpo" time="1500" wait="false"]
 
+*miyuki_tojo2
 ;★みゆき立ち絵右からスライドイン　右側
 [chara_mod name="02_miyuki" face="STA02BD" time="0"]
+[chara_move name="02_miyuki" top="0" left="600" anim="true" effect="easeOutExpo" time="1500" wait="true"]
 
 
 #鳩村　美柚季
@@ -368,7 +377,7 @@
 
 [chara_mod name="00_tomoya" face="STA00BC" time="0"]
 
-[chara_mod name="02_miyuki" face="STA02AA" time="0"]
+[chara_mod name="02_miyuki" face="default" time="0"]
 
 #鳩村　美柚季
 「え～意外です。もっと聞きたいですね」[p]
@@ -487,7 +496,7 @@
 #鳩村　美柚季
 「その人は今、幸せそうなんですか？」[p]
 
-[chara_mod name="02_miyuki" face="STA02AA" time="0"]
+[chara_mod name="02_miyuki" face="default" time="0"]
 
 #柴崎　智也
 「…………」[p]
@@ -563,7 +572,7 @@
 #柴崎　智也
 「ええ」[p]
 
-[chara_mod name="02_miyuki" face="STA02AA" time="0"]
+[chara_mod name="02_miyuki" face="default" time="0"]
 
 #
 この穏やかな日常が、明日も、明後日も続いてほしい。[p]
@@ -585,8 +594,11 @@
 #
 さしあたっては、警察で状況を確認して、連中の狙いを探るか……。[p]
 
+*miyuki_joge
 ;★みゆき立ち絵上下
 [chara_mod name="02_miyuki" face="STA02BC" time="0"]
+[chara_move name="02_miyuki" top="-60" left="600" anim="true" effect="easeOutExpo" time="100" wait="true"]
+[chara_move name="02_miyuki" top="0" left="600" anim="true" effect="easeOutExpo" time="100" wait="true"]
 
 
 #鳩村　美柚季
@@ -606,6 +618,7 @@
 
 ;00_智也立ち絵消す
 [chara_hide name="00_tomoya" wait="false"]
+[chara_hide name="02_miyuki" wait="false"]
 [bg storage="BG_black.png" time="1500" wait="true"]
 
 *scenario_end
