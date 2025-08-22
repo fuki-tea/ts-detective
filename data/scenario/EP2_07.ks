@@ -2,12 +2,15 @@
 [clearfix]
 [start_keyconfig]
 
-;�w�i�\��BG03�ɉ؊X
-[MesWin getname="bg storage="BG03.png" time="3000""]
+;★SE03
+[playse storage="SE03.mp3"]
+
+;背景表示BG03繁華街
+[bg storage="BG03.png" time="3000"]
 
 [if exp="sf.record.trail_EP2_07_scenario_end !== undefined"]
-[glink text="���ǃX�L�b�v����" size=20 width=200 x=230 y=300 color=blue target=scenario_end ]
-[glink text="���Ȃ�" size=20 width=200 x=730 y=300 color=blue target=scenario_start ]
+[glink text="既読スキップする" size=20 width=200 x=230 y=300 color=blue target=scenario_end ]
+[glink text="しない" size=20 width=200 x=730 y=300 color=blue target=scenario_start ]
 [s]
 [endif]
 
@@ -16,238 +19,244 @@
 
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
+[chara_show name="00_tomoya" top="0" left="0" layer="0" wait="false"]
 
-;��SE03
-[playse storage="SE03.mp3"]
 
 *talk
 [message_area_scenario]
 
-;�����Ă��Ȃ��L�������Â��\��ON
+;喋っていないキャラを暗く表示ON
 [chara_config brightness=40 talk_focus=brightness]
 
 #
-�w�O�ɑ�����ʂ�͍������ɂ��₩���B[p]
+駅前に続く大通りは今日もにぎやかだ。[p]
 
 #
-�ɉ؊X�����ɂ̓`���h�������낤���A�����s�񂪕����Ă���B[p]
+繁華街沿いにはチンドン屋だろうか、仮装行列が歩いている。[p]
 
 #
-�ÓT�I�ȉ�����A�A�j���L�����N�^�[�����ɂȂ��ĕ����Ă������A���̂����̈�l��������Ɍ������Ă����B[p]
+古典的な仮装や、アニメキャラクターが一列になって歩いていたが、そのうちの一人がこちらに向かってきた。[p]
 
-;��BGM19 jouhouya - Stereo Out
+*johoya_tojo
+;★BGM19 jouhouya - Stereo Out
 [playbgm storage="jouhouya - Stereo Out.mp3" loop="true" volume=50]
 
-;����񉮗����G�E����X���C�h�C���@�������@�E�z�u�@
-[chara_mod name="12_johoya" face="STA12AA" time="0"]
+;★情報屋立ち絵右からスライドイン　ゆっくり　右配置　
+[chara_mod name="12_johoya" face="default" time="0"]
+[chara_show name="12_johoya" top="0" left="1200" layer="0" wait="false"]
+[chara_move name="12_johoya" top="0" left="600" anim="true" effect="easeOutExpo" time="3000" wait="true"]
+
+
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
-#�č�@�q��
-�u�悤�v[p]
+#柴崎　智也
+「よう」[p]
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
 #
-���ꂪ�A�������ɂȂ������Ƃ�m�鐔���Ȃ��d�����Ԃ́A��񉮂������B[p]
+それが、俺が女になったことを知る数少ない仕事仲間の、情報屋だった。[p]
 
-#���
-�u�҂������ȁv[p]
+#情報屋
+「待たせたな」[p]
 
 [chara_mod name="00_tomoya" face="STA00CC" time="0"]
 
 #
-����Ȋi�D�ŉ����܂�Ȃ��Ǝv���Ă���̂��낤���B[p]
+こんな格好で怪しまれないと思っているのだろうか。[p]
 
 #
-����A�ނ��낱��Ȋi�D�����炱���A�X�ɗn�����߂�̂�������Ȃ��B[p]
+いや、むしろこんな格好だからこそ、街に溶け込めるのかもしれない。[p]
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
-#���
-�u�����A��̌������c�c�v[p]
+#情報屋
+「早速、例の件だが……」[p]
 
 #
-��񉮂͎茳�ɉ����Ă������܂��J���B[p]
+情報屋は手元に下げていた紙袋を開く。[p]
 
 #
-���́A��̋i���X�P���������󂯂Ă���A��Ƃ���̒U�߂���̂��Ƃ𒲂ׂĂ����̂��B[p]
+俺は、例の喫茶店襲撃事件を受けてから、大家さんの旦那さんのことを調べていたのだ。[p]
 
-#���
-�u�����́A�t�߈�т̓y�n�����̑��q�Ƃ��Đ��܂�Ă���v[p]
+#情報屋
+「鳩村は、付近一帯の土地持ちの息子として生まれている」[p]
 
-#���
-�u�Ⴂ�����͗V�т܂���Ă������A���̂����ɏ��^�@�̎��i�𐶂����Ďd���������Ă���v[p]
+#情報屋
+「若いうちは遊びまわっていたが、そのうちに小型機の資格を生かして仕事を見つけている」[p]
 
-#���
-�u���ꂩ��͐e����ꕔ���n���ꂽ�s���Y�𐶂����Ȃ���A���^�@�̃p�C���b�g�Ƃ��ē����Ă����v[p]
+#情報屋
+「それからは親から一部譲渡された不動産を生かしながら、小型機のパイロットとして働いていた」[p]
 
-#���
-�u�e�����L����r���̃e�i���g�Ńo�C�g�����Ă������ƒm�荇���āA�������Ă���v[p]
+#情報屋
+「親が所有するビルのテナントでバイトをしていた娘と知り合って、結婚している」[p]
 
 
 #
-����͑�Ƃ���̂��Ƃ��B[p]
+これは大家さんのことだ。[p]
 
-#���
-�u���������񂾌�A���S�l�ƂȂ����׌N�́A�Ζ���̃r���𔵑��̗��e��������āA�I�[�i�[�ɂȂ��Ă���v[p]
+#情報屋
+「鳩村が死んだ後、未亡人となった細君は、勤務先のビルを鳩村の両親から譲られて、オーナーになっている」[p]
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
-#�č�@�q��
-�u�����ނˁA���̒m���Ă�����ƈꏏ���v[p]
+#柴崎　智也
+「おおむね、俺の知っている情報と一緒だ」[p]
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
-#���
-�u�b�𑱂��悤�v[p]
+*hanashi_wo_tutukeyo
+#情報屋
+「話を続けよう」[p]
 
 
 #
-���́A���ɁA�_����́A���̒��O�̂��Ƃ𒲍��˗����Ă����B[p]
+俺は、特に、浩くんの、死の直前のことを調査依頼していた。[p]
 
-#���
-�u�Ζ���͍��ۍq��X�փV�X�e���Ƃ�����Ђ��v[p]
+#情報屋
+「勤務先は国際航空郵便システムという会社だ」[p]
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
-#�č�@�q��
-�u���Ɠ��e�́H�v[p]
+#柴崎　智也
+「事業内容は？」[p]
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
-#���
-�u��ƌ����́A�ɔ镶�̗͂A���������q��X�֊�Ƃ��v[p]
+#情報屋
+「企業向けの、極秘文章の輸送を扱う航空郵便企業だ」[p]
 
-#���
-�u���`�ł͂Ȃ��A���^�@�p�̋�`���g�p���Ă���v[p]
+#情報屋
+「大空港ではなく、小型機用の空港を使用している」[p]
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
-#�č�@�q��
-�u�ɔ镶���ˁB���ʂ̗X�ֈȏ�ɏd��������݂̂̂�A���A���v[p]
+#柴崎　智也
+「極秘文書ね。普通の郵便以上に重視するもののみを輸送、か」[p]
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
-#���
-�u���������ϑ����󂯂ėA������Ƃ�����Ђ��ȁv[p]
+#情報屋
+「そういう委託を受けて輸送するという会社だな」[p]
 
 #
-���R�A�閧�ɋ߂����݂Ƃ������ƂɂȂ�B[p]
+当然、秘密に近い存在ということになる。[p]
 
 #
-��z����A������l�Ԃ́A���̒��g�����邱�Ƃ͂Ȃ����A�����g���u��������Εʂ��낤�B[p]
+宅配物を輸送する人間は、その中身を見ることはないが、何かトラブルがあれば別だろう。[p]
 
 [chara_mod name="00_tomoya" face="STA00CC" time="0"]
 
-#�č�@�q��
-�u�ɂ����ȁv[p]
+#柴崎　智也
+「におうな」[p]
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
-#���
-�u���Ǝv�������v[p]
+#情報屋
+「だと思ったぜ」[p]
 
-;��SE28
+;★SE28
 [playse storage="SE28.mp3"]
 #
-��񉮂͎��܂��烊�X�g�����o���B[p]
+情報屋は紙袋からリストを取り出す。[p]
 
-#���
-�u���Ƃł�������ǂ�ł��炦�΂����v[p]
-
-
-#
-����́A���ۍq��X�փV�X�e���̏㓾�Ӄ��X�g�������B[p]
-
-#
-���R�A�ނ��S���Ȃ���3�N�O�̂��̂��p�ӂ���Ă���B[p]
-
-
-#�č�@�q��
-�u�c�c�c�c�v[p]
+#情報屋
+「あとでじっくり読んでもらえばいい」[p]
 
 
 #
-���Ƃ̖��O�����邪�����͖����B[p]
+それは、国際航空郵便システムの上得意リストだった。[p]
 
 #
-���Ђ̕����Ԃ��g������A�����������ډ^�΂��邩�炾�낤�B[p]
+当然、彼が亡くなった3年前のものが用意されている。[p]
+
+
+#柴崎　智也
+「…………」[p]
+
 
 #
-�������K�͂̉�Ђ��ڗ��B[p]
+大企業の名前もあるが多くは無い。[p]
+
+#
+自社の物流網を使ったり、そもそも直接運ばせるからだろう。[p]
+
+#
+小さい規模の会社が目立つ。[p]
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
-#�č�@�q��
-�u��H�v[p]
+#柴崎　智也
+「ん？」[p]
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
 #
-���̃��X�g�ɁA�����c�C�^�W�c�̕������������B[p]
+そのリストに、原町田海運集団の文字が見えた。[p]
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
-#�č�@�q��
-�u�����c�C�^�W�c���c�c�v[p]
+#柴崎　智也
+「原町田海運集団か……」[p]
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
 #
-�������A�i���X���P�����A�����Ԃ𓐂񂾂̂��A���̉�Ђł͂Ȃ��������H[p]
+たしか、喫茶店を襲った連中が車を盗んだのも、この会社ではなかったか？[p]
 
-#���
-�u�����c�C�^�W�c�H�v[p]
+#情報屋
+「原町田海運集団？」[p]
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
-#�č�@�q��
-�u�����A�i���X���P�����A���̏���Ă����Ԃ��A���̉�Ђ��瓐�܂ꂽ���̂��v[p]
+#柴崎　智也
+「ああ、喫茶店を襲った連中の乗っていた車が、この会社から盗まれたものだ」[p]
 
-#���
-�u���R���ȁH�v[p]
+#情報屋
+「偶然かな？」[p]
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
 
 #
-���ƂȂ�Ƃ������A���̉�Ђ̋K�͂͂��قǑ傫���Ȃ��B[p]
+大企業ならともかく、この会社の規模はさほど大きくない。[p]
 
 #
-���̓���Ԃ��A�����Ɋ֗^���Ă���H[p]
+その盗難車が、事件に関与している？[p]
 
 #
-���R�ɂ��Ă͖��Șb���B[p]
+偶然にしては妙な話だ。[p]
 
-#���
-�u�ǉ��������K�v�������ȁv[p]
+#情報屋
+「追加調査が必要そうだな」[p]
 
 
 #
-��񉮂��A�ɂ��Ə΂����C�������B[p]
+情報屋が、にやりと笑った気がした。[p]
 
 [chara_mod name="00_tomoya" face="STA00CH" time="0"]
 
-#�č�@�q��
-�u�@���������ď������v[p]
+#柴崎　智也
+「察しが早くて助かるよ」[p]
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
 #
-���͏�񉮂��玆�܂��󂯎��B[p]
+俺は情報屋から紙袋を受け取る。[p]
 
 #
-�����āA��񉮂́A�����ɎG���ւƏ����Ă������B[p]
+そして、情報屋は、足早に雑踏へと消えていった。[p]
 
-;�������G����
-;��BGM����
+;★立ち絵消す
+;★BGM消す
 [stopbgm]
 
 [layopt layer="message0" visible="false"]
 
-;00_�q�痧���G����
-[chara_hide name="00_tomoya" wait="false"]
+;00_智也立ち絵消す
+[chara_hide name="00_tomoya" time="0" wait="false" pos_mode="false"]
+[chara_hide name="12_johoya" time="0" wait="false" pos_mode="false"]
 [bg storage="BG_black.png" time="1500" wait="true"]
 
 *scenario_end
