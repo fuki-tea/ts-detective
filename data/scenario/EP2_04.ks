@@ -237,12 +237,12 @@
 
 #西春　愛
 「え、ちょ、どこ行くんすか」[p]
-
+#
 ;★立ち絵消す
 [chara_hide name="00_tomoya" wait="false" pos_mode="false"]
 [chara_hide name="03_ui" wait="false" pos_mode="false"]
 
-;still
+*still
 
 ;STL
 ;★暗転
@@ -331,10 +331,11 @@
 ;★BGM消す
 [stopbgm]
 
+*tomoya_tojo
 
 #柴崎　智也
 「ずいぶん行儀の悪い客だな」[p]
-
+#
 ;暗転STL
 ;★暗転
 [bg storage="BG_black.png" time="1500" wait="true"]
@@ -352,6 +353,7 @@
 [playbgm storage="tantei8 - Stereo Out.mp3" loop="true" volume=50]
 
 ;★敵立ち絵　右に表示
+[chara_show name="30_teki" top="0" left="600" layer="0" wait="false"]
 
 #
 男たちが振り返る。[p]
@@ -391,8 +393,9 @@
 #謎の男B
 「お前も、見たからには無事に帰せないぞ」[p]
 
-;★カットイン gun02a.png
-[chara_show name="gun02" top="60" left="600" layer="0" wait="false"]
+*gun_cutin
+;★カットイン gun01a.png
+[chara_show name="gun01" top="160" left="400" layer="0" wait="false"]
 
 #
 男は黒光りする拳銃を取り出す。[r]
@@ -426,13 +429,14 @@
 「変な女だな。おい、そっちにいけ」[p]
 
 ;★カットイン消す
-[chara_hide name="gun02" time="0" wait="false" pos_mode="false"]
+[chara_hide name="gun01" time="0" wait="false" pos_mode="false"]
 ;★立ち絵消す
 [chara_hide name="00_tomoya" time="0" wait="false" pos_mode="false"]
+[chara_hide name="30_teki" time="0" wait="false" pos_mode="false"]
 
 
 ;背景表示STL　目見開き怯え
-[bg storage="STL2-03b.png" time="1000"]
+[bg storage="stl2-04/stl2-04a.png" time="1000"]
 
 
 #
@@ -462,6 +466,9 @@
 ;背景表示BG02喫茶店昼
 [bg storage="BG02a.png" time="3000"]
 ;★立ち絵配置　敵中央　
+[chara_show name="30_teki" top="0" left="300" layer="0" wait="false"]
+
+*ui_tojo
 
 ;★愛右からスライドイン　右配置
 [chara_mod name="03_ui" face="STA03AR" time="0"]
@@ -472,8 +479,8 @@
 ;★SE48
 [playse storage="SE48.mp3"]
 
-;★カットイン　gun01a.png 警察拳銃(M3913)　画面中央
-[chara_show name="gun01" top="60" left="600" layer="0" wait="false"]
+;★カットイン　gun02a.png 警察拳銃(M3913)　画面中央
+[chara_show name="gun02" top="120" left="400" layer="0" wait="false"]
 
 #西春　愛
 「警察だ！全員動くな！」[p]
@@ -487,7 +494,7 @@
 緊張した面持ちの西春が、拳銃を構えて飛び込んでくる。[p]
 
 ;★カットイン消す
-[chara_hide name="gun01" time="0" wait="false" pos_mode="false"]
+[chara_hide name="gun02" time="0" wait="false" pos_mode="false"]
 
 
 #謎の男A
@@ -514,6 +521,7 @@
 「いっでぇっ！」[p]
 
 ;★敵立ち絵　下にスライドアウト
+[chara_move name="30_teki" top="1000" left="0" anim="true" effect="easeOutExpo" time="500" wait="true"]
 
 ;★智也立ち絵　左定位置に移動
 [chara_move name="00_tomoya" top="0" left="0" anim="true" effect="easeOutExpo" time="500" wait="true"]
@@ -523,6 +531,9 @@
 
 
 ;★敵立ち絵　右からスライドイン　中央に配置
+[chara_show name="30_teki" top="0" left="1200" layer="0" wait="false"]
+[chara_move name="30_teki" top="0" left="300" anim="true" effect="easeOutExpo" time="1500" wait="true"]
+
 
 #謎の男B
 「チッ！」[p]
@@ -545,6 +556,8 @@
 
 ;★敵立ち絵　下にスライドアウト
 
+[chara_move name="30_teki" top="1000" left="300" anim="true" effect="easeOutExpo" time="500" wait="true"]
+
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
 [chara_mod name="03_ui" face="STA03AM" time="0"]
@@ -565,9 +578,13 @@
 #
 一人目の男が落とした拳銃を拾う。[p]
 
+
+*ui_pyon
 ;★愛立ち絵上下に移動
 
 [chara_mod name="03_ui" face="STA03AH" time="0"]
+[chara_move name="03_ui" top="-10" left="600" anim="true" effect="easeOutExpo" time="500" wait="true"]
+[chara_move name="03_ui" top="0" left="600" anim="true" effect="easeOutExpo" time="500" wait="true"]
 
 #西春　愛
 「先輩っ！約束のタイミングと違うじゃないっすか！」[p]
@@ -607,6 +624,7 @@
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
 [chara_mod name="03_ui" face="STA03AP" time="0"]
+[chara_move name="03_ui" top="0" left="300" anim="true" effect="easeOutExpo" time="500" wait="true"]
 
 #柴崎　智也
 「それにしては妙なことを口走っていたがな。そこの男から銃を取り上げろ」[p]
@@ -624,6 +642,8 @@
 ;★敵立ち絵中央　下からスライドイン
 
 [chara_mod name="00_tomoya" face="STA00CF" time="0"]
+[chara_move name="30_teki" top="0" left="300" anim="true" effect="easeOutExpo" time="500" wait="true"]
+
 
 #謎の男B
 「らぁっ！」[p]
@@ -637,8 +657,10 @@
 [playse storage="SE52.mp3"]
 
 ;★愛立ち絵左に移動　智也の真横に配置
+[chara_move name="03_ui" top="0" left="-300" anim="true" effect="easeOutExpo" time="500" wait="true"]
 
 ;★敵立ち絵　左手にスライドアウト
+[chara_move name="30_teki" top="0" left="-600" anim="true" effect="easeOutExpo" time="500" wait="true"]
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
@@ -652,6 +674,8 @@
 [playse storage="SE55.mp3"]
 
 ;★愛立ち絵・智也立ち絵ともに下方へスライドアウト
+[chara_move name="00_tomoya" top="1000" left="0" anim="true" effect="easeOutExpo" time="500" wait="false"]
+[chara_move name="03_ui" top="1000" left="100" anim="true" effect="easeOutExpo" time="500" wait="true"]
 
 #
 俺もろとも突き飛ばされ、警察用のオートマチックを取り落とす。[p]
@@ -659,17 +683,24 @@
 #謎の男B
 「ずらかるぞっ！」[p]
 
+*teki_taijo
 ;★敵立ち絵中央　下方からスライドイン
+[chara_show name="30_teki" top="1000" left="300" layer="0" wait="false"]
+[chara_move name="30_teki" top="0" left="300" anim="true" effect="easeOutExpo" time="500" wait="true"]
 
 #謎の男A
 「チイっ！」[p]
 
 ;★敵立ち絵　左へスライドアウト
+[chara_move name="30_teki" top="0" left="-600" anim="true" effect="easeOutExpo" time="500" wait="true"]
+
+
 ;★SE48
 [playse storage="SE48.mp3"]
 
 ;★銃カットイン　智也狙撃ポーズ（両手）+大陸製拳銃(54式拳銃)（両手）
-
+*gun_cutin2
+[chara_show name="gun02" top="120" left="400" layer="0" wait="false"]
 #柴崎　智也
 「待てっ───あれ？」[p]
 
@@ -677,9 +708,12 @@
 逃げる男に向けた銃口は叫ばない。[p]
 
 ;★カットイン消す
+[chara_hide name="gun02" time="0" wait="false" pos_mode="false"]
+
 
 ;★智也立ち絵下方からスライドイン　配置左
 [chara_mod name="00_tomoya" face="STA00CF" time="0"]
+[chara_move name="00_tomoya" top="0" left="0" anim="true" effect="easeOutExpo" time="500" wait="true"]
 
 
 
@@ -691,7 +725,8 @@
 
 ;★愛立ち絵下方からスライドイン　上半身だけ表示　配置中央
 [chara_mod name="03_ui" face="STA03AR" time="0"]
-
+[chara_show name="03_ui" top="1000" left="300" layer="0" wait="false"]
+[chara_move name="03_ui" top="300" left="300" anim="true" effect="easeOutExpo" time="500" wait="true"]
 
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
@@ -713,6 +748,7 @@
 ;★SE52
 [playse storage="SE52.mp3"]
 ;★愛立ち絵下方へスライドアウト
+[chara_move name="03_ui" top="1000" left="300" anim="true" effect="easeOutExpo" time="500" wait="true"]
 
 #
 テーブルの下に西春を突き飛ばす。[p]
@@ -731,6 +767,7 @@
 
 ;★智也立ち絵中央
 [chara_mod name="00_tomoya" face="STA00CF" time="0"]
+[chara_move name="00_tomoya" top="0" left="300" anim="true" effect="easeOutExpo" time="500" wait="true"]
 
 
 ;★BGM消す
@@ -747,15 +784,19 @@
 [playse storage="SE54.mp3"]
 
 ;★智也立ち絵左にスライドアウト
+[chara_move name="00_tomoya" top="0" left="-600" anim="true" effect="easeOutExpo" time="500" wait="true"]
 
 #
 俺は西春の落とした自動拳銃を拾って追いかける。[p]
 
+
+*bg_slide
 ;★SE56
 [playse storage="SE56.mp3"]
 
 ;★画面が横移動するトランジション
-[bg storage="BG02a.png" time="1000"]
+[bg storage="BG02a.png" time="1000" method="fadeInLeft"]
+
 
 ;★BGM　file_725
 [playbgm storage="file_725.mp3" loop="true" volume=50]
@@ -779,6 +820,9 @@
 一人の男が窓から銃を向ける。[p]
 
 ;★カットイン　智也狙撃ポーズ（両手）+警察拳銃（M3913）（両手）
+[chara_show name="gun00" top="60" left="200" layer="0" wait="false"]
+[chara_show name="gun01" top="60" left="600" layer="0" wait="false"]
+
 
 #柴崎　智也
 「───っ！」[p]
@@ -801,6 +845,9 @@
 ;★SE27
 [playse storage="SE27.mp3"]
 ;★カットイン消す
+[chara_hide name="gun02" time="0" wait="false" pos_mode="false"]
+[chara_hide name="gun01" time="0" wait="false" pos_mode="false"]
+
 
 #
 急加速中に駆動輪のグリップを失い、車は派手な音を立てて消火栓にぶち当たる。[r]
@@ -817,9 +864,9 @@
 [stopbgm]
 
 
-
+*bg_effect2
 ;★画面が横移動するトランジション
-[bg storage="BG02a.png" time="1000"]
+[bg storage="BG02a.png" time="1000" method="puffIn"]
 
 
 [chara_show name="00_tomoya" top="0" left="-600" layer="0" wait="false"]
@@ -879,6 +926,7 @@
 #柴崎　智也
 「おや？」[p]
 
+*bgm
 ;★BGM question - Stereo Out
 [playbgm storage="question - Stereo Out.mp3" loop="true" volume=50]
 
@@ -969,7 +1017,8 @@
 [layopt layer="message0" visible="false"]
 
 ;00_智也立ち絵消す
-[chara_hide name="00_tomoya" wait="false"]
+[chara_hide name="00_tomoya" time="0" wait="false" pos_mode="false"]
+[chara_hide name="01_yu" time="0" wait="false" pos_mode="false"]
 [bg storage="BG_black.png" time="1500" wait="true"]
 
 *scenario_end

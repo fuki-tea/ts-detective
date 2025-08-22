@@ -12,6 +12,7 @@
 [chara_new  name="15_rino" storage="chara/15_rino/STA15AA.png" jname="河越　凜乃"  ]
 [chara_new  name="19_onise" storage="chara/19_onise/STA19AA.png" jname="鬼瀬　龍一"  ]
 [chara_new  name="21_sojuro" storage="chara/21_sojuro/STA21AA.png" jname="十二橋　総渋朗"  ]
+[chara_new  name="30_teki" storage="chara/30_teki/teki.png" jname="十二橋　総渋朗"  ]
 
 ;状況で名前が変わるキャラ
 ;[chara_new  name="13_takao" storage="chara/13_takao/STA13AA.png" jname="高尾　良治"  ]
