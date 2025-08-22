@@ -36,10 +36,11 @@
 [chara_new  name="cut_07" storage="cut/ep1/07.png" ]
 [chara_new  name="cut_08" storage="cut/ep1/08.png" ]
 [chara_new  name="cut_iSZHHcW" storage="cut/ep1/cut_iSZHHcW.png" ]
-[chara_new  name="gun00" storage="cut/ep2/gun00.png" ]
-[chara_new  name="gun01" storage="cut/ep2/gun01.png" ]
-[chara_new  name="gun02" storage="cut/ep2/gun02.png" ]
-[chara_new  name="gun03" storage="cut/ep2/gun03.png" ]
+[chara_new  name="cut_gun00" storage="cut/ep2/gun00.png" ]
+[chara_new  name="cut_gun01" storage="cut/ep2/gun01.png" ]
+[chara_new  name="cut_gun02" storage="cut/ep2/gun02.png" ]
+[chara_new  name="cut_gun03" storage="cut/ep2/gun03.png" ]
+[chara_new  name="cut_unaji" storage="cut/ep2/unaji.png" ]
 
 [chara_new name="tomo_zoom" storage="../bgimage/stl1-03/stl1-03d-full.png" jname=""]
 

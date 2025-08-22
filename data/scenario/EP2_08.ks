@@ -2,12 +2,12 @@
 [clearfix]
 [start_keyconfig]
 
-;�w�i�\��BG02b�i���X��
+;背景表示BG02b喫茶店夜
 [bg storage="BG02b.png" time="3000"]
 
 [if exp="sf.record.trail_EP2_08_scenario_end !== undefined"]
-[glink text="���ǃX�L�b�v����" size=20 width=200 x=230 y=300 color=blue target=scenario_end ]
-[glink text="���Ȃ�" size=20 width=200 x=730 y=300 color=blue target=scenario_start ]
+[glink text="既読スキップする" size=20 width=200 x=230 y=300 color=blue target=scenario_end ]
+[glink text="しない" size=20 width=200 x=730 y=300 color=blue target=scenario_start ]
 [s]
 [endif]
 
@@ -15,357 +15,383 @@
 *start
 
 
-;���q�痧���G����
+;★智也立ち絵中央
 
 [chara_mod name="00_tomoya" face="STA00CD" time="0"]
+[chara_show name="00_tomoya" top="0" left="300" layer="0" wait="false"]
+
 
 *talk
 [message_area_scenario]
 
-;�����Ă��Ȃ��L�������Â��\��ON
+;喋っていないキャラを暗く表示ON
 [chara_config brightness=40 talk_focus=brightness]
 
-#�č�@�q��
-�u�������悭�������ȁc�c�v[p]
+#柴崎　智也
+「今日もよく働いたな……」[p]
 
 #
-�C���t���΂�������i���X�o�C�g�������ł��܂����B[p]
+気が付けばすっかり喫茶店バイトが馴染んでしまった。[p]
 
 #
-���̂܂ܒT��x�Ƃ��ċi���X�o�C�g�̂܂܂������肵�āc�c�B[p]
+このまま探偵休業して喫茶店バイトのままだったりして……。[p]
 
 #
-�d���ς��悤���ȁc�c�������낤�ȁB[p]
+仕事変えようかな……無理だろうな。[p]
 
-;��BGM11(file863)
+;★BGM11(file863)
 [playbgm storage="file_863.mp3" loop="true" volume=50]
 
-;����l�������G���Ɉړ��A�݂䂫�����G�E�ɕ\��
+*tomoya_ido
+;★主人公立ち絵左に移動、みゆき立ち絵右に表示
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
+[chara_move name="00_tomoya" top="0" left="0" anim="true" effect="easeOutExpo" time="1500" wait="false"]
 
-[chara_mod name="02_miyuki" face="STA02AA" time="0"]
+[chara_mod name="02_miyuki" face="default" time="0"]
+[chara_show name="02_miyuki" top="0" left="600" layer="0" time="1500" wait="true"]
 
-#�����@���M�G
-�u�͂��A�����l�v[p]
+
+#鳩村　美柚季
+「はい、お疲れ様」[p]
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
-#�č�@�q��
-�u��Ƃ��c�c�}�X�^�[�v[p]
+#柴崎　智也
+「大家さ……マスター」[p]
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
 [chara_mod name="02_miyuki" face="STA02AC" time="0"]
 
-#�����@���M�G
-�u�͂��A�}�X�^�[�ł���B�����͏I���܂������H�v[p]
+#鳩村　美柚季
+「はい、マスターですよ。準備は終わりましたか？」[p]
 
 [chara_mod name="00_tomoya" face="STA00CH" time="0"]
 
-#�č�@�q��
-�u�����A���Ƃ͌������ł��v[p]
+#柴崎　智也
+「ええ、あとは鍵だけです」[p]
 
 [chara_mod name="02_miyuki" face="STA02AB" time="0"]
 
-#�����@���M�G
-�u�ӂӁA���肪�Ƃ��������܂��B���ꂶ�Ⴀ�A�A��܂��傤�v[p]
+#鳩村　美柚季
+「ふふ、ありがとうございます。それじゃあ、帰宅しましょう」[p]
+#
+;★立ち絵消す
+[chara_hide name="00_tomoya" time="0" wait="false" pos_mode="false"]
+[chara_hide name="02_miyuki" time="0" wait="false" pos_mode="false"]
 
-;�������G����
-;���Ó]
-;���w���X�`��HK3fiW9
+;★暗転
+[bg storage="BG_black.png" time="1500" wait="true"]
+
+*still
+;★背中スチルHK3fiW9
+[bg storage="stl2-04/unaji.png" time="1500" wait="true"]
 
 #
-���h���ɂ��w���������Ĕ��𐮂��Ă���B[p]
+無防備にも背中を見せて髪を整えている。[p]
 
 #
-�G�v������E�����A�V���G�b�g�����������Z�[�^�[�p�ɁA���́c�c�B[p]
+エプロンを脱いだ、シルエットが強調されるセーター姿に、俺は……。[p]
 
-#�č�@�q��
-�i���āA���l���Ă�񂾁A���͏����낤���j[p]
-
-#
-���g�͒j�����c�c�B[r]
-����A����Ȃ��Ƃ͂ǂ��ł������B[p]
-
-#�����@���M�G
-�u���́v[p]
-
-#�č�@�q��
-�u�͂��I�͂��I�I�v[p]
-
-#�����@���M�G
-�u�H�v[p]
-
-#�č�@�q��
-�u�Ȃ�ł��傤���v[p]
-
-#�����@���M�G
-�u�����A����ŗ~������ł��v[p]
-
-#�č�@�q��
-�u���A���ɂł����H�v[p]
-
-#�����@���M�G
-�u�����v[p]
-
+#柴崎　智也
+（って、何考えてるんだ、俺は女だろうが）[p]
 
 #
-���́A��Ƃ���̔w���Ɉ���߂Â��B[p]
+中身は男だが……。[r]
+いや、そんなことはどうでもいい。[p]
 
-#
-�����̂��ȁA�����G��āB[p]
+#鳩村　美柚季
+「あの」[p]
 
-#�����@���M�G
-�u�ˁH�v[p]
+#柴崎　智也
+「はっ！はい！！」[p]
+
+#鳩村　美柚季
+「？」[p]
+
+#柴崎　智也
+「なんでしょうか」[p]
+
+#鳩村　美柚季
+「髪を、結んで欲しいんです」[p]
+
+#柴崎　智也
+「お、俺にですか？」[p]
+
+#鳩村　美柚季
+「ええ」[p]
 
 
 #
-��Ƃ���̓S�����w�ō����o���B[p]
+俺は、大家さんの背中に一歩近づく。[p]
 
 #
-���͗D�����A�Â��ɁA���̔��ɐG�ꂽ�B[p]
+いいのかな、俺が触れて。[p]
 
-#
-���炳��Ɨ����悤�Ȕ����A���̏��ɐG���B[p]
-
-#�č�@�q��
-�u���ꂢ�ł��v[p]
-
-#�����@���M�G
-�u�q�炳����A�������ł���ˁv[p]
-
-#�č�@�q��
-�u�����A�ł��A����Ȃ񂶂�Ȃ��āv[p]
-
-#�����@���M�G
-�u�����Ƃ�����ꂵ�Ȃ��Ⴞ�߂ł���v[p]
-
-#�č�@�q��
-�u�����A�͂��c�c�B�܂��v[p]
-
-#�����@���M�G
-�u�I�K�ɂ��Ă�������炢�����ł����H�v[p]
-
-#�č�@�q��
-�u����A���ꂾ���͂��v[p]
+#鳩村　美柚季
+「ね？」[p]
 
 
 #
-�w���z���ɁA��Ƃ���͂��������΂��Ă���̂��킩��B[p]
+大家さんはゴムを指で差し出す。[p]
 
 #
-�I�K�ɐG�点����A�ǂ�Ȋi�D�ɂ������邩�킩�������̂���Ȃ��B[p]
+俺は優しく、静かに、その髪に触れた。[p]
 
-#�����@���M�G
-�u����Ȃ�A���������������܂��傤���H�v[p]
+#
+さらさらと流れるような髪が、俺の掌に触れる。[p]
 
-#�č�@�q��
-�u���A��Ƃ��񂪁H�v[p]
+#柴崎　智也
+「きれいです」[p]
 
-#�����@���M�G
-�u�s���ł����H�v[p]
+#鳩村　美柚季
+「智也さんも、髪長いですよね」[p]
+
+#柴崎　智也
+「ええ、でも、こんなんじゃなくて」[p]
+
+#鳩村　美柚季
+「ちゃんとお手入れしなきゃだめですよ」[p]
+
+#柴崎　智也
+「ええ、はい……。まあ」[p]
+
+#鳩村　美柚季
+「悠卯にしてもらったらいかがですか？」[p]
+
+#柴崎　智也
+「いや、それだけはっ」[p]
 
 
 #
-�����ƁA�߂����\������Ă���ɈႢ�Ȃ��B[p]
-
-#�č�@�q��
-�u�����A�Ƃ�ł��Ȃ��I���Ђ��ЁI�I�v[p]
-
-#�����@���M�G
-�u�ӂӁv[p]
+背中越しに、大家さんはくすくす笑っているのがわかる。[p]
 
 #
-�������΂��B[p]
+悠卯に触らせたら、どんな格好にさせられるかわかったものじゃない。[p]
+
+#鳩村　美柚季
+「それなら、私がお手入れをしましょうか？」[p]
+
+#柴崎　智也
+「え、大家さんが？」[p]
+
+#鳩村　美柚季
+「不服ですか？」[p]
+
 
 #
-�����ŁA��b���r�؂ꂽ�B[p]
+きっと、悲しい表情をしているに違いない。[p]
+
+#柴崎　智也
+「いえ、とんでもない！ぜひぜひ！！」[p]
+
+#鳩村　美柚季
+「ふふ」[p]
 
 #
-���́A�S���Ō����̂Ɏl�ꔪ�ꂵ�Ă���B[p]
+小さく笑う。[p]
 
 #
-���َq�̑܂Ȃ�A��͖����̂��B[r]
-����������͑�Ƃ���̔��ł���B[p]
+そこで、会話が途切れた。[p]
+
+#
+俺は、ゴムで結うのに四苦八苦している。[p]
+
+#
+お菓子の袋なら、訳は無いのだ。[r]
+しかしこれは大家さんの髪である。[p]
 
 
-;��BGM�t�F�[�h�A�E�g
+;★BGMフェードアウト
 [fadeoutbgm time=2000]
 
+*bgm_fadeout
 #
-�Â��ȕ����ɁA���̏ł��������������������B[p]
+静かな部屋に、俺の焦った息遣いだけが響く。[p]
 
-#�����@���M�G
-�u���̔��ˁc�c�v[p]
+#鳩村　美柚季
+「この髪ね……」[p]
 
-#�����@���M�G
-�u�����ł���v[p]
+#鳩村　美柚季
+「長いでしょ」[p]
 
-#�č�@�q��
-�u�����v[p]
+#柴崎　智也
+「ええ」[p]
 
-#�����@���M�G
-�u�c�c�_���񂪖S���Ȃ����Ƃ�����A�؂��ĂȂ���ł��v[p]
+#鳩村　美柚季
+「……浩さんが亡くなったときから、切ってないんです」[p]
 
-#�č�@�q��
-�u�c�c�c�c�v[p]
+#柴崎　智也
+「…………」[p]
 
-
-#
-���˂Ȍ��t�ɁA�肪�~�܂����B[p]
 
 #
-�������̑�Ƃ���́A�\��͒m��Ȃ��B[p]
-
-#�����@���M�G
-�u�ł��c�c�����������Ȃ��āA�v���Ă����ł��v[p]
-
-#�����@���M�G
-�u�I�K�͌��C�����A�q�炳������Ă���邵�c�c�v[p]
-
-#�����@���M�G
-�u�����A�O�������Ȃ��Ɓv[p]
-
-#�č�@�q��
-�u�c�c�c�c�v[p]
+唐突な言葉に、手が止まった。[p]
 
 #
-��Ƃ���A���Ȃ��̒��ɂ͂܂��c�c�B[p]
+後ろ向きの大家さんの、表情は知れない。[p]
 
-#�č�@�q��
-�u���́A�����ɂ��܂���v[p]
+#鳩村　美柚季
+「でも……もういいかなって、思っているんです」[p]
 
-#�����@���M�G
-�u�ӂӁc�c���肪�Ƃ��������܂��v[p]
+#鳩村　美柚季
+「悠卯は元気だし、智也さんもいてくれるし……」[p]
 
-#
-������ǂ��A����A�I�K���A��Ƃ���̐S�𖄂߂��Ȃ����Ƃ́A�킩���Ă���B[p]
+#鳩村　美柚季
+「もう、前を向かないと」[p]
 
-#
-���������A���Ԃ��K�v�Ȃ̂��B[p]
-
-#
-���́A�����ȋC�����Ŗڐ������ɂ�����B[p]
+#柴崎　智也
+「…………」[p]
 
 #
-���́A�_���񂪎c���Ă������L�X�}�[�N��������B[p]
+大家さん、あなたの中にはまだ……。[p]
 
-#�č�@�q��
-�u�c�c�c�c�H�v[p]
+#柴崎　智也
+「俺は、ここにいますよ」[p]
 
-;���J�b�g�C��nrVlIXa.png
+#鳩村　美柚季
+「ふふ……ありがとうございます」[p]
 
-;��BGM�@nazonazo - Stereo Out.mp3
+#
+だけれども、俺や、悠卯が、大家さんの心を埋められないことは、わかっている。[p]
+
+#
+もう少し、時間が必要なのだ。[p]
+
+#
+俺は、微妙な気持ちで目線を下にやった。[p]
+
+#
+あの、浩くんが残していったキスマークが見える。[p]
+
+#柴崎　智也
+「…………？」[p]
+
+*unaji_cutin
+;★カットインnrVlIXa.png
+[chara_show name="cut_unaji" top="120" left="600" layer="0" wait="false"]
+
+
+;★BGM　nazonazo - Stereo Out.mp3
 [playbgm storage="nazonazo - Stereo Out.mp3" loop="true" volume=50]
 
 #
-���́A��a���������ă}�[�N���悭�悭����B[p]
+俺は、違和感を感じてマークをよくよく見る。[p]
 
 #
-�ȑO�͋C�Â��Ȃ��������A����̓L�X�}�[�N�ł͂Ȃ��B[p]
+以前は気づかなかったが、これはキスマークではない。[p]
 
 #
-�l�דI�ɂ���ꂽ�A��������̖͗l���B[p]
+人為的につけられた、何かしらの模様だ。[p]
 
 #
-�������z��͉�����T���Ă����B[p]
+───奴らは何かを探していた。[p]
 
 #
-�����������_����́A���̏؋����B�������A�����ꎩ�����������\���������Ă����B[p]
+何かを見た浩くんは、その証拠を隠したが、いずれ自分が消される可能性を感じていた。[p]
 
 #
-��������āA�x�@�ɂ͓`�����Ȃ������̂��낤�B[p]
+事情があって、警察には伝えられなかったのだろう。[p]
 
 #
-���邢�́A���������������āA�铽���邾���ŏ��؂낤�Ƃ��Ă����̂�������Ȃ��B[p]
+あるいは、何か条件があって、秘匿するだけで乗り切ろうとしていたのかもしれない。[p]
 
 #
-�������A���̉B���ꏊ�͂ǂ����Ɏc���˂΂Ȃ�Ȃ��B[p]
+しかし、その隠し場所はどこかに残さねばならない。[p]
 
 #
-���̃q���g���A���̖͗l�Ȃ̂ł͂Ȃ����B[p]
+そのヒントが、この模様なのではないか。[p]
 
 #
-�ނɋ߂����l��A�g�D�̐l�Ԃ�����΂킩��悤�Ȃ��Ƃ��A���̖͗l�ɉB����Ă���ɈႢ�Ȃ��B[p]
+彼に近しい人や、組織の人間が見ればわかるようなことが、この模様に隠されているに違いない。[p]
 
 #
-�_����͂����炭�A���̔閧������ړI�ő�Ƃ���ɂ��̖͗l�������̂��낤�B[p]
+浩くんはおそらく、その秘密を託す目的で大家さんにこの模様をつけたのだろう。[p]
 
 #
-�^�g�D�[����������ނȂ�΁A���̕��@�ɂ͂����Ă���ɈႢ�Ȃ��B[p]
+タトゥーが趣味だった彼ならば、その方法にはたけているに違いない。[p]
 
 #
-�����炭�́A���̖͗l�͂����I�K�Ȃǂ̐e�����l�������Ƃ��Ɓu�����v���������Ƃ�m��l�Ԃɂ���Č�������͂��ł������B[p]
+おそらくは、この模様はいつか悠卯などの親しい人──もともと「あざ」が無いことを知る人間によって見つけられるはずであった。[p]
 
 #
-�����A��Ƃ���͎v���l�S����A�����Ɣ���L�΂��Ă����B[p]
+だが、大家さんは思い人亡き後、ずっと髪を伸ばしていた。[p]
 
 #
-������A���̔閧�͖{�l�ȊO�̒N���m�邱�ƂȂ��A�����܂ŕ��󂳂�Ă����B[p]
+だから、その秘密は本人以外の誰も知ることなく、今日まで封印されていた。[p]
 
 #
-�z�炪����܂ł́c�c�B[p]
+奴らが来るまでは……。[p]
 
-;���J�b�g�C������
+;★カットイン消す
+[chara_hide name="cut_unaji" time="0" wait="false" pos_mode="false"]
 
-#�����@���M�G
-�u�q�炳��H�v[p]
+
+#鳩村　美柚季
+「智也さん？」[p]
 
 
 #
-�w���z���ɁA�s�����Ȑ������������B[p]
+背中越しに、不安げな声が聞こえた。[p]
 
 #
-���̎肪�~�܂��Ă������炾�낤�B[p]
+俺の手が止まっていたからだろう。[p]
 
-#�č�@�q��
-�u���A�����A�Ȃ�ł��Ȃ���ł��v[p]
+#柴崎　智也
+「あ、いえ、なんでもないんです」[p]
 
-#�����@���M�G
-�u���݂܂���A����Șb�����Ă��܂��āc�c�v[p]
+#鳩村　美柚季
+「すみません、こんな話をしてしまって……」[p]
 
-#�č�@�q��
-�u����Ȃ킯����Ȃ���ł��v[p]
+#柴崎　智也
+「そんなわけじゃないんです」[p]
 
-#�����@���M�G
-�u���H�v[p]
+#鳩村　美柚季
+「え？」[p]
 
-#�č�@�q��
-�u��Ƃ�����A��邷�ׂ�������������c�c�v[p]
+#柴崎　智也
+「大家さんを、守るすべを見つけたいから……」[p]
+#
+
+;★暗転
+[bg storage="BG_black.png" time="1500" wait="true"]
 
 
-;���Ó]
-;�w�i�\��BG02b�i���X��
+;背景表示BG02b喫茶店夜
 [bg storage="BG02b.png" time="3000"]
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
+[chara_show name="00_tomoya" top="0" left="0" layer="0" wait="false"]
+
 
 [chara_mod name="02_miyuki" face="STA02CE" time="0"]
+[chara_show name="02_miyuki" top="0" left="600" layer="0" wait="false"]
 
-#�����@���M�G
-�u�ł́A�A��܂��傤�v[p]
+#鳩村　美柚季
+「では、帰りましょう」[p]
 
-
-#
-��Ƃ���̊�ɉA�肪����̂́A���قɑς��؂ꂸ����Șb�����Ă��܂����������낤�B[p]
 
 #
-�����A���͂���Ȃ��ƂȂǋC�ɂ��Ă��Ȃ������B[p]
+大家さんの顔に陰りがあるのは、沈黙に耐え切れずあんな話をしてしまったせいだろう。[p]
 
 #
-�w���������Ă��̘b�����Ă��ꂽ���Ƃ́A���ւ̐M���̏؂Ǝ󂯗������B[p]
+だが、俺はそんなことなど気にしていなかった。[p]
 
 #
-���ɂ͓z�炪��Ƃ����_�����R�̌����������B[p]
+背中を見せてその話をしてくれたことは、俺への信頼の証と受け立った。[p]
 
 #
-���Ƃ́A�����W�߂ď��������邾�����B[p]
+俺には奴らが大家さんを狙う理由の見当がついた。[p]
+
+#
+あとは、情報を集めて準備をするだけだ。[p]
 
 [layopt layer="message0" visible="false"]
 
-;00_�q�痧���G����
-[chara_hide name="00_tomoya" wait="false"]
+;00_智也立ち絵消す
+[chara_hide name="00_tomoya" time="0" wait="false" pos_mode="false"]
+[chara_hide name="02_miyuki" time="0" wait="false" pos_mode="false"]
 [bg storage="BG_black.png" time="1500" wait="true"]
 
 *scenario_end

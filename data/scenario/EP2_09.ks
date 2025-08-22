@@ -4,12 +4,12 @@
 [clearfix]
 [start_keyconfig]
 
-;�w�i�\��BG03�ɉ؊X
+;背景表示BG03繁華街
 [bg storage="BG03.png" time="3000"]
 
 [if exp="sf.record.trail_EP2_09_scenario_end !== undefined"]
-[glink text="���ǃX�L�b�v����" size=20 width=200 x=230 y=300 color=blue target=scenario_end ]
-[glink text="���Ȃ�" size=20 width=200 x=730 y=300 color=blue target=scenario_start ]
+[glink text="既読スキップする" size=20 width=200 x=230 y=300 color=blue target=scenario_end ]
+[glink text="しない" size=20 width=200 x=730 y=300 color=blue target=scenario_start ]
 [s]
 [endif]
 
@@ -19,367 +19,377 @@
 
 
 
-;���q�痧���G���@��񉮁E�L�������G�E
+;★智也立ち絵左　情報屋・猫島立ち絵右
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
+[chara_show name="00_tomoya" top="0" left="0" layer="0" wait="false"]
+;[chara_show name="12_johoya" top="0" left="600" layer="0" wait="false"]
+;[chara_show name="11_necojima" top="0" left="800" layer="0" wait="false"]
 
 *talk
 [message_area_scenario]
 
-;�����Ă��Ȃ��L�������Â��\��ON
+;喋っていないキャラを暗く表示ON
 [chara_config brightness=40 talk_focus=brightness]
 
 #
-�w�i�t�O�ցO�j����񂨁I�x[p]
+『（Ｕ＾ω＾）わんわんお！』[p]
 
-#�č�@�q��
-�u�c�c�c�c�v[p]
-
-#
-���͂����񂷁B[p]
+#柴崎　智也
+「…………」[p]
 
 #
-��������̔ɉ؊X�͂قǂقǂɍ���ł����B[p]
-
-#�č�@�q��
-�u�U�����Ă���l���Ă킯�ł͂Ȃ��炵���ȁv[p]
+周囲を見回す。[p]
 
 #
-��ʂ���s���o�X�A�q���~�낵�ė�������^�N�V�[�B[r]
-�����ĘH�����Ă��郏���{�b�N�X�J�[�B[p]
+昼下がりの繁華街はほどほどに混んでいた。[p]
+
+#柴崎　智也
+「散歩している人ってわけではないらしいな」[p]
+
+#
+大通りを行くバス、客を降ろして立ち去るタクシー。[r]
+そして路駐しているワンボックスカー。[p]
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
-#�č�@�q��
-�u��H�v[p]
+#柴崎　智也
+「ん？」[p]
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
 #
-�x�O�i���o�[�̔��������{�b�N�X�J�[�B[r]
-���A�E�B���h�E�̓X���[�N�K���X�Ŕ铽����Ă���B[p]
+郊外ナンバーの白いワンボックスカー。[r]
+リアウィンドウはスモークガラスで秘匿されている。[p]
 
 #
-�V��Ɋ��C�����t���Ă���Ƃ��납��A����p�r�̎ԗ��ƕ�����B[p]
+天井に換気口が付いているところから、特殊用途の車両と分かる。[p]
 
 [chara_mod name="00_tomoya" face="STA00CH" time="0"]
 
-#�č�@�q��
-�u�Ȃ�قǂˁv[p]
-
+#柴崎　智也
+「なるほどね」[p]
+#
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
-[chara_show name="12_johoya" top="0" left="1200" layer="0" time="0" wait="false"]
-;[chara_mod name="12_johoya" face="STA12AA" time="0"]
-[chara_move name="12_johoya" top="0" left="600" anim="true" effect="easeOutExpo" time="3000" wait="true"]
+*johoya_tojo
+[chara_mod name="12_johoya" face="default" time="0"]
+[chara_show name="12_johoya" top="0" left="600" layer="0" time="1500" wait="true"]
 
 
 #
-�Ԃ̌��ɋ߂Â��ƁA��񉮂�����o�����B[p]
+車の後ろに近づくと、情報屋が顔を出した。[p]
 
-#���
-�u�����Ă��ꂽ���v[p]
+#情報屋
+「見つけてくれたか」[p]
 
-#�č�@�q��
-�u�Ȃ�قǁA����񂩁v[p]
-
-#
-�ꌩ�A��ʎԂƓ����悤�ȕ��͋C�����A����͌x�@���̗A���ԗ����B[p]
+#柴崎　智也
+「なるほど、わんわんか」[p]
 
 #
-�����炭�O�Ɏ~�܂��Ă��郌���^�J�[���x�@�̎؂�グ���낤�B[p]
+一見、一般車と同じような雰囲気だが、これは警察犬の輸送車両だ。[p]
 
-#���
-�u�����̑{���ŗ��Ă���炵�����v[p]
+#
+おそらく前に止まっているレンタカーも警察の借り上げだろう。[p]
+
+#情報屋
+「事件の捜査で来ているらしいぜ」[p]
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
-#�č�@�q��
-�u����ȏꏊ���w�肷��Ȃ�Ē������ȁv[p]
+#柴崎　智也
+「こんな場所を指定するなんて珍しいな」[p]
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
 #
-��񉮂͕��i�A�x�@������ĉ��ƐڐG����B[p]
+情報屋は普段、警察を避けて俺と接触する。[p]
 
-#���
-�u�ł��邾�����S�ȏꏊ�ɂ����ق����悳�����łȁv[p]
+#情報屋
+「できるだけ安全な場所にいたほうがよさそうでな」[p]
 
 [chara_mod name="00_tomoya" face="STA00CC" time="0"]
 
 #
-����Ȃ��Ԃ̑O�ŉ�΂����̂����c�c�B[p]
+それなら交番の前で会えばいいのだが……。[p]
 
 #
-�����ڂ�����������ȁB[r]
-�b�ŐE�������͖̂ڂɌ����Ă���B[p]
+見た目が怪しいからな。[r]
+秒で職質されるのは目に見えている。[p]
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
-#���
-�u�ǂ���烄�o������������񂾂��v[p]
+#情報屋
+「どうやらヤバい感じがするんだぜ」[p]
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
-#�č�@�q��
-�u���o���H�v[p]
+#柴崎　智也
+「ヤバい？」[p]
 
-#���
-�u���񂽂̒ǂ��Ă���A�����c�C�^�W�c���v[p]
+#情報屋
+「あんたの追っている、原町田海運集団だ」[p]
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
 #
-L�łɃv�����g���ꂽ�ʐ^�ƕ����������t����B[p]
+L版にプリントされた写真と封筒を押し付ける。[p]
 
 #
-���͂������Ɏ��B[r]
-�������ƁA���̎���œ����j�����̎ʐ^���B[p]
+俺はそれを手に取る。[r]
+事務所と、その周りで動く男たちの写真だ。[p]
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
 #
-�[�ɉf���Ă���j�́c�c�i���X���P�������A���Ɏ��Ă���ȁB[p]
+端に映っている男は……喫茶店を襲撃した連中に似ているな。[p]
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
-#���
-�u���̍��A�A���̎��������A���Ɋ����炵���v[p]
+#情報屋
+「この頃、連中の事務所が、妙に活発らしい」[p]
 
 #
-�i���X���P�����A���̎Ԃ͂��̉�Ђ��瓐�܂ꂽ���̂������B[p]
+喫茶店を襲った連中の車はこの会社から盗まれたものだった。[p]
 
 #
-�����đ�Ƃ���̒U�߂ł���_���񂪐��O�΂߂Ă������ۍq��X�փV�X�e���̏�A��������Ƃ��B[p]
+そして大家さんの旦那である浩くんが生前勤めていた国際航空郵便システムの常連だった企業だ。[p]
 
 #
-���ꂾ���̊֌W�ł͂Ȃ��Ƃ������Ƃ��H[p]
+それだけの関係ではないということか？[p]
 
-#���
-�u���̉�Ђ̓��Ƀ��o���\�����Ă݂��񂾂��v[p]
+#情報屋
+「この会社の特にヤバい噂を洗ってみたんだぜ」[p]
 
-#���
-�u����Əo�Ă���o�Ă���c�c���ȏL�����[�h���ȁv[p]
+#情報屋
+「すると出てくる出てくる……きな臭いワードがな」[p]
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
-#�č�@�q��
-�u�ǂ�Ȃ��H�v[p]
+#柴崎　智也
+「どんなだ？」[p]
 
-#���
-�u�ߍ��̘A�����H�����Ɗ֌W���Ă�����ĉ\���v[p]
+#情報屋
+「近頃の連続失踪事件と関係しているって噂だ」[p]
 
-#�č�@�q��
-�u���H�����H�v[p]
+#柴崎　智也
+「失踪事件？」[p]
 
-#���
-�u���傤�ǂ��񂽂݂����Ȑl�Ԃ̂��Ƃ��v[p]
+#情報屋
+「ちょうどあんたみたいな人間のことさ」[p]
 
 [chara_mod name="00_tomoya" face="STA00CE" time="0"]
 
-#�č�@�q��
-�u�܂����c�c�H�v[p]
+#柴崎　智也
+「まさか……？」[p]
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
 #
-���Ɠ����悤�Ȗڂɂ����Ă���l�Ԃ��A���ɂ�������Č����̂��B[p]
+俺と同じような目にあっている人間が、他にも居るって言うのか。[p]
 
 #
-�����āA���ꂪ�����c�C�^�W�c�Ɋ֌W���Ă��邾�Ɓc�c�H[p]
+そして、それが原町田海運集団に関係しているだと……？[p]
 
 #
-��Ƃ����_���Ă���̂͌����c�C�^�W�c�Ȃ̂��H[p]
+大家さんを狙っているのは原町田海運集団なのか？[p]
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
-#���
-�u�Ƃɂ����A���͂��񂽂ɓn���Ă������v[p]
+#情報屋
+「とにかく、情報はあんたに渡しておくぜ」[p]
 
-#���
-�u�����A�����ւ���̂͂����܂ł��B���΂炭�g���B�����Ă��炤���v[p]
+#情報屋
+「だが、俺が関われるのはここまでだ。しばらく身を隠させてもらうぜ」[p]
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
-#�č�@�q��
-�u���A�������c�c�v[p]
+#柴崎　智也
+「そ、そうか……」[p]
 
-#���
-�u�ڗ��^���͂ł��Ȃ��񂾁v[p]
+#情報屋
+「目立つ真似はできないんだ」[p]
 
-#�č�@�q��
-�u�������킩�����B�C��t���Ăȁv[p]
+#柴崎　智也
+「───わかった。気を付けてな」[p]
 
-#���
-�u���񂽂����ȁB�z��A�育�킢���v[p]
-
+#情報屋
+「あんたこそな。奴ら、手ごわいぜ」[p]
+#
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
-;����񉮗����G�E�ɃX���C�h�A�E�g
+;★情報屋立ち絵右にスライドアウト
+[chara_move name="12_johoya" top="0" left="1200" anim="true" effect="easeOutExpo" time="1500" wait="true"]
 
-;��BGM�t�F�[�h�A�E�g
+;★BGMフェードアウト
 [fadeoutbgm time=2000]
 
-#
-���������ƁA�����{�b�N�X�J�[�̉A�ɏ����Ă������B[p]
+*johoya_taijo
 
 #
-��񉮂��ǂ�������i�œz��̂��Ƃ�T�����̂��͕s�������A�啪��Ȃ�����n�����悤�������B[p]
+そう言うと、ワンボックスカーの陰に消えていった。[p]
 
 #
-����łȂ���Β͂߂Ȃ��g�D���Ƃ����̂��B[p]
+情報屋がどういう手段で奴らのことを探ったのかは不明だが、大分危ない橋を渡ったようだった。[p]
 
 #
-���ɂ͘b���Ȃ��������A���̐��E�ł͒m��ꂽ�g�D�Ȃ̂�������Ȃ��B[p]
+それでなければ掴めない組織だというのか。[p]
 
-;���E����L���x���X���C�h�C���@�E�z�u
+#
+俺には話さなかったが、裏の世界では知られた組織なのかもしれない。[p]
+
+
+*nekojima_tojo
+;★右から猫島警部スライドイン　右配置
 [chara_mod name="11_necojima" face="STA11AB" time="0"]
+[chara_show name="11_necojima" top="0" left="1200" layer="0" wait="false"]
+[chara_move name="11_necojima" top="0" left="600" anim="true" effect="easeOutExpo" time="1500" wait="true"]
+
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
-;��BGM18 �Y�������p
+;★BGM18 刑事部屋用
 
-#�L���x��
-�u�����v[p]
+#猫島警部
+「おう」[p]
 
-#�č�@�q��
-�u����H�v[p]
+#柴崎　智也
+「おや？」[p]
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
 
 #
-�G�����甲���o�Ă����̂́A�L���x���������B[p]
+雑踏から抜け出てきたのは、猫島警部だった。[p]
 
-#�L���x��
-�u�d�����H�v[p]
+#猫島警部
+「仕事か？」[p]
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
-#�č�@�q��
-�u�����B�L��������ł����v[p]
+#柴崎　智也
+「ええ。猫島さんもですか」[p]
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
 [chara_mod name="11_necojima" face="STA11AC" time="0"]
 
-#�L���x��
-�u���̊X�͎�������������v[p]
+#猫島警部
+「この街は事件が多すぎる」[p]
 
 
-[chara_mod name="11_necojima" face="STA11AA" time="0"]
+[chara_mod name="11_necojima" face="default" time="0"]
 
 #
-����A�����̌x�@������������Ă��鎖���̑{���Ȃ̂��낤�B[p]
+大方、そこの警察犬が導入されている事件の捜査なのだろう。[p]
 
 [chara_mod name="11_necojima" face="STA11AB" time="0"]
 
-#�L���x��
-�u�Ƃ���Łc�c�Ȃɂ��T���Ă���炵���ȁv[p]
+#猫島警部
+「ところで……なにやら探っているらしいな」[p]
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
-#�č�@�q��
-�u���H�v[p]
+#柴崎　智也
+「え？」[p]
 
 [chara_mod name="11_necojima" face="STA11AF" time="0"]
 
-#�L���x��
-�u�����c�C�^�W�c��������������Ă݂邪�A�������v[p]
+#猫島警部
+「原町田海運集団───俺も洗ってみるが、厄介そうだ」[p]
 
-#�č�@�q��
-�u�c�c�c�c�v[p]
+#柴崎　智也
+「…………」[p]
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
 [chara_mod name="11_necojima" face="STA11AB" time="0"]
 
-#�L���x��
-�u���ꂩ��͎���������ق����ǂ��v[p]
+#猫島警部
+「あれからは手を引いたほうが良い」[p]
 
-#�L���x��
-�u���x�͑̂����ɂȂ邾������ς܂Ȃ���������Ȃ����v[p]
+#猫島警部
+「今度は体が女になるだけじゃ済まないかもしれないぞ」[p]
 
-#�L���x��
-�u�ꉞ�A�x���͒���t�������Ă��邪�A���f�͂���ȁv[p]
+#猫島警部
+「一応、警官は張り付けさせているが、油断はするな」[p]
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
-[chara_mod name="11_necojima" face="STA11AA" time="0"]
+[chara_mod name="11_necojima" face="default" time="0"]
 
-#�č�@�q��
-�u�c�c���������肪�Ƃ��������܂��v[p]
+#柴崎　智也
+「……ご忠告ありがとうございます」[p]
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
 [chara_mod name="11_necojima" face="STA11AB" time="0"]
 
-#�L���x��
-�u�����A���Ⴀ�ȁv[p]
+#猫島警部
+「ああ、じゃあな」[p]
+#
+;★猫島立ち絵右にスライドアウト
+[chara_move name="11_necojima" top="0" left="1200" anim="true" effect="easeOutExpo" time="1500" wait="true"]
 
-;���L�������G�E�ɃX���C�h�A�E�g
+*nakojima_taijo
 
 #
-�L���x���͂��ꂾ�������ƁA�����Ă������B[p]
+猫島警部はそれだけ言うと、去っていった。[p]
 
 #
-�̂����ɂȂ邾������ς܂Ȃ��A���B[p]
+体が女になるだけじゃ済まない、か。[p]
 
 #
-�������̉������ۂɁA�L���x���ɂ͂��̒������˗����Ă����B[p]
+俺が女体化した際に、猫島警部にはその調査を依頼していた。[p]
 
 #
-����̋i���X�P�������ƁA���̒����̌��ʂ����т����̂��낤���H[p]
+先日の喫茶店襲撃事件と、その調査の結果が結びついたのだろうか？[p]
 
 #
-�����A���̑_���͉��ł͂Ȃ���Ƃ��񂾂����͂��c�c�B[p]
+だが連中の狙いは俺ではなく大家さんだったはず……。[p]
 
-#�č�@�q��
-�u�c�c�c�c�v[p]
+#柴崎　智也
+「…………」[p]
 
-;��SE28
+;★SE28
 [playse storage="SE28.mp3"]
 
 #
-���A�Ɉړ����ď�񉮂���󂯎��������������B[p]
+物陰に移動して情報屋から受け取った資料を見る。[p]
 
 #
-�z��̕\�����Ɍ��\����Ă�����̂̑��ɁA�����̊֌W����ڂ��Ă���B[p]
+奴らの表向きに公表されているものの他に、裏側の関係先も載っている。[p]
 
 #
-�Ȃ�قǁA�����s������уT�������z��̊֌W�悩�B[p]
+なるほど、俺が行った育毛サロンも奴らの関係先か。[p]
 
 #
-����᎟�͌��\�т��炯���t���t�ӂ�ӂ�ɂȂ邩������Ȃ��ȁB[p]
+こりゃ次は結構毛だらけモフモフふわふわになるかもしれないな。[p]
 
 #
-�����͂��Ȃ�f�ГI�ŁA��񉮂炵���Ȃ��܂Ƃߕ����B[r]
-�Ƃɂ����䑽���A�댯�ȑg�D�炵���B[p]
+資料はかなり断片的で、情報屋らしくないまとめ方だ。[r]
+とにかく謎多く、危険な組織らしい。[p]
 
 #
-�����A���ɂ͂ЂƂ������Ă��邱�Ƃ�����B[p]
+だが、俺にはひとつ分かっていることがある。[p]
 
 #
-���̓z��̑_���́A���ł͂Ȃ���Ƃ��񂾂Ƃ������Ƃ��B[p]
+今の奴らの狙いは、俺ではなく大家さんだということだ。[p]
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
-#�č�@�q��
-�u�����������Ă���ɂ͖����ȁv[p]
+#柴崎　智也
+「ぐずぐずしている暇は無いな」[p]
 
 #
-�G�̎�������߂����Ƃ����A�s����͈�����Ȃ��c�c�I[p]
-
-
-
-
-
-
+敵の事情もつかめたことだし、行く先は一つしかない……！[p]
 
 [layopt layer="message0" visible="false"]
 
-;00_�q�痧���G����
-[chara_hide name="00_tomoya" wait="false"]
+;00_智也立ち絵消す
+[chara_hide name="00_tomoya" time="0" wait="false" pos_mode="false"]
+;[chara_hide name="11_necojima" time="0" wait="false" pos_mode="false"]
+;[chara_hide name="12_johoyas" time="0" wait="false" pos_mode="false"]
 [bg storage="BG_black.png" time="1500" wait="true"]
 
 *scenario_end
