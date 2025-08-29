@@ -4,12 +4,12 @@
 [clearfix]
 [start_keyconfig]
 
-;�w�i�\��BG02�i���X��
+;背景表示BG02喫茶店昼
 [bg storage="BG02a.png" time="3000"]
 
 [if exp="sf.record.trail_EP2_10_scenario_end !== undefined"]
-[glink text="���ǃX�L�b�v����" size=20 width=200 x=230 y=300 color=blue target=scenario_end ]
-[glink text="���Ȃ�" size=20 width=200 x=730 y=300 color=blue target=scenario_start ]
+[glink text="既読スキップする" size=20 width=200 x=230 y=300 color=blue target=scenario_end ]
+[glink text="しない" size=20 width=200 x=730 y=300 color=blue target=scenario_start ]
 [s]
 [endif]
 
@@ -17,725 +17,766 @@
 *start
 
 
-;���q�痧���G������X���C�h�C��
-
-;��SE48
-[playse storage="SE48.mp3"]
-
+;★智也立ち絵左からスライドイン
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
+[chara_show name="00_tomoya" top="0" left="-600" layer="0" wait="false"]
+[chara_move name="00_tomoya" top="0" left="0" anim="true" effect="easeOutExpo" time="1500" wait="true"]
+
+;★SE48
+[playse storage="SE48.mp3"]
 
 *talk
 [message_area_scenario]
 
-;�����Ă��Ȃ��L�������Â��\��ON
+;喋っていないキャラを暗く表示ON
 [chara_config brightness=40 talk_focus=brightness]
 
 #
-���u�����̑O�Ɍx�������荞��ł��邱�Ƃ��m�F���āA�X�̒��ɓ���B[p]
+ルブランの前に警官が張り込んでいることを確認して、店の中に入る。[p]
 
-;���U�݂䂫�����G�E��1200�\��
-[chara_mod name="22_miyuki(fake)" face="STA22AA" time="0"]
+;★偽みゆき立ち絵右手1200表示
+[chara_mod name="22_miyuki_fake" face="default" time="0"]
+[chara_show name="22_miyuki_fake" top="0" left="600" layer="0" wait="false"]
 
-#�}�X�^�[
-�u��������Ⴂ�܂��[�v[p]
+#マスター
+「いらっしゃいませー」[p]
 
-#�č�@�q��
-�u�c�c�v[p]
+#柴崎　智也
+「……」[p]
 
-[chara_mod name="22_miyuki(fake)" face="STA22AB" time="0"]
+[chara_mod name="22_miyuki_fake" face="STA22AB" time="0"]
 
-#�}�X�^�[
-�u���ɂȂ����܂����H�v[p]
-
-[chara_mod name="00_tomoya" face="STA00CB" time="0"]
-
-#�č�@�q��
-�u�c�c���[�j���O���v[p]
-
-[chara_mod name="00_tomoya" face="STA00CA" time="0"]
-
-[chara_mod name="22_miyuki(fake)" face="STA22AA" time="0"]
-
-#�}�X�^�[
-�u�����ݕ��́H�v[p]
+#マスター
+「何になさいますか？」[p]
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
-#�č�@�q��
-�u�R�[�q�[�Łv[p]
+#柴崎　智也
+「……モーニングを」[p]
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
-;���݂䂫�����G�E�ɃX���C�h�A�E�g
+[chara_mod name="22_miyuki_fake" face="default" time="0"]
 
-#
-�`�[�������ă}�X�^�[���������Ă����B[p]
-
-#
-���΂炭����ƁA�����̍��肪�Y���Ă����B[p]
+#マスター
+「お飲み物は？」[p]
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
-#�č�@�q��
-�u�ǂ����A�x�������炵���ȁc�c�v[p]
+#柴崎　智也
+「コーヒーで」[p]
+#
+[chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
-#�}�X�^�[
-�u�ǂ�����܂����A�č肳��B�ǉ��̂������ł����H�v[p]
+;★みゆき立ち絵右にスライドアウト
+[chara_move name="22_miyuki_fake" top="0" left="1200" anim="true" effect="easeOutExpo" time="1500" wait="true"]
 
-#�č�@�q��
-�u����v[p]
+*miyuki_fake_taijo
+
+#
+伝票を持ってマスターが下がっていく。[p]
+
+#
+しばらくすると、いつもの香りが漂ってきた。[p]
+
+[chara_mod name="00_tomoya" face="STA00CB" time="0"]
+
+#柴崎　智也
+「どうやら、遅かったらしいな……」[p]
+
+#マスター
+「どうされました、柴崎さん。追加のご注文ですか？」[p]
+
+#柴崎　智也
+「いや」[p]
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
 #
-���͍l����B[p]
+俺は考える。[p]
 
 #
-�܂����Ԃ͌o���Ă��Ȃ��炵���B[r]
-������A�ł�͂���B[p]
+まだ時間は経っていないらしい。[r]
+だから、打つ手はある。[p]
 
 
-;���݂䂫�����G�E����X���C�h�C��
-[chara_mod name="22_miyuki(fake)" face="STA22AB" time="0"]
+*miyuki_fake_tojo
+;★みゆき立ち絵右からスライドイン
+[chara_mod name="22_miyuki_fake" face="STA22AB" time="0"]
+[chara_move name="22_miyuki_fake" top="0" left="600" anim="true" effect="easeOutExpo" time="1500" wait="true"]
 
-#�}�X�^�[
-�u�͂��ǂ����v[p]
+#マスター
+「はいどうぞ」[p]
 
-[chara_mod name="22_miyuki(fake)" face="STA22AA" time="0"]
+[chara_mod name="22_miyuki_fake" face="default" time="0"]
 
-;��SE12
+;★SE12
 [playse storage="SE12.mp3"]
 #
-�}�X�^�[���R�[�q�[�������Ă���B[p]
+マスターがコーヒーを持ってくる。[p]
 
-#�č�@�q��
-�u�c�c�v[p]
+#柴崎　智也
+「……」[p]
 
 #
-�~���N�̃J�b�v�����ނƁA���͏������߂Ă���A���Ƃ����B[p]
+ミルクのカップをつかむと、俺は少し眺めてから、落とした。[p]
 
-[chara_mod name="22_miyuki(fake)" face="STA22AE" time="0"]
+[chara_mod name="22_miyuki_fake" face="STA22AE" time="0"]
 
-#�}�X�^�[
-�u���b�I�v[p]
+#マスター
+「あッ！」[p]
 
 [chara_mod name="00_tomoya" face="STA00CH" time="0"]
 
-;��SE12
+;★SE12
 [playse storage="SE12.mp3"]
 #
-�Ƃ����Ƀ}�X�^�[���E���L�΂��ăL���b�`����B[p]
+とっさにマスターが右手を伸ばしてキャッチする。[p]
 
-[chara_mod name="22_miyuki(fake)" face="STA22AA" time="0"]
+[chara_mod name="22_miyuki_fake" face="default" time="0"]
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
 
-#�č�@�q��
-�u���肪�Ƃ��������܂��v[p]
+#柴崎　智也
+「ありがとうございます」[p]
 
-[chara_mod name="22_miyuki(fake)" face="STA22AB" time="0"]
+[chara_mod name="22_miyuki_fake" face="STA22AB" time="0"]
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
-#�}�X�^�[
-�u�ǂ��������܂��āv[p]
+#マスター
+「どういたしまして」[p]
 
-[chara_mod name="22_miyuki(fake)" face="STA22AA" time="0"]
+[chara_mod name="22_miyuki_fake" face="default" time="0"]
 
-
-#
-�~���N�̃J�b�v���R�[�q�[�J�b�v�̖T��ɒu���B[r]
-���ߐF�̉t�̂ɓ��C���Y���Ă���B[p]
-
-#�č�@�q��
-�u�c�c�v[p]
-
-[chara_mod name="22_miyuki(fake)" face="STA22AD" time="0"]
-
-#�}�X�^�[
-�u�ǂ����܂������H�v[p]
-
-#�č�@�q��
-�u�c�c�v[p]
-
-[chara_mod name="22_miyuki(fake)" face="STA22AC" time="0"]
 
 #
-���͖����Ń}�X�^�[�̍��������B[p]
+ミルクのカップをコーヒーカップの傍らに置く。[r]
+琥珀色の液体に湯気が漂っている。[p]
 
-[chara_mod name="22_miyuki(fake)" face="STA22AD" time="0"]
+#柴崎　智也
+「……」[p]
 
-#�}�X�^�[
-�u������ƁA�č肳��B�ǂ������̂ł����v[p]
+[chara_mod name="22_miyuki_fake" face="STA22AD" time="0"]
+
+#マスター
+「どうしましたか？」[p]
+
+#柴崎　智也
+「……」[p]
+
+[chara_mod name="22_miyuki_fake" face="STA22AC" time="0"]
+
+#
+俺は無言でマスターの左手を握る。[p]
+
+[chara_mod name="22_miyuki_fake" face="STA22AD" time="0"]
+
+#マスター
+「ちょっと、柴崎さん。どうしたのですか」[p]
 
 ;BGM
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
-#�č�@�q��
-�u���������O�́A�N���H�v[p]
+#柴崎　智也
+「───お前は、誰だ？」[p]
 
-[chara_mod name="22_miyuki(fake)" face="STA22AC" time="0"]
+[chara_mod name="22_miyuki_fake" face="STA22AC" time="0"]
 
-#�}�X�^�[�H
-�u�����v[p]
+#マスター？
+「えっ」[p]
 
-#�č�@�q��
-�u��Ƃ���͍��������B���O�͂Ƃ����ɉE��ŃJ�b�v��������v[p]
+#柴崎　智也
+「大家さんは左利きだ。お前はとっさに右手でカップを取った」[p]
 
-[chara_mod name="22_miyuki(fake)" face="STA22AD" time="0"]
+[chara_mod name="22_miyuki_fake" face="STA22AD" time="0"]
 
-#�}�X�^�[�H
-�u����Ȃ̋��R�c�c�v[p]
+#マスター？
+「そんなの偶然……」[p]
 
-[chara_mod name="22_miyuki(fake)" face="STA22AC" time="0"]
+[chara_mod name="22_miyuki_fake" face="STA22AC" time="0"]
 
-#�č�@�q��
-�u�w�ւ��Ƃ���͊O���Ȃ��B���ł��_����̂��Ƃ��v���Ă��邩�炾�v[p]
+#柴崎　智也
+「指輪を大家さんは外さない。今でも浩くんのことを思っているからだ」[p]
 
-#�č�@�q��
-�u���͖����u���b�N�����ށB�ڔn�Ȓ��Ԃɕ����Ȃ��������H�v[p]
+#柴崎　智也
+「俺は毎朝ブラックを飲む。頓馬な仲間に聞かなかったか？」[p]
 
-#�č�@�q��
-�u�����đ�Ƃ���A����}�X�^�[�́A���̂��Ƃ�q�炳��ƌĂԁv[p]
+#柴崎　智也
+「そして大家さん、いやマスターは、俺のことを智也さんと呼ぶ」[p]
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
 #
-�p�������͎��Ă��Ă��A�ق��Ȃ�ʑ�Ƃ���̂��ƁB[r]
-�����x�����Ƃ͂ł��Ȃ��B[p]
+姿かたちは似ていても、ほかならぬ大家さんのこと。[r]
+俺を騙すことはできない。[p]
 
 #
-��p�����ɉ�������ƁA�X�͒��قɕ�܂ꂽ�B[p]
+矢継ぎ早に俺が喋ると、店は沈黙に包まれた。[p]
 
-[chara_mod name="22_miyuki(fake)" face="STA22AE" time="0"]
+[chara_mod name="22_miyuki_fake" face="STA22AE" time="0"]
 
-#��̏�
-�u�c�c�v[p]
+*miyuki_fake_namae_henko
 
-[chara_mod name="22_miyuki(fake)" face="STA22AF" time="0"]
+[iscript]
+TYRANO.kag.stat.charas['22_miyuki_fake'].jname = '謎の女'
+[endscript]
+
+#22_miyuki_fake:default
+「……」[p]
+
+[chara_mod name="22_miyuki_fake" face="STA22AF" time="0"]
 
 [chara_mod name="00_tomoya" face="STA00CE" time="0"]
 
-#��̏�
-�u�c�c�t�n�n�v[p]
+#22_miyuki_fake:default
+「……フハハ」[p]
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
-#��̏�
-�u�n�b�n�n�n�I�}�W����I�o����̑���������v[p]
+#22_miyuki_fake:default
+「ハッハハハ！マジかよ！バレるの早すぎだろ」[p]
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
-#�č�@�q��
-�u���߂������񂾂ȁv[p]
+#柴崎　智也
+「諦めがいいんだな」[p]
 
-#��̏�
-�u���Ƀo���邩������Ȃ��Ƃ͎v���Ă������A�����̃o�C�g�Ɍ��j����Ƃ͎v��Ȃ�������v[p]
+#22_miyuki_fake:default
+「妹にバレるかもしれないとは思っていたが、ただのバイトに見破られるとは思わなかったわ」[p]
 
-#��̏�
-�u�o�C�g�̏��͏��Ȃ�����������f���Ă���B���O�q����Č����̂���B�j�݂����Ȗ��O���ȁv[p]
+#22_miyuki_fake:default
+「バイトの情報は少なかったから油断してたわ。お前智也って言うのかよ。男みたいな名前だな」[p]
 
-#�č�@�q��
-�u�{���̑�Ƃ���͂ǂ��ɂ�����B������v[p]
+#柴崎　智也
+「本当の大家さんはどこにやった。答えろ」[p]
 
-#��̏�
-�u�����Ă��킯�˂������B�����莩���̐S�z�������v[p]
+#22_miyuki_fake:default
+「答えてやるわけねえじゃん。それより自分の心配をしろよ」[p]
 
 [chara_mod name="00_tomoya" face="STA00CE" time="0"]
 
-[chara_mod name="22_miyuki(fake)" face="STA22AG" time="0"]
+[chara_mod name="22_miyuki_fake" face="STA22AG" time="0"]
 
-;��SE54
+;★SE54
 [playse storage="SE54.mp3"]
 #
-���̘e���ɁA�������̂��˂��t������B[p]
+俺の脇腹に、堅いものが突き付けられる。[p]
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
-#�č�@�q��
-�u�����̂��B�����ɂȂ邼�B�\�ɂ͌x��������v[p]
+#柴崎　智也
+「いいのか。騒ぎになるぞ。表には警官がいる」[p]
 
-[chara_mod name="22_miyuki(fake)" face="STA22AH" time="0"]
+[chara_mod name="22_miyuki_fake" face="STA22AH" time="0"]
 
-#��̏�
-�u�����܂Œ����Đ������ĕԂ��킯�Ȃ������B�ł����S�����A�܂��E���Ȃ�����v[p]
+#22_miyuki_fake:default
+「そこまで喋られて生かして返すわけないじゃん。でも安心しろよ、まだ殺さないから」[p]
 
-#�č�@�q��
-�u�Ȃ����H�v[p]
+#柴崎　智也
+「なぜだ？」[p]
 
-[chara_mod name="22_miyuki(fake)" face="STA22AI" time="0"]
+[chara_mod name="22_miyuki_fake" face="STA22AI" time="0"]
 
-#��̏�
-�u���A�팟�̂�T���Ă񂾁B���O�͂���Ɏg���Ă���v[p]
+#22_miyuki_fake:default
+「今、被検体を探してんだ。お前はそれに使ってやるよ」[p]
 
-#�č�@�q��
-�u�Ȃ�قǁv[p]
+#柴崎　智也
+「なるほど」[p]
 
 #
-�����͏�肭�s���Α̂����ɖ߂���Ă��Ƃ��H[p]
+そいつは上手く行けば体が元に戻るってことか？[p]
 
 [chara_mod name="00_tomoya" face="STA00CD" time="0"]
 
-#�č�@�q��
-�u�������͂��̂܂܂ŗ��ށv[p]
+#柴崎　智也
+「髪だけはそのままで頼む」[p]
 
-[chara_mod name="22_miyuki(fake)" face="STA22AJ" time="0"]
+[chara_mod name="22_miyuki_fake" face="STA22AJ" time="0"]
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
-#��̏�
-�u�́H�v[p]
+#22_miyuki_fake:default
+「は？」[p]
 
-#�č�@�q��
-�u����A�Ȃ�ł��Ȃ��v[p]
+#柴崎　智也
+「いや、なんでもない」[p]
 
-#��̏�
-�u�₯�ɗ��������Ă񂶂��v[p]
+#22_miyuki_fake:default
+「やけに落ち着いてんじゃん」[p]
 
-#�č�@�q��
+#柴崎　智也
 [chara_mod name="00_tomoya" face="STA00CC" time="0"]
 
-�u�|����������B��l�ڂ����Ŏ��ʂ̂͌�������v[p]
+「怖いだけだよ。一人ぼっちで死ぬのは嫌だから」[p]
 
-[chara_mod name="22_miyuki(fake)" face="STA22AG" time="0"]
+[chara_mod name="22_miyuki_fake" face="STA22AG" time="0"]
 
-#��̏�
-�u�܁A�^���ǂ���΂��O�̌ق���ƍĉ�ł��邩��B�ꏏ�Ɏg���Ă���v[p]
+#22_miyuki_fake:default
+「ま、運が良ければお前の雇い主と再会できるから。一緒に使ってやるよ」[p]
 
 [chara_mod name="00_tomoya" face="STA00CD" time="0"]
 
 #
-����͍D�s�����B[r]
-���Ќق���ɉ�킹�Ă��炨���B[p]
+それは好都合だ。[r]
+ぜひ雇い主に会わせてもらおう。[p]
 
-[chara_mod name="22_miyuki(fake)" face="STA22AH" time="0"]
+[chara_mod name="22_miyuki_fake" face="STA22AH" time="0"]
 
+
+*tomoya_furue
 [chara_mod name="00_tomoya" face="STA00CF" time="0"]
-;���q�痧���G�k��������
+;★智也立ち絵震えさせる
+[chara_move name="00_tomoya" top="0" left="10" anim="true" effect="easeOutExpo" time="100" wait="true"]
+[chara_move name="00_tomoya" top="0" left="-10" anim="true" effect="easeOutExpo" time="100" wait="true"]
+[chara_move name="00_tomoya" top="0" left="10" anim="true" effect="easeOutExpo" time="100" wait="true"]
+[chara_move name="00_tomoya" top="0" left="-10" anim="true" effect="easeOutExpo" time="100" wait="true"]
+[chara_move name="00_tomoya" top="0" left="0" anim="true" effect="easeOutExpo" time="100" wait="true"]
 
-#�č�@�q��
-�u���A�E���Ȃ��Łc�c�v[p]
 
-#��̏�
-�u���X���т������Ă��x���B�����Ă��ȁv[p]
+
+#柴崎　智也
+「こ、殺さないで……」[p]
+
+#22_miyuki_fake:default
+「今更おびえだしても遅い。着いてきな」[p]
 
 [chara_mod name="00_tomoya" face="STA00CD" time="0"]
 
-#�č�@�q��
-�u�₾�[���낳�Ȃ��Ł[�v[p]
-
-;�����G����
+#柴崎　智也
+「やだーころさないでー」[p]
+#
+;立ち絵消す
 [chara_hide name="00_tomoya" wait="false" pos_mode="false"]
-[chara_hide name="22_miyuki(fake)" wait="false" pos_mode="false"]
+[chara_hide name="22_miyuki_fake" wait="false" pos_mode="false"]
 
 
 
 
 
+;水攻めSTL
+;★暗転
+[bg storage="BG_black.png" time="1500" wait="true"]
 
-;���U��STL
-;���Ó]
+*still
 
-;�w�i�\�����U�߃X�`���@�z�[�X����@STL2-04a
-[bg storage="STL2-04a.png" time="5000"]
+;背景表示水攻めスチル　ホースあり　STL2-04a
+[bg storage="stl2-04/stl2-04a.png" time="5000"]
 
 
-#�����@���M�G
-�u�񂮂��c�c����c�c����c�c�v[p]
+#鳩村　美柚季
+「んぐっ……んっ……んっ……」[p]
 
-#�����@���M�G
-�u���ق��A���ق��I�v[p]
+#鳩村　美柚季
+「げほっ、げほっ！」[p]
 
-;��SE60
+;★SE60
 [playse storage="SE60.mp3"]
-#��̒jA
-�u���[������ň���߂��v[p]
+#謎の男A
+「おーいこれで一回やめだ」[p]
 
-#��̒jB
-�u�ǂ����A�f���C�ɂȂ������H�v[p]
+#謎の男B
+「どうだ、吐く気になったか？」[p]
+#
 
-;�w�i�\�����U�߃X�`�� �z�[�X�Ȃ��@STL2-04b
-[bg storage="STL2-04b.png" time="3000"]
+;背景表示水攻めスチル ホースなし　STL2-04b
+[bg storage="stl2-04/stl2-04b.png" time="3000"]
 
-#�����@���M�G
-�u���c�c���ق��c�c�v[p]
+#鳩村　美柚季
+「う……げほっ……」[p]
 
-#�����@���M�G
-�u�������c�c�����c�c�v[p]
+#鳩村　美柚季
+「うぐっ……えぇ……」[p]
 
-#��̒jB
-�u�܂����ݑ���Ȃ��炵�����B�ǉ�����v[p]
+#謎の男B
+「まだ飲み足りないらしいぜ。追加しろ」[p]
+#
 
-;�w�i�\�����U�߃X�`���@�z�[�X����@STL2-04a
-[bg storage="STL2-04a.png" time="3000"]
+;背景表示水攻めスチル　ホースあり　STL2-04a
+[bg storage="stl2-04/stl2-04a.png" time="3000"]
 
-#�����@���M�G
-�u��A��߂āc�c�񂮂��c�c����c�c����c�c�v[p]
+#鳩村　美柚季
+「や、やめて……んぐっ……んっ……んっ……」[p]
 
-;��SE60
+;★SE60
 [playse storage="SE60.mp3"]
-#�����@���M�G
-�u�������c�c���ق��c�c�v[p]
+#鳩村　美柚季
+「えぇっ……えほっ……」[p]
 
-#��̒jA
-�u�����������݂����ĕ����D�w�݂����ɂȂ��Ă邶��ˁ[���v[p]
+#謎の男A
+「おいおい飲みすぎて腹が妊婦みたいになってるじゃねーか」[p]
+#
 
-;�w�i�\�����U�߃X�`�� �z�[�X�Ȃ��@STL2-04b
-[bg storage="STL2-04b.png" time="3000"]
+;背景表示水攻めスチル ホースなし　STL2-04b
+[bg storage="stl2-04/stl2-04b.png" time="3000"]
 
-#��̒jC
-�u��������j�􂵂��������v[p]
+#謎の男C
+「押したら破裂しそうだぜ」[p]
 
-#�����@���M�G
-�u�ɂ��B��A��߂Ă��c�c���������c�c�v[p]
+#鳩村　美柚季
+「痛っ。や、やめてぇ……ください……」[p]
 
-#��̒jD
-�u���Ⴀ��l���������Ă��炨�����B���񂽂̒U�߂��B���������̂��肩���v[p]
+#謎の男D
+「じゃあ大人しく教えてもらおうか。あんたの旦那が隠した資料のありかを」[p]
 
-#�����@���M�G
-�u�m��Ȃ���ł��c�c�������c�c�v[p]
+#鳩村　美柚季
+「知らないんです……私何も……」[p]
 
-#��̒jD
-�u�m��Ȃ��͂��͂Ȃ��B�U�߂̗�������͑S�Ē��ׂ��B�c��͂��O�����Ȃ񂾁v[p]
+#謎の男D
+「知らないはずはない。旦那の立ち寄り先は全て調べた。残るはお前だけなんだ」[p]
 
-#�����@���M�G
-�u�{���Ȃ�ł��c�c�v[p]
+#鳩村　美柚季
+「本当なんです……」[p]
 
-#�����@���M�G
-�u���A�����c�c�����c�c�v[p]
+#鳩村　美柚季
+「私、何も……何も……」[p]
 
-#��̒jA
-�u���c�c�n�@�`�v[p]
+#謎の男A
+「っ……ハァ～」[p]
 
-#��̒jB
-�u�ǂ������H�v[p]
+#謎の男B
+「どうするよ？」[p]
 
-#��̒jE
-�u������B�f���܂ł��v[p]
+#謎の男E
+「続けろ。吐くまでだ」[p]
 
-#�����@���M�G
-�u���肢�ł��A�ƂɋA���Ă��������c�c�v[p]
+#鳩村　美柚季
+「お願いです、家に帰してください……」[p]
 
-#��̒jA
-�u�������O�ɖ߂�ꏊ�͂˂���B���O�̂����ꏊ�ɂ͕ʂ̂��O������񂾂���ȁv[p]
+#謎の男A
+「もうお前に戻る場所はねえよ。お前のいた場所には別のお前がいるんだからな」[p]
 
-#�����@���M�G
-�u���A����ȁc�c�v[p]
+#鳩村　美柚季
+「そ、そんな……」[p]
 
-#�����@���M�G
-�u�_����c�c�I�K�c�c�q�炳��c�c�v[p]
+#鳩村　美柚季
+「浩さん……悠卯……智也さん……」[p]
 
-#��̒jC
-�u���ʂ��B���O�̒��Ԃ��A�x�@���A�C�Â��Ă��Ȃ��v[p]
+#謎の男C
+「無駄だ。お前の仲間も、警察も、気づいていない」[p]
 
-#��̒jB
-�u������B�N���T���ɗ��Ȃ����v[p]
+#謎の男B
+「そうよ。誰も探しに来ないぜ」[p]
 
 
-#�č�@�q��
-�u����͂ǂ����ȁH�v[p]
+#柴崎　智也
+「それはどうかな？」[p]
 
-;���Ó]
+*anten
+;★暗転
+[bg storage="BG_black.png" time="1500" wait="true"]
 
-;��SE39
+;★SE39
 [playse storage="SE39.mp3"]
-;�w�i�\���R���e�i�J���X�`���@STL2-04c
-[bg storage="STL2-04c.png" time="3000"]
+;背景表示コンテナ開放スチル　STL2-04c
+[bg storage="stl2-04/stl2-04c.png" time="3000"]
 
 
 #
-���̓R���e�i�̔����J�������A������������f�����B[p]
+俺はコンテナの扉を開け放ち、明かりを高く掲げた。[p]
 
-#��̒jA
-�u�N���I�H�v[p]
-
-
-#�č�@�q��
-�u�����̃A���o�C�g���v[p]
+#謎の男A
+「誰だ！？」[p]
 
 
-#�����@���M�G
-�u�Ɓc�c�q�炳��c�c�H�v[p]
+#柴崎　智也
+「ただのアルバイトさ」[p]
 
 
-#�č�@�q��
-�u���݂܂���A�}�X�^�[�B�x�����܂����v[p]
-
-#��̒jA
-�u�e���F�I�ǂ�����Ă����Ɂv[p]
+#鳩村　美柚季
+「と……智也さん……？」[p]
 
 
-#�č�@�q��
-�u���O��̒��Ԃ������܂ňē����Ă��ꂽ�̂��v[p]
+#柴崎　智也
+「すみません、マスター。遅刻しました」[p]
 
-#��̒jB
-�u�܂����A�i���X�̐g����́c�c�v[p]
-
-
-#�č�@�q��
-�u���̊Ԕ����Ȃ�������̃R���e�i�ł��x�݂��Ă��邺�v[p]
+#謎の男A
+「テメェ！どうやってここに」[p]
 
 
-#�č�@�q��
-�u���񂽂�͍`�p��ƈ��̃t�����B�܂�ŃR�X�v�����ȁv[p]
+#柴崎　智也
+「お前らの仲間がここまで案内してくれたのさ」[p]
 
-#��̒jA
-�u�e���F�I�v[p]
+#謎の男B
+「まさか、喫茶店の身代わりは……」[p]
 
-#��̒jC
-�u�c�c�����A������͏I��肾�B�������Ƃ��ƂƕЕt�����܂������v[p]
 
-#��̒jA
-�u�����A���O�ɗp�͂˂��񂾁B�����Ă��炤���v[p]
+#柴崎　智也
+「その間抜けなら向こうのコンテナでお休みしているぜ」[p]
 
-;�e��
 
-;��SE61
+#柴崎　智也
+「あんたらは港湾作業員のフリか。まるでコスプレ大会だな」[p]
+
+#謎の男A
+「テメェ！」[p]
+
+#謎の男C
+「……おい、お喋りは終わりだ。こいつをとっとと片付けちまおうぜ」[p]
+
+#謎の男A
+「あぁ、お前に用はねえんだ。消えてもらうぜ」[p]
+
+*juusei
+;銃声
+
+;★SE61
 [playse storage="SE61.mp3"]
-#��̒jA
-�u���������I�v[p]
+#謎の男A
+「ぐあああ！」[p]
 
 
-#�č�@�q��
-�u�������Ԕ������炢���������e���B���̂ŉ��̘r�͂킩�������낤�H�v[p]
+#柴崎　智也
+「こいつが間抜けからいただいた銃だ。今ので俺の腕はわかっただろう？」[p]
 
-#��̒jB
-�u���̒��˂������肪�c�c����l�łǂ��Ȃ�Ƃł��H�v[p]
+#謎の男B
+「この跳ねっかえりが……女一人でどうなるとでも？」[p]
 
-#��̒jC
-�u�Ԕ����͂����������v[p]
+#謎の男C
+「間抜けはそっちだぜ」[p]
 
-#��̒jD
-�u�V�т͏I��肾�B�������藿�����Ă��v[p]
-
-
-#�č�@�q��
-�u��߂Ă������ق��������v[p]
+#謎の男D
+「遊びは終わりだ。じっくり料理してやる」[p]
 
 
-;�w�i�\���R���e�i�J���X�`���@�Ή��r�J�b�g�C�� STL2-04d
-[bg storage="STL2-04d.png" time="3000"]
+#柴崎　智也
+「やめておいたほうがいい」[p]
 
-;��SE62
+
+*kaenbin
+;背景表示コンテナ開放スチル　火炎瓶カットイン STL2-04d
+[chara_show name="cut_kaenbin" top="120" left="400" layer="0" wait="false"]
+
+;★SE62
 [playse storage="SE62.mp3"]
 #
-���͎茳�����Ɏ����Ă����r��z��̑O�ɍ����������B[p]
+俺は手元灯風に持っていた瓶を奴らの前に高くかざす。[p]
 
-#��̒jD
-�u���A�Ή��r�I�H�v[p]
+#謎の男D
+「か、火炎瓶！？」[p]
 
-#��̒jE
-�u�����I�v[p]
-
-
-#�č�@�q��
-�u�����킵����������H�v[p]
+#謎の男E
+「おい！」[p]
 
 
-#�č�@�q��
-�u��Ƃ�����������B�łȂ��Ⴑ����@�����邺�v[p]
-
-#�č�@�q��
-�u�R���e�i�̏o���͉��̌��ꃖ���B�S�����ǂ������̂ł������肾���v[p]
-
-#��̒jB
-�u�o�J���I����Ȃ��Ƃ���΂��̏������O�����ʂ��v[p]
+#柴崎　智也
+「かぐわしい匂いだろ？」[p]
 
 
-#�č�@�q��
-�u���Ⴀ�A���Ă�v[p]
+#柴崎　智也
+「大家さんを解放しろ。でなきゃこいつを叩きつけるぜ」[p]
 
-#��̒jB
-�u���̕r������I�����E�����v[p]
+#柴崎　智也
+「コンテナの出口は俺の後ろ一ヶ所。全員仲良く燻製のできあがりだぜ」[p]
+
+#謎の男B
+「バカが！そんなことすればこの女もお前も死ぬぞ」[p]
 
 
-#�č�@�q��
-�u�㓙����˂����c�c����Ă݂��v[p]
+#柴崎　智也
+「じゃあ、撃てよ」[p]
 
-[bg storage="STL2-04c.png" time="1000"]
-;���J�b�g�C��shot2+gun00b
+#謎の男B
+「その瓶を放せ！女を殺すぞ」[p]
 
-;��SE61
+
+#柴崎　智也
+「上等じゃねえか……やってみろよ」[p]
+
+#[bg storage="stl2-04/stl2-04c.png" time="1000"]
+[chara_hide name="cut_kaenbin" time="0" wait="false" pos_mode="false"]
+ 
+;★カットインshot2+gun00b
+[chara_show name="cut_gun00b" top="120" left="400" layer="0" wait="false"]
+
+;★SE61
 [playse storage="SE61.mp3"]
-#��̒jB
-�u�M���A�b�v[p]
+#謎の男B
+「ギャアッ」[p]
 
 
 #
-�j���ߖ��グ�Č��ɂ�����ԁB[p]
+男が悲鳴を上げて後ろにすっ飛ぶ。[p]
 
-#��̒jC
-�u�����e���F�I�v[p]
+#謎の男C
+「くそテメェ！」[p]
 
-#��̒jD
-�u���Ȃ��̏����I�v[p]
+#謎の男D
+「撃つなあの女を！」[p]
 
-#��̒jE
-�u�Ή��r�������Ȃ��̂��B�҂񂾁v[p]
+#謎の男E
+「火炎瓶が見えないのか。待つんだ」[p]
 
 
-#�č�@�q��
-�u�ǂ�����H�c�c���ɏe���������ȏ�A���O��˓I�̓I�Ɠ��������H�v[p]
+#柴崎　智也
+「どうする？……俺に銃を向けた以上、お前ら射的の的と同じだぜ？」[p]
 
 
 #
-�R���e�i�̋C�������肶��オ���Ă����B[p]
+コンテナの気温がじりじり上がっていく。[p]
 
 #
-�j�����̏e�͉��ɑ_�����߂邪�A�������A�������ɂ��߂炢������B[p]
+男たちの銃は俺に狙いを定めるが、しかし、引き金にためらいがある。[p]
 
 
-#�č�@�q��
-�u�����A�ǂ��Ȃ񂾁I�v[p]
-
-;��SE61
+#柴崎　智也
+「さぁ、どうなんだ！」[p]
+#
+;★SE61
 [playse storage="SE61.mp3"]
-;���J�b�g�C������
+;★カットイン消す
+[chara_hide name="cut_gun00b" time="0" wait="false" pos_mode="false"]
 
 
-;���Ó]3000
+;★暗転3000
+[bg storage="BG_black.png" time="3000" wait="true"]
 
+*minato
 
-;��SE63
+;★SE63
 [playse storage="SE63.mp3"]
-;�w�i�\���`
-[bg storage="BG11.png" time="5000"]
+;背景表示港
+[bg storage="BG09.png" time="5000"]
 
-;�������G�\���@�q�獶�@�݂䂫�E
+;★立ち絵表示　智也左　みゆき右
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
+[chara_show name="00_tomoya" top="0" left="0" layer="0" wait="false"]
 
 [chara_mod name="02_miyuki" face="STA02CG" time="0"]
+[chara_show name="02_miyuki" top="0" left="600" layer="0" wait="false"]
 
 
 
-;��SE64
+;★SE64
 [playse storage="SE64.mp3"]
-#�����@���M�G
-�u�����c�c�����c�c�v[p]
+#鳩村　美柚季
+「うっ……うぇ……」[p]
 
 
-#�č�@�q��
-�u�������肵�Ă��������v[p]
+#柴崎　智也
+「しっかりしてください」[p]
 
 [chara_mod name="02_miyuki" face="STA02EJ" time="0"]
 
-;��SE64
+;★SE64
 [playse storage="SE64.mp3"]
-#�����@���M�G
-�u�������c�c�����c�c�v[p]
+#鳩村　美柚季
+「うぇえ……うぐ……」[p]
 
 
 #
-�C���������t����u���B[r]
-�����ݐ��̉��ŁA���͑�Ƃ�����A������Ă����B[p]
+海風が吹き付ける埠頭。[r]
+引込み線の横で、俺は大家さんを、介抱していた。[p]
 
 
-#�č�@�q��
-�u���͂�������f���Ă��������v[p]
+#柴崎　智也
+「水はしっかり吐いてください」[p]
 
-;��SE64
+;★SE64
 [playse storage="SE64.mp3"]
 [chara_mod name="02_miyuki" face="STA02EG" time="0"]
 
-#�����@���M�G
-�u�������c�c�����c�c�v[p]
+#鳩村　美柚季
+「うぐっ……えぇ……」[p]
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
 [chara_mod name="02_miyuki" face="STA02EJ" time="0"]
 
 #
-�S�t�̍������������A�₽���R���N���[�g�ɗ�����A�s���ȉ��B[p]
+粘液の混じった水が、冷たいコンクリートに落ちる、不快な音。[p]
 
 #
-��ɂŘc�ޑ�Ƃ���̊�ɁA��u�S���A�D��ꂻ���ɂȂ�B[p]
+苦痛で歪む大家さんの顔に、一瞬心を、奪われそうになる。[p]
 
 #
-����ȂƂ��ł��A���̐S��͂�ŁA�����Ȃ��B[p]
+こんなときでも、俺の心を掴んで、離さない。[p]
 
 #
-�������͓z�炩�疳���ɒE�o���Ă����B[p]
+俺たちは奴らから無事に脱出していた。[p]
 
 #
-�S�����������A�e�ŋ����A�Ō�ɔ���߂��B[p]
+拘束を解かせ、銃で脅し、最後に扉を閉めた。[p]
 
 #
-�����ŒN�����A�R���e�i�̔���@���Ă���C�����邪�A�󎨂��낤�B[p]
+遠くで誰かが、コンテナの扉を叩いている気がするが、空耳だろう。[p]
 
 #
-�ȂɁA�����ɏo���Ă��炦�邳�B�x�@������΂ȁB[p]
+なに、すぐに出してもらえるさ。警察が来ればな。[p]
 
 [chara_mod name="02_miyuki" face="STA02DI" time="0"]
 
-#�����@���M�G
-�u�q�炳��͂ǂ����Ă����Ɂc�c�H�v[p]
+#鳩村　美柚季
+「智也さんはどうしてここに……？」[p]
 
 
 [chara_mod name="00_tomoya" face="STA00CH" time="0"]
 
-#�č�@�q��
-�u�A���͑�Ƃ���ȊO�ɂ���������̐l��U�����Ă��܂����B���̈�l�ɕ���Ă�����ł��v[p]
+#柴崎　智也
+「連中は大家さん以外にもたくさんの人を誘拐していました。その一人に紛れてきたんです」[p]
 
 [chara_mod name="02_miyuki" face="STA02CF" time="0"]
 
 
-#�����@���M�G
-�u���Ⴀ�c�c�v[p]
+#鳩村　美柚季
+「じゃあ……」[p]
 
 [chara_mod name="02_miyuki" face="STA02CE" time="0"]
 
 
-#�č�@�q��
-�u���S���Ă��������A�ނ�͊��ɉ�����Ă��܁c�c��H�v[p]
+#柴崎　智也
+「安心してください、彼らは既に解放していま……ん？」[p]
 
 [chara_mod name="02_miyuki" face="STA02CF" time="0"]
 
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
-;�X�L�[����:
-;��SE58
+;スキール音:
+;★SE58
 [playse storage="SE58.mp3"]
 
-#
-�������L���u���̒����A����̍����Z�_������яo���Ă����B[p]
+*kuroi_kuruma
 
 #
-��ڌ��āA�z��̒��Ԃ��ƕ��������B[p]
+だだっ広い埠頭の中を、数台の黒いセダンが飛び出していく。[p]
 
 #
-�W�߂��l�������o���A��Ƃ���̎撲�ׂ����s�������ƂɁA�A�W�g�̘A�����C�Â����̂��낤�B[p]
+一目見て、奴らの仲間だと分かった。[p]
+
+#
+集めた人が逃げ出し、大家さんの取調べが失敗したことに、アジトの連中が気づいたのだろう。[p]
 
 [chara_mod name="02_miyuki" face="STA02CI" time="0"]
 
-#�����@���M�G
-�u�����Ă����܂���I�v[p]
+#鳩村　美柚季
+「逃げていきますよ！」[p]
 
 [chara_mod name="00_tomoya" face="STA00CH" time="0"]
 
 [chara_mod name="02_miyuki" face="STA02CF" time="0"]
 
-#�č�@�q��
-�u���v�B�����������܂�����v[p]
+#柴崎　智也
+「大丈夫。もうすぐ来ますから」[p]
 
-;��SE65
+;★SE65
 [playse storage="SE65.mp3"]
 [chara_mod name="02_miyuki" face="STA02CD" time="0"]
 
 #
-�Z�_���̗񂪕u���̓�����ɍ����|�������Ƃ���ŁA���̌������ɂς��ƐԂ������v������B[p]
+セダンの列が埠頭の入り口に差し掛かったところで、その向こうにぱっと赤いランプが灯る。[p]
 
 #
-�����o�����l�������A�x�@�֘A�������̂��B[p]
+逃げ出した人たちが、警察へ連絡したのだ。[p]
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
 
-#�č�@�q��
-�u�ǂ����Ԃɍ������悤���ȁv[p]
+#柴崎　智也
+「どうやら間に合ったようだな」[p]
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
@@ -743,254 +784,266 @@
 [chara_mod name="02_miyuki" face="STA02CE" time="0"]
 
 #
-����̃p�g�J�[�╢�ʃp�g�J�[���A�u���̓�����𕕍����n�߂�B[p]
+数台のパトカーや覆面パトカーが、埠頭の入り口を封鎖し始める。[p]
 
 #
-�Z�_���͋}��Ԃ��A�p�g�J�[�Ɖ����тɂȂ�B[p]
+セダンは急停車し、パトカーと横並びになる。[p]
 
-;��SE57
+;★SE57
 [playse storage="SE57.mp3"]
 #
-���l�����Z�_�������яo���ƁA���C�����B[p]
+何人かがセダンから飛び出すと、発砲した。[p]
 
-;��SE49
+;★SE49
 [playse storage="SE49.mp3"]
 
 [chara_mod name="02_miyuki" face="STA02CD" time="0"]
 
 #
-�����Ɍx�@�������˂��A�e���킪�n�܂�B[p]
+すぐに警察側も応射し、銃撃戦が始まる。[p]
 
 [chara_mod name="02_miyuki" face="STA02CF" time="0"]
 
 #
-�ԐF�����ӂ��U��A�Z�_�����p���N���āA�X���B[p]
+赤色灯が砕け散り、セダンがパンクして、傾く。[p]
 
-;��SE57
+;★SE57
 [playse storage="SE57.mp3"]
 
 [chara_mod name="00_tomoya" face="STA00CC" time="0"]
 
-#�č�@�q��
-�u���`���v[p]
+#柴崎　智也
+「あ～あ」[p]
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
 #
-���̒��ɔL���x���␼�t������͂������A���΂ɂ�������͌����Ȃ��B[p]
+あの中に猫島警部や西春がいるはずだが、流石にここからは見えない。[p]
 
-;��SE49
+;★SE49
 [playse storage="SE49.mp3"]
 
 #
-���ڂ̌������B[p]
+遠目の見物だ。[p]
 
 
 [chara_mod name="02_miyuki" face="STA02CH" time="0"]
 
-#�����@���M�G
-�u�����v[p]
+#鳩村　美柚季
+「あっ」[p]
 
 [chara_mod name="00_tomoya" face="STA00CF" time="0"]
 
-;���J�b�g�C��carexp
-;��SE59
+*careexp
+;★カットインcarexp
+;★SE59
 [playse storage="SE59.mp3"]
 
 [chara_mod name="02_miyuki" face="STA02CI" time="0"]
 
 #
-�p�g�J�[�ɗ���e����сA�K�\�����^���N�̂���㕔����A����ɔ�������B[p]
+パトカーに流れ弾が飛び、ガソリンタンクのある後部から、盛大に爆発する。[p]
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
 #
-���͂��A�ς��Ɩ��邭�Ȃ�A�Z�_�����V���G�b�g��ɕ����яオ��B[p]
+周囲が、ぱっと明るくなり、セダンがシルエット状に浮かび上がる。[p]
 
 [chara_mod name="02_miyuki" face="STA02CE" time="0"]
 
-;���J�b�g�C������
+;★カットイン消す
 
 #
-�����A�����ɁA�x���̉������A�@�������������邾�낤�B[p]
+だが、じきに、警官の応援も、機動隊も到着するだろう。[p]
 
 #
-�A���̔s�k�͊m���������B[r]
-���ʂȂ��������Ă���B[p]
+連中の敗北は確実だった。[r]
+無駄なあがきってやつだ。[p]
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
 [chara_mod name="02_miyuki" face="STA02DH" time="0"]
 
-#�����@���M�G
-�u���̐l�����́c�c���̉����_���������̂ł��傤�v[p]
+#鳩村　美柚季
+「あの人たちは……私の何が狙いだったのでしょう」[p]
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
 
 [chara_mod name="02_miyuki" face="STA02DE" time="0"]
 
-#�č�@�q��
-�u����́c�c�v[p]
+#柴崎　智也
+「それは……」[p]
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
 [chara_mod name="02_miyuki" face="STA02EF" time="0"]
 
-#�����@���M�G
-�u�����Ă��������v[p]
+#鳩村　美柚季
+「教えてください」[p]
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
 
-#�č�@�q��
-�u�c�c��؂̃L�X�}�[�N�ł���v[p]
+#柴崎　智也
+「……首筋のキスマークですよ」[p]
 
 [chara_mod name="02_miyuki" face="STA02ED" time="0"]
 
 
-#�����@���M�G
-�u�����v[p]
+#鳩村　美柚季
+「えっ」[p]
 
 
 [chara_mod name="00_tomoya" face="STA00CF" time="0"]
 
 [chara_mod name="02_miyuki" face="STA02EF" time="0"]
 
-#�č�@�q��
-�u����͍_����̎c�����������N���I�H�v[p]
+#柴崎　智也
+「それは浩くんの残した───誰だ！？」[p]
+#
 
-
-;:�e�𓮂�����
-;��SE54
+;:銃を動かす音
+;★SE54
 [playse storage="SE54.mp3"]
 
 [chara_mod name="02_miyuki" face="STA02EI" time="0"]
 
-;�������G�c���E����X���C�h�C���@�E�[�ɔz�u
-[chara_mod name="17_nojarori" face="STA17AA" time="0"]
+*nojarori_tojo
 
-#�c��
-�u�Ђ����A���łȂ��B���̂͂�߂Ă���v[p]
+;★立ち絵幼女右からスライドイン　右端に配置
+[chara_mod name="17_nojarori" face="default" time="0"]
+[chara_show name="17_nojarori" top="250" left="1400" layer="0" wait="false"]
+[chara_move name="17_nojarori" top="250" left="1100" anim="true" effect="easeOutExpo" time="1500" wait="true"]
+
+
+#幼女
+「ひぃっ、撃つでない。撃つのはやめてくれ」[p]
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
-;�������G�c���@�����Ɉړ�
-[chara_mod name="17_nojarori" face="STA17AA" time="0"]
+;★立ち絵幼女　中央に移動
+[chara_mod name="17_nojarori" face="default" time="0"]
+[chara_move name="17_nojarori" top="250" left="500" anim="true" effect="easeOutExpo" time="1500" wait="true"]
 
 #
-�ݎԂ̌�납�犴�����C�z�B[p]
+貨車の後ろから感じた気配。[p]
 
 #
-�e���̐�ɂ����̂́A�c���������B[p]
+銃口の先にいたのは、幼女だった。[p]
 
 [chara_mod name="02_miyuki" face="STA02CD" time="0"]
 
 [chara_mod name="17_nojarori" face="STA17AB" time="0"]
 
-#�c��
-�u�҂񂶂�A���V�͓z��ɕ߂܂��Ă������̂���v[p]
+#幼女
+「待つんじゃ、ワシは奴らに捕まっておったのじゃ」[p]
 
 [chara_mod name="02_miyuki" face="STA02DA" time="0"]
 
 
 #
-�k����c�������đ�Ƃ���͔��΂ށB[p]
+震える幼女を見て大家さんは微笑む。[p]
 
 
 [chara_mod name="00_tomoya" face="STA00CH" time="0"]
 
-;���݂䂫�����G�������Ɉړ��@���Y������
+;★みゆき立ち絵中央側に移動　寄り添う感じ
 [chara_mod name="02_miyuki" face="STA02DB" time="0"]
+[chara_move name="02_miyuki" top="0" left="400" anim="true" effect="easeOutExpo" time="1500" wait="true"]
+
 
 [chara_mod name="17_nojarori" face="STA17AD" time="0"]
 
-#�����@���M�G
-�u���v�ł���B�������v�v[p]
+#鳩村　美柚季
+「大丈夫ですよ。もう大丈夫」[p]
 
 #
-�������B[r]
-�܂�œV�g�̂悤�ȕ�e�͂��B[p]
+美しい。[r]
+まるで天使のような包容力だ。[p]
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
 [chara_mod name="17_nojarori" face="STA17AC" time="0"]
 
-#�c��
-�u�����c�c���肪�Ƃ��v[p]
+#幼女
+「うぅ……ありがとう」[p]
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
-[chara_mod name="17_nojarori" face="STA17AA" time="0"]
+[chara_mod name="17_nojarori" face="default" time="0"]
 
 
 [chara_mod name="02_miyuki" face="STA02DD" time="0"]
 
-#�č�@�q��
-�u�҂āv[p]
+#柴崎　智也
+「待て」[p]
 
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
 #
-�������͌������Ȃ������B[p]
+だが俺は見逃さなかった。[p]
 
 #
-���̗c�����A��Ƃ���̎�؂ɖڂ𑖂点�A�ق����΂񂾂̂��B[p]
+その幼女が、大家さんの首筋に目を走らせ、ほくそ笑んだのを。[p]
 
 [chara_mod name="02_miyuki" face="STA02CE" time="0"]
 
 [chara_mod name="17_nojarori" face="STA17AD" time="0"]
+[iscript]
+TYRANO.kag.stat.charas['17_nojarori'].jname = '幼女？'
+[endscript]
 
-#�c���H
-�u�ȁA�Ȃ񂶂�v[p]
+#17_nojarori:default
+「な、なんじゃ」[p]
 
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
-#�č�@�q��
-�u�Ȃ�قǁc�c���O���{�X�����Ė󂩁v[p]
+#柴崎　智也
+「なるほど……お前がボスだって訳か」[p]
 
 [chara_mod name="02_miyuki" face="STA02CF" time="0"]
 
 [chara_mod name="17_nojarori" face="STA17AB" time="0"]
 
-#�c���H
-�u�ȁA���������Ă���̂���B���V�̈́������v[p]
+#17_nojarori:default
+「な、何を言っておるのじゃ。ワシは───」[p]
 
-[chara_mod name="17_nojarori" face="STA17AA" time="0"]
+[chara_mod name="17_nojarori" face="default" time="0"]
 
 
-#�č�@�q��
-�u���̃R���e�i����������̂́A�����v[p]
+#柴崎　智也
+「あのコンテナを解放したのは、俺だ」[p]
 
 [chara_mod name="02_miyuki" face="STA02CE" time="0"]
 
-#�c���H
-�u�����ɂ́A���O�̂悤�ȏ������q�́A���Ȃ������񂾁v[p]
+#17_nojarori:default
+「そこには、お前のような小さい子は、いなかったんだ」[p]
 
 
-#�č�@�q��
-�u���O�́c�c�ǂ����痈���v[p]
+#柴崎　智也
+「お前は……どこから来た」[p]
 
 [chara_mod name="17_nojarori" face="STA17AB" time="0"]
 
-#�c���H
-�u���A����́c�c�v[p]
+#17_nojarori:default
+「そ、それは……」[p]
 
 
 [chara_mod name="00_tomoya" face="STA00CF" time="0"]
 
-#�č�@�q��
-�u���̏ꏊ�ɗ�����̂́A�������ŏe��������Ă���Z�_���̏�������Ȃ񂾂�v[p]
+#柴崎　智也
+「この場所に来られるのは、あそこで銃撃戦をしているセダンの乗員だけなんだよ」[p]
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
-;���݂䂫�����G�@�W�����v���镗�ɍ��ړ��@��ʒ������኱����
+;★みゆき立ち絵　ジャンプする風に左移動　画面中央より若干左寄せ
 [chara_mod name="02_miyuki" face="STA02CH" time="0"]
 
-#�����@���M�G
-�u�܂����I�H�v[p]
+#鳩村　美柚季
+「まさか！？」[p]
 
 [chara_mod name="02_miyuki" face="STA02CI" time="0"]
 
@@ -1000,56 +1053,57 @@
 [chara_mod name="17_nojarori" face="STA17AD" time="0"]
 
 #
-�c���͓������~�߂��B[p]
+幼女は動きを止めた。[p]
 
-;���c�������G���E��ɃX���C�h�@�E�ɔz�u
+;★幼女立ち絵を右手にスライド　右に配置
+[chara_move name="17_nojarori" top="250" left="1100" anim="true" effect="easeOutExpo" time="1500" wait="true"]
 
 #
-�e�����痣���悤�A�C�̂ق��ɕ����Ă����B[p]
+銃口から離れるよう、海のほうに歩いていく。[p]
 
 [chara_mod name="02_miyuki" face="STA02CH" time="0"]
 
 [chara_mod name="17_nojarori" face="STA17AE" time="0"]
 
 #
-�������v�Ă���悤�ɂ��āA�����Č����J���B[p]
+何かを思案するようにして、そして口を開く。[p]
 
 [chara_mod name="17_nojarori" face="STA17AF" time="0"]
 
-#�c���H
-�u�c�c�Ȃ�قǂȁA�팟��17���͂��O��������̂��v[p]
+#17_nojarori:default
+「……なるほどな、被検体17号はお前じゃったのか」[p]
 
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
-#�č�@�q��
-�u����Ȗ��O�͒m��Ȃ��ȁv[p]
+#柴崎　智也
+「そんな名前は知らないな」[p]
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
 [chara_mod name="17_nojarori" face="STA17AC" time="0"]
 
-#�c���H
-�u���񂾂Ƃ����Ă������A����Ȃ͂��͂Ȃ��Ǝv���Ă�������v[p]
+#17_nojarori:default
+「死んだといわれていたが、そんなはずはないと思っておったよ」[p]
 
 
 #
-���͏e�������ėc���̘b����������B[p]
+俺は銃を向けて幼女の話をさえぎる。[p]
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
 [chara_mod name="02_miyuki" face="STA02CF" time="0"]
 
-#�č�@�q��
-�u���񂽂̑f�炪�ǂ�Ȃ��m��Ȃ����A�c���ɉ�����Ƃ͂ȁv[p]
+#柴崎　智也
+「あんたの素顔がどんなか知らないが、幼女に化けるとはな」[p]
 
 
-#�č�@�q��
-�u����Ȃ�΁A�w����z����Ă��A����������Ȃ��킯���v[p]
+#柴崎　智也
+「それならば、指名手配されても、見つかりっこないわけだ」[p]
 
 
-#�č�@�q��
-�u�^�̊��m���邱�ƂȂ��A���̂���芷����c�c���Љ�̐l�Ԃɂ����Ă����v[p]
+#柴崎　智也
+「真の顔を知られることなく、肉体を乗り換える……裏社会の人間にうってつけだ」[p]
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
@@ -1057,41 +1111,41 @@
 
 [chara_mod name="17_nojarori" face="STA17AE" time="0"]
 
-#�c���H
-�u�c�c�c�c�v[p]
+#17_nojarori:default
+「…………」[p]
 
 [chara_mod name="17_nojarori" face="STA17AD" time="0"]
 
-#�c���H
-�u�n�܂�́c�c15�N�O��������v[p]
+#17_nojarori:default
+「始まりは……15年前じゃった」[p]
 
-#�c���H
-�u���V�A�k�����ɒė�����覐΂���A���̖��m�̕����́A�������ꂽ�̂���v[p]
+#17_nojarori:default
+「ロシア北東部に墜落した隕石から、その未知の物質は、発見されたのじゃ」[p]
 
-#�c���H
-�u�ŏ��͕s�V�s���̌����Ɏg����̂ł͂Ȃ����ƁA�A�����J�̃`�[�������������B���ʂ�������v[p]
+#17_nojarori:default
+「最初は不老不死の研究に使えるのではないかと、アメリカのチームが当たった。無駄じゃった」[p]
 
 [chara_mod name="17_nojarori" face="STA17AF" time="0"]
 
-#�c���H
-�u�������O�ȏ��u�Ɋv���I�e����^����Z�p���A��X�͌������Ȃ������v[p]
+#17_nojarori:default
+「しかし外科処置に革命的影響を与える技術を、我々は見逃さなかった」[p]
 
-#�c���H
-�u�Ǝ��̌������d�ˁA���E�������Ō�����i�߁A�����܂ŗ����v[p]
+#17_nojarori:default
+「独自の研究を重ね、世界数ヶ所で研究を進め、ここまで来た」[p]
 
 [chara_mod name="17_nojarori" face="STA17AD" time="0"]
 
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
-#�č�@�q��
-�u������������A�����Ɏg���Ƃ͂ȁv[p]
+#柴崎　智也
+「それをこうも、悪事に使うとはな」[p]
 
 
 [chara_mod name="02_miyuki" face="STA02CH" time="0"]
 
-#�č�@�q��
-�u�����_�̈�Y��T�����R���A�����Ă��炨�����v[p]
+#柴崎　智也
+「鳩村浩の遺産を探す理由を、教えてもらおうか」[p]
 
 [chara_mod name="17_nojarori" face="STA17AE" time="0"]
 
@@ -1099,59 +1153,59 @@
 
 [chara_mod name="02_miyuki" face="STA02CF" time="0"]
 
-#�����@���M�G
-�u�_����́c�c�H�v[p]
+#鳩村　美柚季
+「浩さんの……？」[p]
 
 [chara_mod name="02_miyuki" face="STA02CF" time="0"]
 
 [chara_mod name="17_nojarori" face="STA17AF" time="0"]
 
-#�c���H
-�u���̒j�͓��l����v[p]
+#17_nojarori:default
+「あの男は盗人じゃ」[p]
 
 [chara_mod name="00_tomoya" face="STA00CF" time="0"]
 
 [chara_mod name="02_miyuki" face="STA02CE" time="0"]
 
 #
-���͐�����悤�ɏe��U��B[p]
+俺は制するように銃を振る。[p]
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
 [chara_mod name="17_nojarori" face="STA17AE" time="0"]
 
 
-#�č�@�q��
-�u�b�𑱂��Ă��炤���v[p]
+#柴崎　智也
+「話を続けてもらうぞ」[p]
 
 [chara_mod name="17_nojarori" face="STA17AD" time="0"]
 
-#�c���H
-�u�c�c3�N�O�A��X�̑g�D�͋@�����ނ��`���[�^�[�@�ɂėA�����Ă����̂���v[p]
+#17_nojarori:default
+「……3年前、我々の組織は機密書類をチャーター機にて輸送していたのじゃ」[p]
 
 
-#�č�@�q��
-�u���̃p�C���b�g���_���񂾂�������������Łv[p]
+#柴崎　智也
+「そのパイロットが浩くんだった───それで」[p]
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
 [chara_mod name="17_nojarori" face="STA17AE" time="0"]
 
-#�c���H
-�u�z�͉�X�̐l�̎����₻�̑����X�̏��𓾂��B���̗��R�͒m���v[p]
+#17_nojarori:default
+「奴は我々の人体実験やその他諸々の情報を得た。その理由は知らん」[p]
 
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
 [chara_mod name="17_nojarori" face="STA17AF" time="0"]
 
-#�č�@�q��
-�u�j���X�֕��̏C�����A�N������R�ꂽ���B����ȂƂ��낾�낤�v[p]
+#柴崎　智也
+「破損郵便物の修復か、誰かから漏れたか。そんなところだろう」[p]
 
 [chara_mod name="17_nojarori" face="STA17AD" time="0"]
 
-#�c���H
-�u�z�͗X�֕�����������A�Љ�I�ȍ��������݂��炵���B��X�́c�c�v[p]
+#17_nojarori:default
+「奴は郵便物を持ち去り、社会的な告発を試みたらしい。我々は……」[p]
 
 [chara_mod name="02_miyuki" face="STA02CI" time="0"]
 
@@ -1159,195 +1213,200 @@
 
 [chara_mod name="17_nojarori" face="STA17AE" time="0"]
 
-#�č�@�q��
-�u�c�c���̂Ɍ��������āA�������v[p]
+#柴崎　智也
+「……事故に見せかけて、消した」[p]
 
 [chara_mod name="02_miyuki" face="STA02EJ" time="0"]
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
-#�����@���M�G
-�u�q�b�v[p]
+#鳩村　美柚季
+「ヒッ」[p]
 
 [chara_mod name="02_miyuki" face="STA02EI" time="0"]
 
-#�����@���M�G
-�u����ȁc�c�_���񂪁c�c�v[p]
+#鳩村　美柚季
+「そんな……浩さんが……」[p]
 
 
 [chara_mod name="02_miyuki" face="STA02EF" time="0"]
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
-#�č�@�q��
-�u����3�N��̍��A�Ȃ����S�l��_�����v[p]
+#柴崎　智也
+「だが3年後の今、なぜ未亡人を狙った」[p]
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
 [chara_mod name="17_nojarori" face="STA17AD" time="0"]
 
-#�c���H
-�u��X�̌����f�[�^�͂���ꏊ�ɏW�񂳂�Ă����c�c�v[p]
+#17_nojarori:default
+「我々の研究データはある場所に集約されていた……」[p]
 
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
-#�č�@�q��
-�u�ǂ߂Ă��邺�B�������؍����ȁv[p]
+#柴崎　智也
+「読めているぜ。───韓国だな」[p]
 
 [chara_mod name="17_nojarori" face="STA17AF" time="0"]
 
-#�c���H
-�u��������B�؍��ł̃T�[�o�[�e�������c�c���̍ۂɊ������܂�A����������ꂽ�v[p]
+#17_nojarori:default
+「そうじゃ。韓国でのサーバーテロ事件……その際に巻き込まれ、多くが失われた」[p]
 
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
-#�č�@�q��
-�u�䂦�ɁA3�N�O�̍_���񂪍����p�Ɋm�ۂ����������d�����ꂽ���Ă킯���v[p]
+#柴崎　智也
+「ゆえに、3年前の浩くんが告発用に確保した資料が重視されたってわけか」[p]
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
 [chara_mod name="17_nojarori" face="STA17AD" time="0"]
 
-#�c���H
-�u3�N�O�̊�b�m�����̎���������΁A���N�Ō����͉񕜂ł���c�c�v[p]
+#17_nojarori:default
+「3年前の基礎確立時の資料があれば、半年で研究は回復できる……」[p]
 
 [chara_mod name="17_nojarori" face="STA17AE" time="0"]
 
-#�c���H
-�u�����A�����҂͎n���������A���̎����͌��d�ۊǂ���Ă��邱�Ƃ�������A����͒��߂��v[p]
+#17_nojarori:default
+「当時、告発者は始末したが、その資料は厳重保管されていることが分かり、回収は諦めた」[p]
 
-#�c���H
-�u���ہA���̌㎑�����o��邱�Ƃ��Ȃ������c�c�v[p]
+#17_nojarori:default
+「実際、その後資料が出回ることもなかった……」[p]
 
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
-#�č�@�q��
-�u�܂莑���͖����ŕۊǂ��ꑱ���Ă���Ɠ��񂾂킯���v[p]
-F" time="0"]
+#柴崎　智也
+「つまり資料は無傷で保管され続けていると踏んだわけだ」[p]
 
-#�c���H
-�u��X�͖��S�l�ɏ��݂̍菈��������Ă���ƍl���A�������Ă����̂���v[p]
+#17_nojarori:default
+「我々は未亡人に情報の在り処が託されていると考え、調査していたのじゃ」[p]
 
 
-#�č�@�q��
-�u���̓ǂ݂͓����肾�����ȁB�����{�l�������m��Ȃ������͕̂s�^�������v[p]
+#柴崎　智也
+「その読みは当たりだったな。だが本人がそれを知らなかったのは不運だった」[p]
 
 
 [chara_mod name="00_tomoya" face="STA00CH" time="0"]
 
-#�č�@�q��
-�u�����āA�����������Ƃ��ȁv[p]
+#柴崎　智也
+「そして、俺がいたこともな」[p]
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
 [chara_mod name="17_nojarori" face="STA17AE" time="0"]
 
-#�c���H
-�u�܂���������c�c�v[p]
+#17_nojarori:default
+「まったくじゃ……」[p]
 
+*mattakuja
 
 [chara_mod name="02_miyuki" face="STA02EE" time="0"]
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
 #
-�c���������G�̎�̂͌��t��؂����B[p]
+幼女───敵の首領は言葉を切った。[p]
 
 #
-�����܂Œ���Ƃ������Ƃ͒��߂��̂��A����Ƃ��B���ʂ�������Ă��Ƃ��H[p]
+ここまで喋るということは諦めたのか、それとも隠し玉があるってことか？[p]
 
 #
-���́A���f�����ɁA�e���\�������Ă���B[p]
+俺は、油断せずに、銃を構え続けている。[p]
 
 
-#�č�@�q��
-�u�����āA���낻��x�@�̂Ƃ���ɍs�����v[p]
+#柴崎　智也
+「さぁて、そろそろ警察のところに行くぜ」[p]
 
 
 [chara_mod name="00_tomoya" face="STA00CE" time="0"]
 
-;���݂䂫�����G�@���Ɉړ��@��l���̗����G�E��Ɉړ�
-[chara_mod name="02_miyuki" face="STA02DG" time="0"]
+*miyuki_matte
 
-#�����@���M�G
-�u�҂��āI�v[p]
+;★みゆき立ち絵　左に移動　主人公の立ち絵右手に移動
+[chara_mod name="02_miyuki" face="STA02DG" time="0"]
+[chara_move name="02_miyuki" top="0" left="200" anim="true" effect="easeOutExpo" time="1500" wait="true"]
+
+
+
+#鳩村　美柚季
+「待って！」[p]
 
 [chara_mod name="17_nojarori" face="STA17AD" time="0"]
 
 
 #
-�ӂ��ɁA�������܂Ŗق��Ă�����Ƃ��񂪁A��яo���Ă���B[p]
+ふいに、さっきまで黙っていた大家さんが、飛び出してくる。[p]
 
 [chara_mod name="00_tomoya" face="STA00CG" time="0"]
 
-[chara_mod name="17_nojarori" face="STA17AA" time="0"]
+[chara_mod name="17_nojarori" face="default" time="0"]
 
 #
-�����āA���̌��e������B[p]
+そして、俺の拳銃を握る。[p]
 
-;��SE54
+;★SE54
 [playse storage="SE54.mp3"]
 
 [chara_mod name="00_tomoya" face="STA00CF" time="0"]
 
 
-#�č�@�q��
-�u��Ƃ���I�v[p]
+#柴崎　智也
+「大家さん！」[p]
 
 [chara_mod name="02_miyuki" face="STA02DK" time="0"]
 
 
-#�����@���M�G
-�u�������������v[p]
+#鳩村　美柚季
+「あいつを───」[p]
 
 
-#�����@���M�G
-�u�_������E�����������������I�I�v[p]
+#鳩村　美柚季
+「浩さんを殺したあいつを───！！」[p]
 
 
-#�č�@�q��
-�u��߂Ă��������I�v[p]
+#柴崎　智也
+「やめてください！」[p]
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
-��Ƃ���͉��̎肩��e��D���̂���߁A�ォ���𕢂��ēz�Ɍ�����B[p]
+大家さんは俺の手から銃を奪うのを諦め、上から手を覆って奴に向ける。[p]
 
-#�c���H
-�u�܁A�҂̂���v[p]
+#17_nojarori:default
+「ま、待つのじゃ」[p]
 
 [chara_mod name="02_miyuki" face="STA02DL" time="0"]
 
-#�����@���M�G
-�u�������c�c�v[p]
+#鳩村　美柚季
+「あいつが……」[p]
 
 
 [chara_mod name="00_tomoya" face="STA00CF" time="0"]
 
-#�č�@�q��
-�u��Ƃ���I�v[p]
+#柴崎　智也
+「大家さん！」[p]
 
-#�c���H
-�u�҂̂���A�҂̂���v[p]
+#17_nojarori:default
+「待つのじゃ、待つのじゃ」[p]
 
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
 #
-�G�̎�̂��A���Ɏ�������킹��B[p]
+敵の首領が、懐に手を向かわせる。[p]
 
 
 [chara_mod name="00_tomoya" face="STA00CF" time="0"]
 
-#�č�@�q��
-�u���Ȑ^���͎~���I�v[p]
+#柴崎　智也
+「妙な真似は止せ！」[p]
 
 [chara_mod name="17_nojarori" face="STA17AD" time="0"]
 
-#�c���H
-�u���Ⴂ����łȂ��I�v[p]
+#17_nojarori:default
+「勘違いするでない！」[p]
 
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
@@ -1355,298 +1414,306 @@ F" time="0"]
 [chara_mod name="02_miyuki" face="STA02DF" time="0"]
 
 #
-�c���͂������Ǝ�𓮂����B[p]
+幼女はゆっくりと手を動かす。[p]
 
-;���J�b�g�C���@�A���v��
+*cut_ampul
+;★カットイン　アンプル
+[chara_show name="cut_ampul" top="180" left="600" layer="0" wait="false"]
 
 [chara_mod name="17_nojarori" face="STA17AE" time="0"]
 
-#�c���H
-�u���ꂪ�ڂɓ���ʂ��v[p]
+#17_nojarori:default
+「これが目に入らぬか」[p]
 
 
 #
-��ɂ͕r��������Ă���B[p]
+手には瓶が一つ握られている。[p]
 
 [chara_mod name="02_miyuki" face="STA02DI" time="0"]
 
 [chara_mod name="17_nojarori" face="STA17AD" time="0"]
 
-#�c���H
-�u�ǂ�����c�c�{���̉����܂���v[p]
+#17_nojarori:default
+「どうじゃ……本物の解除剤じゃ」[p]
 
-#�c���H
-�u���V�̕��Ƃ��Ď���Ă������A���̎����ȍ~�������Ȃ��Ō�̈�{����v[p]
+#17_nojarori:default
+「ワシの分として取っておいた、あの事件以降もう作れない最後の一本じゃ」[p]
 
-#�c���H
-�u���̏���n���΁A�����͂��O�ɂ���Ă�邼�v[p]
+#17_nojarori:default
+「その女を渡せば、こいつはお前にくれてやるぞ」[p]
 
 [chara_mod name="17_nojarori" face="STA17AC" time="0"]
 
-#�c���H
-�u�j�ɖ߂肽���񂶂��H�v[p]
+#17_nojarori:default
+「男に戻りたいんじゃろ？」[p]
 
-;���J�b�g�C������
-
-#
-���߂��\��A����ł��Ď��M�ɖ��������ŁA�c���͚����B[p]
+;★カットイン消す
+[chara_hide name="cut_ampul" time="0" wait="false" pos_mode="false"]
 
 #
-�C�����A�{�����ɂ���͂��̂Ȃ��A���̔��𕏂ł�B[p]
+青ざめた表情、それでいて自信に満ちた声で、幼女は囁く。[p]
+
+#
+海風が、本来俺にあるはずのない、俺の髪を撫でる。[p]
 
 [chara_mod name="02_miyuki" face="STA02DJ" time="0"]
 
 [chara_mod name="17_nojarori" face="STA17AE" time="0"]
 
-#�����@���M�G
-�u�q�炳��c�c�v[p]
+#鳩村　美柚季
+「智也さん……」[p]
 
 
 #
-���e�������Ƃ���̗͂��A�}���Ɋɂ�ł����B[p]
+拳銃を握る大家さんの力が、急激に緩んでいく。[p]
 
 #
-�c���͑�Ƃ���Ɍ������Č����B[p]
+幼女は大家さんに向かって言う。[p]
 
 [chara_mod name="02_miyuki" face="STA02DH" time="0"]
 
 [chara_mod name="17_nojarori" face="STA17AC" time="0"]
 
-#�c���H
-�u�ǂ�����A���O��������ɗ���΁A�����͌��ɖ߂��񂶂Ⴜ�v[p]
+#17_nojarori:default
+「どうじゃ、お前がこちらに来れば、そいつは元に戻れるんじゃぞ」[p]
 
-#�c���H
-�u���O�������A��������񂶂�v[p]
+#17_nojarori:default
+「お前だけが、助けられるんじゃ」[p]
 
 [chara_mod name="02_miyuki" face="STA02DG" time="0"]
 
 #
-��Ƃ���͂������A�e������Ȃ��B[p]
+大家さんはしかし、銃を放さない。[p]
 
 #
-�����܂��A�e��c�����痣���Ȃ������B[p]
+俺もまた、銃を幼女から離さなかった。[p]
 
 [chara_mod name="17_nojarori" face="STA17AF" time="0"]
 
-#�c���H
-�u�����̂��A���V�����ĂΕr�͗����čӂ��邩�A�C�̒ꂶ�Ⴜ�v[p]
+#17_nojarori:default
+「いいのか、ワシを撃てば瓶は落ちて砕けるか、海の底じゃぞ」[p]
 
 [chara_mod name="00_tomoya" face="STA00CC" time="0"]
 
 [chara_mod name="02_miyuki" face="STA02DL" time="0"]
 
 #
-���́A��Ƃ���̗�����A����ŕ����āA�e���牺�낷�B[p]
+俺は、大家さんの両手を、左手で抱いて、銃から下ろす。[p]
 
 [chara_mod name="02_miyuki" face="STA02DM" time="0"]
 
-#�����@���M�G
-�u�q�炳��c�c�v[p]
+#鳩村　美柚季
+「智也さん……」[p]
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
 
-#�č�@�q��
-�u��Ƃ���A�_���ł���v[p]
+#柴崎　智也
+「大家さん、ダメですよ」[p]
 
 [chara_mod name="17_nojarori" face="STA17AC" time="0"]
 
-#�c���H
-�u�ǂ�����A�S�͌��܂����悤����ȁv[p]
+#17_nojarori:default
+「どうじゃ、心は決まったようじゃな」[p]
 
 
 #
-�c���͏����ւ����΂݂ł����������B[p]
+幼女は勝ち誇った笑みでこちらを見る。[p]
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
 
-#�č�@�q��
-�u�����͍ŏ�����A���܂��Ă��邳�v[p]
+#柴崎　智也
+「答えは最初から、決まっているさ」[p]
 
 
 #
-��Ƃ���̍���́A������������A��������΂܂��A�e�c������̂ł͂Ȃ����Ǝv��ꂽ�B[p]
+大家さんの左手は、もしかしたら、隙があればまた、銃把を握るのではないかと思われた。[p]
 
 [chara_mod name="17_nojarori" face="STA17AD" time="0"]
 
 [chara_mod name="02_miyuki" face="STA02DK" time="0"]
 
-#�����@���M�G
-�u�q�炳��v[p]
+#鳩村　美柚季
+「智也さん」[p]
 
 
-#�����@���M�G
-�u���͂ǂ����Ă������Ȃ���ł��v[p]
+#鳩村　美柚季
+「私はどうしても許せないんです」[p]
 
 
 [chara_mod name="02_miyuki" face="STA02DM" time="0"]
 
-#�����@���M�G
-�u�ł��A�ǂ����Ă��c�c�v[p]
+#鳩村　美柚季
+「でも、どうしても……」[p]
 
 [chara_mod name="02_miyuki" face="STA02DL" time="0"]
 
 
-#�����@���M�G
-�u���̂ЂƂ́c�c���Ƃ��c�c�v[p]
+#鳩村　美柚季
+「あのひとの……ことが……」[p]
 
-;BGM����
+;BGM消す
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
 #
-����ȑ�Ƃ���̌���ق��āA�����B[p]
+そんな大家さんの肩を黙って、抱く。[p]
 
-;���J�b�g�C��shot2+gun00b
-;��SE54
+;★カットインshot2+gun00b
+[chara_show name="cut_gun00b" top="120" left="600" layer="0" wait="false"]
+
+;★SE54
 [playse storage="SE54.mp3"]
 
-[chara_mod name="17_nojarori" face="STA17AA" time="0"]
+[chara_mod name="17_nojarori" face="default" time="0"]
 
 #
-�����āA�e���܂������z�Ɍ�����B[p]
+そして、銃をまっすぐ奴に向ける。[p]
 
 #
-�Ə����A������B[p]
+照準が、捉える。[p]
 
 #
-���������A�����B[p]
+引き金を、引く。[p]
 
-;��SE61
+;★SE61
 [playse storage="SE61.mp3"]
 
-;���J�b�g�C������
+;★カットイン消す
+[chara_hide name="cut_gun00b" time="0" wait="false" pos_mode="false"]
 
 
 
-;��SE66
+;★SE66
 [playse storage="SE66.mp3"]
 
-;�K���X�̊���鉹:
+;ガラスの割れる音:
 
 [chara_mod name="02_miyuki" face="STA02DH" time="0"]
 
 [chara_mod name="17_nojarori" face="STA17AG" time="0"]
 
-#�c���H
-�u���킠�������I�v[p]
+#17_nojarori:default
+「うわああああ！」[p]
 
-#�c���H
-�u���������I�����I�I���A���V�́I�I���V�̉�ō܂����������I�I�v[p]
+#17_nojarori:default
+「ああああ！ああ！！あ、ワシの！！ワシの解毒剤がああああ！！」[p]
 
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
 #
-�c���̎�ɂ������r�́A�e�ۂŖ؂��[���o�Ɋ���Ă���B[p]
+幼女の手にあった瓶は、弾丸で木っ端微塵に割れている。[p]
 
 #
-�C�̋��������A�ׂ����j�Ђ��A���̒��g���A���܂��������Ő��������Ă����B[p]
+海の強い風が、細かい破片も、その中身も、凄まじい勢いで吹き去っていく。[p]
 
-#�c���H
-�u�������A����ȁc�c���V���������������I�v[p]
-
-#
-���܂�ɗ\�z�O�̓W�J�������̂��낤�B[p]
+#17_nojarori:default
+「あああ、そんな……ワシがぁあああああ！」[p]
 
 #
-�c�����n�ʂɕ����ċ����B[p]
+あまりに予想外の展開だったのだろう。[p]
 
-;���c�������G�@�����ɃX���C�h�A�E�g
+#
+幼女が地面に伏して泣く。[p]
 
-;��SE43
+;★幼女立ち絵　下側にスライドアウト
+[chara_move name="17_nojarori" top="850" left="1100" anim="true" effect="easeOutExpo" time="1500" wait="true"]
+
+;★SE43
 [playse storage="SE43.mp3"]
 
 [chara_mod name="02_miyuki" face="STA02DF" time="0"]
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
-#�č�@�q��
-�u���̂܂܁A�ꐶ�A�c�������v[p]
+#柴崎　智也
+「このまま、一生、幼女だぜ」[p]
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
 #
-���邢�́A�e�ۂ��S�����т������A�z�ɂ͐h���̂�������Ȃ��B[p]
+あるいは、弾丸が心臓を貫くよりも、奴には辛いのかもしれない。[p]
 
 #
-�g�D����ԑŐs�ɂȂ�΁A�z�̐g�����ؖ�������̂͂��������������炾�B[p]
+組織が一網打尽になれば、奴の身分を証明するものはもう何も無いからだ。[p]
 
 [chara_mod name="02_miyuki" face="STA02DE" time="0"]
 
-;��SE67
+;★SE67
 [playse storage="SE67.mp3"]
 
 #
-�݂��߂ȓG�̎�̂𒭂߂Ȃ���A���͂܂��M���e���葁���������A�C�Ɏ̂Ă�B[p]
+みじめな敵の首領を眺めながら、俺はまだ熱い銃を手早く分解し、海に捨てる。[p]
 
-
-;�G���f�B���O�ȑ}��[p]
+*ending
+;エンディング曲挿入[p]
 
 [chara_mod name="02_miyuki" face="STA02EM" time="0"]
 
-#�����@���M�G
-�u�ǂ����āc�c�v[p]
+#鳩村　美柚季
+「どうして……」[p]
 
 #
-���ɐ�����āA��Ƃ��񂪂����B[p]
+風に吹かれて、大家さんがいた。[p]
 
 #
-�S�Ȃ����A�����Ă���悤�ȋC�������B[p]
+心なしか、泣いているような気がした。[p]
 
 #
-���̗܂���A�C���͐�����΂��Ă����B[p]
+その涙すら、海風は吹き飛ばしていく。[p]
 
 #
-�����܂���G������w�ɁA�u���̃��C�g���A���߂����B[p]
+長いまつげを触った薬指に、埠頭のライトが、煌めいた。[p]
 
 [chara_mod name="00_tomoya" face="STA00CH" time="0"]
 
-#�č�@�q��
-�u�_����̎w�ւ��͂܂����w�ɁA�������͈��������܂����v[p]
+#柴崎　智也
+「浩くんの指輪がはまった指に、引き金は引かせられませんよ」[p]
 
 #
-���͏����Ƃ�āA�����������B[p]
+俺は少し照れて、そう言った。[p]
 
 [chara_mod name="02_miyuki" face="STA02EL" time="0"]
 
-#�����@���M�G
-�u�����c�c���v[p]
+#鳩村　美柚季
+「あぁ……っ」[p]
 
 
 #
-�����Ă����Ƃ��񂪁A���ɔ�э���ł���B[p]
+泣いている大家さんが、胸に飛び込んでくる。[p]
 
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
-#�č�@�q��
-�u����Ɂv[p]
+#柴崎　智也
+「それに」[p]
 
 
 [chara_mod name="02_miyuki" face="STA02EM" time="0"]
 
-#�č�@�q��
-�u��Ƃ��񂪂��Ȃ���΁A�j�ɖ߂��Ă��d���Ȃ��v[p]
+#柴崎　智也
+「大家さんがいなければ、男に戻っても仕方ない」[p]
 
 #
-��Ƃ�����A�����������߂�B[p]
+大家さんを、強く抱きしめる。[p]
 
 #
-�e������I�����p�g�J�[���A�������̂ق��Ɍ������Ă���̂��������B[p]
+銃撃戦を終えたパトカーが、俺たちのほうに向かってくるのが見えた。[p]
 
 
-;��SE63
+;★SE63
 [playse storage="SE63.mp3"]
 
-;��SE�̋D�J�̉����I��莟��G���f�B���O�J�b�g��
+;★SEの汽笛の音が終わり次第エンディングカットへ
 
 
 [layopt layer="message0" visible="false"]
 
-;00_�q�痧���G����
-[chara_hide name="00_tomoya" wait="false"]
+;00_智也立ち絵消す
+[chara_hide name="00_tomoya" time="0" wait="false" pos_mode="false"]
+[chara_hide name="02_miyuki" time="0" wait="false" pos_mode="false"]
 [bg storage="BG_black.png" time="1500" wait="true"]
 
 *scenario_end
