@@ -6,8 +6,8 @@
 [clearfix]
 [start_keyconfig]
 [free name="chara_name_area" layer="message0"]
-
-[bg storage="BG02.png" time="100"]
+[stopbgm]
+[bg storage="BG01a.png" time="100"]
 
 ;喋っていないキャラに対するエフェクト
 [chara_config brightness=40 talk_focus=brightness]
@@ -23,6 +23,7 @@
 [message_area_scenario]
 
 ;★BGM14
+[playbgm storage="BGM14.mp3" loop="true" volume=50]
 
 #
 俺の名前は柴崎智也。[r]
@@ -46,9 +47,9 @@ Shibasaki-TomoyaでTS。[r]
 とても華やかさとは縁のない、男だけの寂しい事務所───だったのだが。[p]
 
 *yu_tojo
-[chara_show name="01_yu" top="0" left="600" layer="0" wait="0"]
-
 ;★立ち絵：STA01AB.png
+[chara_mod name="01_yu" face="STA01AB" time="0"]
+[chara_show name="01_yu" top="0" left="600" layer="0" wait="0"]
 
 #常葉　悠卯
 「トモちゃーん！下着買ってきてあげたよ！」[p]
@@ -57,6 +58,7 @@ Shibasaki-TomoyaでTS。[r]
 「トモちゃんはやめろと言っただろう……」[p]
 
 ;★立ち絵：STA01AJ.png
+[chara_mod name="01_yu" face="STA01AJ" time="0"]
 
 #常葉　悠卯
 「えぇーいいじゃん！ほら、これなんかどぉ？きわどいのもあるよぉ～」[p]
@@ -65,6 +67,7 @@ Shibasaki-TomoyaでTS。[r]
 「普通のでいいのに……」[p]
 
 ;★立ち絵：STA01AH.png
+[chara_mod name="01_yu" face="STA01AH" time="0"]
 
 [chara_config talk_focus=none]
 #
@@ -82,9 +85,9 @@ Shibasaki-TomoyaでTS。[r]
 [chara_config brightness=40 talk_focus=brightness]
 
 *miyuki_tojo
-[chara_show name="02_miyuki" top="0" left="600" layer="0" wait="0"]
-
 ;★立ち絵：STA02BA.png
+[chara_mod name="02_miyuki" face="STA02BA" time="0"]
+[chara_show name="02_miyuki" top="0" left="600" layer="0" wait="0"]
 
 #鳩村　美柚季
 「智也さん。悠卯と一緒だったんですね」[p]
@@ -93,6 +96,7 @@ Shibasaki-TomoyaでTS。[r]
 「大家さん、どうもどうも」[p]
 
 ;★立ち絵：STA02BD.png
+[chara_mod name="02_miyuki" face="STA02BD" time="0"]
 
 #鳩村　美柚季
 「体、どうですか？」[p]
@@ -101,6 +105,8 @@ Shibasaki-TomoyaでTS。[r]
 「いやまぁ……なんとかやっていますよ」[p]
 
 ;★立ち絵：STA02BB.png
+[chara_mod name="02_miyuki" face="STA02BB" time="0"]
+
 
 #鳩村　美柚季
 「私に出来ることならなんでも相談してくださいね」[p]
@@ -108,6 +114,7 @@ Shibasaki-TomoyaでTS。[r]
 [chara_config talk_focus=none]
 
 ;★立ち絵：STA02BA.png
+[chara_mod name="02_miyuki" face="STA02BA" time="0"]
 
 #
 この美しく優しい方は鳩村美柚季（はとむら　みゆき）さん。[p]
@@ -120,9 +127,9 @@ Shibasaki-TomoyaでTS。[r]
 [chara_config brightness=40 talk_focus=brightness]
 
 *ui_tojo
-[chara_show name="03_ui" top="0" left="600" layer="0" wait="0"]
-
 ;★立ち絵：STA03AB.png
+[chara_mod name="03_ui" face="STA03AB" time="0"]
+[chara_show name="03_ui" top="0" left="600" layer="0" wait="0"]
 
 #西春　愛
 「先輩、今いいすか？その……生理用品……」[p]
@@ -131,6 +138,7 @@ Shibasaki-TomoyaでTS。[r]
 「ありがとう。助かるよ」[p]
 
 ;★立ち絵：STA03AF.png
+[chara_mod name="03_ui" face="STA03AF" time="0"]
 
 #西春　愛
 「分からないけど多分必要すよね？困ったことがあれば自分に聞いてください」[p]
@@ -139,6 +147,7 @@ Shibasaki-TomoyaでTS。[r]
 「すまんな」[p]
 
 ;★立ち絵：STA03AC.png
+[chara_mod name="03_ui" face="STA03AC" time="0"]
 
 #西春　愛
 「猫島さんもまた来るって言うし、気を落とさないでほしいっす」[p]
@@ -146,6 +155,7 @@ Shibasaki-TomoyaでTS。[r]
 [chara_config talk_focus=none]
 
 ;★立ち絵：STA03AA.png
+[chara_mod name="03_ui" face="default" time="0"]
 
 #
 このスーツで長身の女は西春愛（にしはる　うい）。[r]
@@ -169,9 +179,9 @@ Shibasaki-TomoyaでTS。[r]
 #
 ……いや、それは正確ではないか。[p]
 
-[chara_show name="01_yu" top="0" left="600" layer="0" wait="0"]
-
 ;★立ち絵：STA01AJ.png
+[chara_mod name="01_yu" face="STA01AJ" time="0"]
+[chara_show name="01_yu" top="0" left="600" layer="0" wait="0"]
 
 #常葉　悠卯
 「ねぇねぇ、トモちゃん。これ着てみてよ」[p]
@@ -180,6 +190,7 @@ Shibasaki-TomoyaでTS。[r]
 「ええい、ここでそんな恥ずかしい格好などできるか」[p]
 
 ;★立ち絵：STA01AB.png
+[chara_mod name="01_yu" face="STA01AB" time="0"]
 
 #常葉　悠卯
 「え～いいじゃん！どうせ女同士なんだしぃ」[p]
@@ -189,6 +200,7 @@ Shibasaki-TomoyaでTS。[r]
 [chara_show name="00_tomoya" top="0" left="0" layer="0" wait="0"]
 
 ;★立ち絵：STA01CF.png
+[chara_mod name="00_tomoya" face="STA00CF" time="0"]
 
 #
 そう、俺は女の子になってしまったのである。[p]
@@ -216,7 +228,7 @@ Shibasaki-TomoyaでTS。[r]
 マジ勘弁して欲しい。[p]
 
 #
-よく貧乳の女性が周りの肉を寄せて集めて巨乳を演出するというが、男も一緒だ。[r]
+よく貧乳の女性が周りの肉を寄せて集めて巨乳を演出するというが、男も一緒だ。[p]
 こめかみ近くの豊かな髪を無理やり前方に寄せてボリュームを稼いでいる。[p]
 
 #
@@ -258,10 +270,10 @@ Shibasaki-TomoyaでTS。[r]
 「そこのお兄さん！」[p]
 
 #柴崎　智也
-「？[p]
+「？」[p]
 
 #
-三十路を捕まえてお兄さんというのは風俗か保険屋だけだ。[r]
+三十路を捕まえてお兄さんというのは風俗か保険屋だけだ。[p]
 
 #キャッチの女性
 「いま、育毛プランのサンプルをお試しいただいているんですけど如何ですか？」[p]
@@ -311,7 +323,7 @@ Shibasaki-TomoyaでTS。[r]
 お帰りなさい私の前髪！[p]
 
 #
-どうやってかは覚えていないが、事務所まで逃げ帰った俺は猫島警部に助けを求めた。[r]
+どうやってかは覚えていないが、事務所まで逃げ帰った俺は猫島警部に助けを求めた。[p]
 この状況を説明するだけでも一苦労だったが、なんとか信じてもらった。[p]
 
 #
@@ -340,18 +352,20 @@ Shibasaki-TomoyaでTS。[r]
 [bg storage="BG02.png" time="100"]
 
 ;★立ち絵：STA00CC.png
-
+[chara_mod name="00_tomoya" face="STA00CC" time="0"]
 [chara_show name="00_tomoya" top="0" left="0" layer="0" wait="0"]
+
 #柴崎　智也
 「何か事件でもないかな……」[p]
 
 ;★立ち絵：STA03AA.png
-
+[chara_mod name="03_ui" face="default" time="0"]
 [chara_show name="03_ui" top="0" left="600" layer="0" wait="0"]
 #西春　愛
 「女になったのは事件じゃないすか？」[p]
 
 ;★立ち絵：STA00CA.png
+[chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
 #柴崎　智也
 「いや、もっとマシな事件がいいんだけどさ……」[p]
