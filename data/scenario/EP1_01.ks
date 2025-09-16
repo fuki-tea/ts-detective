@@ -6,7 +6,7 @@
 
 [fadeoutbgm]
 [;★★BGM12:file_702.mp3
-playbgm storage="file_702.mp3" loop="true" volume=50]
+[playbgm storage="file_702.mp3" loop="true" volume=50]
 ;背景表示BG04駅前
 [bg storage="BG04.png" time="3000"]
 
