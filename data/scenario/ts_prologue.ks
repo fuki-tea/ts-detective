@@ -6,8 +6,11 @@
 [clearfix]
 [start_keyconfig]
 [free name="chara_name_area" layer="message0"]
-[stopbgm]
-[bg storage="BG01a.png" time="100"]
+[fadeoutbgm]
+;★BGM14
+[playbgm storage="BGM14.mp3" loop="true" volume=50]
+
+[bg storage="BG01a.png" time="1500"]
 
 ;喋っていないキャラに対するエフェクト
 [chara_config brightness=40 talk_focus=brightness]
@@ -21,9 +24,6 @@
 *scenario_start
 ;メッセージエリアの設定
 [message_area_scenario]
-
-;★BGM14
-[playbgm storage="BGM14.mp3" loop="true" volume=50]
 
 #
 俺の名前は柴崎智也。[r]
@@ -310,6 +310,8 @@ Shibasaki-TomoyaでTS。[r]
 
 *kiokun_no_togire
 [freeimage layer="base" time="100" wait="false"]
+
+[bg storage="BG01a.png" time="1500"]
 
 #
 そこで俺の記憶は途切れている。[p]

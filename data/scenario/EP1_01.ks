@@ -4,6 +4,9 @@
 [clearfix]
 [start_keyconfig]
 
+[fadeoutbgm]
+[;★★BGM12:file_702.mp3
+playbgm storage="file_702.mp3" loop="true" volume=50]
 ;背景表示BG04駅前
 [bg storage="BG04.png" time="3000"]
 
@@ -44,8 +47,8 @@
 #常葉　悠卯
 「あっ」[p]
 
-;★★BGM12:file_702.mp3
-[playbgm storage="file_702.mp3" loop="true" volume=50]
+;;★★BGM12:file_702.mp3
+;[playbgm storage="file_702.mp3" loop="true" volume=50]
 
 #
 人の行きかう駅前で、俺は悠卯と出会った。[p]
@@ -249,6 +252,8 @@
 ;スチル表示
 
 ;★★BGM15
+[playbgm storage="BGM15.ogg" loop="true" volume=50]
+
 
 [bg storage="stl1-01/stl1-01a.png" time="0" method="puffIn"]
 [chara_new  name="stl1_01" storage="../bgimage/stl1-01/stl1-01a.png" ]
@@ -464,7 +469,7 @@
 これは撮影でもなんでもなかったのだと、ようやく気付いたのだ。[p]
 
 #
-助平親父たちと入れ替わるようにして、同級生たちや警官が走りこんでくる。[r]
+助平親父たちと入れ替わるようにして、同級生たちや警官が走りこんでくる。[p]
 野次馬の白衣の男が、うだつの上がらないサラリーマンが、蜘蛛の子を散らして逃げる。[p]
 
 ;★★SE07

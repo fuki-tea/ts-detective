@@ -78,7 +78,7 @@
 [bg storage="BG06.png" time="100"]
 [message_area_scenario]
 #
-悠卵の通っている私立尾府学園だ。[r]
+悠卯の通っている私立尾府学園だ。[r]
 こうもんであそんじゃいけないぜ。[p]
 
 [layopt layer="message0" visible="false"]

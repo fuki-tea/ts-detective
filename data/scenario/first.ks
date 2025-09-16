@@ -25,6 +25,7 @@
 ;-------------------------------------------------------------------------------
 [iscript]
 sf.type_r18=true	; R18の場合は真
+sf.first=true
 [endscript]
 
 ;-------------------------------------------------------------------------------
@@ -63,10 +64,20 @@ sf.type_r18=true	; R18の場合は真
 
 ;-------------------------------------------------------------------------------
 ;タイトルロゴ表示
-@jump target="*for_debug"
+;@jump target="*for_debug"
 @bg storage ="BG_black.png" time=100 wait="false"
-[layopt layer="1" visible="true"]
+
+[if exp="sf.first"]
+
+[iscript]
+sf.first=false
+[endscript]
+
 [ptext layer="1" x="460" y="600" text="CLICK TO START" size="40" color="white" edge="0xFF0000"]
+[layopt layer="1" visible="true"]
+
+[endif]
+
 [playbgm storage="elevator girl - Stereo Out.mp3" loop="true" volume=50]
 [freeimage layer="1"]
 [eval exp="f.title_bgm = true"]
