@@ -8,6 +8,7 @@
 ;左端　左（主人公定位置）　中央　右　右端
 
 
+[fadeoutbgm]
 ;背景表示BG01事務所昼
 [bg storage="BG01a.png" time="3000"]
 

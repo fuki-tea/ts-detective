@@ -2,6 +2,7 @@
 [clearfix]
 [start_keyconfig]
 
+[fadeoutbgm]
 ;★SE03
 [playse storage="SE03.mp3"]
 

@@ -4,6 +4,7 @@
 [clearfix]
 [start_keyconfig]
 
+[fadeoutbgm]
 ;背景表示BG06　学園正門
 [bg storage="BG06.png" time="3000"]
 

@@ -5,6 +5,7 @@
 [clearfix]
 [start_keyconfig]
 
+[fadeoutbgm]
 ;背景表示BG　警察署
 [bg storage="BG05.png" time="3000"]
 

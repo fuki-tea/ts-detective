@@ -3,6 +3,7 @@
 [clearfix]
 [start_keyconfig]
 
+[fadeoutbgm]
 ;★BGM消す
 ;★背景黒
 [bg storage="BG_black.png" time="3000"]

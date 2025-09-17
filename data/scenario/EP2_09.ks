@@ -4,6 +4,7 @@
 [clearfix]
 [start_keyconfig]
 
+[fadeoutbgm]
 ;背景表示BG03繁華街
 [bg storage="BG03.png" time="3000"]
 

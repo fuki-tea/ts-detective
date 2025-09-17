@@ -4,6 +4,7 @@
 [clearfix]
 [start_keyconfig]
 
+[fadeoutbgm]
 ;背景表示BG03市街地
 [bg storage="BG03.png" time="3000"]
 
@@ -680,6 +681,8 @@
 #高尾　文江
 「───っ！」[p]
 
+;★SE76
+[playse storage="SE76.mp3"]
 #柴崎　智也
 「あっ！」[p]
 
@@ -692,6 +695,8 @@
 ;★SE27
 [playse storage="SE27.mp3"]
 
+;★SE74
+[playse storage="SE74.mp3"]
 #
 鋼材を積んだセミトレーラーが急ブレーキで高尾文絵を跳ね飛ばす。[p]
 
@@ -746,6 +751,9 @@
 [chara_move name="01_yu" top="0" left="1200" anim="true" effect="easeOutExpo" time="1500" wait="true"]
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
+;★SE25
+[playse storage="SE25.mp3"]
+
 #
 くしゃくしゃになったトラクタのキャブから、ドライバーが這い出して来る。[r]
 あと一歩伏せるのが遅ければぺしゃんこだっただろう。[p]
@@ -795,6 +803,10 @@
 ;STL1-06b 社員証
 [bg storage="stl1-08/stl1-08b.png" time="3000"]
 [cg storage="stl1-08/stl1-08a.png"]
+
+
+;★SE65
+[playse storage="SE65.mp3"]
 #
 警らの警官が駆けてきて、交通整理を始める。[r]
 遠くから、救急車のサイレンが聞こえてきた。[p]

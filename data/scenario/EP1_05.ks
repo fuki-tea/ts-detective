@@ -5,6 +5,7 @@
 [clearfix]
 [start_keyconfig]
 
+[fadeoutbgm]
 ;背景駅前
 [bg storage="BG04.png" time="3000"]
 

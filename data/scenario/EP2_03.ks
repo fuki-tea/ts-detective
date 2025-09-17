@@ -4,6 +4,7 @@
 [clearfix]
 [start_keyconfig]
 
+[fadeoutbgm]
 ;背景表示BG02b喫茶店夜
 [bg storage="BG02b.png" time="3000"]
 

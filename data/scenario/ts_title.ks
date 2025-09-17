@@ -33,9 +33,9 @@ f.story_step=[-1,-1,-1]	; エピソードごとのストーリーの進捗
 [else]
 [glink text="R18 OFF→ON" size=20 width=500 x=630 y=120 color=blue target=test_r18_on ]
 [endif]
-[glink text="シナリオテストEP1-10" size=20 width=500 x=630 y=300 color=blue target=test_scenario ]
+[glink text="シナリオテスト" size=20 width=500 x=630 y=240 color=blue target=test_scenario ]
+[glink text="シナリオテストEP1-10" size=20 width=500 x=630 y=300 color=blue target=test_scenario1 ]
 [glink text="シナリオテストEP2-10" size=20 width=500 x=630 y=360 color=blue target=test_scenario2 ]
-;[glink text="キャラ表示移動テスト" size=20 width=500 x=630 y=360 color=blue target=test_chara ]
 ;[glink text="キャラ表示効果テスト" size=20 width=500 x=630 y=360 color=blue target=test_chara2 ]
 ;[glink text="キャラテスト３" size=20 width=500 x=630 y=360 color=blue target=test_chara3 ]
 [glink text="サウンドテスト" size=20 width=500 x=630 y=420 color=blue target=test_sound ]
@@ -51,6 +51,11 @@ f.story_step=[-1,-1,-1]	; エピソードごとのストーリーの進捗
 [s]
 
 *test_scenario
+[call storage="EP1_02.ks"]
+@jump target="*init"
+[s]
+
+*test_scenario1
 [call storage="EP1_10.ks"]
 @jump target="*init"
 [s]
