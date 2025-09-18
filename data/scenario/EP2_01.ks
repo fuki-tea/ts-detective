@@ -23,7 +23,7 @@
 
 
 ;★BGM11(file863)
-[playbgm storage="file_863.mp3" loop="true" volume=50]
+[playbgm storage="BGM11.mp3" loop="true" volume=50]
 
 ;★SE48
 [playse storage="SE48.mp3"]

@@ -41,7 +41,7 @@
 仕事変えようかな……無理だろうな。[p]
 
 ;★BGM11(file863)
-[playbgm storage="file_863.mp3" loop="true" volume=50]
+[playbgm storage="BGM11.mp3" loop="true" volume=50]
 
 *tomoya_ido
 ;★主人公立ち絵左に移動、みゆき立ち絵右に表示

@@ -21,7 +21,7 @@
 ;★智也立ち絵中央
 
 ;★BGM11(file863)
-[playbgm storage="file_863.mp3" loop="true" volume=50]
+[playbgm storage="BGM11.mp3" loop="true" volume=50]
 
 [chara_mod name="00_tomoya" face="STA00BB" time="0"]
 [chara_show name="00_tomoya" top="0" left="300" layer="0" wait="false"]

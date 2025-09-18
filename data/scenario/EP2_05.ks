@@ -225,7 +225,7 @@
 「ばあ」[p]
 
 ;★BGM file863
-[playbgm storage="file_863.mp3" loop="true" volume=50]
+[playbgm storage="BGM11.mp3" loop="true" volume=50]
 
 ;★智也立ち絵上下
 [chara_mod name="00_tomoya" face="STA00BE" time="0"]

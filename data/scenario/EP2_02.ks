@@ -41,7 +41,7 @@
 だが大家さんにお願いをされては断れない。[p]
 
 ;★BGM11(file863)
-[playbgm storage="file_863.mp3" loop="true" volume=50]
+[playbgm storage="BGM11.mp3" loop="true" volume=50]
 
 [chara_mod name="02_miyuki" face="STA02AB" time="0"]
 
@@ -131,7 +131,7 @@
 [chara_show name="02_miyuki" top="0" left="600" layer="0" wait="false"]
 
 ;★BGM11(file863)
-[playbgm storage="file_863.mp3" loop="true" volume=50]
+[playbgm storage="BGM11.mp3" loop="true" volume=50]
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 [chara_show name="00_tomoya" top="0" left="0" layer="0" wait="false"]

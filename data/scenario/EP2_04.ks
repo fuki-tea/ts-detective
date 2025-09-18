@@ -799,8 +799,8 @@
 [bg storage="BG02a.png" time="1000" method="fadeInLeft"]
 
 
-;★BGM　file_725
-[playbgm storage="file_725.mp3" loop="true" volume=50]
+;★BGM　BGM725
+[playbgm storage="BGM725.mp3" loop="true" volume=50]
 
 
 #

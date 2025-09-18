@@ -5,8 +5,8 @@
 [start_keyconfig]
 
 [fadeoutbgm]
-[;★★BGM12:file_702.mp3
-[playbgm storage="file_702.mp3" loop="true" volume=50]
+[;★★BGM12:BGM702.mp3
+[playbgm storage="BGM702.mp3" loop="true" volume=50]
 ;背景表示BG04駅前
 [bg storage="BG04.png" time="3000"]
 
@@ -47,8 +47,8 @@
 #常葉　悠卯
 「あっ」[p]
 
-;;★★BGM12:file_702.mp3
-;[playbgm storage="file_702.mp3" loop="true" volume=50]
+;;★★BGM12:BGM702.mp3
+;[playbgm storage="BGM702.mp3" loop="true" volume=50]
 
 #
 人の行きかう駅前で、俺は悠卯と出会った。[p]
@@ -200,7 +200,7 @@
 #
 さて、お使いを済ませたら帰るか。[p]
 
-;★★BGM12:file_702.mp3をフェードアウト
+;★★BGM12:BGM702.mp3をフェードアウト
 [fadeoutbgm time=2000]
 
 *bokin
