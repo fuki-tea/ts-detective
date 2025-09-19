@@ -340,6 +340,7 @@ TYRANO.kag.stat.charas['13_takao'].jname = '高尾　良治？'
 *anten
 ;★暗転
 [bg storage="BG_balck.png" time="3000"]
+[freeimage layer="base"]
 
 ;背景表示BG08　体育館裏
 [bg storage="BG08.png" time="3000"]
@@ -429,7 +430,7 @@ TYRANO.kag.stat.charas['13_takao'].jname = '高尾　良治？'
 [chara_mod name="00_tomoya" face="STA00AC" time="0"]
 
 [chara_mod name="01_yu" face="STA01BL" time="0"]
-
+#
 いや……？[r]
 案外そうかもしれない。[p]
 

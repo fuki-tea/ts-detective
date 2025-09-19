@@ -64,7 +64,7 @@ sf.first=true
 
 ;-------------------------------------------------------------------------------
 ;タイトルロゴ表示
-;@jump target="*for_debug"
+@jump target="*for_debug"
 @bg storage ="BG_black.png" time=100 wait="false"
 
 [if exp="sf.first"]

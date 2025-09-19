@@ -1099,6 +1099,8 @@
 
 ;★エンディング画面に遷移　BGMそのまま
 [chara_hide_all]
+#
+GOOD END
 [layopt layer="message0" visible="false"]
 
 *scenario_end

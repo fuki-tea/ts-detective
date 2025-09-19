@@ -105,16 +105,7 @@
 
 #
 BAD END[p]
-
-*scenario_end
-[return]
-[s]
-
 [layopt layer="message0" visible="false"]
-
-;00_智也立ち絵消す
-[chara_hide name="00_tomoya" wait="false"]
-[bg storage="BG_black.png" time="1500" wait="true"]
 
 *scenario_end
 [return]

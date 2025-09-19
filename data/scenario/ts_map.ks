@@ -63,41 +63,42 @@ f.current_step=-1
 ;-------------------------------------------------------------------------------
 ; 修了確認
 [macro name="check_end"]
-[if exp="f.current_ep == 1 - 1 || f.current_ep == 2 - 1"]
 ;#
-	;EP[emb exp="f.current_ep+1"]-[emb exp="f.current_step+1"]/[emb exp="f.current_map"][r]
-	[if exp="f.current_ep != -1 && f.current_step == 9"]
-	#GOOD END
-	GOOD END[p]
-		[emb exp="f.current_ep"]
+;EPend[emb exp="f.current_ep+1"]-[emb exp="f.current_step+1"]/[emb exp="f.current_map"][r]
+;[emb exp="f.story_step[0]"]/[emb exp="f.story_step[1]"]/[emb exp="f.story_step[2]"][p]
+
+[if exp="f.current_ep != -1 && f.current_step == 10"]
+#GOOD END
+GOOD END[p]
+	[emb exp="f.current_ep"]
+	[freeimage layer="1"]
+	[stopbgm]
+	[jump storage="first.ks"]
+[elsif exp="f.current_ep != -1 && f.current_step == 99"]
+#BAD END
+	[iscript]
+	tf.ep_scenario = f.story_badend[f.current_ep]
+	[endscript]
+	[if exp="f.current_ep == 1 - 1 || f.current_ep == 2 - 1"]
 		[freeimage layer="1"]
-		[stopbgm]
-		[jump storage="ts_title.ks"]
-	[elsif exp="f.current_ep != -1 && f.current_step == 99"]
-	#BAD END
-		[iscript]
-		tf.ep_scenario = f.story_badend[f.current_ep]
-		[endscript]
-		[if exp="f.current_ep == 1 - 1 || f.current_ep == 2 - 1"]
-			[freeimage layer="1"]
-			[layopt layer="message0" visible="false"]
-			[free name="chara_name_area" layer="message0"]
-			[if exp="tf.ep_scenario != ''"]
-				[stopbgm]
-				[call storage="&tf.ep_scenario"]
-			[endif]
-			[call target="next_ep"]
-			@jump storage="ts_title.ks"
+		[layopt layer="message0" visible="false"]
+		[free name="chara_name_area" layer="message0"]
+		[if exp="tf.ep_scenario != ''"]
+			[stopbgm]
+			[call storage="&tf.ep_scenario"]
+			[free_filter]
 		[endif]
-		
-	BAD END[p]
-		[emb exp="f.current_ep"]
-		[freeimage layer="message0" time="100" wait="false"]
-		[freeimage layer="1" time="100" wait="false"]
-		[freeimage layer="base" time="100" wait="true"]
-		[stopbgm]
-		[jump storage="ts_title.ks"]
+		[call target="next_ep"]
+		@jump storage="ts_title.ks"
 	[endif]
+	
+BAD END[p]
+	[emb exp="f.current_ep"]
+	[freeimage layer="message0" time="100" wait="false"]
+	[freeimage layer="1" time="100" wait="false"]
+	[freeimage layer="base" time="100" wait="true"]
+	[stopbgm]
+	[jump storage="first.ks"]
 [endif]
 [endmacro]
 
@@ -120,16 +121,21 @@ f.current_step=-1
 		[call storage="&tf.ep_scenario"]
 	[endif]
 	[call target="next_ep"]
+
+	[if exp="f.story_step[0] >= 9 - 1 || f.story_step[1] >= 9 - 1 || f.story_step[2] >= 9 - 1"]
+	@jump storage="first.ks"
+	[endif]
 	@jump target="init"
 
-[elsif exp="f.current_ep == -1 && f.current_map != '-'"]
+[elsif exp="(f.current_ep == -1 || f.current_ep == 3 - 1) && f.current_map != '-'"]
 
 	[freeimage layer="1"]
 	[layopt layer="message0" visible="false"]
 	[free name="chara_name_area" layer="message0"]
 	[stopbgm]
-	[jump storage="ts_scenario_ep00.ks"]
+	[call storage="ts_scenario_ep00.ks"]
 
+	@jump target="init"
 [endif]
 [endmacro]
 
@@ -137,7 +143,7 @@ f.current_step=-1
 ; 次の状態に合わせたメッセージを表示
 [macro name="disp_next"]
 #
-[if exp="f.current_ep != -1 && f.current_step == 9 - 1"]
+[if exp="f.storystep[0] == 9 - 1 || f.storystep[1] == 9 - 1 || f.storystep[2] == 9 - 1"]
 慎重に行き先を選ぼう
 [else]
 何処へ行く？
@@ -146,13 +152,9 @@ f.current_step=-1
 
 ;-------------------------------------------------------------------------------
 ;-------------------------------------------------------------------------------
-;最初のメッセージ
-[check_end]
-[check_next]
+*main
 [disp_next]
 
-;-------------------------------------------------------------------------------
-*main
 [ep_stat]
 
 ;事務所	jimusho
@@ -210,10 +212,10 @@ f.current_step=-1
 
 ;-------------------------------------------------------------------------------
 *next_action
-[call target="check_ep"]
-[check_end]
+[call target="get_top_ep"]
+;[check_end]
+[call target="check_end_ep"]
 [check_next]
-[disp_next]
 [call target="next_ep"]
 [jump target="*main"]
 [s]
@@ -221,7 +223,7 @@ f.current_step=-1
 ;-------------------------------------------------------------------------------
 ;-------------------------------------------------------------------------------
 ; 現在のステージにマッチするエピソードのうち、最もストーリーが進んでいるものを返す
-*check_ep
+*get_top_ep
 [iscript]
 let array = Array.from(f.story_step);
 let n = array.length;
@@ -293,3 +295,16 @@ if(f.current_ep != -1){
 }
 [endscript]
 [return]
+
+
+*check_end_ep
+[if exp="f.story_step[0] >= 10 - 1"]
+	[eval exp="f.current_ep = 0"]
+	[eval exp="f.current_step = f.story_step[0]"]
+[elsif exp="f.story_step[1] >= 10 - 1"]
+	[eval exp="f.current_ep = 1"]
+	[eval exp="f.current_step = f.story_step[1]"]
+[elsif exp="f.story_step[2] >= 10 - 1"]
+	[eval exp="f.current_ep = 2"]
+	[eval exp="f.current_step = f.story_step[2]"]
+[endif]

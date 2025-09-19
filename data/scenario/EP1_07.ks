@@ -660,7 +660,7 @@
 ;★背景トランジション　紙をめくるように
 ;背景表示BG01b事務所夜
 [bg storage="BG_black.png" time="1500" cross="true" method="fadeInLeftBig"]
-[bg storage="BG01a.png" time="1500" cross="true"]
+[bg storage="BG01b.png" time="1500" cross="true"]
 
 ;★立ち絵表示　智也左　悠卯右
 

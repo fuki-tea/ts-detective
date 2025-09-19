@@ -23,8 +23,7 @@
 [elsif exp="f.current_map == 'ekimae'" ]
 @jump target=*ekimae
 [endif]
-[jump storage="ts_map.ks"]
-
+[return]
 ;-------------------------------------------------------------------------------
 ;-------------------------------------------------------------------------------
 ;駅前
@@ -37,8 +36,7 @@
 
 [layopt layer="message0" visible="false"]
 [jump storage="ts_map.ks"]
-[s]
-
+[return]
 
 ;-------------------------------------------------------------------------------
 ;警察署
@@ -51,8 +49,7 @@
 
 [layopt layer="message0" visible="false"]
 [jump storage="ts_map.ks"]
-[s]
-
+[return]
 
 
 
@@ -67,8 +64,7 @@
 
 [layopt layer="message0" visible="false"]
 [jump storage="ts_map.ks"]
-[s]
-
+[return]
 
 
 
@@ -83,8 +79,7 @@
 
 [layopt layer="message0" visible="false"]
 [jump storage="ts_map.ks"]
-[s]
-
+[return]
 
 
 
@@ -100,8 +95,7 @@
 
 [layopt layer="message0" visible="false"]
 [jump storage="ts_map.ks"]
-[s]
-
+[return]
 
 
 
@@ -116,4 +110,4 @@
 
 [layopt layer="message0" visible="false"]
 [jump storage="ts_map.ks"]
-[s]
+[return]

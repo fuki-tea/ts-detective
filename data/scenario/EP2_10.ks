@@ -1710,12 +1710,14 @@ TYRANO.kag.stat.charas['17_nojarori'].jname = '幼女？'
 ;★SEの汽笛の音が終わり次第エンディングカットへ
 
 
-[layopt layer="message0" visible="false"]
-
 ;00_智也立ち絵消す
 [chara_hide name="00_tomoya" time="0" wait="false" pos_mode="false"]
 [chara_hide name="02_miyuki" time="0" wait="false" pos_mode="false"]
 [bg storage="BG_black.png" time="1500" wait="true"]
+
+#
+GOOD END
+[layopt layer="message0" visible="false"]
 
 *scenario_end
 [return]

@@ -42,6 +42,7 @@
 
 #
 BAD END[p]
+[layopt layer="message0" visible="false"]
 
 *scenario_end
 [return]
