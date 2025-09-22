@@ -75,10 +75,12 @@ sf.first=true
 [playbgm storage="elevator girl - Stereo Out.mp3" loop="true" volume=50]
 [freeimage layer="1"]
 [eval exp="f.title_bgm = true"]
-@jump target="*for_debug"
+;@jump target="*for_debug"
+
 [chara_show name="logo" left="140" top="189" time="1000" wait="false"]
 @wait time = 4000
 [chara_hide name="logo"]
+
 *for_debug
 ;タイトル画面へ移動
 @jump storage="ts_title.ks"
