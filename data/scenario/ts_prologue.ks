@@ -351,7 +351,7 @@ Shibasaki-TomoyaでTS。[r]
 そろそろ飯を食うために仕事をしなきゃならない。[p]
 
 *nanika_jiken
-[bg storage="BG02.png" time="100"]
+[bg storage="BG01a.png" time="100"]
 
 ;★立ち絵：STA00CC.png
 [chara_mod name="00_tomoya" face="STA00CC" time="0"]

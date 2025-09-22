@@ -246,10 +246,18 @@
 
 #鳩村　美柚季
 「ふふ」[p]
+#
 
 [chara_mod name="00_tomoya" face="STA00BA" time="0"]
 
 [chara_mod name="02_miyuki" face="STA02DB" time="0"]
+
+*still2
+[chara_hide name="00_tomoya" wait="false" pos_mode="false"]
+[chara_hide name="02_miyuki" wait="false" pos_mode="false"]
+
+;立ち絵表示を取りやめ　HK3fiW9.png（STL2-02）を表示
+[bg storage="stl2-03/unaji.png" time="1500"]
 
 #
 大家さんが笑って髪をかき上げる。[p]
@@ -279,9 +287,13 @@
 #
 俺だけが、そのことを知っているようで、妙な優越感が湧く。[p]
 
+[bg storage="BG02b.png" time="1500"]
+
 [chara_mod name="02_miyuki" face="STA02ED" time="0"]
+[chara_show name="02_miyuki" top="0" left="600" layer="0" wait="false"]
 
 [chara_mod name="00_tomoya" face="STA00BB" time="0"]
+[chara_show name="00_tomoya" top="0" left="0" layer="0" wait="false"]
 
 #柴崎　智也
 「大家さ……マスター」[p]

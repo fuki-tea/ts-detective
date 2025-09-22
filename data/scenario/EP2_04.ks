@@ -199,6 +199,9 @@
 
 [chara_mod name="03_ui" face="STA03AM" time="0"]
 
+; 上下
+[chara_move name="03_ui" top="-100" left="600" anim="true" effect="easeOutSine" time="200" wait="true"]
+[chara_move name="03_ui" top="0" left="600" anim="true" effect="easeInSine" time="200" wait="true"]
 #西春　愛
 「ちょっ、汚っ！！今の会話にギャグはなかったっすよ！」[p]
 
@@ -396,7 +399,7 @@
 
 *gun_cutin
 ;★カットイン gun01a.png
-[chara_show name="cut_gun01" top="160" left="400" layer="0" wait="false"]
+[chara_show name="cut_gun02" top="160" left="400" layer="0" wait="false"]
 
 #
 男は黒光りする拳銃を取り出す。[r]
@@ -430,7 +433,7 @@
 「変な女だな。おい、そっちにいけ」[p]
 
 ;★カットイン消す
-[chara_hide name="cut_gun01" time="0" wait="false" pos_mode="false"]
+[chara_hide name="cut_gun02" time="0" wait="false" pos_mode="false"]
 ;★立ち絵消す
 [chara_hide name="00_tomoya" time="0" wait="false" pos_mode="false"]
 [chara_hide name="30_teki" time="0" wait="false" pos_mode="false"]
@@ -822,7 +825,7 @@
 
 ;★カットイン　智也狙撃ポーズ（両手）+警察拳銃（M3913）（両手）
 [chara_show name="cut_gun00" top="60" left="200" layer="0" wait="false"]
-[chara_show name="cut_gun01" top="120" left="600" layer="0" wait="false"]
+[chara_show name="cut_gun02" top="120" left="600" layer="0" wait="false"]
 
 
 #柴崎　智也
@@ -846,8 +849,8 @@
 ;★SE27
 [playse storage="SE27.mp3"]
 ;★カットイン消す
+[chara_hide name="cut_gun00" time="0" wait="false" pos_mode="false"]
 [chara_hide name="cut_gun02" time="0" wait="false" pos_mode="false"]
-[chara_hide name="cut_gun01" time="0" wait="false" pos_mode="false"]
 
 
 #
@@ -985,6 +988,7 @@
 
 [chara_mod name="00_tomoya" face="STA00CD" time="0"]
 
+#柴崎　智也
 「いやー鮮やかだったぞ西春。全弾命中。昇進確実だ」[p]
 
 #柴崎　智也
@@ -1019,7 +1023,7 @@
 
 ;00_智也立ち絵消す
 [chara_hide name="00_tomoya" time="0" wait="false" pos_mode="false"]
-[chara_hide name="01_yu" time="0" wait="false" pos_mode="false"]
+[chara_hide name="03_ui" time="0" wait="false" pos_mode="false"]
 [bg storage="BG_black.png" time="1500" wait="true"]
 
 *scenario_end

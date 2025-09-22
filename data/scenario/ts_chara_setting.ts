@@ -45,7 +45,8 @@
 [chara_new  name="cut_ampul" storage="cut/ep2/ampul.png" ]
 [chara_new  name="cut_kaenbin" storage="cut/ep2/kaenbin.png" ]
 
-[chara_new name="tomo_zoom" storage="../bgimage/stl1-03/stl1-03d-full.png" jname=""]
+[chara_new name="tomo_zoom1" storage="../bgimage/stl1-03/stl1-03d-full.png" jname=""]
+[chara_new name="tomo_zoom2" storage="../bgimage/stl2-04/stl2-04c.png" jname=""]
 
 ;logo
 [chara_new name="logo" storage="../bgimage/logo.png" jname="logo"]

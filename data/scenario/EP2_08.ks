@@ -18,7 +18,7 @@
 
 ;★智也立ち絵中央
 
-[chara_mod name="00_tomoya" face="STA00CD" time="0"]
+[chara_mod name="00_tomoya" face="STA00BD" time="0"]
 [chara_show name="00_tomoya" top="0" left="300" layer="0" wait="false"]
 
 
@@ -46,7 +46,7 @@
 *tomoya_ido
 ;★主人公立ち絵左に移動、みゆき立ち絵右に表示
 
-[chara_mod name="00_tomoya" face="STA00CA" time="0"]
+[chara_mod name="00_tomoya" face="STA00BA" time="0"]
 [chara_move name="00_tomoya" top="0" left="0" anim="true" effect="easeOutExpo" time="1500" wait="false"]
 
 [chara_mod name="02_miyuki" face="default" time="0"]
@@ -56,19 +56,19 @@
 #鳩村　美柚季
 「はい、お疲れ様」[p]
 
-[chara_mod name="00_tomoya" face="STA00CB" time="0"]
+[chara_mod name="00_tomoya" face="STA00BB" time="0"]
 
 #柴崎　智也
 「大家さ……マスター」[p]
 
-[chara_mod name="00_tomoya" face="STA00CA" time="0"]
+[chara_mod name="00_tomoya" face="STA00BA" time="0"]
 
 [chara_mod name="02_miyuki" face="STA02AC" time="0"]
 
 #鳩村　美柚季
 「はい、マスターですよ。準備は終わりましたか？」[p]
 
-[chara_mod name="00_tomoya" face="STA00CH" time="0"]
+[chara_mod name="00_tomoya" face="STA00BH" time="0"]
 
 #柴崎　智也
 「ええ、あとは鍵だけです」[p]
@@ -362,7 +362,7 @@
 ;背景表示BG02b喫茶店夜
 [bg storage="BG02b.png" time="3000"]
 
-[chara_mod name="00_tomoya" face="STA00CA" time="0"]
+[chara_mod name="00_tomoya" face="STA00BA" time="0"]
 [chara_show name="00_tomoya" top="0" left="0" layer="0" wait="false"]
 
 

@@ -168,14 +168,14 @@
 #常葉　悠卯
 「助けて！！トモちゃああん！！！」[p]
 
-*tomo_zoom
+*tomo_zoom1
 ;★背景STL1-04d表示は以前指定の演出指示反映
 [layopt layer="message0" visible="false"]
-[chara_show name="tomo_zoom" width="5120" height="2880" left="-3600" top="-2160" time="1000"]
-[chara_move name="tomo_zoom" width="1280" height="720" left="0" top="0" anim="true" effect="easeInQuint" time="1500" wait="true"]
+[chara_show name="tomo_zoom1" width="5120" height="2880" left="-3600" top="-2160" time="1000"]
+[chara_move name="tomo_zoom1" width="1280" height="720" left="0" top="0" anim="true" effect="easeInQuint" time="1500" wait="true"]
 
 ;★BMG消す
-
+[stopbgm]
 
 [layopt layer="message0" visible="true"]
 #柴崎　智也
@@ -184,7 +184,6 @@
 ;★SE39
 [playse storage="SE39.mp3"]
 
-/[r]
 #浅川 鷹貨夫
 「誰です！？」[p]
 
@@ -219,7 +218,7 @@
 しかし、中身が男だと知っても気に入ったなんて言えるのだろうか。[p]
 
 ;★スチル消す
-[chara_hide name="tomo_zoom" time="0" pos_mode="false"]
+[chara_hide name="tomo_zoom1" time="0" pos_mode="false"]
 
 *tomoya_zoom_end
 ;★背景倉庫
@@ -365,7 +364,7 @@
 
 #浅川 鷹貨夫
 「そこまでお気づきとは……そうです。超小型の受信機をつけているのです」[p]
-
+#
 [chara_mod name="00_tomoya" face="STA00AA" time="0"]
 
 [chara_mod name="01_yu" face="STA01BD" time="0"]
@@ -506,10 +505,10 @@
 
 
 ;★スチル表示
-[bg storage="stl1-06a.png" time="0"]
+[bg storage="stl1-06/stl1-06a.png" time="0"]
 
 #
-やめろ……、俺の前髪を……。
+やめろ……、俺の前髪を……。[p]
 
 #柴崎　智也
 「う……ぐう……」[p]
@@ -651,7 +650,7 @@
 
 
 ;★スチル表示　顎クイ
-[bg storage="stl1-04/stl1-04e.png" time="0"]
+[bg storage="stl1-04/stl1-04e.png" time="1000"]
 
 
 #
@@ -730,7 +729,7 @@
 「うっ……うぐ……」[p]
 
 ;★スチル表示　顎クイ
-[bg storage="stl1-04e.png" time="3000"]
+[bg storage="stl1-04/stl1-04e.png" time="3000"]
 
 #
 息が続かなくなったので口を離す。[p]
@@ -1083,7 +1082,6 @@
 
 ;★背景STL1-04j 1-04eの催眠目無し
 [bg storage="stl1-04/stl1-04j.png" time="3000"]
-[cg storage="stl1-04/stl1-01a.png"]
 
 #柴崎　智也
 「これは催眠のせいじゃないぞ」[p]
@@ -1093,6 +1091,8 @@
 「アホ……」[p]
 #
 
+[cg storage="stl1-04/stl1-01a.png"]
+[layopt layer="message0" visible="false"]
 ;★画面をセピアに変更　wait5000
 [filter layer="base" sepia="100"]
 [wait time="5000"]
@@ -1101,7 +1101,6 @@
 [chara_hide_all]
 #
 GOOD END
-[layopt layer="message0" visible="false"]
 
 *scenario_end
 [return]

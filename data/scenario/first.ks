@@ -22,11 +22,23 @@
 ;メッセージボックスは非表示
 @layopt layer="message" visible=false
 
+;最初は右下のメニューボタンを非表示にする
+[hidemenubutton]
 ;-------------------------------------------------------------------------------
 [iscript]
 sf.type_r18=true	; R18の場合は真
 sf.first=true
 [endscript]
+
+;-------------------------------------------------------------------------------
+;タイトルロゴ表示
+@bg storage ="attention.png" time=100 wait="false"
+
+;[ptext layer="1" x="460" y="600" text="CLICK TO START" size="40" color="white" edge="0xFF0000"]
+;[layopt layer="1" visible="true"]
+
+[p]
+@bg storage ="BG_black.png" time=100 wait="false"
 
 ;-------------------------------------------------------------------------------
 ;メッセージエリアの設定
@@ -56,31 +68,14 @@ sf.first=true
 [endmacro]
 
 ;-------------------------------------------------------------------------------
-;最初は右下のメニューボタンを非表示にする
-[hidemenubutton]
-
 ;キャラ設定
 [call storage="ts_chara_setting.ts"]
 
 ;-------------------------------------------------------------------------------
-;タイトルロゴ表示
-@jump target="*for_debug"
-@bg storage ="BG_black.png" time=100 wait="false"
-
-[if exp="sf.first"]
-
-[iscript]
-sf.first=false
-[endscript]
-
-[ptext layer="1" x="460" y="600" text="CLICK TO START" size="40" color="white" edge="0xFF0000"]
-[layopt layer="1" visible="true"]
-
-[endif]
-
 [playbgm storage="elevator girl - Stereo Out.mp3" loop="true" volume=50]
 [freeimage layer="1"]
 [eval exp="f.title_bgm = true"]
+@jump target="*for_debug"
 [chara_show name="logo" left="140" top="189" time="1000" wait="false"]
 @wait time = 4000
 [chara_hide name="logo"]

@@ -14,11 +14,12 @@ f.story_step=[-1,-1,-1]	; エピソードごとのストーリーの進捗
 [playbgm storage="elevator girl - Stereo Out.mp3" loop="true" volume=50]
 [eval exp="f.title_bgm = true"]
 [endif]
+[free_filter]
 
 ;メッセージウィンドウの非表示
 [layopt layer=message0 visible=false]
 
-@bg storage ="title.jpg" time=100
+@bg storage ="title_visual.png" time=100
 [hidemenubutton]
 
 [button x=135 y=230 graphic="title/button_start.png" enterimg="title/button_start2.png"  target="gamestart" keyfocus="1"]
@@ -51,7 +52,7 @@ f.story_step=[-1,-1,-1]	; エピソードごとのストーリーの進捗
 [s]
 
 *test_scenario
-[call storage="EP1_08.ks"]
+[call storage="EP2_08.ks"]
 @jump target="*init"
 [s]
 
