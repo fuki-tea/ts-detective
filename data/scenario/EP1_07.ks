@@ -202,7 +202,7 @@
 [chara_mod name="00_tomoya" face="STA00CC" time="0"]
 
 ;★BGM12 file702
-[playbgm storage="BGM702.mp3" loop="true" volume=50]
+[playbgm storage="BGM12.mp3" loop="true" volume=50]
 
 #柴崎　智也
 「居るけどノックくらいはして欲しいな」[p]

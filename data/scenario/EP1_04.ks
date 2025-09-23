@@ -19,8 +19,8 @@
 
 ;★立ち絵は智也左　悠卯右配置
 
-;★BGM12:BGM702.mp3
-[playbgm storage="BGM702.mp3" loop="true" volume=50]
+;★BGM12:BGM12.mp3
+[playbgm storage="BGM12.mp3" loop="true" volume=50]
 
 [chara_show name="00_tomoya" top="0" left="0" layer="0" time="100" wait="false"]
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
@@ -721,7 +721,7 @@
 [chara_show name="01_yu" top="0" left="1200" layer="0" time="0" wait="false"]
 
 ;★BGM15
-[playbgm storage="BGM702.mp3" loop="true" volume=50]
+[playbgm storage="BGM12.mp3" loop="true" volume=50]
 
 
 [chara_mod name="00_tomoya" face="STA00CG" time="0"]

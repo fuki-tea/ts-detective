@@ -92,7 +92,7 @@
 「風紀委員にビビりすぎ。ウケる」[p]
 
 ;★BGM12
-[playbgm storage="BGM702.mp3" loop="true" volume=50]
+[playbgm storage="BGM12.mp3" loop="true" volume=50]
 
 [chara_mod name="01_yu" face="STA01BA" time="0"]
 
@@ -202,7 +202,7 @@
 [chara_mod name="00_tomoya" face="STA00AE" time="0"]
 
 ;★BGM32
-[playbgm storage="BGM702.mp3" loop="true" volume=50]
+[playbgm storage="BGM12.mp3" loop="true" volume=50]
 
 #柴崎　智也
 「なっ！」[p]
@@ -344,7 +344,7 @@
 「悠卯が立たせたんだろ！」[p]
 
 ;★BGM22
-[playbgm storage="BGM702.mp3" loop="true" volume=50]
+[playbgm storage="BGM12.mp3" loop="true" volume=50]
 
 [chara_mod name="01_yu" face="STA01AM" time="0"]
 [chara_hide name="cut_paimomi" time="0" wait="false" pos_mode="false"]
@@ -772,7 +772,7 @@
 嬌声が飛び込んでくる。[p]
 
 ;★BGM32
-[playbgm storage="BGM702.mp3" loop="true" volume=50]
+[playbgm storage="BGM12.mp3" loop="true" volume=50]
 
 [chara_mod name="00_tomoya" face="STA00AH" time="0"]
 
@@ -960,7 +960,7 @@ TYRANO.kag.stat.charas['13_takao'].jname = "高尾　良治"
 「！？」[p]
 #
 
-;★BGM12　BGM702.mp3
+;★BGM12　BGM12.mp3
 [playbgm storage="BGM12.mp3" loop="true" volume=50]
 
 *yu_tojo2

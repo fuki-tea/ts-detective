@@ -241,7 +241,7 @@ TYRANO.kag.stat.charas['13_takao'].jname = '高尾　良治？'
 スマホを覗き込むのに夢中になっていた俺は、背後から近づいてきた男に気づかなかった。[p]
 
 ;★BGM15
-[playbgm storage="BGM702.mp3" loop="true" volume=50]
+[playbgm storage="BGM12.mp3" loop="true" volume=50]
 
 
 [chara_mod name="00_tomoya" face="STA00AA" time="0"]
@@ -400,7 +400,7 @@ TYRANO.kag.stat.charas['13_takao'].jname = '高尾　良治？'
 [chara_mod name="01_yu" face="STA01AH" time="0"]
 
 ;★BGM12　FILE702
-[playbgm storage="BGM702.mp3" loop="true" volume=50]
+[playbgm storage="BGM12.mp3" loop="true" volume=50]
 
 
 #常葉　悠卯

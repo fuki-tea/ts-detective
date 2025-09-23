@@ -4,6 +4,7 @@
 [clearfix]
 [start_keyconfig]
 [free name="chara_name_area" layer="message0"]
+[chara_hide_all]
 
 [playbgm storage="pokan - Stereo Out.mp3" loop="true" volume=50]
 
@@ -37,11 +38,20 @@
 ;-------------------------------------------------------------------------------
 [iscript]
 f.story_map=[["ekimae","jimusho","gakuen","hankagai","ekimae","hankagai","jimusho","gakuen","keisatsu","gakuen"],["kissa","kissa","kissa","kissa","kissa","keisatsu","hankagai","kissa","hankagai","kissa"],["hankagai","keisatsu","hankagai","jimusho","jimusho","kissa","keisatsu","jimusho","jimusho","ekimae"]]
+f.ep_head=[
+["白昼のストリップ","依頼は浮気調査","潜入調査は制服で","最後の再会","謎の依頼人","顔の無い男","コーヒーと親友","制服潜入調査ふたたび","制服おねだりおじさん","催眠術師vsTS探偵"],
+["琥珀色の思い出","喫茶店員はじめちゃいました","消えないキスマーク","MAKE MY DAY","昼下がりの推理","ウェイトレスおねだりおじさん","ビル街のはざまで","首筋に伝えて","危険のかおり","TS科学者vsTS探偵"]
+]
+f.chapter=[
+["chapter/chapter1-01.png","chapter/chapter1-02.png","chapter/chapter1-03.png","chapter/chapter1-04.png","chapter/chapter1-05.png","chapter/chapter1-06.png","chapter/chapter1-07.png","chapter/chapter1-08.png","chapter/chapter1-09.png","chapter/chapter1-10.png"],
+["chapter/chapter2-01.png","chapter/chapter2-02.png","chapter/chapter2-03.png","chapter/chapter2-04.png","chapter/chapter2-05.png","chapter/chapter2-06.png","chapter/chapter2-07.png","chapter/chapter2-08.png","chapter/chapter2-09.png","chapter/chapter2-10.png"]
+]
 f.story_scenario=[["EP1_01.ks","EP1_02.ks","EP1_03.ks","EP1_04.ks","EP1_05.ks","EP1_06.ks","EP1_07.ks","EP1_08.ks","EP1_09.ks","EP1_10.ks"],["EP2_01.ks","EP2_02.ks","EP2_03.ks","EP2_04.ks","EP2_05.ks","EP2_06.ks","EP2_07.ks","EP2_08.ks","EP2_09.ks","EP2_10.ks"],["","","","","","","","","",""]]
 f.story_badend=["EP1_XX.ks","EP2_XX.ks",""]
 f.current_map="-"
 f.current_ep=-1
 f.current_step=-1
+f.current_chapter=""
 [endscript]
 
 ;-------------------------------------------------------------------------------
@@ -111,13 +121,18 @@ BAD END[p]
 [if exp="f.current_ep == 1 - 1 || f.current_ep == 2 - 1"]
 	[iscript]
 	tf.ep_scenario = f.story_scenario[f.current_ep][f.current_step]
+	f.current_chapter = f.chapter[f.current_ep][f.current_step]
 	[endscript]
-
+;EP[emb exp="f.current_ep+1"]-[emb exp="f.current_step+1"]/[emb exp="f.current_map"][r]
+;EP[emb exp="f.current_chapter"]-[emb exp="tf.ep_scenario"][p]
+	
 	[freeimage layer="1"]
 	[layopt layer="message0" visible="false"]
 	[free name="chara_name_area" layer="message0"]
 	[if exp="tf.ep_scenario != ''"]
 		[stopbgm]
+		; シナリオが進む
+		[call storage="EP_chapter.ks"]
 		[call storage="&tf.ep_scenario"]
 	[endif]
 	[call target="next_ep"]
@@ -128,7 +143,7 @@ BAD END[p]
 	@jump target="init"
 
 [elsif exp="(f.current_ep == -1 || f.current_ep == 3 - 1) && f.current_map != '-'"]
-
+	; シナリオが進まない
 	[freeimage layer="1"]
 	[layopt layer="message0" visible="false"]
 	[free name="chara_name_area" layer="message0"]
