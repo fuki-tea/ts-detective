@@ -7,6 +7,7 @@
 @clearfix
 [hidemenubutton]
 [cm]
+[chara_hide_all]
 
 [bg storage="../../tyrano/images/system/bg_base.png" time=100]
 [layopt layer=1 visible=true]
@@ -70,7 +71,20 @@
 *backtitle
 [cm]
 [freeimage layer=1]
-@jump storage=ts_title.ks
+;@jump storage=ts_title.ks target="start_bg"
+
+;	fixボタンをクリア
+	[clearfix]
+
+;	キーコンフィグの有効化
+	[start_keyconfig]
+
+;	コールスタックのクリア
+	[clearstack]
+
+;	ゲーム復帰
+	[awakegame]
+[s]
 
 *nextpage
 [emb exp="tf.page++;"]
