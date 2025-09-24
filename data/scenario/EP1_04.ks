@@ -806,7 +806,7 @@
 
 
 ;★SE65
-[playse storage="SE65.mp3"]
+[playse storage="SE65.m4a"]
 #
 警らの警官が駆けてきて、交通整理を始める。[r]
 遠くから、救急車のサイレンが聞こえてきた。[p]

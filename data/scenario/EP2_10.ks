@@ -261,7 +261,7 @@ TYRANO.kag.stat.charas['22_miyuki_fake'].jname = '謎の女'
 [chara_mod name="22_miyuki_fake" face="STA22AG" time="0" effect="none"]
 
 ;★SE54
-[playse storage="SE54.mp3"]
+[playse storage="SE54.m4a"]
 #
 俺の脇腹に、堅いものが突き付けられる。[p]
 
@@ -373,7 +373,7 @@ TYRANO.kag.stat.charas['22_miyuki_fake'].jname = '謎の女'
 「げほっ、げほっ！」[p]
 
 ;★SE60
-[playse storage="SE60.mp3"]
+[playse storage="SE60.m4a"]
 #謎の男A
 「おーいこれで一回やめだ」[p]
 
@@ -401,7 +401,7 @@ TYRANO.kag.stat.charas['22_miyuki_fake'].jname = '謎の女'
 「や、やめて……んぐっ……んっ……んっ……」[p]
 
 ;★SE60
-[playse storage="SE60.mp3"]
+[playse storage="SE60.m4a"]
 #鳩村　美柚季
 「えぇっ……えほっ……」[p]
 
@@ -532,7 +532,7 @@ TYRANO.kag.stat.charas['22_miyuki_fake'].jname = '謎の女'
 ;銃声
 
 ;★SE61
-[playse storage="SE61.mp3"]
+[playse storage="SE61.m4a"]
 #謎の男A
 「ぐあああ！」[p]
 
@@ -559,7 +559,7 @@ TYRANO.kag.stat.charas['22_miyuki_fake'].jname = '謎の女'
 [chara_show name="cut_kaenbin" top="120" left="400" layer="0" wait="false"]
 
 ;★SE62
-[playse storage="SE62.mp3"]
+[playse storage="SE62.m4a"]
 #
 俺は手元灯風に持っていた瓶を奴らの前に高くかざす。[p]
 
@@ -602,7 +602,7 @@ TYRANO.kag.stat.charas['22_miyuki_fake'].jname = '謎の女'
 [chara_show name="cut_gun00b" top="120" left="400" layer="0" wait="false"]
 
 ;★SE61
-[playse storage="SE61.mp3"]
+[playse storage="SE61.m4a"]
 #謎の男B
 「ギャアッ」[p]
 
@@ -635,7 +635,7 @@ TYRANO.kag.stat.charas['22_miyuki_fake'].jname = '謎の女'
 「さぁ、どうなんだ！」[p]
 #
 ;★SE61
-[playse storage="SE61.mp3"]
+[playse storage="SE61.m4a"]
 ;★カットイン消す
 [chara_hide name="cut_gun00b" time="0" wait="false" pos_mode="false"]
 
@@ -646,7 +646,7 @@ TYRANO.kag.stat.charas['22_miyuki_fake'].jname = '謎の女'
 *minato
 
 ;★SE63
-[playse storage="SE63.mp3"]
+[playse storage="SE63.m4a"]
 ;背景表示港
 [bg storage="BG09.png" time="5000"]
 
@@ -661,7 +661,7 @@ TYRANO.kag.stat.charas['22_miyuki_fake'].jname = '謎の女'
 
 
 ;★SE64
-[playse storage="SE64.mp3"]
+[playse storage="SE64.m4a"]
 #鳩村　美柚季
 「うっ……うぇ……」[p]
 
@@ -672,7 +672,7 @@ TYRANO.kag.stat.charas['22_miyuki_fake'].jname = '謎の女'
 [chara_mod name="02_miyuki" face="STA02EJ" time="0" effect="none"]
 
 ;★SE64
-[playse storage="SE64.mp3"]
+[playse storage="SE64.m4a"]
 #鳩村　美柚季
 「うぇえ……うぐ……」[p]
 
@@ -686,7 +686,7 @@ TYRANO.kag.stat.charas['22_miyuki_fake'].jname = '謎の女'
 「水はしっかり吐いてください」[p]
 
 ;★SE64
-[playse storage="SE64.mp3"]
+[playse storage="SE64.m4a"]
 [chara_mod name="02_miyuki" face="STA02EG" time="0" effect="none"]
 
 #鳩村　美柚季
@@ -915,7 +915,7 @@ TYRANO.kag.stat.charas['22_miyuki_fake'].jname = '謎の女'
 
 ;:銃を動かす音
 ;★SE54
-[playse storage="SE54.mp3"]
+[playse storage="SE54.m4a"]
 
 [chara_mod name="02_miyuki" face="STA02EI" time="0" effect="none"]
 
@@ -1361,7 +1361,7 @@ TYRANO.kag.stat.charas['17_nojarori'].jname = '幼女？'
 そして、俺の拳銃を握る。[p]
 
 ;★SE54
-[playse storage="SE54.mp3"]
+[playse storage="SE54.m4a"]
 
 [chara_mod name="00_tomoya" face="STA00CF" time="0" effect="none"]
 
@@ -1577,7 +1577,7 @@ TYRANO.kag.stat.charas['17_nojarori'].jname = '幼女？'
 [chara_show name="cut_gun00b" top="120" left="600" layer="0" wait="false"]
 
 ;★SE54
-[playse storage="SE54.mp3"]
+[playse storage="SE54.m4a"]
 
 [chara_mod name="17_nojarori" face="default" time="0" effect="none"]
 
@@ -1591,7 +1591,7 @@ TYRANO.kag.stat.charas['17_nojarori'].jname = '幼女？'
 引き金を、引く。[p]
 
 ;★SE61
-[playse storage="SE61.mp3"]
+[playse storage="SE61.m4a"]
 
 ;★カットイン消す
 [chara_hide name="cut_gun00b" time="0" wait="false" pos_mode="false"]
@@ -1599,7 +1599,7 @@ TYRANO.kag.stat.charas['17_nojarori'].jname = '幼女？'
 
 
 ;★SE66
-[playse storage="SE66.mp3"]
+[playse storage="SE66.m4a"]
 
 ;ガラスの割れる音:
 
@@ -1655,7 +1655,7 @@ TYRANO.kag.stat.charas['17_nojarori'].jname = '幼女？'
 [chara_mod name="02_miyuki" face="STA02DE" time="0" effect="none"]
 
 ;★SE67
-[playse storage="SE67.mp3"]
+[playse storage="SE67.m4a"]
 
 #
 みじめな敵の首領を眺めながら、俺はまだ熱い銃を手早く分解し、海に捨てる。[p]
@@ -1717,7 +1717,7 @@ TYRANO.kag.stat.charas['17_nojarori'].jname = '幼女？'
 
 
 ;★SE63
-[playse storage="SE63.mp3"]
+[playse storage="SE63.m4a"]
 
 ;★SEの汽笛の音が終わり次第エンディングカットへ
 

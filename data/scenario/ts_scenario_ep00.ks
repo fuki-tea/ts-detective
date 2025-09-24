@@ -87,7 +87,7 @@
 ;-------------------------------------------------------------------------------
 ;事務所
 *jimusho
-[bg storage="BG01.png" time="100"]
+[bg storage="BG01a.png" time="100"]
 [message_area_scenario]
 #
 俺の事務所だ。[r]
@@ -102,7 +102,7 @@
 ;-------------------------------------------------------------------------------
 ;喫茶店
 *kissa
-[bg storage="BG02.png" time="100"]
+[bg storage="BG02a.png" time="100"]
 [message_area_scenario]
 #
 喫茶店ルブランだ。[r]

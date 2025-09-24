@@ -186,7 +186,7 @@
 [stopbgm]
 
 ;★SE51
-[playse storage="SE51.mp3"]
+[playse storage="SE51.m4a"]
 
 [chara_mod name="03_ui" face="STA03AR" time="0"]
 
@@ -550,13 +550,13 @@
 もう一人の男が飛び出し、懐から拳銃を取り出そうとした瞬間、俺はポットのコーヒーをぶちまけた。[p]
 
 ;★SE50
-[playse storage="SE50.mp3"]
+[playse storage="SE50.m4a"]
 
 #謎の男B
 「ぎゃあああっちいいいいい！」[p]
 
 ;★SE51
-[playse storage="SE51.mp3"]
+[playse storage="SE51.m4a"]
 
 ;★敵立ち絵　下にスライドアウト
 
@@ -574,7 +574,7 @@
 それさえできればあとはこっちのものだ。[p]
 
 ;★SE54
-[playse storage="SE54.mp3"]
+[playse storage="SE54.m4a"]
 
 ;★BGMフェードアウト
 [fadeoutbgm time=2000]
@@ -785,7 +785,7 @@
 「先輩っ！？」[p]
 
 ;★SE54
-[playse storage="SE54.mp3"]
+[playse storage="SE54.m4a"]
 
 ;★智也立ち絵左にスライドアウト
 [chara_move name="00_tomoya" top="0" left="-600" anim="true" effect="easeOutExpo" time="500" wait="true"]
@@ -984,7 +984,7 @@
 俺は西春の手に拳銃を返す。[p]
 
 ;★SE54
-[playse storage="SE54.mp3"]
+[playse storage="SE54.m4a"]
 
 [chara_mod name="00_tomoya" face="STA00CD" time="0"]
 
