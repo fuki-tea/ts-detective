@@ -70,7 +70,7 @@ sf.deb_sw=false;	// deb
 [chara_config ptext="chara_name_area"]
 
 ;既読テキストのカラー設定
-[config_record_label color="0x87cefa"]
+[config_record_label color="0xffffff"]
 
 [endmacro]
 
