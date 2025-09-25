@@ -199,8 +199,16 @@ f.current_chapter="";
 [s]
 
 *badend
-#
-BAD END[p]
+[iscript]
+f.ep_scenario = f.story_badend[f.current_ep];
+[endscript]
+[freeimage layer="1"]
+[layopt layer="message0" visible="false"]
+[free name="chara_name_area" layer="message0"]
+[if exp="f.ep_scenario != ''"]
+	[stopbgm]
+	[call storage="&f.ep_scenario"]
+[endif]
 ; エピソード終了のためロゴ画面から
 @jump storage="ts_end_credits.ks"
 
