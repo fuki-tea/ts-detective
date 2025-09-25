@@ -1082,6 +1082,7 @@
 
 ;★背景STL1-04j 1-04eの催眠目無し
 [bg storage="stl1-04/stl1-04j.png" time="3000"]
+[cg storage="stl1-04/stl1-04a.png"]
 
 #柴崎　智也
 「これは催眠のせいじゃないぞ」[p]
@@ -1091,7 +1092,6 @@
 「アホ……」[p]
 #
 
-[cg storage="stl1-04/stl1-01a.png"]
 [layopt layer="message0" visible="false"]
 ;★画面をセピアに変更　wait5000
 [filter layer="base" sepia="100"]

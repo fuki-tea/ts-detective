@@ -88,6 +88,7 @@
 *still
 ;★背中スチルHK3fiW9
 [bg storage="stl2-04/unaji.png" time="1500" wait="true"]
+[cg storage="stl2-04/unaji.png"]
 
 #
 無防備にも背中を見せて髪を整えている。[p]

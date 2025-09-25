@@ -441,6 +441,7 @@
 
 ;背景表示STL　目見開き怯え
 [bg storage="stl2-04/stl2-04a.png" time="1000"]
+[cg storage="stl2-04/stl2-04a.png"]
 
 
 #

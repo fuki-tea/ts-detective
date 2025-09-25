@@ -596,6 +596,8 @@ TYRANO.kag.stat.charas['22_miyuki_fake'].jname = '謎の女'
 #
 
 [bg storage="stl2-04/stl2-04c.png" time="1000"]
+[cg storage="stl2-04/stl2-04a.png"]
+
 [chara_hide name="cut_kaenbin" time="0" wait="false" pos_mode="false"]
  
 ;★カットインshot2+gun00b
@@ -846,6 +848,7 @@ TYRANO.kag.stat.charas['22_miyuki_fake'].jname = '謎の女'
 
 *careexp
 ;★カットインcarexp
+[chara_show name="cut_carexp" top="180" left="400" layer="0" wait="false" zindex="10"]
 ;★SE59
 [playse storage="SE59.mp3"]
 
@@ -862,6 +865,7 @@ TYRANO.kag.stat.charas['22_miyuki_fake'].jname = '謎の女'
 [chara_mod name="02_miyuki" face="STA02CE" time="0" effect="none"]
 
 ;★カットイン消す
+[chara_hide name="cut_carexp" time="0" wait="false" pos_mode="false"]
 
 #
 だが、じきに、警官の応援も、機動隊も到着するだろう。[p]

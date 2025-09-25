@@ -45,17 +45,34 @@
 @jump target=&tf.target_page
 
 *page_0
+;EP1-01
 [if exp="sf.type_r18 != true"]
 [cg_image_button no_graphic="../../tyrano/images/system/noimage.png" x=60 y=130 width=256 height=144 folder="bgimage" graphic="stl1-01/stl1-01a.png,stl1-01/stl1-01b.png,stl1-01/stl1-01c.png,stl1-01/stl1-01d.png,stl1-01/stl1-01e.png,stl1-01/stl1-01g.png" ]
 [else]
 [cg_image_button no_graphic="../../tyrano/images/system/noimage.png" x=60 y=130 width=256 height=144 folder="bgimage" graphic="stl1-01/stl1-01a.png,stl1-01/stl1-01b.png,stl1-01/stl1-01c.png,stl1-01/stl1-01d.png,stl1-01/stl1-01e.png,stl1-01/stl1-01g.png,stl1-01/stl1-01f.png"]
 [endif]
 
-[cg_image_button no_graphic="../../tyrano/images/system/noimage.png" x=380 y=130 width=256 height=144 folder="bgimage" graphic="stl1-03/stl1-03a.png,stl1-03/stl1-03b.png,stl1-03/stl1-03c.png,stl1-03/stl1-03d.png" ]
 
+;EP1-04
+[cg_image_button no_graphic="../../tyrano/images/system/noimage.png" x=380 y=130 width=256 height=144 folder="bgimage" graphic="stl1-08/stl1-08a.png,stl1-08/stl1-08b.png" ]
+
+
+;EP1-07
 [cg_image_button no_graphic="../../tyrano/images/system/noimage.png" x=700 y=130 width=256 height=144 folder="bgimage" graphic="stl1-07/stl1-07.png" ]
 
-[cg_image_button no_graphic="../../tyrano/images/system/noimage.png" x=1020 y=130 width=256 height=144 folder="bgimage" graphic="stl1-08/stl1-08a.png,stl1-08/stl1-08b.png" ]
+;EP1-10
+[cg_image_button no_graphic="../../tyrano/images/system/noimage.png" x=1020 y=130 width=256 height=144 folder="bgimage" graphic="stl1-04/stl1-04a.png,stl1-04/stl1-04b.png,stl1-04/stl1-04c.png,stl1-06/stl1-06a.png,stl1-06/stl1-06b.png,stl1-04/stl1-04e.png,stl1-04/stl1-04f.png,stl1-04/stl1-04g.png,stl1-04/stl1-04h.png,stl1-04/stl1-04e.png,stl1-04/stl1-04f.png,stl1-04/stl1-04g.png,stl1-04/stl1-04h.png,stl1-04/stl1-04j.png,stl1-04/stl1-04k.png,stl1-04/stl1-04j.png" ]
+
+
+;EP2-03
+[cg_image_button no_graphic="../../tyrano/images/system/noimage.png" x=60 y=330 width=256 height=144 folder="bgimage" graphic="stl2-03/unaji.png" ]
+
+;EP2-04
+[cg_image_button no_graphic="../../tyrano/images/system/noimage.png" x=380 y=330 width=256 height=144 folder="bgimage" graphic="stl2-04/stl2-04a.png,stl2-04/stl2-04b.png,stl2-04/stl2-04a.png" ]
+
+;EP2-10
+[cg_image_button no_graphic="../../tyrano/images/system/noimage.png" x=700 y=330 width=256 height=144 folder="bgimage" graphic="stl2-04/stl2-04a.png,stl2-04/stl2-04b.png,stl2-04/stl2-04a.png,stl2-04/stl2-04b.png,stl2-04/stl2-04c.png,stl2-04/stl2-04c.png" ]
+
 
 @jump target="*common"
 

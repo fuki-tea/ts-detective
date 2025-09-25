@@ -15,7 +15,8 @@
 [config_record_label color="0xFFFFFF"]
 
 ;メニューボタンの表示
-@showmenubutton
+;@showmenubutton
+[hidemenubutton]
 
 ;メッセージウィンドウの設定
 [position layer="message0" left=10 top=500 width=400 height=200 page=fore visible=true]
@@ -37,26 +38,27 @@
 
 ;-------------------------------------------------------------------------------
 [iscript]
-f.story_map=[["ekimae","jimusho","gakuen","hankagai","ekimae","hankagai","jimusho","gakuen","keisatsu","gakuen"],["kissa","kissa","kissa","kissa","kissa","keisatsu","hankagai","kissa","hankagai","kissa"],["hankagai","keisatsu","hankagai","jimusho","jimusho","kissa","keisatsu","jimusho","jimusho","ekimae"]]
+f.story_map=[["ekimae","jimusho","gakuen","hankagai","ekimae","hankagai","jimusho","gakuen","keisatsu","gakuen"],["kissa","kissa","kissa","kissa","kissa","keisatsu","hankagai","kissa","hankagai","kissa"],["hankagai","keisatsu","hankagai","jimusho","jimusho","kissa","keisatsu","jimusho","jimusho","ekimae"]];
 f.ep_head=[
 ["白昼のストリップ","依頼は浮気調査","潜入調査は制服で","最後の再会","謎の依頼人","顔の無い男","コーヒーと親友","制服潜入調査ふたたび","制服おねだりおじさん","催眠術師vsTS探偵"],
 ["琥珀色の思い出","喫茶店員はじめちゃいました","消えないキスマーク","MAKE MY DAY","昼下がりの推理","ウェイトレスおねだりおじさん","ビル街のはざまで","首筋に伝えて","危険のかおり","TS科学者vsTS探偵"]
-]
+];
 f.chapter=[
 ["chapter/chapter1-01.png","chapter/chapter1-02.png","chapter/chapter1-03.png","chapter/chapter1-04.png","chapter/chapter1-05.png","chapter/chapter1-06.png","chapter/chapter1-07.png","chapter/chapter1-08.png","chapter/chapter1-09.png","chapter/chapter1-10.png"],
 ["chapter/chapter2-01.png","chapter/chapter2-02.png","chapter/chapter2-03.png","chapter/chapter2-04.png","chapter/chapter2-05.png","chapter/chapter2-06.png","chapter/chapter2-07.png","chapter/chapter2-08.png","chapter/chapter2-09.png","chapter/chapter2-10.png"]
-]
-f.story_scenario=[["EP1_01.ks","EP1_02.ks","EP1_03.ks","EP1_04.ks","EP1_05.ks","EP1_06.ks","EP1_07.ks","EP1_08.ks","EP1_09.ks","EP1_10.ks"],["EP2_01.ks","EP2_02.ks","EP2_03.ks","EP2_04.ks","EP2_05.ks","EP2_06.ks","EP2_07.ks","EP2_08.ks","EP2_09.ks","EP2_10.ks"],["","","","","","","","","",""]]
-f.story_badend=["EP1_XX.ks","EP2_XX.ks",""]
-f.current_map="-"
-f.current_ep=-1
-f.current_step=-1
-f.current_chapter=""
+];
+f.story_scenario=[["EP1_01.ks","EP1_02.ks","EP1_03.ks","EP1_04.ks","EP1_05.ks","EP1_06.ks","EP1_07.ks","EP1_08.ks","EP1_09.ks","EP1_10.ks"],["EP2_01.ks","EP2_02.ks","EP2_03.ks","EP2_04.ks","EP2_05.ks","EP2_06.ks","EP2_07.ks","EP2_08.ks","EP2_09.ks","EP2_10.ks"],["","","","","","","","","",""]];
+f.story_badend=["EP1_XX.ks","EP2_XX.ks",""];
+
+f.current_map="-";
+f.current_ep=-1;
+f.current_step=-1;
+f.current_chapter="";
+
 [endscript]
 
 ;-------------------------------------------------------------------------------
 [macro name="ep_stat"]
-[freeimage layer="1"]
 [ptext layer="1" x="1200" y="0" text="&f.current_ep+1" color="white" edge="0xFF0000"]
 [ptext layer="1" x="1220" y="0" text="&f.current_step+1" color="white" edge="0xFF0000"]
 [ptext layer="1" x="1200" y="20" text="&f.current_map" color="white" edge="0xFF0000"]
@@ -71,105 +73,17 @@ f.current_chapter=""
 
 
 ;-------------------------------------------------------------------------------
-; 修了確認
-[macro name="check_end"]
-;#
-;EPend[emb exp="f.current_ep+1"]-[emb exp="f.current_step+1"]/[emb exp="f.current_map"][r]
-;[emb exp="f.story_step[0]"]/[emb exp="f.story_step[1]"]/[emb exp="f.story_step[2]"][p]
-
-[if exp="f.current_ep != -1 && f.current_step == 10"]
-#GOOD END
-GOOD END[p]
-	[emb exp="f.current_ep"]
-	[freeimage layer="1"]
-	[stopbgm]
-	[jump storage="first.ks"]
-[elsif exp="f.current_ep != -1 && f.current_step == 99"]
-#BAD END
-	[iscript]
-	tf.ep_scenario = f.story_badend[f.current_ep]
-	[endscript]
-	[if exp="f.current_ep == 1 - 1 || f.current_ep == 2 - 1"]
-		[freeimage layer="1"]
-		[layopt layer="message0" visible="false"]
-		[free name="chara_name_area" layer="message0"]
-		[if exp="tf.ep_scenario != ''"]
-			[stopbgm]
-			[call storage="&tf.ep_scenario"]
-			[free_filter]
-		[endif]
-		[call target="next_ep"]
-		@jump storage="ts_title.ks"
-	[endif]
-	
-BAD END[p]
-	[emb exp="f.current_ep"]
-	[freeimage layer="message0" time="100" wait="false"]
-	[freeimage layer="1" time="100" wait="false"]
-	[freeimage layer="base" time="100" wait="true"]
-	[stopbgm]
-	[jump storage="first.ks"]
-[endif]
-[endmacro]
-
 ;-------------------------------------------------------------------------------
-; 次の状態によってシナリオ表示
-[macro name="check_next"]
-;EP[emb exp="f.current_ep+1"]-[emb exp="f.current_step+1"]/[emb exp="f.current_map"][p]
-
-[eval exp="tf.ep_scenario = ''"]
-[if exp="f.current_ep == 1 - 1 || f.current_ep == 2 - 1"]
-	[iscript]
-	tf.ep_scenario = f.story_scenario[f.current_ep][f.current_step]
-	f.current_chapter = f.chapter[f.current_ep][f.current_step]
-	[endscript]
-;EP[emb exp="f.current_ep+1"]-[emb exp="f.current_step+1"]/[emb exp="f.current_map"][r]
-;EP[emb exp="f.current_chapter"]-[emb exp="tf.ep_scenario"][p]
-	
-	[freeimage layer="1"]
-	[layopt layer="message0" visible="false"]
-	[free name="chara_name_area" layer="message0"]
-	[if exp="tf.ep_scenario != ''"]
-		[stopbgm]
-		; シナリオが進む
-		[call storage="EP_chapter.ks"]
-		[call storage="&tf.ep_scenario"]
-	[endif]
-	[call target="next_ep"]
-
-	[if exp="f.story_step[0] >= 9 - 1 || f.story_step[1] >= 9 - 1 || f.story_step[2] >= 9 - 1"]
-	@jump storage="first.ks"
-	[endif]
-	@jump target="init"
-
-[elsif exp="(f.current_ep == -1 || f.current_ep == 3 - 1) && f.current_map != '-'"]
-	; シナリオが進まない
-	[freeimage layer="1"]
-	[layopt layer="message0" visible="false"]
-	[free name="chara_name_area" layer="message0"]
-	[stopbgm]
-	[call storage="ts_scenario_ep00.ks"]
-
-	@jump target="init"
-[endif]
-[endmacro]
-
-;-------------------------------------------------------------------------------
-; 次の状態に合わせたメッセージを表示
-[macro name="disp_next"]
+*main
 #
-[if exp="f.storystep[0] == 9 - 1 || f.storystep[1] == 9 - 1 || f.storystep[2] == 9 - 1"]
+; 次の状態に合わせたメッセージを表示
+[if exp="f.story_step[0] == 9 - 1 || f.story_step[1] == 9 - 1 || f.story_step[2] == 9 - 1"]
 慎重に行き先を選ぼう
 [else]
 何処へ行く？
 [endif]
-[endmacro]
 
-;-------------------------------------------------------------------------------
-;-------------------------------------------------------------------------------
-*main
-[disp_next]
-
+[freeimage layer="1"]
 [ep_stat]
 
 ;事務所	jimusho
@@ -180,6 +94,7 @@ BAD END[p]
 ;駅前	ekimae
 
 ;
+*map_input
 [clickable opacity="0" mouseopacity="50" x=853 y=360 width=328 height=154 color="yellow" target=jimusho ]
 [clickable opacity="0" mouseopacity="50" x=600 y=522 width=347 height=142 color="yellow" target=kissa ]
 [clickable opacity="0" mouseopacity="50" x=820 y=87  width=291 height=202 color="yellow" target=gakuen ]
@@ -192,52 +107,107 @@ BAD END[p]
 ;-------------------------------------------------------------------------------
 *jimusho
 [eval exp="f.current_map='jimusho'"]
-[jump target="*next_action"]
+[jump target="next_action"]
 [s]
 
 ;-------------------------------------------------------------------------------
 *kissa
 [eval exp="f.current_map='kissa'"]
-[jump target="*next_action"]
+[jump target="next_action"]
 [s]
 
 ;-------------------------------------------------------------------------------
 *gakuen
 [eval exp="f.current_map='gakuen'"]
-[jump target="*next_action"]
+[jump target="next_action"]
 [s]
 
 ;-------------------------------------------------------------------------------
 *hankagai
 [eval exp="f.current_map='hankagai'"]
-[jump target="*next_action"]
+[jump target="next_action"]
 [s]
 
 ;-------------------------------------------------------------------------------
 *keisatsu
 [eval exp="f.current_map='keisatsu'"]
-[jump target="*next_action"]
+[jump target="next_action"]
 [s]
 
 ;-------------------------------------------------------------------------------
 *ekimae
 [eval exp="f.current_map='ekimae'"]
-[jump target="*next_action"]
+[jump target="next_action"]
 [s]
 
+;-------------------------------------------------------------------------------
+;-------------------------------------------------------------------------------
+;-------------------------------------------------------------------------------
+;-------------------------------------------------------------------------------
 ;-------------------------------------------------------------------------------
 *next_action
+; マップ選択後にそのマップの進捗具合を得る
+#
+;EP0:[emb exp="f.current_ep+1"]-[emb exp="f.current_step+1"]/[emb exp="f.current_map"][p]
 [call target="get_top_ep"]
-;[check_end]
-[call target="check_end_ep"]
-[check_next]
-[call target="next_ep"]
-[jump target="*main"]
+;EP1:[emb exp="f.current_ep+1"]-[emb exp="f.current_step+1"]/[emb exp="f.current_map"][p]
+
+; 次の状態によってシナリオ表示
+;EP[emb exp="f.current_ep+1"]-[emb exp="f.current_step+1"]/[emb exp="f.current_map"][p]
+
+[eval exp="f.ep_scenario = ''"]
+[if exp="f.current_ep == 1 - 1 || f.current_ep == 2 - 1"]
+	[if exp="f.current_step > 10]
+		@jump target="badend"
+	[endif]
+	[iscript]
+	f.ep_scenario = f.story_scenario[f.current_ep][f.current_step];
+	f.current_chapter = f.chapter[f.current_ep][f.current_step];
+	[endscript]
+;EP[emb exp="f.current_ep+1"]-[emb exp="f.current_step+1"]/[emb exp="f.current_map"][r]
+;EP[emb exp="f.current_chapter"]-[emb exp="f.ep_scenario"][p]
+	
+	[freeimage layer="1"]
+	[layopt layer="message0" visible="false"]
+	[free name="chara_name_area" layer="message0"]
+	[if exp="f.ep_scenario != ''"]
+		[stopbgm]
+		; シナリオが進む
+		[call storage="EP_chapter.ks"]
+		[call storage="&f.ep_scenario"]
+	[endif]
+	[call target="next_ep_step"]
+	; 終了確認
+	[if exp="f.current_ep != -1 && f.current_step >= 10 - 1"]
+	; エピソード終了のためロゴ画面から
+	@jump storage="ts_end_credits.ks"
+	[endif]
+	@jump target="init"
+	
+[elsif exp="(f.current_ep == -1 || f.current_ep == 3 - 1) && f.current_map != '-'"]
+	; シナリオが進まない
+	[freeimage layer="1"]
+	[layopt layer="message0" visible="false"]
+	[free name="chara_name_area" layer="message0"]
+	[stopbgm]
+	[call storage="ts_scenario_ep00.ks"]
+	@jump target="init"
+
+[endif]
+
+[jump target="main"]
 [s]
+
+*badend
+#
+BAD END[p]
+; エピソード終了のためロゴ画面から
+@jump storage="ts_end_credits.ks"
+
 
 ;-------------------------------------------------------------------------------
 ;-------------------------------------------------------------------------------
-; 現在のステージにマッチするエピソードのうち、最もストーリーが進んでいるものを返す
+; 指定されたマップにマッチするエピソードのうち、最もストーリーが進んでいるものをカレントとして返す
 *get_top_ep
 [iscript]
 let array = Array.from(f.story_step);
@@ -303,23 +273,10 @@ if(exist_flag){
 ;-------------------------------------------------------------------------------
 ;-------------------------------------------------------------------------------
 ; ストーリーを進める
-*next_ep
+*next_ep_step
 [iscript]
 if(f.current_ep != -1){
 	f.story_step[f.current_ep] = f.current_step;
 }
 [endscript]
 [return]
-
-
-*check_end_ep
-[if exp="f.story_step[0] >= 10 - 1"]
-	[eval exp="f.current_ep = 0"]
-	[eval exp="f.current_step = f.story_step[0]"]
-[elsif exp="f.story_step[1] >= 10 - 1"]
-	[eval exp="f.current_ep = 1"]
-	[eval exp="f.current_step = f.story_step[1]"]
-[elsif exp="f.story_step[2] >= 10 - 1"]
-	[eval exp="f.current_ep = 2"]
-	[eval exp="f.current_step = f.story_step[2]"]
-[endif]

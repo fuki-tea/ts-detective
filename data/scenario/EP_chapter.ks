@@ -8,6 +8,9 @@
 [hidemenubutton]
 [cm]
 [chara_hide_all]
+[if exp="sf.deb_sw === true"]
+@jump target="backtitle"
+[endif]
 
 [bg storage="&f.current_chapter" time=1500]
 
@@ -20,5 +23,8 @@
 *backtitle
 [cm]
 [freeimage layer=1]
+
+;メニューボタンの表示
+@showmenubutton
 
 [return]

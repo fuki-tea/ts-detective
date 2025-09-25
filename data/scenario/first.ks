@@ -3,6 +3,13 @@
 
 [title name="ＴＳ探偵"]
 
+;-------------------------------------------------------------------------------
+[iscript]
+sf.type_r18=true;	// R18の場合は真
+sf.deb_sw=false;	// deb
+[endscript]
+;-------------------------------------------------------------------------------
+
 [stop_keyconfig]
 
 ;ティラノスクリプトが標準で用意している便利なライブラリ群
@@ -24,14 +31,13 @@
 
 ;最初は右下のメニューボタンを非表示にする
 [hidemenubutton]
-;-------------------------------------------------------------------------------
-[iscript]
-sf.type_r18=true	; R18の場合は真
-sf.first=true
-[endscript]
+
 
 ;-------------------------------------------------------------------------------
-;タイトルロゴ表示
+[if exp="sf.deb_sw === true"]
+@jump target="attention_end"
+[endif]
+;アテンション表示
 @bg storage ="attention.png" time=100 wait="false"
 
 ;[ptext layer="1" x="460" y="600" text="CLICK TO START" size="40" color="white" edge="0xFF0000"]
@@ -39,6 +45,7 @@ sf.first=true
 
 [p]
 @bg storage ="BG_black.png" time=100 wait="false"
+*attention_end
 
 ;-------------------------------------------------------------------------------
 ;メッセージエリアの設定
@@ -72,16 +79,20 @@ sf.first=true
 [call storage="ts_chara_setting.ts"]
 
 ;-------------------------------------------------------------------------------
+; タイトルロゴ表示
 [playbgm storage="elevator girl - Stereo Out.mp3" loop="true" volume=50]
 [freeimage layer="1"]
 [eval exp="f.title_bgm = true"]
-;@jump target="*for_debug"
+
+[if exp="sf.deb_sw === true"]
+@jump target="title_logo_end"
+[endif]
 
 [chara_show name="logo" left="140" top="189" time="1000" wait="false"]
 @wait time = 4000
 [chara_hide name="logo"]
 
-*for_debug
+*title_logo_end
 ;タイトル画面へ移動
 @jump storage="ts_title.ks"
 

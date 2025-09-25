@@ -258,6 +258,7 @@
 
 ;立ち絵表示を取りやめ　HK3fiW9.png（STL2-02）を表示
 [bg storage="stl2-03/unaji.png" time="1500"]
+[cg storage="stl2-03/unaji.png"]
 
 #
 大家さんが笑って髪をかき上げる。[p]

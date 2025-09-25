@@ -5,7 +5,7 @@
 @clearstack
 ;-------------------------------------------------------------------------------
 [iscript]
-f.story_step=[-1,-1,-1]	; エピソードごとのストーリーの進捗
+f.story_step=[-1,-1,-1];	// エピソードごとのストーリーの進捗
 [endscript]
 
 ;-------------------------------------------------------------------------------
@@ -31,6 +31,10 @@ f.story_step=[-1,-1,-1]	; エピソードごとのストーリーの進捗
 [chara_new name="menu_2" storage="../image/title/menu_2a.png" jname="" ]
 [chara_new name="menu_3" storage="../image/title/menu_3a.png" jname="" ]
 
+[if exp="sf.deb_sw === true"]
+@jump target="button"
+[endif]
+
 [chara_show name="menu_bg" top="0" left="-1280" layer="0" wait="false"]
 [chara_show name="menu_logo" top="970" left="40" layer="0" wait="false"]
 [chara_show name="menu_0" top="390" left="-600" layer="0" wait="false"]
@@ -46,10 +50,10 @@ f.story_step=[-1,-1,-1]	; エピソードごとのストーリーの進捗
 [chara_move name="menu_3" top="570" left="0" anim="true" effect="easeOutExpo" time="300" wait="true"]
 
 *button
-[button x=0 y=390 graphic="title/menu_0a.png" clickimg="title/menu_0b.png" target="gamestart" keyfocus="1"]
-[button x=0 y=450 graphic="title/menu_1a.png" clickimg="title/menu_1b.png" role="load" keyfocus="2"]
-[button x=0 y=510 graphic="title/menu_2a.png" clickimg="title/menu_2b.png" role="sleepgame" storage="cg.ks" keyfocus="3"]
-[button x=0 y=570 graphic="title/menu_3a.png" clickimg="title/menu_3b.png" role="sleepgame" storage="config.ks" keyfocus="4"]
+[button x=0 y=390 graphic="title/menu_0a.png" enterimg="title/menu_0b.png" clickimg="title/menu_0b.png" target="gamestart" keyfocus="1"]
+[button x=0 y=450 graphic="title/menu_1a.png" enterimg="title/menu_1b.png" clickimg="title/menu_1b.png" role="load" keyfocus="2"]
+[button x=0 y=510 graphic="title/menu_2a.png" enterimg="title/menu_2b.png" clickimg="title/menu_2b.png" role="sleepgame" storage="cg.ks" keyfocus="3"]
+[button x=0 y=570 graphic="title/menu_3a.png" enterimg="title/menu_3b.png" clickimg="title/menu_3b.png" role="sleepgame" storage="config.ks" keyfocus="4"]
 
 [chara_hide name="menu_0" time="0" wait="false" pos_mode="false"]
 [chara_hide name="menu_1" time="0" wait="false" pos_mode="false"]
