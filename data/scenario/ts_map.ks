@@ -84,7 +84,7 @@ f.current_chapter="";
 [endif]
 
 [freeimage layer="1"]
-[ep_stat]
+;[ep_stat]
 
 ;事務所	jimusho
 ;喫茶	kissa

@@ -202,7 +202,7 @@
 [chara_mod name="00_tomoya" face="STA00AE" time="0"]
 
 ;★BGM32
-[playbgm storage="BGM12.mp3" loop="true" volume=50]
+[playbgm storage="BGM14.mp3" loop="true" volume=50]
 
 #柴崎　智也
 「なっ！」[p]
@@ -344,7 +344,7 @@
 「悠卯が立たせたんだろ！」[p]
 
 ;★BGM22
-[playbgm storage="BGM12.mp3" loop="true" volume=50]
+[playbgm storage="BGM22.mp3" loop="true" volume=50]
 
 [chara_mod name="01_yu" face="STA01AM" time="0"]
 [chara_hide name="cut_paimomi" time="0" wait="false" pos_mode="false"]
@@ -498,7 +498,7 @@
 [chara_mod name="01_yu" face="STA01BA" time="0"]
 
 ;★BGM14 question - Stereo Out.mp3
-[playbgm storage="question - Stereo Out.mp3" loop="true" volume=50]
+[playbgm storage="BGM14.mp3" loop="true" volume=50]
 
 #常葉　悠卯
 「これからどーする？」[p]
@@ -646,7 +646,7 @@
 「寒いな」[p]
 
 ;★BGM21 jiken - Stereo Out.mp3
-[playbgm storage="jiken - Stereo Out.mp3" loop="true" volume=50]
+[playbgm storage="BGM21.mp3" loop="true" volume=50]
 
 #
 休み時間は校舎の中をうろつき、それ以外の時間は人気のない場所に隠れていた。[p]
@@ -772,7 +772,7 @@
 嬌声が飛び込んでくる。[p]
 
 ;★BGM32
-[playbgm storage="BGM12.mp3" loop="true" volume=50]
+[playbgm storage="BGM14.mp3" loop="true" volume=50]
 
 [chara_mod name="00_tomoya" face="STA00AH" time="0"]
 
@@ -844,7 +844,7 @@
 一時間以上たって、3人の女子学生が出てきた。[p]
 
 ;★BGM21 jiken - Stereo Out.mp3
-[playbgm storage="jiken - Stereo Out.mp3" loop="true" volume=50]
+[playbgm storage="BGM21.mp3" loop="true" volume=50]
 
 #柴崎　智也
 「あーあ、あんな格好しちゃって」[p]

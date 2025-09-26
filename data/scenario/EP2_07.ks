@@ -40,7 +40,7 @@
 
 *johoya_tojo
 ;★BGM19 jouhouya - Stereo Out
-[playbgm storage="jouhouya - Stereo Out.mp3" loop="true" volume=50]
+[playbgm storage="BGM19.mp3" loop="true" volume=50]
 
 ;★情報屋立ち絵右からスライドイン　ゆっくり　右配置　
 [chara_mod name="12_johoya" face="default" time="0"]

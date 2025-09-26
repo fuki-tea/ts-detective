@@ -34,7 +34,7 @@
 [chara_config brightness=40 talk_focus=brightness]
 
 ;★BGM14 question - Stereo Out
-[playbgm storage="question - Stereo Out.mp3" loop="true" volume=50]
+[playbgm storage="BGM14.mp3" loop="true" volume=50]
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
@@ -550,7 +550,7 @@
 
 
 ;★BGM17 nazonazo
-[playbgm storage="nazonazo.mp3" loop="true" volume=50]
+[playbgm storage="BGM17.mp3" loop="true" volume=50]
 
 
 #

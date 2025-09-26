@@ -18,7 +18,7 @@
 *start
 
 ;★BGM21 jiken - Stereo Out.mp3
-[playbgm storage="jiken - Stereo Out.mp3" loop="true" volume=50]
+[playbgm storage="BGM21.mp3" loop="true" volume=50]
 
 
 ;★悠卯立ち絵右に表示
@@ -241,7 +241,7 @@ TYRANO.kag.stat.charas['13_takao'].jname = '高尾　良治？'
 スマホを覗き込むのに夢中になっていた俺は、背後から近づいてきた男に気づかなかった。[p]
 
 ;★BGM15
-[playbgm storage="BGM12.mp3" loop="true" volume=50]
+[playbgm storage="BGM15.ogg" loop="true" volume=50]
 
 
 [chara_mod name="00_tomoya" face="STA00AA" time="0"]

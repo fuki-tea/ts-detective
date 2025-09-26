@@ -39,6 +39,7 @@
 #柴崎　智也
 「…………」[p]
 
+[playse storage="SE03.mp3"]
 #
 周囲を見回す。[p]
 
@@ -77,6 +78,7 @@
 [chara_mod name="12_johoya" face="default" time="0"]
 [chara_show name="12_johoya" top="0" left="600" layer="0" time="1500" wait="true"]
 
+[playbgm storage="BGM19.mp3" loop="true" volume=50]
 
 #
 車の後ろに近づくと、情報屋が顔を出した。[p]
@@ -250,6 +252,7 @@ L版にプリントされた写真と封筒を押し付ける。[p]
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
 ;★BGM18 刑事部屋用
+[playbgm storage="BGM18.mp3" loop="true" volume=50]
 
 #猫島警部
 「おう」[p]

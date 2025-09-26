@@ -20,6 +20,7 @@
 
 ;★立ち絵配置智也左猫島右
 ;★BGM18 刑事部屋用
+[playbgm storage="BGM18.mp3" loop="true" volume=50]
 
 [chara_show name="00_tomoya" top="-600" left="0" layer="0" wait="false"]
 [chara_mod name="00_tomoya" face="STA00AA" time="0"]
@@ -540,6 +541,7 @@
 悠卯のことが心配だ。[p]
 
 ;★BGM消す
+[stopbgm]
 
 ;★立ち絵を消す
 [chara_hide name="00_tomoya" wait="false" pos_mode="false"]
@@ -555,6 +557,7 @@
 [playse storage="SE15.mp3"]
 
 ;★BGM
+[playbgm storage="BGM18.mp3" loop="true" volume=50]
 
 ;★智也立ち絵左から中央にスライドイン
 [chara_show name="00_tomoya" top="0" left="-600" layer="0" wait="false"]
@@ -647,6 +650,7 @@
 [chara_hide name="00_tomoya" wait="true" pos_mode="false"]
 
 ;★マップに戻る
+[stopbgm]
 
 [layopt layer="message0" visible="false"]
 

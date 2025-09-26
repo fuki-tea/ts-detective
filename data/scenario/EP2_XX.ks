@@ -32,7 +32,7 @@
 [message_area_scenario]
 
 ;★BGM15
-[playbgm storage="BGM15.mp3" loop="true" volume=50]
+[playbgm storage="BGM15.ogg" loop="true" volume=50]
 
 ;喋っていないキャラを暗く表示ON
 [chara_config brightness=40 talk_focus=brightness]

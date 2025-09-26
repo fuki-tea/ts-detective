@@ -31,7 +31,7 @@
 [chara_move name="03_ui" top="0" left="600" anim="true" effect="easeOutExpo" time="1500" wait="true"]
 
 ;★BGM nazonazo - Stereo Out
-[playbgm storage="nazonazo - Stereo Out.mp3" loop="true" volume=50]
+[playbgm storage="BGM17.mp3" loop="true" volume=50]
 
 *talk
 [message_area_scenario]
@@ -254,7 +254,7 @@
 [bg storage="stl2-04/stl2-04a.png" time="3000"]
 
 ;★BGM16
-[playbgm storage="BGM16.mp3" loop="true" volume=50]
+[playbgm storage="BGM16.ogg" loop="true" volume=50]
 
 #鳩村　美柚季
 「んむ～っむ～っ」[p]
@@ -354,7 +354,7 @@
 
 
 ;★BGM20　tantei8 - Stereo Out
-[playbgm storage="tantei8 - Stereo Out.mp3" loop="true" volume=50]
+[playbgm storage="BGM20.mp3" loop="true" volume=50]
 
 ;★敵立ち絵　右に表示
 [chara_show name="30_teki" top="0" left="600" layer="0" wait="false"]
@@ -889,7 +889,7 @@
 俺は後ろ手にドアを閉める。[p]
 
 ;★BGM 嵐の前のなんとやら
-[playbgm storage="arashi.mp3" loop="true" volume=50]
+[playbgm storage="BGM13.mp3" loop="true" volume=50]
 
 #西春　愛
 「先輩……」[p]
@@ -933,7 +933,7 @@
 
 *bgm
 ;★BGM question - Stereo Out
-[playbgm storage="question - Stereo Out.mp3" loop="true" volume=50]
+[playbgm storage="BGM14.mp3" loop="true" volume=50]
 
 [chara_mod name="03_ui" face="STA03AO" time="0"]
 

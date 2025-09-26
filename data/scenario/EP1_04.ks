@@ -567,7 +567,7 @@
 
 *fumie_tojo
 ;★BGM21 jiken
-[playbgm storage="jiken.mp3" loop="true" volume=50]
+[playbgm storage="BGM21.mp3" loop="true" volume=50]
 
 ;★文江立ち絵右からスライドイン　右に配置
 [chara_show name="14_fumie" top="0" left="1200" layer="0" wait="false"]
@@ -721,7 +721,7 @@
 [chara_show name="01_yu" top="0" left="1200" layer="0" time="0" wait="false"]
 
 ;★BGM15
-[playbgm storage="BGM12.mp3" loop="true" volume=50]
+[playbgm storage="BGM15.ogg" loop="true" volume=50]
 
 
 [chara_mod name="00_tomoya" face="STA00CG" time="0"]

@@ -50,7 +50,7 @@ TYRANO.kag.stat.charas['14_fumie'].jname = 'OL風の女性'
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
 ;★BGM14
-[playbgm storage="BGM12.mp3" loop="true" volume=50]
+[playbgm storage="BGM14.mp3" loop="true" volume=50]
 
 
 #
