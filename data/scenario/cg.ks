@@ -68,7 +68,7 @@
 [cg_image_button no_graphic="../../tyrano/images/system/noimage.png" x=60 y=330 width=256 height=144 folder="bgimage" graphic="stl2-03/unaji.png" ]
 
 ;EP2-04
-[cg_image_button no_graphic="../../tyrano/images/system/noimage.png" x=380 y=330 width=256 height=144 folder="bgimage" graphic="stl2-04/stl2-04a.png,stl2-04/stl2-04b.png,stl2-04/stl2-04a.png" ]
+[cg_image_button no_graphic="../../tyrano/images/system/noimage.png" x=380 y=330 width=256 height=144 folder="bgimage" graphic="stl2-03/stl2-03a.png,stl2-03/stl2-03b.png,stl2-03/stl2-03c.png" ]
 
 ;EP2-10
 [cg_image_button no_graphic="../../tyrano/images/system/noimage.png" x=700 y=330 width=256 height=144 folder="bgimage" graphic="stl2-04/stl2-04a.png,stl2-04/stl2-04b.png,stl2-04/stl2-04a.png,stl2-04/stl2-04b.png,stl2-04/stl2-04c.png,stl2-04/stl2-04c.png" ]

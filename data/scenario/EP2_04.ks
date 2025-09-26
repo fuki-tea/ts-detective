@@ -251,7 +251,7 @@
 ;STL
 ;★暗転
 ;背景表示STL
-[bg storage="stl2-04/stl2-04a.png" time="3000"]
+[bg storage="stl2-03/stl2-03a.png" time="3000"]
 
 ;★BGM16
 [playbgm storage="BGM16.ogg" loop="true" volume=50]
@@ -290,7 +290,7 @@
 「それじゃあ、俺たちの好きなようにしていいってわけで……」[p]
 
 ;背景表示STL　目見開き怯え
-[bg storage="stl2-04/stl2-04b.png" time="1000"]
+[bg storage="stl2-03/stl2-03b.png" time="1000"]
 
 #鳩村　美柚季
 「ふむぅっ！！ふむむぅっ！！」[p]
@@ -440,8 +440,8 @@
 
 
 ;背景表示STL　目見開き怯え
-[bg storage="stl2-04/stl2-04a.png" time="1000"]
-[cg storage="stl2-04/stl2-04a.png"]
+[bg storage="stl2-03/stl2-03c.png" time="1000"]
+[cg storage="stl2-03/stl2-03a.png"]
 
 
 #
