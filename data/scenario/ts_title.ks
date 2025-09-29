@@ -85,16 +85,19 @@ f.story_step=[-1,-1,-1];	// エピソードごとのストーリーの進捗
 [s]
 
 *test_scenario
+[chara_hide_all]
 [call storage="EP2_04.ks"]
 @jump target="*init"
 [s]
 
 *test_scenario1
+[chara_hide_all]
 [call storage="EP1_10.ks"]
 @jump target="*init"
 [s]
 
 *test_scenario2
+[chara_hide_all]
 [call storage="EP2_10.ks"]
 @jump target="*init"
 [s]

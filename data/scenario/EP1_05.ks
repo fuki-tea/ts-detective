@@ -6,8 +6,9 @@
 [start_keyconfig]
 
 [fadeoutbgm]
-;背景駅前
-[bg storage="BG04.png" time="3000"]
+
+;★暗転　背景黒
+[bg storage="BG_black.png" time="3000"]
 
 [if exp="sf.record.trail_EP1_05_scenario_end !== undefined"]
 [glink text="既読スキップする" size=20 width=200 x=230 y=300 color=blue target=scenario_end ]
@@ -18,14 +19,22 @@
 *scenario_start
 *start
 
+*talk
+[message_area_scenario]
+
+#
+俺は、あの事故のあとのことを思い出す。[p]
+
+
+;背景駅前
+[bg storage="BG04.png" time="3000"]
+
 ;★智也立ち絵左からスライドイン　左に配置
 ;★左から立ち絵スライドイン
 [chara_show name="00_tomoya" top="0" left="-600" layer="0" wait="false"]
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 [chara_move name="00_tomoya" top="0" left="0" anim="true" effect="easeOutExpo" time="1500" wait="true"]
 
-*talk
-[message_area_scenario]
 
 ;★SE11
 [playse storage="SE11.mp3"]
@@ -87,7 +96,7 @@
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 
 ;★BGM18
-[playbgm storage="BGM18.mp3" loop="true" volume=50]
+[playbgm storage="BGM18.ogg" loop="true" volume=50]
 
 ;★猫島警部立ち絵　右からスライドイン　右に配置
 [chara_show name="11_necojima" top="0" left="1200" layer="0" wait="false"]

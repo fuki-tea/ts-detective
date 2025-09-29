@@ -8,9 +8,10 @@
 [free name="chara_name_area" layer="message0"]
 [fadeoutbgm]
 ;★BGM14
-[playbgm storage="BGM14.mp3" loop="true" volume=50]
 
 [bg storage="BG01a.png" time="1500"]
+
+[playbgm storage="BGM14.mp3" loop="true" volume=50]
 
 ;喋っていないキャラに対するエフェクト
 [chara_config brightness=40 talk_focus=brightness]
@@ -214,7 +215,7 @@ Shibasaki-TomoyaでTS。[r]
 きっかけは二週間前。[p]
 
 #柴崎　智也
-そろそろ髪をどげんかせんといかんな……[p]
+「そろそろ髪をどげんかせんといかんな……」[p]
 
 #
 前髪が後退していたのは気づいていたが、そろそろごまかしきれなくなってきた。[r]

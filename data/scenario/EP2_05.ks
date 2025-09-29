@@ -40,7 +40,7 @@
 会計を済ませたお客が、店を出ていく。[p]
 
 ;★BGM question - Stereo Out
-[playbgm storage="question - Stereo Out.mp3" loop="true" volume=50]
+[playbgm storage="BGM21.mp3" loop="true" volume=50]
 
 ;★智也立ち絵左へ移動
 [chara_move name="00_tomoya" top="0" left="0" anim="true" effect="easeOutExpo" time="500" wait="true"]

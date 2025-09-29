@@ -22,7 +22,7 @@
 [chara_show name="00_tomoya" top="0" left="0" layer="0" wait="false"]
 
 ;★BGM18 刑事部屋用
-[playbgm storage="BGM18.mp3" loop="true" volume=50]
+[playbgm storage="BGM18.ogg" loop="true" volume=50]
 
 *talk
 [message_area_scenario]

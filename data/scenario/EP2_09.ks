@@ -252,7 +252,7 @@ L版にプリントされた写真と封筒を押し付ける。[p]
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
 
 ;★BGM18 刑事部屋用
-[playbgm storage="BGM18.mp3" loop="true" volume=50]
+[playbgm storage="BGM18.ogg" loop="true" volume=50]
 
 #猫島警部
 「おう」[p]

@@ -772,7 +772,7 @@
 嬌声が飛び込んでくる。[p]
 
 ;★BGM32
-[playbgm storage="BGM14.mp3" loop="true" volume=50]
+[playbgm storage="BGM15.ogg" loop="true" volume=50]
 
 [chara_mod name="00_tomoya" face="STA00AH" time="0"]
 
@@ -907,6 +907,8 @@ TYRANO.kag.stat.charas['13_takao'].jname = "高尾　良治"
 気が付くと、後ろに白衣の男が立っていた。[p]
 
 
+[playbgm storage="BGM15.ogg" loop="true" volume=50]
+
 [chara_mod name="00_tomoya" face="STA00AE" time="0"]
 
 #柴崎　智也
@@ -950,6 +952,10 @@ TYRANO.kag.stat.charas['13_takao'].jname = "高尾　良治"
 #
 まずいな。[r]
 適当な嘘しか出てこねえ。[p]
+
+
+[stopbgm]
+
 
 #常葉　悠卯
 「トモちゃーん」[p]

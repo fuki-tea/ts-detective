@@ -21,6 +21,8 @@
 
 ;★BGM16
 
+[playbgm storage="BGM16.ogg" loop="true" volume=50]
+
 *talk
 [message_area_scenario]
 
@@ -189,6 +191,8 @@
 
 
 ;★BGM20　tantei8 - Stereo Out
+[playbgm storage="BGM20.mp3" loop="true" volume=50]
+
 
 #常葉　悠卯
 「トモちゃん！」[p]
@@ -411,6 +415,7 @@
 「こうします」[p]
 
 ;★BGM　フェードアウト3000
+[fadeoutbgm time=2000]
 
 *wire
 ;★カットイン06　ロープというかワイヤーやね
@@ -474,6 +479,9 @@
 [chara_hide name="cut_06" time="0" pos_mode="false"]
 [chara_hide name="cut_05" time="0" pos_mode="false"]
 ;★BGM16
+
+[playbgm storage="BGM16.ogg" loop="true" volume=50]
+
 ;★SE43
 [playse storage="SE43.mp3"]
 
@@ -683,7 +691,7 @@
 こっちもうるさいな……。[p]
 
 ;★スチル表示　目つぶりキス
-[bg storage="stl1-04/stl1-04f.png" time="100"]
+[bg storage="stl1-04/stl1-04f.png" time="1000"]
 
 
 #常葉　悠卯
@@ -697,7 +705,7 @@
 ぐいぐい唇を押し付けて、こじ開けた歯の隙間から口内を蹂躙する。[p]
 
 ;★スチル表示　キス
-[bg storage="stl1-04/stl1-04g.png" time="100"]
+[bg storage="stl1-04/stl1-04g.png" time="1000"]
 
 #常葉　悠卯
 「ほもはぁ……ん」[p]
@@ -707,7 +715,7 @@
 
 *stl1_04h
 ;★スチル表示　キスカットイン入り
-[bg storage="stl1-04/stl1-04h.png" time="100"]
+[bg storage="stl1-04/stl1-04h.png" time="500"]
 ;★SE44
 [playse storage="SE44.mp3"]
 
@@ -766,7 +774,7 @@
 何かで、何かで正気に戻らないと……。[p]
 
 ;★スチル表示　キス
-[bg storage="stl1-04/stl1-04g.png" time="100"]
+[bg storage="stl1-04/stl1-04g.png" time="500"]
 
 #常葉　悠卯
 「トモちゃん……」[p]
@@ -822,6 +830,8 @@
 女同士じゃねえぞ……？[p]
 
 ;★BGM消す
+[fadeoutbgm time=2000]
+
 
 #柴崎　智也
 「ハッ！」[p]
@@ -840,6 +850,7 @@
 [bg storage="BG07.png" time="1000"]
 
 ;★BGM20
+[playbgm storage="BGM20.mp3" loop="true" volume=50]
 
 ;★タカオ立ち絵中央
 [chara_show name="13_takao" top="0" left="-600" layer="0" wait="false"]
@@ -917,7 +928,8 @@
 「ギエエエエエエ！」[p]
 
 ;★SE46
-[playse storage="SE46.mp3"]
+;[playse storage="SE46.mp3"]
+[playse storage="SE45.mp3"]
 
 
 #柴崎　智也
@@ -938,7 +950,8 @@
 逃げようとする『神殺しの傀儡師』の背中に向かって何度もバットを振り下ろす。[p]
 
 ;★SE46
-[playse storage="SE46.mp3"]
+;[playse storage="SE46.mp3"]
+[playse storage="SE45.mp3"]
 
 
 ;★タカオ立ち絵高さ位置少し下げる
@@ -949,7 +962,8 @@
 目を離すとすぐ催眠してくるからな。[p]
 
 ;★SE46
-[playse storage="SE46.mp3"]
+;[playse storage="SE46.mp3"]
+[playse storage="SE45.mp3"]
 
 ;★タカオ立ち絵 ふらふら　下にフェードアウト
 [chara_move name="13_takao" top="700" left="300" anim="true" effect="easeInSine" time="500" wait="true"]
@@ -962,6 +976,7 @@
 急所は外しているから大丈夫だろう。[p]
 
 ;★BGM消す
+[fadeoutbgm time=2000]
 
 #柴崎　智也
 「無事か？」[p]
@@ -974,6 +989,7 @@
 俺はバットを放り投げる。[p]
 
 ;★BGM14　question
+[playbgm storage="BGM14.mp3" loop="true" volume=50]
 ;★背景STL1-04j 1-04eの催眠目無し
 [bg storage="stl1-04/stl1-04j.png" time="3000"]
 
@@ -1047,12 +1063,14 @@
 「ぶーっ」[p]
 
 ;★BGM フェードアウト
+[fadeoutbgm time=1000]
 
 #
 今度はむすっとしてしまった。[p]
 
 ;エンディング曲挿入
 ;★BGM03
+[playbgm storage="BGM03.mp3" loop="true" volume=50]
 
 #柴崎　智也
 「なんだ、催眠のせいじゃいけないのか」[p]

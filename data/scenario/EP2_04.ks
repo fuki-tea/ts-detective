@@ -399,7 +399,7 @@
 
 *gun_cutin
 ;★カットイン gun01a.png
-[chara_show name="cut_gun02" top="160" left="400" layer="0" wait="false"]
+[chara_show name="cut_gun02b" top="160" left="400" layer="0" wait="false"]
 
 #
 男は黒光りする拳銃を取り出す。[r]
@@ -433,15 +433,14 @@
 「変な女だな。おい、そっちにいけ」[p]
 
 ;★カットイン消す
-[chara_hide name="cut_gun02" time="0" wait="false" pos_mode="false"]
+[chara_hide name="cut_gun02b" time="0" wait="false" pos_mode="false"]
 ;★立ち絵消す
 [chara_hide name="00_tomoya" time="0" wait="false" pos_mode="false"]
 [chara_hide name="30_teki" time="0" wait="false" pos_mode="false"]
 
 
 ;背景表示STL　目見開き怯え
-[bg storage="stl2-03/stl2-03c.png" time="1000"]
-[cg storage="stl2-03/stl2-03a.png"]
+[bg storage="stl2-03/stl2-03a.png" time="1000"]
 
 
 #
@@ -485,7 +484,7 @@
 [playse storage="SE48.mp3"]
 
 ;★カットイン　gun02a.png 警察拳銃(M3913)　画面中央
-[chara_show name="cut_gun02" top="120" left="400" layer="0" wait="false"]
+[chara_show name="cut_gun01a" top="120" left="400" layer="0" wait="false"]
 
 #西春　愛
 「警察だ！全員動くな！」[p]
@@ -499,7 +498,7 @@
 緊張した面持ちの西春が、拳銃を構えて飛び込んでくる。[p]
 
 ;★カットイン消す
-[chara_hide name="cut_gun02" time="0" wait="false" pos_mode="false"]
+[chara_hide name="cut_gun01a" time="0" wait="false" pos_mode="false"]
 
 
 #謎の男A
@@ -598,6 +597,8 @@
 
 ;★jiken - Stereo Out
 
+[playbgm storage="BGM21.mp3" loop="true" volume=50]
+
 #柴崎　智也
 「すまん。放っておくと悠卯が襲われそうだったからな。こっちもつい夢中になっちまった」[p]
 
@@ -650,6 +651,7 @@
 [chara_move name="30_teki" top="0" left="300" anim="true" effect="easeOutExpo" time="500" wait="true"]
 
 
+[fadeoutbgm time=1000]
 #謎の男B
 「らぁっ！」[p]
 
@@ -705,7 +707,8 @@
 
 ;★銃カットイン　智也狙撃ポーズ（両手）+大陸製拳銃(54式拳銃)（両手）
 *gun_cutin2
-[chara_show name="cut_gun02" top="120" left="400" layer="0" wait="false"]
+[chara_show name="cut_shot1" top="60" left="200" layer="0" wait="false"]
+[chara_show name="cut_gun02a" top="120" left="400" layer="0" wait="false"]
 #柴崎　智也
 「待てっ───あれ？」[p]
 
@@ -713,7 +716,8 @@
 逃げる男に向けた銃口は叫ばない。[p]
 
 ;★カットイン消す
-[chara_hide name="cut_gun02" time="0" wait="false" pos_mode="false"]
+[chara_hide name="cut_shot1" time="0" wait="false" pos_mode="false"]
+[chara_hide name="cut_gun02b" time="0" wait="false" pos_mode="false"]
 
 
 ;★智也立ち絵下方からスライドイン　配置左
@@ -825,8 +829,8 @@
 一人の男が窓から銃を向ける。[p]
 
 ;★カットイン　智也狙撃ポーズ（両手）+警察拳銃（M3913）（両手）
-[chara_show name="cut_gun00" top="60" left="200" layer="0" wait="false"]
-[chara_show name="cut_gun02" top="120" left="600" layer="0" wait="false"]
+[chara_show name="cut_shot1" top="60" left="200" layer="0" wait="false"]
+[chara_show name="cut_gun01a" top="120" left="600" layer="0" wait="false"]
 
 
 #柴崎　智也
@@ -837,11 +841,8 @@
 #
 走り出した車に向け、引き金を絞る。[p]
 
-;★SE49
-[playse storage="SE49.mp3"]
-[playse storage="SE49.mp3"]
-[playse storage="SE49.mp3"]
-;★↑3回鳴らす
+;★SE79
+[playse storage="SE79.mp3"]
 
 
 #
@@ -850,8 +851,8 @@
 ;★SE27
 [playse storage="SE27.mp3"]
 ;★カットイン消す
-[chara_hide name="cut_gun00" time="0" wait="false" pos_mode="false"]
-[chara_hide name="cut_gun02" time="0" wait="false" pos_mode="false"]
+[chara_hide name="cut_shot1" time="0" wait="false" pos_mode="false"]
+[chara_hide name="cut_gun01a" time="0" wait="false" pos_mode="false"]
 
 
 #
@@ -924,6 +925,7 @@
 ;★SE59
 [playse storage="SE59.mp3"]
 ;★カットインcarexp.png
+[chara_show name="cut_carexp" top="110" left="400" layer="0" wait="false"]
 
 
 [chara_mod name="00_tomoya" face="STA00CC" time="0"]
@@ -978,6 +980,7 @@
 「えっ、ちょっとそっちこそ何言ってんすか」[p]
 
 ;★カットイン消す
+[chara_hide name="cut_carexp" time="0" wait="false" pos_mode="false"]
 
 [chara_mod name="03_ui" face="STA03AG" time="0"]
 

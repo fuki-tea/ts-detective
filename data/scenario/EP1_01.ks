@@ -486,7 +486,7 @@
 [playse storage="SE09.mp3"]
 
 #
-俺はコートを脱いで少女にかぶせてしゃがませる。[p]
+俺は野次馬から借りたコートを少女にかぶせてしゃがませる。[p]
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0"]
 

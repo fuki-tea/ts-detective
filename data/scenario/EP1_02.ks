@@ -39,7 +39,7 @@ TYRANO.kag.stat.charas['14_fumie'].jname = 'OL風の女性'
 #柴崎　智也
 「さぁて、困ったことになったぞ……」[p]
 
-#14_fumie:default
+#OL風の女性
 「何かおっしゃいましたか？」[p]
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0"]
@@ -56,7 +56,7 @@ TYRANO.kag.stat.charas['14_fumie'].jname = 'OL風の女性'
 #
 俺は来客に向き合う。[p]
 
-#14_fumie:default
+#OL風の女性
 「女性の所長さんですか？」[p]
 
 [chara_mod name="00_tomoya" face="STA00CD" time="0"]
@@ -130,7 +130,7 @@ TYRANO.kag.stat.charas['14_fumie'].jname = 'OL風の女性'
 
 [chara_mod name="14_fumie" face="STA14AC" time="0"]
 
-#14_fumie:default
+#OL風の女性
 「今の方は……？」[p]
 
 [chara_mod name="00_tomoya" face="STA00CD" time="0"]

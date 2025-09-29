@@ -34,6 +34,8 @@
 #
 ルブランの前に警官が張り込んでいることを確認して、店の中に入る。[p]
 
+[playbgm storage="BGM21.mp3" loop="true" volume=50]
+
 ;★偽みゆき立ち絵右手1200表示
 [chara_mod name="22_miyuki_fake" face="default" time="0" effect="none"]
 [chara_show name="22_miyuki_fake" top="0" left="600" layer="0" wait="false"]
@@ -168,6 +170,8 @@
 
 [chara_mod name="22_miyuki_fake" face="STA22AC" time="0" effect="none"]
 
+[fadeoutbgm time=2000]
+
 #
 俺は無言でマスターの左手を握る。[p]
 
@@ -177,6 +181,7 @@
 「ちょっと、柴崎さん。どうしたのですか」[p]
 
 ;BGM
+[playbgm storage="BGM15.ogg" loop="true" volume=50]
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0" effect="none"]
 
@@ -224,19 +229,19 @@
 TYRANO.kag.stat.charas['22_miyuki_fake'].jname = '謎の女'
 [endscript]
 
-#22_miyuki_fake:default
+#謎の女
 「……」[p]
 
 [chara_mod name="22_miyuki_fake" face="STA22AF" time="0" effect="none"]
 
 [chara_mod name="00_tomoya" face="STA00CE" time="0" effect="none"]
 
-#22_miyuki_fake:default
+#謎の女
 「……フハハ」[p]
 
 [chara_mod name="00_tomoya" face="STA00CA" time="0" effect="none"]
 
-#22_miyuki_fake:default
+#謎の女
 「ハッハハハ！マジかよ！バレるの早すぎだろ」[p]
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0" effect="none"]
@@ -244,16 +249,16 @@ TYRANO.kag.stat.charas['22_miyuki_fake'].jname = '謎の女'
 #柴崎　智也
 「諦めがいいんだな」[p]
 
-#22_miyuki_fake:default
+#謎の女
 「妹にバレるかもしれないとは思っていたが、ただのバイトに見破られるとは思わなかったわ」[p]
 
-#22_miyuki_fake:default
+#謎の女
 「バイトの情報は少なかったから油断してたわ。お前智也って言うのかよ。男みたいな名前だな」[p]
 
 #柴崎　智也
 「本当の大家さんはどこにやった。答えろ」[p]
 
-#22_miyuki_fake:default
+#謎の女
 「答えてやるわけねえじゃん。それより自分の心配をしろよ」[p]
 
 [chara_mod name="00_tomoya" face="STA00CE" time="0" effect="none"]
@@ -272,7 +277,7 @@ TYRANO.kag.stat.charas['22_miyuki_fake'].jname = '謎の女'
 
 [chara_mod name="22_miyuki_fake" face="STA22AH" time="0" effect="none"]
 
-#22_miyuki_fake:default
+#謎の女
 「そこまで喋られて生かして返すわけないじゃん。でも安心しろよ、まだ殺さないから」[p]
 
 #柴崎　智也
@@ -280,7 +285,7 @@ TYRANO.kag.stat.charas['22_miyuki_fake'].jname = '謎の女'
 
 [chara_mod name="22_miyuki_fake" face="STA22AI" time="0" effect="none"]
 
-#22_miyuki_fake:default
+#謎の女
 「今、被検体を探してんだ。お前はそれに使ってやるよ」[p]
 
 #柴崎　智也
@@ -298,13 +303,13 @@ TYRANO.kag.stat.charas['22_miyuki_fake'].jname = '謎の女'
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0" effect="none"]
 
-#22_miyuki_fake:default
+#謎の女
 「は？」[p]
 
 #柴崎　智也
 「いや、なんでもない」[p]
 
-#22_miyuki_fake:default
+#謎の女
 「やけに落ち着いてんじゃん」[p]
 
 #柴崎　智也
@@ -314,7 +319,7 @@ TYRANO.kag.stat.charas['22_miyuki_fake'].jname = '謎の女'
 
 [chara_mod name="22_miyuki_fake" face="STA22AG" time="0" effect="none"]
 
-#22_miyuki_fake:default
+#謎の女
 「ま、運が良ければお前の雇い主と再会できるから。一緒に使ってやるよ」[p]
 
 [chara_mod name="00_tomoya" face="STA00CD" time="0" effect="none"]
@@ -340,7 +345,7 @@ TYRANO.kag.stat.charas['22_miyuki_fake'].jname = '謎の女'
 #柴崎　智也
 「こ、殺さないで……」[p]
 
-#22_miyuki_fake:default
+#謎の女
 「今更おびえだしても遅い。着いてきな」[p]
 
 [chara_mod name="00_tomoya" face="STA00CD" time="0" effect="none"]
@@ -351,6 +356,7 @@ TYRANO.kag.stat.charas['22_miyuki_fake'].jname = '謎の女'
 ;立ち絵消す
 [chara_hide name="00_tomoya" wait="false" pos_mode="false"]
 [chara_hide name="22_miyuki_fake" wait="false" pos_mode="false"]
+[fadeoutbgm time=2000]
 
 
 
@@ -371,6 +377,8 @@ TYRANO.kag.stat.charas['22_miyuki_fake'].jname = '謎の女'
 
 #鳩村　美柚季
 「げほっ、げほっ！」[p]
+
+[playbgm storage="BGM16.ogg" loop="true" volume=50]
 
 ;★SE60
 [playse storage="SE60.m4a"]
@@ -460,6 +468,7 @@ TYRANO.kag.stat.charas['22_miyuki_fake'].jname = '謎の女'
 #謎の男B
 「そうよ。誰も探しに来ないぜ」[p]
 
+[fadeoutbgm time=1000]
 
 #柴崎　智也
 「それはどうかな？」[p]
@@ -485,6 +494,8 @@ TYRANO.kag.stat.charas['22_miyuki_fake'].jname = '謎の女'
 [bg storage="stl2-04/stl2-04c.png" time="0"]
 [chara_hide name="tomo_zoom2" time="0" pos_mode="false"]
 [layopt layer="message0" visible="true"]
+
+[playbgm storage="BGM20.mp3" loop="true" volume=50]
 
 #謎の男A
 「誰だ！？」[p]
@@ -601,7 +612,8 @@ TYRANO.kag.stat.charas['22_miyuki_fake'].jname = '謎の女'
 [chara_hide name="cut_kaenbin" time="0" wait="false" pos_mode="false"]
  
 ;★カットインshot2+gun00b
-[chara_show name="cut_gun00b" top="120" left="400" layer="0" wait="false"]
+[chara_show name="cut_shot2" top="60" left="200" layer="0" wait="false"]
+[chara_show name="cut_gun00b" top="120" left="500" layer="0" wait="false"]
 
 ;★SE61
 [playse storage="SE61.m4a"]
@@ -639,6 +651,7 @@ TYRANO.kag.stat.charas['22_miyuki_fake'].jname = '謎の女'
 ;★SE61
 [playse storage="SE61.m4a"]
 ;★カットイン消す
+[chara_hide name="cut_shot2" time="0" wait="false" pos_mode="false"]
 [chara_hide name="cut_gun00b" time="0" wait="false" pos_mode="false"]
 
 
@@ -672,6 +685,8 @@ TYRANO.kag.stat.charas['22_miyuki_fake'].jname = '謎の女'
 「しっかりしてください」[p]
 
 [chara_mod name="02_miyuki" face="STA02EJ" time="0" effect="none"]
+
+[playbgm storage="BGM21.mp3" loop="true" volume=50]
 
 ;★SE64
 [playse storage="SE64.m4a"]
@@ -915,7 +930,9 @@ TYRANO.kag.stat.charas['22_miyuki_fake'].jname = '謎の女'
 
 #柴崎　智也
 「それは浩くんの残した───誰だ！？」[p]
-#
+
+[stopbgm]
+
 
 ;:銃を動かす音
 ;★SE54
@@ -934,10 +951,12 @@ TYRANO.kag.stat.charas['22_miyuki_fake'].jname = '謎の女'
 #幼女
 「ひぃっ、撃つでない。撃つのはやめてくれ」[p]
 
+[playbgm storage="BGM21.mp3" loop="true" volume=50]
+
 [chara_mod name="00_tomoya" face="STA00CB" time="0" effect="none"]
 
 ;★立ち絵幼女　中央に移動
-[chara_mod name="17_nojarori" face="default" time="0" effect="none"]
+;[chara_mod name="17_nojarori" face="default" time="0" effect="none"]
 [chara_move name="17_nojarori" top="250" left="500" anim="true" effect="easeOutExpo" time="1500" wait="true"]
 
 #
@@ -955,6 +974,8 @@ TYRANO.kag.stat.charas['22_miyuki_fake'].jname = '謎の女'
 
 [chara_mod name="02_miyuki" face="STA02DA" time="0" effect="none"]
 
+[fadeoutbgm time=1000]
+
 
 #
 震える幼女を見て大家さんは微笑む。[p]
@@ -966,6 +987,7 @@ TYRANO.kag.stat.charas['22_miyuki_fake'].jname = '謎の女'
 [chara_mod name="02_miyuki" face="STA02DB" time="0" effect="none"]
 [chara_move name="02_miyuki" top="0" left="400" anim="true" effect="easeOutExpo" time="1500" wait="true"]
 
+[playbgm storage="BGM25.mp3" loop="true" volume=50]
 
 [chara_mod name="17_nojarori" face="STA17AD" time="0" effect="none"]
 
@@ -990,6 +1012,8 @@ TYRANO.kag.stat.charas['22_miyuki_fake'].jname = '謎の女'
 
 [chara_mod name="02_miyuki" face="STA02DD" time="0" effect="none"]
 
+[stopbgm]
+
 #柴崎　智也
 「待て」[p]
 
@@ -1009,7 +1033,9 @@ TYRANO.kag.stat.charas['22_miyuki_fake'].jname = '謎の女'
 TYRANO.kag.stat.charas['17_nojarori'].jname = '幼女？'
 [endscript]
 
-#17_nojarori:default
+[playbgm storage="BGM15.ogg" loop="true" volume=50]
+
+#幼女？
 「な、なんじゃ」[p]
 
 
@@ -1022,7 +1048,7 @@ TYRANO.kag.stat.charas['17_nojarori'].jname = '幼女？'
 
 [chara_mod name="17_nojarori" face="STA17AB" time="0" effect="none"]
 
-#17_nojarori:default
+#幼女？
 「な、何を言っておるのじゃ。ワシは───」[p]
 
 [chara_mod name="17_nojarori" face="default" time="0" effect="none"]
@@ -1033,7 +1059,7 @@ TYRANO.kag.stat.charas['17_nojarori'].jname = '幼女？'
 
 [chara_mod name="02_miyuki" face="STA02CE" time="0" effect="none"]
 
-#17_nojarori:default
+#幼女？
 「そこには、お前のような小さい子は、いなかったんだ」[p]
 
 
@@ -1042,7 +1068,7 @@ TYRANO.kag.stat.charas['17_nojarori'].jname = '幼女？'
 
 [chara_mod name="17_nojarori" face="STA17AB" time="0" effect="none"]
 
-#17_nojarori:default
+#幼女？
 「そ、それは……」[p]
 
 
@@ -1087,7 +1113,7 @@ TYRANO.kag.stat.charas['17_nojarori'].jname = '幼女？'
 
 [chara_mod name="17_nojarori" face="STA17AF" time="0" effect="none"]
 
-#17_nojarori:default
+#幼女？
 「……なるほどな、被検体17号はお前じゃったのか」[p]
 
 
@@ -1100,7 +1126,7 @@ TYRANO.kag.stat.charas['17_nojarori'].jname = '幼女？'
 
 [chara_mod name="17_nojarori" face="STA17AC" time="0" effect="none"]
 
-#17_nojarori:default
+#幼女？
 「死んだといわれていたが、そんなはずはないと思っておったよ」[p]
 
 
@@ -1122,32 +1148,36 @@ TYRANO.kag.stat.charas['17_nojarori'].jname = '幼女？'
 #柴崎　智也
 「真の顔を知られることなく、肉体を乗り換える……裏社会の人間にうってつけだ」[p]
 
+[fadeoutbgm time=2000]
+
 [chara_mod name="00_tomoya" face="STA00CA" time="0" effect="none"]
 
 [chara_mod name="02_miyuki" face="STA02CE" time="0" effect="none"]
 
 [chara_mod name="17_nojarori" face="STA17AE" time="0" effect="none"]
 
-#17_nojarori:default
+#幼女？
 「…………」[p]
 
 [chara_mod name="17_nojarori" face="STA17AD" time="0" effect="none"]
 
-#17_nojarori:default
+#幼女？
 「始まりは……15年前じゃった」[p]
 
-#17_nojarori:default
+[playbgm storage="BGM21.mp3" loop="true" volume=50]
+
+#幼女？
 「ロシア北東部に墜落した隕石から、その未知の物質は、発見されたのじゃ」[p]
 
-#17_nojarori:default
+#幼女？
 「最初は不老不死の研究に使えるのではないかと、アメリカのチームが当たった。無駄じゃった」[p]
 
 [chara_mod name="17_nojarori" face="STA17AF" time="0" effect="none"]
 
-#17_nojarori:default
+#幼女？
 「しかし外科処置に革命的影響を与える技術を、我々は見逃さなかった」[p]
 
-#17_nojarori:default
+#幼女？
 「独自の研究を重ね、世界数ヶ所で研究を進め、ここまで来た」[p]
 
 [chara_mod name="17_nojarori" face="STA17AD" time="0" effect="none"]
@@ -1177,7 +1207,7 @@ TYRANO.kag.stat.charas['17_nojarori'].jname = '幼女？'
 
 [chara_mod name="17_nojarori" face="STA17AF" time="0" effect="none"]
 
-#17_nojarori:default
+#幼女？
 「あの男は盗人じゃ」[p]
 
 [chara_mod name="00_tomoya" face="STA00CF" time="0" effect="none"]
@@ -1197,7 +1227,7 @@ TYRANO.kag.stat.charas['17_nojarori'].jname = '幼女？'
 
 [chara_mod name="17_nojarori" face="STA17AD" time="0" effect="none"]
 
-#17_nojarori:default
+#幼女？
 「……3年前、我々の組織は機密書類をチャーター機にて輸送していたのじゃ」[p]
 
 
@@ -1208,7 +1238,7 @@ TYRANO.kag.stat.charas['17_nojarori'].jname = '幼女？'
 
 [chara_mod name="17_nojarori" face="STA17AE" time="0" effect="none"]
 
-#17_nojarori:default
+#幼女？
 「奴は我々の人体実験やその他諸々の情報を得た。その理由は知らん」[p]
 
 
@@ -1221,7 +1251,7 @@ TYRANO.kag.stat.charas['17_nojarori'].jname = '幼女？'
 
 [chara_mod name="17_nojarori" face="STA17AD" time="0" effect="none"]
 
-#17_nojarori:default
+#幼女？
 「奴は郵便物を持ち去り、社会的な告発を試みたらしい。我々は……」[p]
 
 [chara_mod name="02_miyuki" face="STA02CI" time="0" effect="none"]
@@ -1257,7 +1287,7 @@ TYRANO.kag.stat.charas['17_nojarori'].jname = '幼女？'
 
 [chara_mod name="17_nojarori" face="STA17AD" time="0" effect="none"]
 
-#17_nojarori:default
+#幼女？
 「我々の研究データはある場所に集約されていた……」[p]
 
 
@@ -1268,7 +1298,7 @@ TYRANO.kag.stat.charas['17_nojarori'].jname = '幼女？'
 
 [chara_mod name="17_nojarori" face="STA17AF" time="0" effect="none"]
 
-#17_nojarori:default
+#幼女？
 「そうじゃ。韓国でのサーバーテロ事件……その際に巻き込まれ、多くが失われた」[p]
 
 
@@ -1281,15 +1311,15 @@ TYRANO.kag.stat.charas['17_nojarori'].jname = '幼女？'
 
 [chara_mod name="17_nojarori" face="STA17AD" time="0" effect="none"]
 
-#17_nojarori:default
+#幼女？
 「3年前の基礎確立時の資料があれば、半年で研究は回復できる……」[p]
 
 [chara_mod name="17_nojarori" face="STA17AE" time="0" effect="none"]
 
-#17_nojarori:default
+#幼女？
 「当時、告発者は始末したが、その資料は厳重保管されていることが分かり、回収は諦めた」[p]
 
-#17_nojarori:default
+#幼女？
 「実際、その後資料が出回ることもなかった……」[p]
 
 
@@ -1298,7 +1328,7 @@ TYRANO.kag.stat.charas['17_nojarori'].jname = '幼女？'
 #柴崎　智也
 「つまり資料は無傷で保管され続けていると踏んだわけだ」[p]
 
-#17_nojarori:default
+#幼女？
 「我々は未亡人に情報の在り処が託されていると考え、調査していたのじゃ」[p]
 
 
@@ -1315,7 +1345,7 @@ TYRANO.kag.stat.charas['17_nojarori'].jname = '幼女？'
 
 [chara_mod name="17_nojarori" face="STA17AE" time="0" effect="none"]
 
-#17_nojarori:default
+#幼女？
 「まったくじゃ……」[p]
 
 *mattakuja
@@ -1337,6 +1367,7 @@ TYRANO.kag.stat.charas['17_nojarori'].jname = '幼女？'
 #柴崎　智也
 「さぁて、そろそろ警察のところに行くぜ」[p]
 
+[fadeoutbgm time=2000]
 
 [chara_mod name="00_tomoya" face="STA00CE" time="0" effect="none"]
 
@@ -1344,7 +1375,7 @@ TYRANO.kag.stat.charas['17_nojarori'].jname = '幼女？'
 
 ;★みゆき立ち絵　左に移動　主人公の立ち絵右手に移動
 [chara_mod name="02_miyuki" face="STA02DG" time="0" effect="none"]
-[chara_move name="02_miyuki" top="0" left="500" anim="true" effect="easeOutExpo" time="1500" wait="true"]
+[chara_move name="02_miyuki" top="0" left="100" anim="true" effect="easeOutExpo" time="1500" wait="true"]
 
 
 
@@ -1363,6 +1394,8 @@ TYRANO.kag.stat.charas['17_nojarori'].jname = '幼女？'
 
 #
 そして、俺の拳銃を握る。[p]
+
+[playbgm storage="BGM16.ogg" loop="true" volume=50]
 
 ;★SE54
 [playse storage="SE54.m4a"]
@@ -1391,7 +1424,7 @@ TYRANO.kag.stat.charas['17_nojarori'].jname = '幼女？'
 
 大家さんは俺の手から銃を奪うのを諦め、上から手を覆って奴に向ける。[p]
 
-#17_nojarori:default
+#幼女？
 「ま、待つのじゃ」[p]
 
 [chara_mod name="02_miyuki" face="STA02DL" time="0" effect="none"]
@@ -1405,7 +1438,7 @@ TYRANO.kag.stat.charas['17_nojarori'].jname = '幼女？'
 #柴崎　智也
 「大家さん！」[p]
 
-#17_nojarori:default
+#幼女？
 「待つのじゃ、待つのじゃ」[p]
 
 
@@ -1422,7 +1455,7 @@ TYRANO.kag.stat.charas['17_nojarori'].jname = '幼女？'
 
 [chara_mod name="17_nojarori" face="STA17AD" time="0" effect="none"]
 
-#17_nojarori:default
+#幼女？
 「勘違いするでない！」[p]
 
 
@@ -1439,7 +1472,7 @@ TYRANO.kag.stat.charas['17_nojarori'].jname = '幼女？'
 
 [chara_mod name="17_nojarori" face="STA17AE" time="0" effect="none"]
 
-#17_nojarori:default
+#幼女？
 「これが目に入らぬか」[p]
 
 
@@ -1450,18 +1483,18 @@ TYRANO.kag.stat.charas['17_nojarori'].jname = '幼女？'
 
 [chara_mod name="17_nojarori" face="STA17AD" time="0" effect="none"]
 
-#17_nojarori:default
+#幼女？
 「どうじゃ……本物の解除剤じゃ」[p]
 
-#17_nojarori:default
+#幼女？
 「ワシの分として取っておいた、あの事件以降もう作れない最後の一本じゃ」[p]
 
-#17_nojarori:default
+#幼女？
 「その女を渡せば、こいつはお前にくれてやるぞ」[p]
 
 [chara_mod name="17_nojarori" face="STA17AC" time="0" effect="none"]
 
-#17_nojarori:default
+#幼女？
 「男に戻りたいんじゃろ？」[p]
 
 ;★カットイン消す
@@ -1491,10 +1524,10 @@ TYRANO.kag.stat.charas['17_nojarori'].jname = '幼女？'
 
 [chara_mod name="17_nojarori" face="STA17AC" time="0" effect="none"]
 
-#17_nojarori:default
+#幼女？
 「どうじゃ、お前がこちらに来れば、そいつは元に戻れるんじゃぞ」[p]
 
-#17_nojarori:default
+#幼女？
 「お前だけが、助けられるんじゃ」[p]
 
 [chara_mod name="02_miyuki" face="STA02DG" time="0" effect="none"]
@@ -1507,7 +1540,7 @@ TYRANO.kag.stat.charas['17_nojarori'].jname = '幼女？'
 
 [chara_mod name="17_nojarori" face="STA17AF" time="0" effect="none"]
 
-#17_nojarori:default
+#幼女？
 「いいのか、ワシを撃てば瓶は落ちて砕けるか、海の底じゃぞ」[p]
 
 [chara_mod name="00_tomoya" face="STA00CC" time="0" effect="none"]
@@ -1530,7 +1563,7 @@ TYRANO.kag.stat.charas['17_nojarori'].jname = '幼女？'
 
 [chara_mod name="17_nojarori" face="STA17AC" time="0" effect="none"]
 
-#17_nojarori:default
+#幼女？
 「どうじゃ、心は決まったようじゃな」[p]
 
 
@@ -1571,14 +1604,16 @@ TYRANO.kag.stat.charas['17_nojarori'].jname = '幼女？'
 「あのひとの……ことが……」[p]
 
 ;BGM消す
+[fadeoutbgm time=3000]
 
 [chara_mod name="00_tomoya" face="STA00CB" time="0" effect="none"]
 
 #
-そんな大家さんの肩を黙って、抱く。[p]
+そんな大家さんの肩を黙って、引き寄せる。[p]
 
 ;★カットインshot2+gun00b
-[chara_show name="cut_gun00b" top="120" left="600" layer="0" wait="false"]
+[chara_show name="cut_shot1" top="60" left="200" layer="0" wait="false"]
+[chara_show name="cut_gun00a" top="120" left="400" layer="0" wait="false"]
 
 ;★SE54
 [playse storage="SE54.m4a"]
@@ -1598,7 +1633,8 @@ TYRANO.kag.stat.charas['17_nojarori'].jname = '幼女？'
 [playse storage="SE61.m4a"]
 
 ;★カットイン消す
-[chara_hide name="cut_gun00b" time="0" wait="false" pos_mode="false"]
+[chara_hide name="cut_shot1" time="0" wait="false" pos_mode="false"]
+[chara_hide name="cut_gun00a" time="0" wait="false" pos_mode="false"]
 
 
 
@@ -1611,10 +1647,12 @@ TYRANO.kag.stat.charas['17_nojarori'].jname = '幼女？'
 
 [chara_mod name="17_nojarori" face="STA17AG" time="0" effect="none"]
 
-#17_nojarori:default
+[playbgm storage="BGM04.mp3" loop="true" volume=50]
+
+#幼女？
 「うわああああ！」[p]
 
-#17_nojarori:default
+#幼女？
 「ああああ！ああ！！あ、ワシの！！ワシの解毒剤がああああ！！」[p]
 
 
@@ -1626,7 +1664,7 @@ TYRANO.kag.stat.charas['17_nojarori'].jname = '幼女？'
 #
 海の強い風が、細かい破片も、その中身も、凄まじい勢いで吹き去っていく。[p]
 
-#17_nojarori:default
+#幼女？
 「あああ、そんな……ワシがぁあああああ！」[p]
 
 #
