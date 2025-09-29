@@ -73,7 +73,6 @@
 ;EP2-10
 [cg_image_button no_graphic="../../tyrano/images/system/noimage.png" x=700 y=330 width=256 height=144 folder="bgimage" graphic="stl2-04/stl2-04a.png,stl2-04/stl2-04b.png,stl2-04/stl2-04c.png" ]
 
-
 @jump target="*common"
 
 *common
