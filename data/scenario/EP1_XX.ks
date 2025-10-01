@@ -45,5 +45,6 @@ BAD END[p]
 [layopt layer="message0" visible="false"]
 
 *scenario_end
+[jump storage="ts_ending.ks"]
 [return]
 [s]

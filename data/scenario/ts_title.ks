@@ -74,7 +74,7 @@ f.story_step=[-1,-1,-1];	// エピソードごとのストーリーの進捗
 ;;[glink text="サウンドテスト" size=20 width=500 x=630 y=420 color=blue target=test_sound ]
 ;[glink text="マップテスト" size=20 width=500 x=630 y=480 color=blue target=ts_map ]
 ;;[glink text="スチルテスト" size=20 width=500 x=630 y=540 color=blue target=ts_stil1_01 ]
-;;[glink text="スチルテスト２" size=20 width=500 x=630 y=600 color=blue target=ts_stil1_02 ]
+[glink text="エンディングテスト" size=20 width=500 x=630 y=600 color=blue target=ts_ending ]
 
 [s]
 
@@ -132,8 +132,9 @@ f.story_step=[-1,-1,-1];	// エピソードごとのストーリーの進捗
 
 [s]
 
-*ts_stil1_02
-@jump storage="ts_stil1_02.ks"
+*ts_ending
+[chara_hide_all]
+@jump storage="ts_ending.ks"
 
 [s]
 

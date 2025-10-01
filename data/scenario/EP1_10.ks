@@ -1121,6 +1121,7 @@
 GOOD END
 
 *scenario_end
+[jump storage="ts_ending.ks"]
 [return]
 [s]
 

@@ -36,6 +36,13 @@
 [chara_new  name="cut_07" storage="cut/ep1/07.png" ]
 [chara_new  name="cut_08" storage="cut/ep1/08.png" ]
 [chara_new  name="cut_iSZHHcW" storage="cut/ep1/cut_iSZHHcW.png" ]
+[chara_new  name="cut_unaji" storage="cut/ep2/unaji.png" ]
+[chara_new  name="cut_ampul" storage="cut/ep2/ampul.png" ]
+[chara_new  name="cut_kaenbin" storage="cut/cut_kaenbin.png" ]
+[chara_new  name="cut_carexp" storage="cut/cut_carexp.png" ]
+
+[chara_new  name="cut_shot1" storage="cut/cut_shot1.png" ]
+[chara_new  name="cut_shot2" storage="cut/cut_shot2.png" ]
 [chara_new  name="cut_gun00" storage="cut/cut_gun00a.png" ]
 [chara_new  name="cut_gun00b" storage="cut/cut_gun00b.png" ]
 [chara_new  name="cut_gun01" storage="cut/cut_gun01a.png" ]
@@ -44,15 +51,8 @@
 [chara_new  name="cut_gun02b" storage="cut/cut_gun02b.png" ]
 [chara_new  name="cut_gun03" storage="cut/cut_gun03a.png" ]
 [chara_new  name="cut_gun03b" storage="cut/cut_gun03b.png" ]
-[chara_new  name="cut_unaji" storage="cut/ep2/unaji.png" ]
-[chara_new  name="cut_ampul" storage="cut/ep2/ampul.png" ]
-[chara_new  name="cut_kaenbin" storage="cut/cut_kaenbin.png" ]
-[chara_new  name="cut_carexp" storage="cut/cut_carexp.png" ]
-[chara_new  name="cut_shot1" storage="cut/cut_shot1.png" ]
-[chara_new  name="cut_shot2" storage="cut/cut_shot2.png" ]
 
 [chara_new name="tomo_zoom1" storage="../bgimage/stl1-03/stl1-03d-full.png" jname=""]
-[chara_new name="tomo_zoom2" storage="../bgimage/stl2-04/stl2-04c.png" jname=""]
 
 ;logo
 [chara_new name="logo" storage="../bgimage/logo.png" jname="logo"]

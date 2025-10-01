@@ -1,5 +1,8 @@
 ;*EP2-10_
 
+[chara_new name="tomo_zoom2" storage="../bgimage/stl2-04/stl2-04c.png" jname=""]
+
+
 [cm  ]
 [clearfix]
 [start_keyconfig]
@@ -492,7 +495,9 @@ TYRANO.kag.stat.charas['22_miyuki_fake'].jname = '謎の女'
 [chara_move name="tomo_zoom2" width="1280" height="720" left="0" top="0" anim="true" effect="easeInQuint" time="1500" wait="true"]
 
 [bg storage="stl2-04/stl2-04c.png" time="0"]
+[cg storage="stl2-04/stl2-04a.png"]
 [chara_hide name="tomo_zoom2" time="0" pos_mode="false"]
+[chara_delete name="tomo_zoom2"]
 [layopt layer="message0" visible="true"]
 
 [playbgm storage="BGM20.mp3" loop="true" volume=50]
@@ -606,17 +611,16 @@ TYRANO.kag.stat.charas['22_miyuki_fake'].jname = '謎の女'
 「上等じゃねえか……やってみろよ」[p]
 #
 
-[bg storage="stl2-04/stl2-04c.png" time="1000"]
-[cg storage="stl2-04/stl2-04a.png"]
+;[bg storage="stl2-04/stl2-04c.png" time="1000"]
 
 [chara_hide name="cut_kaenbin" time="0" wait="false" pos_mode="false"]
  
 ;★カットインshot2+gun00b
-[chara_show name="cut_shot2" top="60" left="200" layer="0" wait="false"]
-[chara_show name="cut_gun00b" top="120" left="500" layer="0" wait="false"]
+;;;;[chara_show name="cut_shot2" top="60" left="200" layer="0" wait="false"]
+;;;;[chara_show name="cut_gun00b" top="120" left="500" layer="0" wait="false"]
 
 ;★SE61
-[playse storage="SE61.m4a"]
+[playse storage="SE61.mp3"]
 #謎の男B
 「ギャアッ」[p]
 
@@ -649,10 +653,10 @@ TYRANO.kag.stat.charas['22_miyuki_fake'].jname = '謎の女'
 「さぁ、どうなんだ！」[p]
 #
 ;★SE61
-[playse storage="SE61.m4a"]
+[playse storage="SE61.mp3"]
 ;★カットイン消す
-[chara_hide name="cut_shot2" time="0" wait="false" pos_mode="false"]
-[chara_hide name="cut_gun00b" time="0" wait="false" pos_mode="false"]
+;;;;[chara_hide name="cut_shot2" time="0" wait="false" pos_mode="false"]
+;;;;[chara_hide name="cut_gun00b" time="0" wait="false" pos_mode="false"]
 
 
 ;★暗転3000
@@ -1612,11 +1616,11 @@ TYRANO.kag.stat.charas['17_nojarori'].jname = '幼女？'
 そんな大家さんの肩を黙って、引き寄せる。[p]
 
 ;★カットインshot2+gun00b
-[chara_show name="cut_shot1" top="60" left="200" layer="0" wait="false"]
-[chara_show name="cut_gun00a" top="120" left="400" layer="0" wait="false"]
+;;;;[chara_show name="cut_shot1" top="60" left="200" layer="0" wait="false"]
+;;;;[chara_show name="cut_gun00a" top="120" left="400" layer="0" wait="false"]
 
 ;★SE54
-[playse storage="SE54.m4a"]
+;;;;[playse storage="SE54.mp3"]
 
 [chara_mod name="17_nojarori" face="default" time="0" effect="none"]
 
@@ -1633,8 +1637,8 @@ TYRANO.kag.stat.charas['17_nojarori'].jname = '幼女？'
 [playse storage="SE61.m4a"]
 
 ;★カットイン消す
-[chara_hide name="cut_shot1" time="0" wait="false" pos_mode="false"]
-[chara_hide name="cut_gun00a" time="0" wait="false" pos_mode="false"]
+;;;;[chara_hide name="cut_shot1" time="0" wait="false" pos_mode="false"]
+;;;;[chara_hide name="cut_gun00a" time="0" wait="false" pos_mode="false"]
 
 
 
@@ -1774,5 +1778,6 @@ GOOD END
 [layopt layer="message0" visible="false"]
 
 *scenario_end
+[jump storage="ts_ending.ks"]
 [return]
 [s]
