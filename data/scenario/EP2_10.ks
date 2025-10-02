@@ -1,8 +1,5 @@
 ;*EP2-10_
 
-[chara_new name="tomo_zoom2" storage="../bgimage/stl2-04/stl2-04c.png" jname=""]
-
-
 [cm  ]
 [clearfix]
 [start_keyconfig]
@@ -19,6 +16,13 @@
 
 *scenario_start
 *start
+
+[chara_new  name="cut_ampul" storage="cut/ep2/ampul.png" ]
+[chara_new  name="cut_kaenbin" storage="cut/cut_kaenbin.png" ]
+[chara_new  name="cut_carexp" storage="cut/cut_carexp.png" ]
+[chara_new  name="cut_shot2" storage="cut/cut_shot2.png" ]
+[chara_new  name="cut_gun00b" storage="cut/cut_gun00b.png" ]
+[chara_new name="tomo_zoom2" storage="../bgimage/stl2-04/stl2-04c.png" jname=""]
 
 ;★智也立ち絵左からスライドイン
 [chara_mod name="00_tomoya" face="STA00CA" time="0" effect="none"]
@@ -269,7 +273,7 @@ TYRANO.kag.stat.charas['22_miyuki_fake'].jname = '謎の女'
 [chara_mod name="22_miyuki_fake" face="STA22AG" time="0" effect="none"]
 
 ;★SE54
-[playse storage="SE54.m4a"]
+[playse storage="SE54.mp3"]
 #
 俺の脇腹に、堅いものが突き付けられる。[p]
 
@@ -548,7 +552,7 @@ TYRANO.kag.stat.charas['22_miyuki_fake'].jname = '謎の女'
 ;銃声
 
 ;★SE61
-[playse storage="SE61.m4a"]
+[playse storage="SE61.mp3"]
 #謎の男A
 「ぐあああ！」[p]
 
@@ -616,8 +620,8 @@ TYRANO.kag.stat.charas['22_miyuki_fake'].jname = '謎の女'
 [chara_hide name="cut_kaenbin" time="0" wait="false" pos_mode="false"]
  
 ;★カットインshot2+gun00b
-;;;;[chara_show name="cut_shot2" top="60" left="200" layer="0" wait="false"]
-;;;;[chara_show name="cut_gun00b" top="120" left="500" layer="0" wait="false"]
+[chara_show name="cut_shot2" top="60" left="200" layer="0" wait="false"]
+[chara_show name="cut_gun00b" top="120" left="500" layer="0" wait="false"]
 
 ;★SE61
 [playse storage="SE61.mp3"]
@@ -655,8 +659,8 @@ TYRANO.kag.stat.charas['22_miyuki_fake'].jname = '謎の女'
 ;★SE61
 [playse storage="SE61.mp3"]
 ;★カットイン消す
-;;;;[chara_hide name="cut_shot2" time="0" wait="false" pos_mode="false"]
-;;;;[chara_hide name="cut_gun00b" time="0" wait="false" pos_mode="false"]
+[chara_hide name="cut_shot2" time="0" wait="false" pos_mode="false"]
+[chara_hide name="cut_gun00b" time="0" wait="false" pos_mode="false"]
 
 
 ;★暗転3000
@@ -940,7 +944,7 @@ TYRANO.kag.stat.charas['22_miyuki_fake'].jname = '謎の女'
 
 ;:銃を動かす音
 ;★SE54
-[playse storage="SE54.m4a"]
+[playse storage="SE54.mp3"]
 
 [chara_mod name="02_miyuki" face="STA02EI" time="0" effect="none"]
 
@@ -1402,7 +1406,7 @@ TYRANO.kag.stat.charas['17_nojarori'].jname = '幼女？'
 [playbgm storage="BGM16.ogg" loop="true" volume=50]
 
 ;★SE54
-[playse storage="SE54.m4a"]
+[playse storage="SE54.mp3"]
 
 [chara_mod name="00_tomoya" face="STA00CF" time="0" effect="none"]
 
@@ -1616,8 +1620,8 @@ TYRANO.kag.stat.charas['17_nojarori'].jname = '幼女？'
 そんな大家さんの肩を黙って、引き寄せる。[p]
 
 ;★カットインshot2+gun00b
-;;;;[chara_show name="cut_shot1" top="60" left="200" layer="0" wait="false"]
-;;;;[chara_show name="cut_gun00a" top="120" left="400" layer="0" wait="false"]
+;;;;[chara_show name="cut_shot2" top="60" left="200" layer="0" wait="false"]
+;;;;[chara_show name="cut_gun00b" top="120" left="400" layer="0" wait="false"]
 
 ;★SE54
 ;;;;[playse storage="SE54.mp3"]
@@ -1634,16 +1638,16 @@ TYRANO.kag.stat.charas['17_nojarori'].jname = '幼女？'
 引き金を、引く。[p]
 
 ;★SE61
-[playse storage="SE61.m4a"]
+[playse storage="SE61.mp3"]
 
 ;★カットイン消す
-;;;;[chara_hide name="cut_shot1" time="0" wait="false" pos_mode="false"]
-;;;;[chara_hide name="cut_gun00a" time="0" wait="false" pos_mode="false"]
+;;;;[chara_hide name="cut_shot2" time="0" wait="false" pos_mode="false"]
+;;;;[chara_hide name="cut_gun00b" time="0" wait="false" pos_mode="false"]
 
 
 
 ;★SE66
-[playse storage="SE66.m4a"]
+[playse storage="SE66.mp3"]
 
 ;ガラスの割れる音:
 
@@ -1701,7 +1705,7 @@ TYRANO.kag.stat.charas['17_nojarori'].jname = '幼女？'
 [chara_mod name="02_miyuki" face="STA02DE" time="0" effect="none"]
 
 ;★SE67
-[playse storage="SE67.m4a"]
+[playse storage="SE67.mp3"]
 
 #
 みじめな敵の首領を眺めながら、俺はまだ熱い銃を手早く分解し、海に捨てる。[p]

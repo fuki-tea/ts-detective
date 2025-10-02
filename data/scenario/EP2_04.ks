@@ -574,7 +574,7 @@
 それさえできればあとはこっちのものだ。[p]
 
 ;★SE54
-[playse storage="SE54.m4a"]
+[playse storage="SE54.mp3"]
 
 ;★BGMフェードアウト
 [fadeoutbgm time=2000]
@@ -790,7 +790,7 @@
 「先輩っ！？」[p]
 
 ;★SE54
-[playse storage="SE54.m4a"]
+[playse storage="SE54.mp3"]
 
 ;★智也立ち絵左にスライドアウト
 [chara_move name="00_tomoya" top="0" left="-600" anim="true" effect="easeOutExpo" time="500" wait="true"]
@@ -988,7 +988,7 @@
 俺は西春の手に拳銃を返す。[p]
 
 ;★SE54
-[playse storage="SE54.m4a"]
+[playse storage="SE54.mp3"]
 
 [chara_mod name="00_tomoya" face="STA00CD" time="0"]
 
